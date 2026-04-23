@@ -1,0 +1,81 @@
+.MainContainer {
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://openhomegroup.com/wp-content/uploads/2025/11/coming-room-reem_island.webp);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  align-content: center;
+}
+.Container {
+  width: 80%;
+  margin: auto;
+}
+.Row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+}
+.Image {
+  visibility: hidden;
+  display: none;
+}
+.Lefti {
+  text-align: left;
+  width: 80%;
+}
+.Righti {
+  display: none;
+  visibility: hidden;
+  text-align: right;
+}
+.Form {
+  background-color: rgba(0, 0, 0, 0.264);
+  backdrop-filter: blur(2px);
+  border-radius: 10px;
+}
+
+@media (max-width: 767px) {
+  .MainContainer {
+    background: white;
+  }
+  .Container {
+    width: 96%;
+    height: 100%;
+  }
+  .Row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+  .Image {
+    visibility: visible;
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    padding-top: 10px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+  .Righti {
+    display: none;
+    visibility: hidden;
+  }
+  .Form {
+    background-color: rgba(0, 0, 0, 0.78);
+    backdrop-filter: blur(10px) !important;
+    border-radius: 10px;
+  }
+  .Lefti {
+    width: 100% !important;
+    position: absolute;
+    top: 70%;
+  }
+}

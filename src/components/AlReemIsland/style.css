@@ -1,0 +1,627 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+.abril-fatface-regular {
+  font-family: "Abril Fatface", serif;
+  font-style: normal;
+}
+
+.playfair-display-regular {
+  /* font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-style: normal; */
+
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -0.5px;
+  
+}
+
+.bgColorOne{
+  background-color: #ffffff;
+}
+.bgColorTwo{
+  background-color: #ece8dd;
+}
+.bgColorThree{
+  background-color: #0f1f2e;
+}
+.bgColorFour{
+  background-color: #2296c4;
+}
+.bgColorFive{
+  background-color: #D2B48C;
+}
+
+
+.montserrat-regular {
+  /* Montserrat font styling applied via className */
+}
+
+.hover-text-s1 .playfair-display-regular{
+  color: #fff !important;
+  font-size: 20px !important;
+}
+.hover-text-s1 .montserrat-regular{
+  color: #fff !important;
+  font-size: 12px !important;
+}
+
+.two-bg-left-right{
+  background-image: url('/images/al-reem-island/right_bg.webp'), url('/images/al-reem-island/left_bg.webp');
+  background-position: left 200px, right 450px;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 300px, 300px;
+  width: 100%;
+  min-height: 00px;
+}
+
+.absolute.inset-0.backdrop-blur-sm{
+  background-color: rgba(57, 150, 196, 0.502) !important;
+}
+
+
+.two-bg-left-right-two {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.two-bg-left-right-two::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background-image: url('/images/al-reem-island/right_bg.webp');
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  border-radius: 20px 0 0 20px;
+}
+
+.two-bg-left-right-two::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background-image: url('/images/al-reem-island/left_bg.webp');
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  border-radius: 0 20px 20px 0;
+}
+
+.two-bg-left-right-two > * {
+  position: relative;
+  z-index: 10;
+}
+
+
+body, #home{
+  background-color: #ebe8dd;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: #2296c4 !important;
+  color: rgb(255, 255, 255) !important;
+  padding: 10px 0;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.swiper-pagination-bullet {
+  background-color: #2296c4 !important;
+}
+
+.btn-font {
+  font-family: var(--font-playfair);
+  font-size: 20px;
+}
+
+
+h2{
+  font-size: 45px;
+}
+
+
+
+
+.process-wrapper {
+  max-width: 1100px;
+  margin: 40px auto;
+  background: #f4f6f8;
+  border-radius: 8px;
+  padding-bottom: 30px;
+}
+
+.process-header {
+  /* background: linear-gradient(90deg, #0d6efd, #1fa2ff); */
+  color: #fff;
+  padding: 12px 20px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px 8px 0 0;
+}
+
+.header-icons {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+/* #2296c4 */
+.step-card {
+  /* background: linear-gradient(180deg, #1fa2ff, #0d6efd); */
+  color: #fff;
+  border-radius: 12px;
+  padding: 50px 20px 30px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  min-height: 300px;
+}
+
+
+.step-content{
+ margin-top: 60px;
+ margin-bottom: 0px;
+}
+
+.step-content p{
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  display: inline-block;
+}
+.middle-text-main p:nth-child(1){
+  margin-top: 0px;
+}
+.middle-text-main p:nth-child(2){
+  margin-top: 20px;
+}
+.middle-text-main p:nth-child(3){
+  margin-top: 10px !important;
+}
+.middle-text-main p:nth-child(4){
+  margin-top: 10px !important;
+}
+.middle-text-main p:nth-child(5){
+  margin-top: 20px !important;
+}
+
+.step-circle {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  color: #0d6efd;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  /* border: 2px solid #22a1ff; */
+}
+
+.text-center-circle{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130px;
+  height: 130px;
+  background: #fff;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  /* border: 2px solid #22a1ff; */
+  /* background: linear-gradient(180deg, #1fa2ff, #0d6efd); */
+}
+
+.step-circle:first-child span {
+  font-size: 30px !important;
+}
+.step-circle:first-child div {
+  font-size: 30px !important;
+}
+
+.text-center-circle span {
+  font-size: 24px !important;
+  display: inline-block !important;
+}
+.text-center-circle div {
+  display: inline-block !important;
+}
+ 
+.step-icon {
+  margin-top: 20px;
+  font-size: 26px;
+  background: #fff;
+  color: #0d6efd;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+}
+
+
+.step-card-1,.step-card-3,.step-card-5{
+  background: #2296c4;
+}
+
+.step-card-0,.step-card-2,.step-card-4{
+  background: #D2B48C;
+}
+
+.text-center-circle-1,.text-center-circle-3,.text-center-circle-5{
+  background: #2296c4;
+  border: 2px solid #2296c4; 
+}
+
+.text-center-circle-0,.text-center-circle-2,.text-center-circle-4{
+  background: #D2B48C;
+  border: 2px solid #D2B48C; 
+}
+
+#value-added-section{
+  background-image: url('/images/al-reem-island/site_top.webp');
+  background-size: 600px 600px;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+
+.hero-banner-text-wrapper{
+  margin-top: -100px;
+}
+
+.css-1pemltt-MuiInputBase-input-MuiFilledInput-input{
+  border-radius: 12px !important;
+}
+
+/* Mobile-specific styles for hero banner */
+@media (max-width: 768px) {
+  /* Ensure banner image has curved corners on mobile */
+  .hero-banner-container {
+    border-radius: 20px !important;
+    -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
+    margin: 0px 10px !important;
+    overflow: hidden !important;
+  }
+
+  #home{
+    padding-bottom: 20px;
+  }
+
+  .hero-keywords-banner{
+    height: 75vh !important;
+    padding-bottom: 0;
+    margin-top: 62px;
+  }
+
+  .counter-section-wrapper{
+    margin-top: 100px;
+  }
+  
+  .hero-banner-container img,
+  .hero-banner-image {
+    border-radius: inherit !important;
+    -webkit-border-radius: inherit !important;
+    -moz-border-radius: inherit !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+  
+  .hero-banner-overlay {
+    border-radius: inherit !important;
+    -webkit-border-radius: inherit !important;
+    -moz-border-radius: inherit !important;
+  }
+  
+  /* Fix banner content positioning on mobile */
+  .hero-banner-content {
+    padding: 0 16px !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  .hero-banner-text-wrapper {
+    padding-bottom: 0 !important;
+    width: 100% !important;
+    margin-top: 0;
+  }
+  
+  /* Fix title positioning */
+  .hero-banner-title {
+    margin-bottom: 16px !important;
+    padding-bottom: 0 !important;
+    line-height: 1.2 !important;
+  }
+  
+  /* Fix description positioning */
+  .hero-banner-description {
+    margin-bottom: 20px !important;
+    line-height: 1.5 !important;
+  }
+  
+  /* Fix button positioning */
+  .hero-banner-button {
+    margin-top: 0 !important;
+  }
+  
+  /* Move search form down and center on mobile */
+  .hero-search-form-container {
+    position: relative !important;
+    bottom: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    margin: 20px auto 0 auto !important;
+    padding: 0 10px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  
+  /* Ensure form wrapper is centered */
+  .hero-search-form-container .banner-form,
+  .hero-search-form-container .custom-width-full-banner {
+    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Center the form content */
+  .hero-search-form-container > * {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .custom-form-container{
+    background-color: #ece8dd;
+  }
+
+  /* Hide background images in CounterSection on mobile */
+  .two-bg-left-right {
+    background-image: none !important;
+    background: none !important;
+  }
+
+  /* Reduce spacing in CounterSection on mobile */
+  section.two-bg-left-right {
+    padding-top: 60px !important;
+    padding-bottom: 40px !important;
+    min-height: auto !important;
+  }
+
+  /* Reduce content padding on mobile */
+  section.two-bg-left-right .relative.z-10 {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* Reduce heading margin on mobile */
+  section.two-bg-left-right h2 {
+    margin-bottom: 20px !important;
+    font-size: 24px !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Reduce description margin on mobile */
+  section.two-bg-left-right p.montserrat-regular {
+    margin-bottom: 30px !important;
+    font-size: 14px !important;
+  }
+
+  /* Reduce grid gap on mobile */
+  section.two-bg-left-right .grid {
+    gap: 16px !important;
+  }
+
+  /* Reduce card padding on mobile */
+  section.two-bg-left-right .step-card {
+    padding: 30px 16px 20px !important;
+    min-height: 250px !important;
+  }
+
+  /* ValueAddedSection - Two column layout on mobile */
+  #value-added-section .grid.grid-cols-2 {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  /* Adjust image sizes for mobile two-column */
+  #value-added-section .relative.overflow-hidden {
+    width: 100% !important;
+  }
+
+  /* Adjust text sizes for mobile */
+  #value-added-section h4 {
+    font-size: 16px !important;
+    margin-bottom: 8px !important;
+  }
+
+  #value-added-section p {
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Make left corner background image smaller on mobile */
+  #value-added-section {
+    background-size: 300px 300px !important;
+    background-position: top left !important;
+  }
+
+  /* NextLegacySection - Show below ValueAddedSection on mobile with rounded corners */
+  .next-legacy-section {
+    margin-top: 40px !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    margin-bottom: 40px !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    min-height: 50vh !important;
+  }
+
+  .next-legacy-banner-container {
+    border-radius: 20px !important;
+    overflow: hidden !important;
+  }
+
+  .next-legacy-image {
+    border-radius: 20px !important;
+  }
+
+  .next-legacy-overlay {
+    border-radius: 20px !important;
+  }
+
+  /* Adjust text sizes for mobile */
+  .next-legacy-section h1 {
+    font-size: 28px !important;
+    line-height: 1.2 !important;
+    padding: 0 16px !important;
+  }
+
+  .next-legacy-section p {
+    font-size: 14px !important;
+    padding: 0 16px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .next-legacy-section button {
+    font-size: 12px !important;
+    padding: 12px 24px !important;
+  }
+
+  /* Show ValueAddedSection right side content below on mobile */
+  .next-legacy-mobile-section {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 300px !important;
+    margin-top: 40px !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+  }
+
+  .next-legacy-mobile-section .relative {
+    border-radius: 20px !important;
+  }
+}
+
+/* Desktop-specific styles for ValueAddedSection */
+@media (min-width: 1024px) {
+  /* Restore desktop image sizes */
+  .timeline-image-container {
+    width: auto !important;
+  }
+  
+  .timeline-image-box {
+    width: 324px !important;
+    height: 215px !important;
+    min-width: 324px !important;
+    min-height: 215px !important;
+  }
+  
+  /* Restore desktop text sizes */
+  #value-added-section h4 {
+    font-size: 24px !important;
+    margin-bottom: 12px !important;
+  }
+  
+  #value-added-section p {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+  }
+  
+  /* Restore desktop number size */
+  .timeline-image-box span {
+    font-size: 60px !important;
+  }
+}
+
+/* Tablet-specific adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-banner-container {
+    border-radius: 20px !important;
+  }
+  
+  .hero-banner-image {
+    border-radius: 20px !important;
+  }
+  
+  .hero-banner-overlay {
+    border-radius: 20px !important;
+  }
+}
+
+/* Tablet-specific adjustments */
+@media (min-width: 1326px) and (max-width: 1587px) {
+  .timeline-image-box {
+    width: 260px !important;
+    height: 180px !important;
+    min-width: 260px !important;
+    min-height: 180px !important;
+  }
+  #value-added-section{
+    background-size: 400px 400px !important;
+  }
+  .two-bg-left-right .container-fluid.mx-auto{
+    max-width:   56rem !important;
+  }
+
+  .hero-banner-container{
+
+  }
+  .hero-search-form-container{
+    bottom: -59px !important;
+  }
+
+}

@@ -1,0 +1,14 @@
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+  color: #ffffff !important;
+  background-color: #5f602c !important;
+  padding: 10px 0;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: #5f602c8a !important;
+  }
+}
+.mySwiper .swiper-pagination-bullet {
+  background-color: #5f602c;
+}

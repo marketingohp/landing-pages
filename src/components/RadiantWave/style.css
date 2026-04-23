@@ -1,0 +1,18 @@
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: #0c1a2a !important;
+  color: rgb(255, 255, 255) !important;
+  padding: 10px 0;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.swiper-pagination-bullet {
+  background-color: #0c1a2a !important;
+}
+.classAddFooter {
+  background-color: #0000003b;
+}

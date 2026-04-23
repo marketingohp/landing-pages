@@ -1,0 +1,10 @@
+ .main-logo-banner{
+  width: 440px;
+ }
+
+
+ @media (max-width: 768px) {
+    .main-logo-banner{
+        width: 200px;
+    }
+ }

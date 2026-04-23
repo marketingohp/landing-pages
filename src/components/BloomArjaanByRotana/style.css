@@ -1,0 +1,33 @@
+@media (max-width: 768px) {
+  .custtom-br {
+    display: block;
+  }
+  .custom-mobile-display-style1 {
+    font-size: 32px;
+  }
+  .font-mobile-payment-plan1 {
+    font-size: 3rem !important;
+  }
+  .font-mobile-payment-plan2 {
+    font-size: 6rem !important;
+  }
+  .font-mobile-payment-plan3 {
+    font-size: 1.4rem !important;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: #1a3a5c !important;
+  color: rgb(255, 255, 255) !important;
+  padding: 10px 0;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.swiper-pagination-bullet {
+  background-color: #1a3a5c !important;
+}

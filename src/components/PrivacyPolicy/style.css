@@ -1,0 +1,107 @@
+@media (max-width: 768px) {
+  .custtom-br {
+    display: block;
+  }
+  .custom-mobile-display-style1 {
+    font-size: 32px;
+  }
+  .font-mobile-payment-plan1 {
+    font-size: 3rem !important;
+  }
+  .font-mobile-payment-plan2 {
+    font-size: 6rem !important;
+  }
+  .font-mobile-payment-plan3 {
+    font-size: 1.4rem !important;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: #1a3a5c !important;
+  color: rgb(255, 255, 255) !important;
+  padding: 10px 0;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.swiper-pagination-bullet {
+  background-color: #1a3a5c !important;
+}
+
+.privacySection {
+  background-color: #ffffff;
+  display: grid;
+  width: 100%;
+  padding: 20px 0;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: grid;
+
+  z-index: 0;
+  /* background-image: url("https://images.unsplash.com/photo-1515549832467-8783363e19b6?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
+}
+.privacySection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  /* background-color: #f0ebeb; */
+  height: 100%;
+  width: 100%;
+}
+.upperContainer {
+  margin: 0 auto;
+  display: block;
+  padding: 10px;
+  position: relative;
+  z-index: 10;
+
+  & img {
+    text-align: center;
+    margin: auto;
+  }
+}
+.contentContainer {
+  padding: 60px 40px;
+  background-color: #021d4b;
+  position: relative;
+  z-index: 10;
+  border-radius: 10px;
+
+  & h1 {
+    padding: 20px 0;
+    font-size: 40px;
+    color: White;
+    /* font-family: "freight-big-pro", sans-serif;  */
+  }
+
+  & h2 {
+    padding: 10px 0;
+    font-size: 24px;
+    color: White;
+  }
+
+  & p {
+    padding: 6px 0;
+    color: White;
+    font-family:
+      Open Sans,
+      sans-serif;
+  }
+}
+
+@media (max-width: 767px) {
+  .contentContainer {
+    padding: 10px;
+  }
+  .upperContainer {
+    padding: 0;
+  }
+}
