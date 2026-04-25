@@ -92,10 +92,7 @@ export default function RootLayout({
         />
         {/* End Google Tag Manager */}
 
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-356195411"
-        ></script>
+
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -113,17 +110,20 @@ export default function RootLayout({
           }}
         />
 
-        {/* <script
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17889682475"
+        ></script>
+        <script
           dangerouslySetInnerHTML={{
             __html: `
-               window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-356195411');
-            `,
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', 'AW-17889682475');
+                `,
           }}
-        /> */}
+        />
 
         <Script
           strategy="afterInteractive"
@@ -139,20 +139,6 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-5LRKP3Z2');`,
           }}
         />
-
-        <Script
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=AW-356195411"
-        />
-
-        <Script id="gtag-init" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-356195411');
-          `}
-        </Script>
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
