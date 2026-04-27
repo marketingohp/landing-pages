@@ -112,13 +112,13 @@ const OhanaHeader = () => {
               <img
                 src="/images/open-day-burtville/oh_logo.png"
                 alt="ohana"
-                className="w-30 h-fit sm:w-50"
+                className="w-30 h-auto sm:w-50"
               />
               <div className="block w-px h-20 sm:h-30 mr-3 bg-white"></div>
               <img
                 src="/images/open-day-burtville/burtville_logo.png"
                 alt="ohana"
-                className="w-20 h-fit sm:w-30"
+                className="w-20 h-auto sm:w-30"
               />
             </div>
             <h2>Your Are Invited</h2>
