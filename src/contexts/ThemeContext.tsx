@@ -1,8 +1,14 @@
-'use client';
+"use client";
 
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  ReactNode,
+} from "react";
 
-type Theme = 'light' | 'dark';
+type Theme = "light" | "dark";
 
 interface ThemeContextType {
   theme: Theme;
@@ -13,52 +19,55 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>('light');
+  const [theme, setThemeState] = useState<Theme>("light");
   const [mounted, setMounted] = useState(false);
+  const [isSystemDark, setIsSystemDark] = useState<boolean>(() => {
+    if (typeof window === "undefined") return false;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  });
+
+  // catching the prefered user system color mode
+  useEffect(() => {
+    const mediaSchema = window.matchMedia("(prefers-color-scheme: dark)");
+
+    const schemaHandler = (e: MediaQueryListEvent) => {
+      setIsSystemDark(e.matches)
+    }
+    mediaSchema.addEventListener("change", schemaHandler)
+    console.log(`is system dark: ${isSystemDark}`)
+
+    return () => mediaSchema.removeEventListener("change", schemaHandler)
+  })
 
   useEffect(() => {
     // Read the theme that was set by the inline script in layout.tsx
     // This ensures we're in sync with the initial script
     const htmlElement = document.documentElement;
-    
-    const hasLight = htmlElement.classList.contains('light');
-    const hasDark = htmlElement.classList.contains('dark');
-    
-    let initialTheme: Theme = 'light'; // Default to light
+    let initialTheme: Theme = "light"; // Default to light
 
-    console.log('hasDark', hasDark);
-    console.log('hasLight', hasLight);
-    console.log('initialTheme', htmlElement);
-
-    if (hasDark) {
-      initialTheme = 'dark';
-    } else if (hasLight) {
-      initialTheme = 'light';
+    // Only check localStorage if user has explicitly set a preference
+    // Default to 'light' if no preference is saved
+    const savedTheme = localStorage.getItem("theme") as Theme;
+    if (savedTheme && (savedTheme === "light" || savedTheme === "dark")) {
+      initialTheme = savedTheme;
     } else {
-      // Only check localStorage if user has explicitly set a preference
-      // Default to 'light' if no preference is saved
-      const savedTheme = localStorage.getItem('theme') as Theme;
-      if (savedTheme && (savedTheme === 'light' || savedTheme === 'dark')) {
-        initialTheme = savedTheme;
-      } else {
-        // Default to light, ignore system preference
-        initialTheme = 'light';
-      }
-      // Apply it to the HTML element
-      htmlElement.classList.remove('light', 'dark');
-      htmlElement.classList.add(initialTheme);
+      // Default to system preference
+      initialTheme = isSystemDark ? "dark" : "light";
     }
-    
+    // Apply it to the HTML element
+    htmlElement.classList.remove("light", "dark");
+    htmlElement.classList.add(initialTheme);
+
     setThemeState(initialTheme);
     setMounted(true);
-  }, []);
+  }, [isSystemDark]);
 
   useEffect(() => {
     if (mounted) {
       const htmlElement = document.documentElement;
-      htmlElement.classList.remove('light', 'dark');
+      htmlElement.classList.remove("light", "dark");
       htmlElement.classList.add(theme);
-      localStorage.setItem('theme', theme);
+      localStorage.setItem("theme", theme);
     }
   }, [theme, mounted]);
 
@@ -70,7 +79,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   const toggleTheme = () => {
     if (mounted) {
-      setThemeState((prev) => (prev === 'light' ? 'dark' : 'light'));
+      setThemeState((prev) => (prev === "light" ? "dark" : "light"));
     }
   };
 
@@ -86,11 +95,10 @@ export function useTheme() {
   if (context === undefined) {
     // Return default values during SSR
     return {
-      theme: 'light' as Theme,
+      theme: "light" as Theme,
       setTheme: () => {},
       toggleTheme: () => {},
     };
   }
   return context;
 }
-
