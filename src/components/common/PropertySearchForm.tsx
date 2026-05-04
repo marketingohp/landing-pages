@@ -14,8 +14,9 @@ import { submitFormLead } from "@/lib/api";
 import { reportConversion, pushToDataLayer } from "@/utils/gtag";
 
 // react-phone-number-input import
-import 'react-phone-number-input/style.css';
-import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
+import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
+import PhoneNumberInput from "./PhoneNumberInput";
 
 const countryCodes = [
   { value: "+971", label: "+971" },
@@ -371,14 +372,18 @@ export default function PropertySearchForm({
     message: string;
   }>({ type: null, message: "" });
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
+  const [isPhoneValid, setIsPhoneValid] = useState<boolean>(true);
+  const [phoneError, setPhoneError] = useState<string>("");
   const [touchedFields, setTouchedFields] = useState<Record<string, boolean>>(
     {},
   );
 
   const handleSelectChange =
     (field: string) => (event: SelectChangeEvent<string>) => {
-      const value = event.target.value;
-      setFormData({ ...formData, [field]: value });
+      if (field != "phoneNumber") {
+        const value = event.target.value;
+        setFormData({ ...formData, [field]: value });
+      }
 
       // Clear error when user starts typing/selecting
       if (fieldErrors[field]) {
@@ -395,8 +400,10 @@ export default function PropertySearchForm({
 
   const handleInputChange =
     (field: string) => (event: React.ChangeEvent<HTMLInputElement>) => {
-      const value = event.target.value;
-      setFormData({ ...formData, [field]: value });
+      if (field != "phoneNumber") {
+        const value = event.target.value;
+        setFormData({ ...formData, [field]: value });
+      }
 
       // Clear error when user starts typing
       if (fieldErrors[field]) {
@@ -414,10 +421,16 @@ export default function PropertySearchForm({
   const validateField = (field: FormFieldKey): string => {
     if (!requiredFields.includes(field)) return "";
 
+    /// will add the error here
+    if (field == "phoneNumber") {
+      console.log(`value: ${formData.phoneNumber}, phone error: ${phoneError}`);
+      return phoneError;
+    }
+
     const value = formData[field];
     if (!value || value.trim() === "") {
       const fieldLabel = t(`${field}` as any) || fieldLabels[field] || field;
-      return `${fieldLabel} is required`;
+      return !(fieldLabel == "phoneNumber") ? `${fieldLabel} is required` : "";
     }
 
     // Email validation
@@ -425,18 +438,6 @@ export default function PropertySearchForm({
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(value)) {
         return "Please enter a valid email address";
-      }
-    }
-
-    // Phone number validation
-    const countryCode = formData['phoneCountryCode']
-    if (field === "phoneNumber" && value) {
-      let phoneRegex = /^[0-9]{7,15}$/;
-      if (countryCode == "+971") {
-        phoneRegex = /^(?:0[0-9]{9}|5[0-9]{8})$/;
-      }
-      if (!phoneRegex.test(value.replace(/\s+/g, ""))) {
-        return "Please enter a valid phone number";
       }
     }
 
@@ -499,7 +500,8 @@ export default function PropertySearchForm({
       return;
     }
 
-    setIsSubmitting(true);
+    ////////////// testing
+    setIsSubmitting(false);
     setSubmitStatus({ type: null, message: "" });
 
     const submissionData: Record<string, string> = {
@@ -507,10 +509,10 @@ export default function PropertySearchForm({
     };
 
     // Combine phone country code and number
-    if (formData.phoneCountryCode && formData.phoneNumber) {
-      submissionData.phoneNumber = `${formData.phoneCountryCode} ${formData.phoneNumber}`;
-      delete submissionData.phoneCountryCode;
-    }
+    // if (formData.phoneCountryCode && formData.phoneNumber) {
+    //   submissionData.phoneNumber = `${formData.phoneCountryCode} ${formData.phoneNumber}`;
+    //   delete submissionData.phoneCountryCode;
+    // }
 
     if (formName) submissionData.formName = formName;
     if (pointName) submissionData.pointName = pointName;
@@ -1175,7 +1177,7 @@ export default function PropertySearchForm({
     return (
       <div>
         <div className="flex gap-2">
-          <FormControl
+          {/* <FormControl
             variant="filled"
             className="bg-white border-2 border-gray-300 rounded-md"
             sx={{ width: "120px", ...getSelectStyles("phoneCountryCode") }}
@@ -1199,8 +1201,8 @@ export default function PropertySearchForm({
                 </MenuItem>
               ))}
             </Select>
-          </FormControl>
-          <TextField
+          </FormControl> */}
+          {/* <TextField
             fullWidth
             id="phoneNumber"
             label={"Phone number"}
@@ -1212,13 +1214,20 @@ export default function PropertySearchForm({
             sx={getTextFieldStyles("phoneNumber")}
             className="bg-white border-2 border-gray-300 rounded-md"
             size="small"
+          /> */}
+          <PhoneNumberInput
+            name="phoneNumber"
+            value={formData.phoneNumber}
+            onChange={handlePhoneInputChange}
+            required={isRequired}
+            setError={setPhoneError}
           />
         </div>
-        {hasError && (
+        {/* {hasError && (
           <div className={`${getErrorColorClass()} text-xs mt-1 ml-3`}>
             {fieldErrors["phoneNumber"]}
           </div>
-        )}
+        )} */}
       </div>
     );
   };
@@ -1555,32 +1564,38 @@ export default function PropertySearchForm({
   };
 
   // Render phone number field only (without country code) for image view
+  const handlePhoneInputChange = (num) => {
+    setFormData({ ...formData, ["phoneNumber"]: num });
+  };
+
   const renderPhoneNumberFieldOnly = () => {
     if (!visibleFields.includes("phoneNumber")) return null;
     const isRequired = requiredFields.includes("phoneNumber");
-    const hasError = !!(
-      fieldErrors["phoneNumber"] && touchedFields["phoneNumber"]
-    );
+    // const hasError = !!(
+    //   fieldErrors["phoneNumber"] && touchedFields["phoneNumber"]
+    // );
 
     return (
-      <TextField
-        fullWidth
-        id="phoneNumber"
-        label={"Phone number"}
-        value={formData.phoneNumber}
-        onChange={handleInputChange("phoneNumber")}
-        variant="filled"
-        required={isRequired}
-        error={hasError}
-        sx={getTextFieldStyles("phoneNumber")}
-        className="bg-white border-2 border-gray-300 rounded-md"
-        size="small"
-      />
-      // <PhoneInput 
-      //   placeholder="Enter Your Phone Number"
+      // <TextField
+      //   fullWidth
+      //   id="phoneNumber"
+      //   label={"Phone number"}
       //   value={formData.phoneNumber}
-      //   onChange={}
+      //   onChange={handleInputChange("phoneNumber")}
+      //   variant="filled"
+      //   required={isRequired}
+      //   error={hasError}
+      //   sx={getTextFieldStyles("phoneNumber")}
+      //   className="bg-white border-2 border-gray-300 rounded-md"
+      //   size="small"
       // />
+      <PhoneNumberInput
+        name="phoneNumber"
+        value={formData.phoneNumber}
+        onChange={handlePhoneInputChange}
+        required={isRequired}
+        setError={setPhoneError}
+      />
     );
   };
 
@@ -1588,18 +1603,18 @@ export default function PropertySearchForm({
   const renderBannerViewLayout = () => (
     <Box className="space-y-4">
       {/* First Row: First Name, Last Name, Email, Phone Code, Phone Number */}
-      <Box className="grid grid-cols-1 md:grid-cols-5 gap-4 box-margin-bottom">
+      <Box className="grid grid-cols-1 md:grid-cols-4 gap-4 box-margin-bottom">
         {renderFirstNameField()}
         {renderLastNameField()}
         {renderEmailField()}
-        {renderPhoneCountryCodeField()}
-        <div>
+        {/* {renderPhoneCountryCodeField()} */}
+        <div className="h-full">
           {renderPhoneNumberFieldOnly()}
-          {fieldErrors["phoneNumber"] && touchedFields["phoneNumber"] && (
+          {/* {fieldErrors["phoneNumber"] && touchedFields["phoneNumber"] && (
             <div className={`${getErrorColorClass()} text-xs mt-1`}>
               {fieldErrors["phoneNumber"]}
             </div>
-          )}
+          )} */}
         </div>
       </Box>
 
@@ -1645,18 +1660,18 @@ export default function PropertySearchForm({
   const renderImageViewLayout = () => (
     <Box className="space-y-4">
       {/* First Row: First Name, Last Name, Email, Phone Code, Phone Number */}
-      <Box className="grid grid-cols-1 md:grid-cols-5 gap-4 box-margin-bottom">
+      <Box className="grid grid-cols-1 md:grid-cols-4 gap-4 box-margin-bottom">
         {renderFirstNameField()}
         {renderLastNameField()}
         {renderEmailField()}
-        {renderPhoneCountryCodeField()}
+        {/* {renderPhoneCountryCodeField()} */}
         <div>
           {renderPhoneNumberFieldOnly()}
-          {fieldErrors["phoneNumber"] && touchedFields["phoneNumber"] && (
+          {/* {fieldErrors["phoneNumber"] && touchedFields["phoneNumber"] && (
             <div className={`${getErrorColorClass()} text-xs mt-1`}>
               {fieldErrors["phoneNumber"]}
             </div>
-          )}
+          )} */}
         </div>
       </Box>
 
@@ -1739,18 +1754,26 @@ export default function PropertySearchForm({
     );
 
     return (
-      <TextField
-        fullWidth
-        id="phoneNumber"
-        label={"Phone number"}
+      // <TextField
+      //   fullWidth
+      //   id="phoneNumber"
+      //   label={"Phone number"}
+      //   value={formData.phoneNumber}
+      //   onChange={handleInputChange("phoneNumber")}
+      //   variant="filled"
+      //   required={isRequired}
+      //   error={hasError}
+      //   sx={getTextFieldStyles("phoneNumber")}
+      //   className="bg-white border-2 border-gray-300 rounded-md"
+      //   size="small"
+      // />
+
+      <PhoneNumberInput
+        name="phoneNumber"
         value={formData.phoneNumber}
-        onChange={handleInputChange("phoneNumber")}
-        variant="filled"
+        onChange={handlePhoneInputChange}
         required={isRequired}
-        error={hasError}
-        sx={getTextFieldStyles("phoneNumber")}
-        className="bg-white border-2 border-gray-300 rounded-md"
-        size="small"
+        setError={setPhoneError}
       />
     );
   };
