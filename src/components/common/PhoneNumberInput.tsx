@@ -4,10 +4,26 @@ import React, { useState, useRef, useEffect } from "react";
 import IntlTelInput from "@intl-tel-input/react";
 import "intl-tel-input/styles";
 
-const geoIpLookup = async () => {
+const geoIpLookup = async (): Promise<string> => {
   const res = await fetch("https://ipapi.co/json");
   const data = await res.json();
   return data.country_code;
+};
+
+type PhoneNumberInputProps = {
+  name: string;
+  value: string;
+  onChange: (value: string) => void;
+  required?: boolean;
+  setError: (error: string) => void;
+};
+
+const errorsMap: Record<number, string> = {
+  0: "Invalid number",
+  1: "Invalid country code",
+  2: "Too short",
+  3: "Too long",
+  4: "Invalid number",
 };
 
 const PhoneNumberInput = ({
@@ -16,34 +32,23 @@ const PhoneNumberInput = ({
   onChange,
   required = true,
   setError,
-}) => {
+}: PhoneNumberInputProps) => {
   const itiRef = useRef<any>(null);
   const [number, setNumber] = useState("");
   const [isValid, setIsValid] = useState(false);
   const [showValidation, setShowValidation] = useState(false);
-  const [errorCode, setErrorCode] = useState(null);
+  const [errorCode, setErrorCode] = useState<number | null>(null);
   const [isFocus, setIsFocus] = useState(false);
 
-  const validatePhone = (errorCode: number | null) => {
-    if (number.trim() == "") return "Invalid number";
-    if (errorCode == null) return "";
-    if (isValid) return true;
-    const errorsMap = {
-      0: "Invalid number",
-      1: "Invalid country code",
-      2: "Too short",
-      3: "Too long",
-      4: "Invalid number",
-    };
-    return errorsMap[errorCode] || "Invalid phone number";
+  const validatePhone = (code: number | null): string => {
+    if (number.trim() === "") return "Invalid number";
+    if (code == null || isValid) return "";
+    return errorsMap[code] ?? "Invalid phone number";
   };
 
-  let invalidMsg = "";
-  if (!isValid) {
-    invalidMsg = validatePhone(errorCode);
-  }
+  const invalidMsg = !isValid ? validatePhone(errorCode) : "";
 
-  const handleChangeNumber = (num) => {
+  const handleChangeNumber = (num: string) => {
     setNumber(num);
     onChange(num);
     setError(invalidMsg);
@@ -56,9 +61,8 @@ const PhoneNumberInput = ({
   const hasError = showValidation && errorCode != null && !isValid;
 
   const focusInput = () => {
-    const input = itiRef.current?.getInstance();
-    input?.["#ui"]?.telInputEl?.focus();
-    // setIsFocus(true);
+    const instance = itiRef.current?.getInstance();
+    (instance?.["#ui"]?.telInputEl as HTMLInputElement | undefined)?.focus();
   };
 
   const handleBlur = () => {
@@ -99,9 +103,8 @@ const PhoneNumberInput = ({
             name,
             onFocus: () => setIsFocus(true),
             onBlur: handleBlur,
-            className: `
-              w-full bg-transparent outline-none text-[14px] text-gray-800 px-2 pb-1 outline-none
-            `,
+            className:
+              "w-full bg-transparent outline-none text-[14px] text-gray-800 px-2 pb-1",
           }}
         />
       </div>

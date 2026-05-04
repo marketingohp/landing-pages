@@ -1564,7 +1564,7 @@ export default function PropertySearchForm({
   };
 
   // Render phone number field only (without country code) for image view
-  const handlePhoneInputChange = (num) => {
+  const handlePhoneInputChange = (num: string) => {
     setFormData({ ...formData, ["phoneNumber"]: num });
   };
 
