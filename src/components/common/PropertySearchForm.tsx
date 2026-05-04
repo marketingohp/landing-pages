@@ -423,7 +423,6 @@ export default function PropertySearchForm({
 
     /// will add the error here
     if (field == "phoneNumber") {
-      console.log(`value: ${formData.phoneNumber}, phone error: ${phoneError}`);
       return phoneError;
     }
 
@@ -500,19 +499,12 @@ export default function PropertySearchForm({
       return;
     }
 
-    ////////////// testing
-    setIsSubmitting(false);
+    setIsSubmitting(true);
     setSubmitStatus({ type: null, message: "" });
 
     const submissionData: Record<string, string> = {
       ...formData,
     };
-
-    // Combine phone country code and number
-    // if (formData.phoneCountryCode && formData.phoneNumber) {
-    //   submissionData.phoneNumber = `${formData.phoneCountryCode} ${formData.phoneNumber}`;
-    //   delete submissionData.phoneCountryCode;
-    // }
 
     if (formName) submissionData.formName = formName;
     if (pointName) submissionData.pointName = pointName;
