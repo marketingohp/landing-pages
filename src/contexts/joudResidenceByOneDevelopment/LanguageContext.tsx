@@ -130,9 +130,9 @@ const translations = {
     "royal.form.select": "Select",
     "royal.waterfront.title": "Joud Residence",
     "royal.waterfront.title2":
-      "blends heritage charm with outstanding connectivity",
-    "royal.waterfront.desc1": "Set within Al Reem Island, this residential tower offers a balanced way of living shaped by the pace of Abu Dhabi. The project brings together well-proportioned homes, considered layouts, and a location that keeps daily life within reach. From nearby cafés and retail spaces to open areas and waterfront views, everything is positioned to support a routine that feels both connected and calm..",
-    "royal.waterfront.desc2": "",
+      "this is where the future of living takes shape",
+    "royal.waterfront.desc1": "At JOUD Residence by One Development, your home doesn’t just respond it learns, adapts, and anticipates your lifestyle through advanced AI integration. Paired with future-forward features like air taxi access and drone-enabled services, it’s designed for those who expect more from where they live.",
+    "royal.waterfront.desc2": "Set within Al Reem Island, the tower offers well-designed homes in a location that keeps everything within reach, from cafés and retail to open spaces and waterfront views, creating a lifestyle that feels both connected and calm.",
     "royal.waterfront.explore": "EXPLORE RESIDENCES",
     "royal.waterfront.brochure": "REGISTER YOUR INTEREST",
     "royal.enlightenment.title": "Clarity in Every Detail",

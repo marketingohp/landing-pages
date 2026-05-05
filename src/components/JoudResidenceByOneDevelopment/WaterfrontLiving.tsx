@@ -120,17 +120,21 @@ export default function WaterfrontLiving() {
             style={{ fontFamily: "var(--font-playfair), serif" }}
             dangerouslySetInnerHTML={{ __html: t("royal.waterfront.title") }}
           ></h2>
+          <h3
+            className="text-2xl text-[#2C3E5F] dark:text-white mb-6"
+            style={{ fontFamily: "var(--font-playfair), serif" }}
+            dangerouslySetInnerHTML={{ __html: t("royal.waterfront.title2") }}
+          ></h3>
 
-          {/* <div className="max-w-8xl mx-auto space-y-4 text-[#2C3E5F] dark:text-gray-300 text-4xl py-2">
-            <p
-              className="custom-mobile-display-style1"
-              dangerouslySetInnerHTML={{ __html: t("royal.waterfront.desc2") }}
-            ></p>
-          </div> */}
           <div className="max-w-5xl mx-auto space-y-4 text-[#2C3E5F] dark:text-white text-lg py-4">
             <p
               dangerouslySetInnerHTML={{ __html: t("royal.waterfront.desc1") }}
-            ></p>
+              ></p>
+          </div>
+          <div className="max-w-5xl mx-auto space-y-4 text-[#2C3E5F] dark:text-white text-lg py-4">
+            <p
+              dangerouslySetInnerHTML={{ __html: t("royal.waterfront.desc2") }}
+              ></p>
           </div>
         </div>
 

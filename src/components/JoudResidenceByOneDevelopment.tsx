@@ -32,6 +32,10 @@ export default function JoudResidenceByOneDevelopment() {
       <Header />
       <div id="home">
         <HeroKeywords />
+        <div className="absolute top-[15%] px-[14%] md:top-[45%] md:px-[11%] text-white z-90">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black">JOUD - AI Powered Tower</h1>
+          <h3 className="text-lg md:text-xl font-normal">On Reem Island</h3>
+        </div>
         <div className="absolute bottom-0 left-0 w-full custom-form-container">
           <PropertySearchForm
             formName="joud-residence-by-one-development"
