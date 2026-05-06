@@ -487,6 +487,10 @@ export default function CareAndGrace() {
             "budget",
             "message",
           ]}
+          hiddenFields={{
+            developer: "One Developments",
+            location: "Al Reem Island"
+          }}
           requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
           viewType="image"
           // downloadBrochure={true}

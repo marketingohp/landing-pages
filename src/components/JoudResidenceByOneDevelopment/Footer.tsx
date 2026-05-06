@@ -38,6 +38,10 @@ export default function Footer() {
                   "budget",
                   "message",
                 ]}
+                hiddenFields={{
+                  developer: "One Developments",
+                  location: "Al Reem Island"
+                }}
                 requiredFields={[
                   "firstName",
                   "lastName",

@@ -12,6 +12,7 @@ import InputLabel from "@mui/material/InputLabel";
 import { Box } from "@mui/material";
 import { submitFormLead } from "@/lib/api";
 import { reportConversion, pushToDataLayer } from "@/utils/gtag";
+import { DEVELOPERS_MAP, LOCATIONS_MAP } from '../../data/crmIds.js'
 
 // react-phone-number-input import
 import "react-phone-number-input/style.css";
@@ -276,10 +277,15 @@ export type FormFieldKey =
 
 export type FormViewType = "default" | "image" | "modal" | "banner";
 
+export interface HiddenFields {
+  developer: string;
+  location: string;
+}
 export interface PropertySearchFormProps {
   formName?: string;
   pointName?: string;
   formType?: string;
+  hiddenFields: HiddenFields;
   visibleFields?: FormFieldKey[];
   requiredFields?: FormFieldKey[];
   onSubmit?: (formData: Record<string, string>) => void;
@@ -331,6 +337,7 @@ export default function PropertySearchForm({
   formName,
   pointName,
   formType,
+  hiddenFields,
   visibleFields = ALL_FIELDS,
   requiredFields = [],
   onSubmit,
@@ -377,7 +384,7 @@ export default function PropertySearchForm({
   const [touchedFields, setTouchedFields] = useState<Record<string, boolean>>(
     {},
   );
-
+  
   const handleSelectChange =
     (field: string) => (event: SelectChangeEvent<string>) => {
       if (field != "phoneNumber") {
@@ -499,11 +506,14 @@ export default function PropertySearchForm({
       return;
     }
 
-    setIsSubmitting(true);
+    setIsSubmitting(false);
     setSubmitStatus({ type: null, message: "" });
 
     const submissionData: Record<string, string> = {
       ...formData,
+      developerId: DEVELOPERS_MAP.get(hiddenFields.developer) || 'Not Found',
+      locationId: LOCATIONS_MAP.get(hiddenFields.location) || 'Not Found',
+      CompanyStatus: 'Yes'
     };
 
     if (formName) submissionData.formName = formName;
@@ -534,6 +544,8 @@ export default function PropertySearchForm({
             formName,
             pointName,
             formType,
+            developerId: DEVELOPERS_MAP.get(hiddenFields.developer) || 'Not Found',
+            locationId: DEVELOPERS_MAP.get(hiddenFields.developer) || 'Not Found'
           }),
         }).then(async (res) => {
           const data = await res.json();

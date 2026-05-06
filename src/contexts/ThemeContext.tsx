@@ -31,13 +31,12 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     const mediaSchema = window.matchMedia("(prefers-color-scheme: dark)");
 
     const schemaHandler = (e: MediaQueryListEvent) => {
-      setIsSystemDark(e.matches)
-    }
-    mediaSchema.addEventListener("change", schemaHandler)
-    console.log(`is system dark: ${isSystemDark}`)
+      setIsSystemDark(e.matches);
+    };
+    mediaSchema.addEventListener("change", schemaHandler);
 
-    return () => mediaSchema.removeEventListener("change", schemaHandler)
-  })
+    return () => mediaSchema.removeEventListener("change", schemaHandler);
+  });
 
   useEffect(() => {
     // Read the theme that was set by the inline script in layout.tsx
