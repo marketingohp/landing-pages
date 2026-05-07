@@ -528,7 +528,7 @@ export default function PropertySearchForm({
       ...cleanFormData,
       ...(developerId && { developerId }),
       ...(locationId && { locationId }),
-      ...(companyStatus && { companyStatus }),
+      ...(companyStatus && { CompanyStatus: companyStatus }),
     };
 
     if (formName) submissionData.formName = formName;
@@ -560,7 +560,8 @@ export default function PropertySearchForm({
             pointName,
             formType,
             ...(locationId && { locationId }),
-            ...(companyStatus && { companyStatus }),
+            ...(developerId && { developerId }),
+            ...(companyStatus && { CompanyStatus: companyStatus }),
           }),
         }).then(async (res) => {
           const data = await res.json();
