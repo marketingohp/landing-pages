@@ -507,7 +507,7 @@ export default function PropertySearchForm({
       return;
     }
 
-    setIsSubmitting(false);
+    setIsSubmitting(true);
     setSubmitStatus({ type: null, message: "" });
 
     // developer and location ids map and send (if found)
@@ -521,21 +521,18 @@ export default function PropertySearchForm({
 
     const companyStatus = searchParams.get('company_status') || 'Yes';
 
+    const { phoneCountryCode, ...cleanFormData } = formData
+
     const submissionData: Record<string, string> = {
-      ...formData,
+      ...cleanFormData,
       ...(developerId && { developerId }),
       ...(locationId && { locationId }),
       ...(companyStatus && { companyStatus }),
     };
 
-    
-
     if (formName) submissionData.formName = formName;
     if (pointName) submissionData.pointName = pointName;
     if (formType) submissionData.formType = formType;
-
-    console.log(submissionData)
-    return 
 
     try {
       // Submit to both Laravel API and Next.js Email API (dual submission)
