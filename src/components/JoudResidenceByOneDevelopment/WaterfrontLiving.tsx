@@ -165,7 +165,7 @@ export default function WaterfrontLiving() {
               {/* LOCATION */}
               <div className="px-4 py-3 text-center border-b border-[#00314a] dark:border-gray-400 border-opacity-30">
                 <div className="text-[#2C3E5F] dark:text-white font-normal text-sm leading-relaxed">
-                  LOCATION: <br /> Al Reem Isalnd, Abu Dhabi
+                  LOCATION: <br /> Al Reem Island, Abu Dhabi
                 </div>
               </div>
 
@@ -202,7 +202,7 @@ export default function WaterfrontLiving() {
                   Al Reem ISLAND
                 </div> */}
                 <div className="text-[#2C3E5F] dark:text-white font-normal text-sm md:text-base leading-relaxed">
-                  LOCATION: <br /> Al Reem Isalnd, Abu Dhabi
+                  LOCATION: <br /> Al Reem Island, Abu Dhabi
                 </div>
               </div>
 
@@ -315,10 +315,6 @@ export default function WaterfrontLiving() {
                 "budget",
                 "message",
               ]}
-              hiddenFields={{
-                developer: "One Developments",
-                location: "Al Reem Island"
-              }}
               requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
               viewType="image"
               // downloadBrochure={true}

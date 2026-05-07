@@ -15,9 +15,9 @@ import { reportConversion, pushToDataLayer } from "@/utils/gtag";
 import { DEVELOPERS_MAP, LOCATIONS_MAP } from '../../data/crmIds.js'
 
 // react-phone-number-input import
-import "react-phone-number-input/style.css";
-import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 import PhoneNumberInput from "./PhoneNumberInput";
+
+import { getProjectHiddenFields, getSlugFromPath } from "../../utils/projectHiddenFields";
 
 const countryCodes = [
   { value: "+971", label: "+971" },
@@ -277,15 +277,10 @@ export type FormFieldKey =
 
 export type FormViewType = "default" | "image" | "modal" | "banner";
 
-export interface HiddenFields {
-  developer?: string | undefined;
-  location?: string | undefined;
-}
 export interface PropertySearchFormProps {
   formName?: string;
   pointName?: string;
   formType?: string;
-  hiddenFields?: HiddenFields;
   visibleFields?: FormFieldKey[];
   requiredFields?: FormFieldKey[];
   onSubmit?: (formData: Record<string, string>) => void;
@@ -337,7 +332,6 @@ export default function PropertySearchForm({
   formName,
   pointName,
   formType,
-  hiddenFields,
   visibleFields = ALL_FIELDS,
   requiredFields = [],
   onSubmit,
@@ -357,7 +351,6 @@ export default function PropertySearchForm({
   colorCodeBtnHoverText = "#ffffff",
   colorCodeBtnHoverBorder = "#1a3a5c",
 }: PropertySearchFormProps) {
-  // const searchParams = useSearchParams();
   const { t } = useLanguage();
   const { theme } = useTheme();
   const router = useRouter();
@@ -510,6 +503,10 @@ export default function PropertySearchForm({
     setIsSubmitting(true);
     setSubmitStatus({ type: null, message: "" });
 
+    // getting developer, and location by slug
+    const slug = getSlugFromPath()
+    const hiddenFields = getProjectHiddenFields(slug)
+
     // developer and location ids map and send (if found)
     const developerId = hiddenFields?.developer
     ? DEVELOPERS_MAP.get(hiddenFields.developer)
@@ -518,7 +515,8 @@ export default function PropertySearchForm({
     const locationId = hiddenFields?.location
       ? LOCATIONS_MAP.get(hiddenFields.location)
       : undefined;
-    
+
+    // check testing params (if not, will send the default value)
     const params = new URLSearchParams(window.location.search);
     const companyStatus = params.get('company_status') || 'Yes';
 

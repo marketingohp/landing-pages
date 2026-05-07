@@ -50,10 +50,6 @@ export default function JoudResidenceByOneDevelopment() {
               "bedrooms",
               "budget",
             ]}
-            hiddenFields={{
-              developer: "One Developments",
-              location: "Al Reem Island"
-            }}
             requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
