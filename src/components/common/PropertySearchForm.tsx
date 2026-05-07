@@ -357,7 +357,7 @@ export default function PropertySearchForm({
   colorCodeBtnHoverText = "#ffffff",
   colorCodeBtnHoverBorder = "#1a3a5c",
 }: PropertySearchFormProps) {
-  const searchParams = useSearchParams();
+  // const searchParams = useSearchParams();
   const { t } = useLanguage();
   const { theme } = useTheme();
   const router = useRouter();
@@ -518,8 +518,9 @@ export default function PropertySearchForm({
     const locationId = hiddenFields?.location
       ? LOCATIONS_MAP.get(hiddenFields.location)
       : undefined;
-
-    const companyStatus = searchParams.get('company_status') || 'Yes';
+    
+    const params = new URLSearchParams(window.location.search);
+    const companyStatus = params.get('company_status') || 'Yes';
 
     const { phoneCountryCode, ...cleanFormData } = formData
 
@@ -558,8 +559,8 @@ export default function PropertySearchForm({
             formName,
             pointName,
             formType,
-            developerId: DEVELOPERS_MAP.get(hiddenFields.developer) || 'Not Found',
-            locationId: DEVELOPERS_MAP.get(hiddenFields.developer) || 'Not Found'
+            ...(locationId && { locationId }),
+            ...(companyStatus && { companyStatus }),
           }),
         }).then(async (res) => {
           const data = await res.json();
