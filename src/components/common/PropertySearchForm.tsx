@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useTheme } from "@/contexts/ThemeContext";
 import TextField from "@mui/material/TextField";
@@ -357,6 +357,7 @@ export default function PropertySearchForm({
   colorCodeBtnHoverText = "#ffffff",
   colorCodeBtnHoverBorder = "#1a3a5c",
 }: PropertySearchFormProps) {
+  const searchParams = useSearchParams();
   const { t } = useLanguage();
   const { theme } = useTheme();
   const router = useRouter();
@@ -506,7 +507,7 @@ export default function PropertySearchForm({
       return;
     }
 
-    setIsSubmitting(true);
+    setIsSubmitting(false);
     setSubmitStatus({ type: null, message: "" });
 
     // developer and location ids map and send (if found)
@@ -518,16 +519,23 @@ export default function PropertySearchForm({
       ? LOCATIONS_MAP.get(hiddenFields.location)
       : undefined;
 
+    const companyStatus = searchParams.get('company_status') || 'Yes';
+
     const submissionData: Record<string, string> = {
       ...formData,
       ...(developerId && { developerId }),
       ...(locationId && { locationId }),
-      CompanyStatus: 'Yes',
+      ...(companyStatus && { companyStatus }),
     };
+
+    
 
     if (formName) submissionData.formName = formName;
     if (pointName) submissionData.pointName = pointName;
     if (formType) submissionData.formType = formType;
+
+    console.log(submissionData)
+    return 
 
     try {
       // Submit to both Laravel API and Next.js Email API (dual submission)
