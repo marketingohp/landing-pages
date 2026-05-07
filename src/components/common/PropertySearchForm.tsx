@@ -278,14 +278,14 @@ export type FormFieldKey =
 export type FormViewType = "default" | "image" | "modal" | "banner";
 
 export interface HiddenFields {
-  developer: string;
-  location: string;
+  developer?: string | undefined;
+  location?: string | undefined;
 }
 export interface PropertySearchFormProps {
   formName?: string;
   pointName?: string;
   formType?: string;
-  hiddenFields: HiddenFields;
+  hiddenFields?: HiddenFields;
   visibleFields?: FormFieldKey[];
   requiredFields?: FormFieldKey[];
   onSubmit?: (formData: Record<string, string>) => void;
@@ -506,14 +506,23 @@ export default function PropertySearchForm({
       return;
     }
 
-    setIsSubmitting(false);
+    setIsSubmitting(true);
     setSubmitStatus({ type: null, message: "" });
+
+    // developer and location ids map and send (if found)
+    const developerId = hiddenFields?.developer
+    ? DEVELOPERS_MAP.get(hiddenFields.developer)
+    : undefined;
+
+    const locationId = hiddenFields?.location
+      ? LOCATIONS_MAP.get(hiddenFields.location)
+      : undefined;
 
     const submissionData: Record<string, string> = {
       ...formData,
-      developerId: DEVELOPERS_MAP.get(hiddenFields.developer) || 'Not Found',
-      locationId: LOCATIONS_MAP.get(hiddenFields.location) || 'Not Found',
-      CompanyStatus: 'Yes'
+      ...(developerId && { developerId }),
+      ...(locationId && { locationId }),
+      CompanyStatus: 'Yes',
     };
 
     if (formName) submissionData.formName = formName;
