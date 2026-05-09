@@ -9,11 +9,11 @@ export const PROJECT_HIDDEN_FIELDS: Record<string, ProjectHiddenFields> = {
     developer: "Object 1",
   },
   "athlon-by-aldar": {
-    location: "Dubailand",
+    location: "Dubai",
     developer: "Aldar",
   },
   "bab-al-qasr-royal-28": {
-    location: "Reem Island",
+    location: "Al Reem Island",
     developer: "Burtville Developments",
   },
   "bashayer-residences": {
@@ -33,7 +33,7 @@ export const PROJECT_HIDDEN_FIELDS: Record<string, ProjectHiddenFields> = {
     developer: "Taraf",
   },
   flow25: {
-    location: "Reem Island",
+    location: "Al Reem Island",
     developer: "GAF",
   },
   "four-seasons": {
@@ -44,16 +44,16 @@ export const PROJECT_HIDDEN_FIELDS: Record<string, ProjectHiddenFields> = {
     location: "Al Raha Beach",
     developer: "Emirates",
   },
-  "hudayriyat-island": {
+  "hudayriyat-Island": {
     location: "Hudayriyat Island",
     developer: "Modon",
   },
-  "jumeirah-residences-al-maryah-island": {
+  "jumeirah-residences-al-maryah-Island": {
     location: "Al Maryah Island",
     developer: "Al Ain Development",
   },
   "magenta-tower": {
-    location: "Dubailand",
+    location: "Dubai",
     developer: "Aldar",
   },
   "manchester-city-yas-residences-by-ohana": {
@@ -61,7 +61,7 @@ export const PROJECT_HIDDEN_FIELDS: Record<string, ProjectHiddenFields> = {
     developer: "Ohana",
   },
   "one-residence": {
-    location: "Al Reem ISLAND",
+    location: "Al Reem Island",
     developer: "One Developments",
   },
   "radiant-waves": {
@@ -69,15 +69,15 @@ export const PROJECT_HIDDEN_FIELDS: Record<string, ProjectHiddenFields> = {
     developer: "Radiant",
   },
   "radisson-residences": {
-    location: "Al Reem ISLAND",
+    location: "Al Reem Island",
     developer: "Royal Development",
   },
   rixos: {
-    location: "Reem Island",
+    location: "Al Reem Island",
     developer: "East and West",
   },
-  "rotana-residences-at-al-reem-island": {
-    location: "Reem Island",
+  "rotana-residences-at-al-reem-Island": {
+    location: "Al Reem Island",
     developer: "Royal Development",
   },
   "seamont-autograph-collection-residences": {
@@ -97,15 +97,15 @@ export const PROJECT_HIDDEN_FIELDS: Record<string, ProjectHiddenFields> = {
     developer: "Aldar",
   },
   "the-wilds-by-aldar": {
-    location: "Dubailand",
+    location: "Dubai",
     developer: "Aldar",
   },
   "the-wilds-residences": {
-    location: "Dubailand",
+    location: "Dubai",
     developer: "Aldar",
   },
   "thewilds-aldar": {
-    location: "Dubailand",
+    location: "Dubai",
     developer: "Aldar",
   },
   wadeem: {
@@ -117,11 +117,11 @@ export const PROJECT_HIDDEN_FIELDS: Record<string, ProjectHiddenFields> = {
     developer: "Aldar",
   },
   "wimbledon-bridge-house-by-aldar": {
-    location: "UK",
+    location: "London",
     developer: "London Square Developments",
   },
   "tara-park-by-modon": {
-    location: "Reem Island",
+    location: "Al Reem Island",
     developer: "Modon",
   },
   "yas-park-place-by-aldar": {
@@ -129,7 +129,7 @@ export const PROJECT_HIDDEN_FIELDS: Record<string, ProjectHiddenFields> = {
     developer: "Aldar",
   },
   "baccarat-residences-by-aldar": {
-    location: "Saadiyat Island – Abu Dhabi",
+    location: "Saadiyat Island",
     developer: "Aldar",
   },
   "reem-hills-by-modon": {
@@ -141,7 +141,7 @@ export const PROJECT_HIDDEN_FIELDS: Record<string, ProjectHiddenFields> = {
     developer: "Burtville Developments",
   },
   "radiant-bridges-by-radiant": {
-    location: "Reem Island",
+    location: "Al Reem Island",
     developer: "Radiant",
   },
   "ramhan-island-by-eagle-hills": {

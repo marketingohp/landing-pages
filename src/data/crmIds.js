@@ -41,6 +41,7 @@ export const DEVELOPERS_MAP = new Map([
   ["GAF", "3745"],
   ["East and West", "3749"],
   ["Object 1", "3757"],
+  ["London Square Developments", "3893"],
 ]);
 
 export const LOCATIONS_MAP = new Map([
