@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import PropertySearchFormTwo from "../common/PropertySearchFormTwo";
+import PropertySearchForm from "../common/PropertySearchForm";
 
 export default function InformationFooter() {
   return (
@@ -29,7 +29,7 @@ export default function InformationFooter() {
           </h2>
 
           {/* Property Search Form - Unchanged */}
-          <PropertySearchFormTwo
+          <PropertySearchForm
             formName="al-reem-island"
             pointName="get-in-touch"
             formType="footer-form"

@@ -270,7 +270,7 @@ export type FormFieldKey =
 
 export type FormViewType = "default" | "image" | "modal" | "banner";
 
-export interface PropertySearchFormProps {
+export interface PropertySearchFormThreeProps {
   formName?: string;
   pointName?: string;
   formType?: string;
@@ -322,7 +322,7 @@ const fieldLabels: Record<string, string> = {
   message: "Message",
 };
 
-export default function PropertySearchForm({
+export default function PropertySearchFormThree({
   formName,
   pointName,
   formType,
@@ -345,7 +345,7 @@ export default function PropertySearchForm({
   colorCodeBtnHoverText = "#ffffff",
   colorCodeBtnHoverBorder = "#1a3a5c",
   classAdd = "",
-}: PropertySearchFormProps) {
+}: PropertySearchFormThreeProps) {
   const { t } = useLanguage();
   const { theme } = useTheme();
   const router = useRouter();

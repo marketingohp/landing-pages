@@ -6,7 +6,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import PropertySearchFormFour from "../common/PropertySearchFormFour";
+import PropertySearchForm from "../common/PropertySearchForm";
 import useCountdown from "./useCountdown";
 //const video = "/video/ohana.mp4";
 
@@ -184,7 +184,7 @@ const OhanaHeader = () => {
         <div className="formContainer mx-4 sm:w-[50%] sm:mx-auto">
           {/* <ContactForm1 /> */}
 
-          <PropertySearchFormFour
+          <PropertySearchForm
             formName="open-day-burtville"
             pointName="get-in-touch"
             formType="footer-form"
@@ -238,7 +238,7 @@ const OhanaHeader = () => {
           },
         }}
       >
-        <PropertySearchFormFour
+        <PropertySearchForm
           formName="open-day-burtville"
           pointName="get-in-touch"
           formType="location-form"

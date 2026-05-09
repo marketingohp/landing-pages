@@ -8,7 +8,7 @@ import InteriorCarousel from "./AlReemIsland/InteriorCarousel";
 import NearBySection from "./AlReemIsland/NearBySection";
 import NextLegacySection from "./AlReemIsland/NextLegacySection";
 import ValueAddedSection from "./AlReemIsland/ValueAddedSection";
-import PropertySearchFormTwo from "./common/PropertySearchFormTwo";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function AlReemIslandPage() {
   return (
@@ -28,7 +28,7 @@ export default function AlReemIslandPage() {
             transform: "translateX(-50%)",
           }}
         >
-          <PropertySearchFormTwo
+          <PropertySearchForm
             formName="al-reem-island"
             pointName="get-in-touch"
             formType="banner-form"

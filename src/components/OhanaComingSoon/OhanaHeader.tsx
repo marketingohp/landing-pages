@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import PropertySearchFormFour from "../common/PropertySearchFormFour";
+import PropertySearchForm from "../common/PropertySearchForm";
 import OhanaTimer from "./OhanaTimer";
 //const video = "/video/ohana.mp4";
 const video =
@@ -105,7 +105,7 @@ const OhanaHeader = () => {
         <div className="formContainer">
           {/* <ContactForm1 /> */}
 
-          <PropertySearchFormFour
+          <PropertySearchForm
             formName="ohana-coming-soon"
             pointName="get-in-touch"
             formType="footer-form"
