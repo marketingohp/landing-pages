@@ -2,10 +2,10 @@
 
 import {
   createContext,
-  useContext,
-  useState,
-  useEffect,
   ReactNode,
+  useContext,
+  useEffect,
+  useState,
 } from "react";
 
 type Language = "en" | "ar" | "ru";
@@ -131,12 +131,14 @@ const translations = {
     "royal.waterfront.title": "Waldorf Astoria Residences",
     "royal.waterfront.title2":
       "blends heritage charm with outstanding connectivity",
-    "royal.waterfront.desc1": "The Waldorf Astoria has a storied history tied to precision and grandeur (famously housing the Waldorf Clock in every lobby). Each unit honours the Waldorf heritage while evoking the mastery of fine timepieces-symbolising permanence, craftsmanship, and an unwavering standard of excellence.",
+    "royal.waterfront.desc1":
+      "The Waldorf Astoria has a storied history tied to precision and grandeur (famously housing the Waldorf Clock in every lobby). Each unit honours the Waldorf heritage while evoking the mastery of fine timepieces-symbolising permanence, craftsmanship, and an unwavering standard of excellence.",
     "royal.waterfront.desc2": "",
     "royal.waterfront.explore": "EXPLORE RESIDENCES",
     "royal.waterfront.brochure": "REGISTER YOUR INTEREST",
     "royal.enlightenment.title": "A Residence Like No Other",
-    "royal.enlightenment.desc": "From the moment it opened its doors, the Waldorf Astoria embodied the grandeur of a true palace in New York City. Its halls welcomed cultural icons, political leaders, musicians, and global dignitaries, all drawn to its opulent suites and iconic spaces. With service that defined excellence, the Waldorf Astoria set the gold standard for American hospitality.",
+    "royal.enlightenment.desc":
+      "From the moment it opened its doors, the Waldorf Astoria embodied the grandeur of a true palace in New York City. Its halls welcomed cultural icons, political leaders, musicians, and global dignitaries, all drawn to its opulent suites and iconic spaces. With service that defined excellence, the Waldorf Astoria set the gold standard for American hospitality.",
     "royal.enlightenment.desc2": "",
 
     "royal.enlightenment.viewGallery": "VIEW GALLERY",
@@ -146,10 +148,12 @@ const translations = {
       "Wake up to inspiring views. Live close to the city’s top destinations. Experience a lifestyle that’s refined, relaxed, and always connected.",
     "royal.hotel.explore": "Register Your Interest",
     "royal.discover.title": "View to Yas Links",
-    "royal.discover.desc": "The Waldorf Astoria Residences Yas is located on Yas Island, overlooking Yas Links Golf Course and the Yas Marina Circuit.",
+    "royal.discover.desc":
+      "The Waldorf Astoria Residences Yas is located on Yas Island, overlooking Yas Links Golf Course and the Yas Marina Circuit.",
     "royal.discover.masterplan": "VIEW MASTERPLAN",
     "royal.care.title": "A Legacy of Excellence",
-    "royal.care.desc": "The Waldorf Astoria's unwavering commitment to luxury, personalized service, and world-class amenities sets the stage for an extraordinary new chapter in Yas Island's residential offerings.",
+    "royal.care.desc":
+      "The Waldorf Astoria's unwavering commitment to luxury, personalized service, and world-class amenities sets the stage for an extraordinary new chapter in Yas Island's residential offerings.",
     "royal.care.viewAll": "Explore More",
     "royal.dreams.title":
       "LET THE BAY SLOW YOU DOWN. LET THE CITY LIFT YOU UP.",

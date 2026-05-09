@@ -1,6 +1,6 @@
-import "../../components/CommingSoonReemIsland/style.css";
-import type { Metadata } from "next";
 import CommingSoonReemIslandPage from "@/components/CommingSoonReemIsland";
+import type { Metadata } from "next";
+import "../../components/CommingSoonReemIsland/style.css";
 export const metadata: Metadata = {
   title: " Coming Soon Reem ",
   description:

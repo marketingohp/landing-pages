@@ -1,6 +1,6 @@
 import OneResidencePage from "@/components/HudayriaytIsland";
-import "../../components/HudayriyatIsland/style.css";
 import type { Metadata } from "next";
+import "../../components/HudayriyatIsland/style.css";
 export const metadata: Metadata = {
   title: " Hudayriyat Island  ",
   description:

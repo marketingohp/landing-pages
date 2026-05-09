@@ -2,10 +2,10 @@
 
 import {
   createContext,
-  useContext,
-  useState,
-  useEffect,
   ReactNode,
+  useContext,
+  useEffect,
+  useState,
 } from "react";
 
 type Language = "en" | "ar" | "ru";
@@ -131,12 +131,14 @@ const translations = {
     "royal.waterfront.title": "Ramhan Island",
     "royal.waterfront.title2":
       "blends heritage charm with outstanding connectivity",
-    "royal.waterfront.desc1": "Ramhan Island is an ultra-luxury natural island development by Eagle Hills, situated off the coast of Abu Dhabi. Spanning 4 million square meters, the project offers a limited collection of 1,800 standalone 3 to 7-bedroom beachfront villas. Every residence features a private beach, an infinity pool, and unobstructed views of the Arabian Gulf and mangroves. The masterplan includes a 170-berth world-class marina, luxury hotels, and a 1.7km retail promenade.",
+    "royal.waterfront.desc1":
+      "Ramhan Island is an ultra-luxury natural island development by Eagle Hills, situated off the coast of Abu Dhabi. Spanning 4 million square meters, the project offers a limited collection of 1,800 standalone 3 to 7-bedroom beachfront villas. Every residence features a private beach, an infinity pool, and unobstructed views of the Arabian Gulf and mangroves. The masterplan includes a 170-berth world-class marina, luxury hotels, and a 1.7km retail promenade.",
     "royal.waterfront.desc2": "",
     "royal.waterfront.explore": "EXPLORE RESIDENCES",
     "royal.waterfront.brochure": "REGISTER YOUR INTEREST",
     "royal.enlightenment.title": "A Natural Masterpiece",
-    "royal.enlightenment.desc": "The development connects residents and professionals to Abu Dhabi’s main business and lifestyle destinations combining urban energy with the calm of island living",
+    "royal.enlightenment.desc":
+      "The development connects residents and professionals to Abu Dhabi’s main business and lifestyle destinations combining urban energy with the calm of island living",
     "royal.enlightenment.desc2": "",
 
     "royal.enlightenment.viewGallery": "VIEW GALLERY",
@@ -146,10 +148,12 @@ const translations = {
       "Wake up to inspiring views. Live close to the city’s top destinations. Experience a lifestyle that’s refined, relaxed, and always connected.",
     "royal.hotel.explore": "Register Your Interest",
     "royal.discover.title": "Coastal Living Defined by Its Setting",
-    "royal.discover.desc": "this naturally formed archipelago is situated between Saadiyat and Yas Island, offering a rare living experience where luxury is deeply integrated into the raw beauty of Abu Dhabi’s coastline.",
+    "royal.discover.desc":
+      "this naturally formed archipelago is situated between Saadiyat and Yas Island, offering a rare living experience where luxury is deeply integrated into the raw beauty of Abu Dhabi’s coastline.",
     "royal.discover.masterplan": "VIEW MASTERPLAN",
     "royal.care.title": "Integrated Amenities and Waterfront Facilities",
-    "royal.care.desc": "Ramhan Island is planned as a fully integrated community, featuring a marina with 170 berths, a yacht club, and a retail promenade with waterfront dining. Wellness facilities, eco-parks, and dedicated outdoor spaces are incorporated throughout. Direct mainland access and proximity to key destinations ensure both convenience and a well-connected setting.",
+    "royal.care.desc":
+      "Ramhan Island is planned as a fully integrated community, featuring a marina with 170 berths, a yacht club, and a retail promenade with waterfront dining. Wellness facilities, eco-parks, and dedicated outdoor spaces are incorporated throughout. Direct mainland access and proximity to key destinations ensure both convenience and a well-connected setting.",
     "royal.care.viewAll": "Explore More",
     "royal.dreams.title":
       "LET THE BAY SLOW YOU DOWN. LET THE CITY LIFT YOU UP.",

@@ -1,30 +1,29 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 export default function InteriorCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = [
-  "/images/waldorf-astoria-residences-by-aldar/interior/waldorf_interior_01.webp",
-  "/images/waldorf-astoria-residences-by-aldar/interior/waldorf_interior_02.webp",
-  "/images/waldorf-astoria-residences-by-aldar/interior/waldorf_interior_03.webp",
-  "/images/waldorf-astoria-residences-by-aldar/interior/waldorf_interior_04.webp",
-  "/images/waldorf-astoria-residences-by-aldar/interior/waldorf_interior_05.webp",
-  "/images/waldorf-astoria-residences-by-aldar/interior/waldorf_interior_06.webp",
-  "/images/waldorf-astoria-residences-by-aldar/interior/waldorf_interior_07.webp"
-];
+    "/images/waldorf-astoria-residences-by-aldar/interior/waldorf_interior_01.webp",
+    "/images/waldorf-astoria-residences-by-aldar/interior/waldorf_interior_02.webp",
+    "/images/waldorf-astoria-residences-by-aldar/interior/waldorf_interior_03.webp",
+    "/images/waldorf-astoria-residences-by-aldar/interior/waldorf_interior_04.webp",
+    "/images/waldorf-astoria-residences-by-aldar/interior/waldorf_interior_05.webp",
+    "/images/waldorf-astoria-residences-by-aldar/interior/waldorf_interior_06.webp",
+    "/images/waldorf-astoria-residences-by-aldar/interior/waldorf_interior_07.webp",
+  ];
 
   const nextImage = () => {
     setCurrentIndex((prev) => (prev + 1) % images.length);

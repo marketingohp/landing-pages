@@ -2,50 +2,49 @@
 
 import { useLanguage } from "@/contexts/LanguageContext";
 
-import React, { useRef, useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import PropertySearchForm from "../common/PropertySearchForm";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 export default function HeroKeywords() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const { t } = useLanguage();
 
   const keywords = [
-  {
-    wordKey: "hero.energy",
-    taglineKey: "hero.tagline",
-    url: "/images/waldorf-astoria-residences-by-aldar/keywords/waldorf_exterior_01.webp"
-  },
-  {
-    wordKey: "hero.energy",
-    taglineKey: "hero.tagline",
-    url: "/images/waldorf-astoria-residences-by-aldar/keywords/waldorf_exterior_02.webp"
-  },
-  {
-    wordKey: "hero.energy",
-    taglineKey: "hero.tagline",
-    url: "/images/waldorf-astoria-residences-by-aldar/keywords/waldorf_exterior_03.webp"
-  },
-  {
-    wordKey: "hero.energy",
-    taglineKey: "hero.tagline",
-    url: "/images/waldorf-astoria-residences-by-aldar/keywords/waldorf_exterior_04.webp"
-  },
-  {
-    wordKey: "hero.energy",
-    taglineKey: "hero.tagline",
-    url: "/images/waldorf-astoria-residences-by-aldar/keywords/waldorf_exterior_05.webp"
-  }
-];
+    {
+      wordKey: "hero.energy",
+      taglineKey: "hero.tagline",
+      url: "/images/waldorf-astoria-residences-by-aldar/keywords/waldorf_exterior_01.webp",
+    },
+    {
+      wordKey: "hero.energy",
+      taglineKey: "hero.tagline",
+      url: "/images/waldorf-astoria-residences-by-aldar/keywords/waldorf_exterior_02.webp",
+    },
+    {
+      wordKey: "hero.energy",
+      taglineKey: "hero.tagline",
+      url: "/images/waldorf-astoria-residences-by-aldar/keywords/waldorf_exterior_03.webp",
+    },
+    {
+      wordKey: "hero.energy",
+      taglineKey: "hero.tagline",
+      url: "/images/waldorf-astoria-residences-by-aldar/keywords/waldorf_exterior_04.webp",
+    },
+    {
+      wordKey: "hero.energy",
+      taglineKey: "hero.tagline",
+      url: "/images/waldorf-astoria-residences-by-aldar/keywords/waldorf_exterior_05.webp",
+    },
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {

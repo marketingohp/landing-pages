@@ -1,23 +1,17 @@
 "use client";
 
 import { useLanguage } from "@/contexts/yasParkPlaceByAldar/LanguageContext";
-import Image from "next/image";
-import React, { useState } from "react";
-import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
-import IconButton from "@mui/material/IconButton";
 import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
-import PropertySearchForm from "../common/PropertySearchForm";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import Image from "next/image";
+import React, { useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import PropertySearchForm from "../common/PropertySearchForm";
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -51,35 +45,35 @@ export default function CareAndGrace() {
   };
 
   const amenities = [
-  {
-    name: "Landscaped parks",
-    icon: "/images/yas-park-place-by-aldar/amenities/landscaped_parks.png"
-  },
-  {
-    name: "Walking, jogging, and cycling tracks",
-    icon: "/images/yas-park-place-by-aldar/amenities/cycling_tracks.png"
-  },
-  {
-    name: "Swimming pools",
-    icon: "/images/yas-park-place-by-aldar/amenities/swimming_pool.png"
-  },
-  {
-    name: "Gym",
-    icon: "/images/yas-park-place-by-aldar/amenities/gym.png"
-  },
-  {
-    name: "Children\u2019s play areas",
-    icon: "/images/yas-park-place-by-aldar/amenities/kids_play.png"
-  },
-  {
-    name: "Multi-purpose community spaces",
-    icon: "/images/yas-park-place-by-aldar/amenities/community_space.png"
-  },
-  {
-    name: "Retail outlets and dining",
-    icon: "/images/yas-park-place-by-aldar/amenities/dining.png"
-  }
-];
+    {
+      name: "Landscaped parks",
+      icon: "/images/yas-park-place-by-aldar/amenities/landscaped_parks.png",
+    },
+    {
+      name: "Walking, jogging, and cycling tracks",
+      icon: "/images/yas-park-place-by-aldar/amenities/cycling_tracks.png",
+    },
+    {
+      name: "Swimming pools",
+      icon: "/images/yas-park-place-by-aldar/amenities/swimming_pool.png",
+    },
+    {
+      name: "Gym",
+      icon: "/images/yas-park-place-by-aldar/amenities/gym.png",
+    },
+    {
+      name: "Children\u2019s play areas",
+      icon: "/images/yas-park-place-by-aldar/amenities/kids_play.png",
+    },
+    {
+      name: "Multi-purpose community spaces",
+      icon: "/images/yas-park-place-by-aldar/amenities/community_space.png",
+    },
+    {
+      name: "Retail outlets and dining",
+      icon: "/images/yas-park-place-by-aldar/amenities/dining.png",
+    },
+  ];
 
   return (
     <section className="py-20 lg:py-32 bg-[[#284242]] dark:bg-[#[#284242]] relative">

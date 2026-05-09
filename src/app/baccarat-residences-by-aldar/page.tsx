@@ -1,6 +1,6 @@
-import "../../components/BaccaratResidencesByAldar/style.css";
-import type { Metadata } from "next";
 import BaccaratResidencesByAldar from "@/components/BaccaratResidencesByAldar";
+import type { Metadata } from "next";
+import "../../components/BaccaratResidencesByAldar/style.css";
 export const metadata: Metadata = {
   title: "Baccarat Residences Saadiyat by Aldar | Luxury Trophy Investment",
   description:

@@ -1,6 +1,6 @@
-import "../../components/RiXos/style.css";
-import type { Metadata } from "next";
 import RixosPage from "@/components/RiXos";
+import type { Metadata } from "next";
+import "../../components/RiXos/style.css";
 export const metadata: Metadata = {
   title: " Rixos Residences ",
   description:
@@ -22,5 +22,5 @@ export const metadata: Metadata = {
 };
 
 export default function RiXos() {
-  return <RixosPage /> ;
+  return <RixosPage />;
 }

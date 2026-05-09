@@ -1,22 +1,17 @@
 "use client";
 
-import Image from "next/image";
 import { useLanguage } from "@/contexts/sobhaCity/LanguageContext";
-import React, { useState } from "react";
-import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
 import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
-import PropertySearchForm from "../common/PropertySearchForm";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import Image from "next/image";
+import React, { useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import PropertySearchForm from "../common/PropertySearchForm";
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -61,27 +56,27 @@ export default function DiscoverSection() {
 
   // Destinations matching the image layout (2x3 grid)
   const destinations = [
-  {
-    time: "5 MINUTES",
-    icon: "/images/sobha-city/locations/yas_island.png",
-    destination: "Yas Island"
-  },
-  {
-    time: "15 MINUTES",
-    icon: "/images/sobha-city/locations/abu_dhabi.png",
-    destination: "Abu Dhabi City"
-  },
-  {
-    time: "25 MINUTES",
-    icon: "/images/sobha-city/locations/zayed_international_airport.png",
-    destination: "Abu Dhabi International Airport"
-  },
-  {
-    time: "45 MINUTES",
-    icon: "/images/sobha-city/locations/dubai.png",
-    destination: "Dubai City Center"
-  }
-];
+    {
+      time: "5 MINUTES",
+      icon: "/images/sobha-city/locations/yas_island.png",
+      destination: "Yas Island",
+    },
+    {
+      time: "15 MINUTES",
+      icon: "/images/sobha-city/locations/abu_dhabi.png",
+      destination: "Abu Dhabi City",
+    },
+    {
+      time: "25 MINUTES",
+      icon: "/images/sobha-city/locations/zayed_international_airport.png",
+      destination: "Abu Dhabi International Airport",
+    },
+    {
+      time: "45 MINUTES",
+      icon: "/images/sobha-city/locations/dubai.png",
+      destination: "Dubai City Center",
+    },
+  ];
 
   return (
     <section className="py-12 sm:py-16 md:py-20 lg:py-32 bg-[#FBFFF7] dark:bg-[#1a1a1a]">

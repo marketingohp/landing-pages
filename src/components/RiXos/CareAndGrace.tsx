@@ -1,23 +1,17 @@
 "use client";
 
 import { useLanguage } from "@/contexts/rixos/LanguageContext";
-import Image from "next/image";
-import React, { useState } from "react";
-import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
-import IconButton from "@mui/material/IconButton";
 import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
-import PropertySearchForm from "../common/PropertySearchForm";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import Image from "next/image";
+import React, { useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import PropertySearchForm from "../common/PropertySearchForm";
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -51,41 +45,39 @@ export default function CareAndGrace() {
   };
 
   const amenities = [
-  {
-    name: "Family Pool",
-    icon: "/images/rixos/amenities/pool.png"
-  },
-  {
-    name: "Kids Pool & Splash Area",
-    icon: "/images/rixos/amenities/kidsclub.png"
-  },
-  {
-    name: "State-of-the-Art Gym & Wellness Facilities",
-    icon: "/images/rixos/amenities/gym.png"
-  },
-  {
-    name: "Treatment Room & Traditional Hammam Rituals",
-    icon: "/images/rixos/amenities/treament.png"
-  },
-  {
-    name: "Padel Court",
-    icon: "/images/rixos/amenities/padelcourt.png"
-  },
-  {
-    name: "Rooftop Lounge",
-    icon: "/images/rixos/amenities/rooftop.png"
-  },
-  {
-    name: "Residents Lounge & Concierge Services",
-    icon: "/images/rixos/amenities/lunge.png"
-  },
-  {
-    name: "Landscaped Walking Track",
-    icon: "/images/rixos/amenities/garden.png",
-  }
-]
-
-
+    {
+      name: "Family Pool",
+      icon: "/images/rixos/amenities/pool.png",
+    },
+    {
+      name: "Kids Pool & Splash Area",
+      icon: "/images/rixos/amenities/kidsclub.png",
+    },
+    {
+      name: "State-of-the-Art Gym & Wellness Facilities",
+      icon: "/images/rixos/amenities/gym.png",
+    },
+    {
+      name: "Treatment Room & Traditional Hammam Rituals",
+      icon: "/images/rixos/amenities/treament.png",
+    },
+    {
+      name: "Padel Court",
+      icon: "/images/rixos/amenities/padelcourt.png",
+    },
+    {
+      name: "Rooftop Lounge",
+      icon: "/images/rixos/amenities/rooftop.png",
+    },
+    {
+      name: "Residents Lounge & Concierge Services",
+      icon: "/images/rixos/amenities/lunge.png",
+    },
+    {
+      name: "Landscaped Walking Track",
+      icon: "/images/rixos/amenities/garden.png",
+    },
+  ];
 
   return (
     <section className="py-20 lg:py-32 bg-[#f5f5f0] dark:bg-[#1a1a1a] relative">
@@ -474,7 +466,7 @@ export default function CareAndGrace() {
             "budget",
             "message",
           ]}
-          requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+          requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
           viewType="image"
           // downloadBrochure={true}
           // brochureUrl="/images/rixos/Yas_Riva_Residences_Brochure.pdf"

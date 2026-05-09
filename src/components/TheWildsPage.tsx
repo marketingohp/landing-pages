@@ -1,22 +1,16 @@
 "use client";
 
-import Header from "./TheWilds/Header";
-import OneResidencesHero from "./TheWilds/OneResidencesHero";
-import WaterfrontLiving from "./TheWilds/WaterfrontLiving";
-import EnlightenmentSection from "./TheWilds/EnlightenmentSection";
-import WindowToWonder from "./TheWilds/WindowToWonder";
-import HotelStyleLiving from "./TheWilds/HotelStyleLiving";
-import InteriorCarousel from "./TheWilds/InteriorCarousel";
-import DiscoverSection from "./TheWilds/DiscoverSection";
 import CareAndGrace from "./TheWilds/CareAndGrace";
-import DreamsAndDesign from "./TheWilds/DreamsAndDesign";
+import DiscoverSection from "./TheWilds/DiscoverSection";
+import EnlightenmentSection from "./TheWilds/EnlightenmentSection";
 import Footer from "./TheWilds/Footer";
+import Header from "./TheWilds/Header";
 import HeroKeywords from "./TheWilds/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./TheWilds/PaymentOptions";
+import InteriorCarousel from "./TheWilds/InteriorCarousel";
 import PaymentOptionsTwo from "./TheWilds/PaymentOptionsTwo";
-import PropertySearchFormThree from "./common/PropertySearchFormThree";
+import WaterfrontLiving from "./TheWilds/WaterfrontLiving";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function TheWildsPage() {
   return (
@@ -25,7 +19,7 @@ export default function TheWildsPage() {
       <div id="home">
         <HeroKeywords />
         <div className="absolute bottom-0 left-0 w-full custom-form-container">
-          <PropertySearchFormThree
+          <PropertySearchForm
             formName="thewilds-aldar"
             pointName="get-in-touch"
             formType="banner-form"
@@ -38,7 +32,7 @@ export default function TheWildsPage() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="/thewilds-aldar/thank-you"

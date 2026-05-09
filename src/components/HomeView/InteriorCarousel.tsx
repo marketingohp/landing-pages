@@ -1,17 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 export default function InteriorCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -34,8 +33,7 @@ export default function InteriorCarousel() {
 
   return (
     <section className="relative h-[600px] lg:h-[800px]">
-
-<Swiper
+      <Swiper
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
@@ -51,18 +49,10 @@ export default function InteriorCarousel() {
       >
         {images?.map((items, index) => (
           <SwiperSlide key={index}>
-            <img
-              src={items}
-              width={1000}
-              height={1000}
-              alt="one residences"
-            />
+            <img src={items} width={1000} height={1000} alt="one residences" />
           </SwiperSlide>
         ))}
       </Swiper>
-
-
-     
 
       {/* Navigation Arrows */}
       {/* <button

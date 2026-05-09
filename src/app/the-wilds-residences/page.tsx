@@ -1,6 +1,6 @@
-import "../../components/TheWildsResidences/style.css";
-import type { Metadata } from "next";
 import TheWildsResidencesPage from "@/components/TheWildsResidences";
+import type { Metadata } from "next";
+import "../../components/TheWildsResidences/style.css";
 
 export const metadata: Metadata = {
   title: "The Wilds Residences by Aldar – Nature-Inspired Apartments in Dubai",

@@ -1,13 +1,13 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { useEffect, useRef, useState } from "react";
 import type { Swiper as SwiperType } from "swiper";
-import { Autoplay, Pagination, Navigation, Keyboard } from "swiper/modules";
+import { Autoplay, Keyboard, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 interface FloorPlanTab {
   id: string;
@@ -19,37 +19,27 @@ const floorPlanTabs: FloorPlanTab[] = [
   {
     id: "studio",
     label: "Studio",
-    images: [
-      "/images/radission-residences/Studio-Type-1.jpg",
-    ],
+    images: ["/images/radission-residences/Studio-Type-1.jpg"],
   },
   {
     id: "1br",
     label: "1 BR",
-    images: [
-      "/images/radission-residences/1-BR-Type-1.jpg"
-    ],
+    images: ["/images/radission-residences/1-BR-Type-1.jpg"],
   },
   {
     id: "2br",
     label: "2 BR",
-    images: [
-      "/images/radission-residences/2-BR-Type-1.jpg",
-    ],
+    images: ["/images/radission-residences/2-BR-Type-1.jpg"],
   },
   {
     id: "3br",
     label: "3 BR",
-    images: [
-      "/images/radission-residences/3-BR-Type-1.jpg",
-    ],
+    images: ["/images/radission-residences/3-BR-Type-1.jpg"],
   },
   {
     id: "townhouse",
     label: "Townhouse",
-    images: [
-      "/images/radission-residences/Townhouse-Type-1.jpg",
-    ],
+    images: ["/images/radission-residences/Townhouse-Type-1.jpg"],
   },
 ];
 
@@ -65,7 +55,11 @@ export default function FloorPlans() {
   const [lightboxIndex, setLightboxIndex] = useState(0);
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const [animationKey, setAnimationKey] = useState(0);
-  const [zoomState, setZoomState] = useState<ZoomState>({ scale: 1, x: 0, y: 0 });
+  const [zoomState, setZoomState] = useState<ZoomState>({
+    scale: 1,
+    x: 0,
+    y: 0,
+  });
   const [isZoomed, setIsZoomed] = useState(false);
   const lightboxSwiperRef = useRef<SwiperType | null>(null);
   const imageRef = useRef<HTMLImageElement | null>(null);
@@ -161,7 +155,11 @@ export default function FloorPlans() {
   };
 
   // Touch support for mobile
-  const touchStartRef = useRef<{ x: number; y: number; distance: number } | null>(null);
+  const touchStartRef = useRef<{
+    x: number;
+    y: number;
+    distance: number;
+  } | null>(null);
 
   const handleTouchStart = (e: React.TouchEvent) => {
     if (e.touches.length === 1 && isZoomed) {
@@ -178,7 +176,7 @@ export default function FloorPlans() {
       const touch2 = e.touches[1];
       const distance = Math.hypot(
         touch2.clientX - touch1.clientX,
-        touch2.clientY - touch1.clientY
+        touch2.clientY - touch1.clientY,
       );
       touchStartRef.current = {
         x: 0,
@@ -206,7 +204,7 @@ export default function FloorPlans() {
       const touch2 = e.touches[1];
       const distance = Math.hypot(
         touch2.clientX - touch1.clientX,
-        touch2.clientY - touch1.clientY
+        touch2.clientY - touch1.clientY,
       );
       const scaleChange = distance / touchStartRef.current.distance;
       setZoomState((prev) => {
@@ -249,10 +247,18 @@ export default function FloorPlans() {
         } else {
           closeLightbox();
         }
-      } else if (e.key === "ArrowLeft" && lightboxSwiperRef.current && !isZoomed) {
+      } else if (
+        e.key === "ArrowLeft" &&
+        lightboxSwiperRef.current &&
+        !isZoomed
+      ) {
         lightboxSwiperRef.current.slidePrev();
         resetZoom();
-      } else if (e.key === "ArrowRight" && lightboxSwiperRef.current && !isZoomed) {
+      } else if (
+        e.key === "ArrowRight" &&
+        lightboxSwiperRef.current &&
+        !isZoomed
+      ) {
         lightboxSwiperRef.current.slideNext();
         resetZoom();
       } else if (e.key === "+" || e.key === "=") {
@@ -278,17 +284,17 @@ export default function FloorPlans() {
 
   return (
     <section className="py-16 px-4 bg-white dark:bg-gray-900">
-              <div className="text-center mb-12 ">
-          <h2
-            className="text-2xl md:text-4xl lg:text-4xl text-[#1a3a5c] dark:text-white mb-8"
-            style={{ fontFamily: "var(--font-playfair), serif" }}
-          >
-            Floor Plans
-          </h2>
-          <p className="text-base sm:text-lg text-[#4a6fa5] dark:text-gray-300 max-w-3xl mx-auto mb-8 sm:mb-10 md:mb-12 px-2">
-            Explore the floor plans of our residential units.
-          </p>
-        </div>
+      <div className="text-center mb-12 ">
+        <h2
+          className="text-2xl md:text-4xl lg:text-4xl text-[#1a3a5c] dark:text-white mb-8"
+          style={{ fontFamily: "var(--font-playfair), serif" }}
+        >
+          Floor Plans
+        </h2>
+        <p className="text-base sm:text-lg text-[#4a6fa5] dark:text-gray-300 max-w-3xl mx-auto mb-8 sm:mb-10 md:mb-12 px-2">
+          Explore the floor plans of our residential units.
+        </p>
+      </div>
       <div className="max-w-6xl mx-auto">
         {/* Tabs */}
         <div className="flex flex-wrap justify-center gap-3 mb-10">
@@ -308,10 +314,7 @@ export default function FloorPlans() {
         </div>
 
         {/* Floor Plan Images with Bounce Animation */}
-        <div
-          key={animationKey}
-          className="animate-bounce-in"
-        >
+        <div key={animationKey} className="animate-bounce-in">
           {activeTabData && activeTabData.images.length > 1 ? (
             <Swiper
               spaceBetween={20}
@@ -383,7 +386,7 @@ export default function FloorPlans() {
               <div className="text-white text-sm font-medium pointer-events-auto">
                 {currentSlideIndex + 1} / {activeTabData.images.length}
               </div>
-              
+
               {/* Control Buttons Group */}
               <div className="flex items-center gap-2 pointer-events-auto">
                 {/* Zoom In */}
@@ -396,11 +399,21 @@ export default function FloorPlans() {
                   aria-label="Zoom in"
                   title="Zoom in (+)"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"
+                    />
                   </svg>
                 </button>
-                
+
                 {/* Zoom Out */}
                 <button
                   onClick={(e) => {
@@ -412,11 +425,21 @@ export default function FloorPlans() {
                   aria-label="Zoom out"
                   title="Zoom out (-)"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM13 10H7" />
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM13 10H7"
+                    />
                   </svg>
                 </button>
-                
+
                 {/* Reset Zoom (only show when zoomed) */}
                 {isZoomed && (
                   <button
@@ -428,12 +451,22 @@ export default function FloorPlans() {
                     aria-label="Reset zoom"
                     title="Reset zoom (0)"
                   >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                      />
                     </svg>
                   </button>
                 )}
-                
+
                 {/* Close Button */}
                 <button
                   onClick={(e) => {
@@ -444,8 +477,18 @@ export default function FloorPlans() {
                   aria-label="Close lightbox"
                   title="Close (ESC)"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
                   </svg>
                 </button>
               </div>
@@ -456,58 +499,66 @@ export default function FloorPlans() {
             >
               <div className="bg-white rounded-lg shadow-2xl overflow-hidden">
                 <Swiper
-                onSwiper={(swiper) => {
-                  lightboxSwiperRef.current = swiper;
-                  swiper.slideTo(lightboxIndex, 0);
-                }}
-                onSlideChange={(swiper) => {
-                  setCurrentSlideIndex(swiper.activeIndex);
-                  resetZoom();
-                }}
-                initialSlide={lightboxIndex}
-                spaceBetween={20}
-                slidesPerView={1}
-                pagination={{ clickable: true }}
-                navigation={true}
-                keyboard={{ enabled: true }}
-                modules={[Pagination, Navigation, Keyboard]}
-                className="lightbox-swiper elementor-lightbox-content"
-                allowTouchMove={!isZoomed}
-              >
-                {activeTabData.images.map((image, index) => (
-                  <SwiperSlide key={index} className="elementor-lightbox-item">
-                    <div
-                      ref={containerRef}
-                      className="relative w-full h-[85vh] flex items-center justify-center overflow-hidden bg-white"
-                      onWheel={handleWheel}
-                      onMouseDown={handleMouseDown}
-                      onTouchStart={handleTouchStart}
-                      onTouchMove={handleTouchMove}
-                      onTouchEnd={handleTouchEnd}
-                      style={{ cursor: isZoomed ? "grab" : "default", touchAction: "none" }}
+                  onSwiper={(swiper) => {
+                    lightboxSwiperRef.current = swiper;
+                    swiper.slideTo(lightboxIndex, 0);
+                  }}
+                  onSlideChange={(swiper) => {
+                    setCurrentSlideIndex(swiper.activeIndex);
+                    resetZoom();
+                  }}
+                  initialSlide={lightboxIndex}
+                  spaceBetween={20}
+                  slidesPerView={1}
+                  pagination={{ clickable: true }}
+                  navigation={true}
+                  keyboard={{ enabled: true }}
+                  modules={[Pagination, Navigation, Keyboard]}
+                  className="lightbox-swiper elementor-lightbox-content"
+                  allowTouchMove={!isZoomed}
+                >
+                  {activeTabData.images.map((image, index) => (
+                    <SwiperSlide
+                      key={index}
+                      className="elementor-lightbox-item"
                     >
-                      <img
-                        ref={imageRef}
-                        src={image}
-                        alt={`${activeTabData.label} Floor Plan ${index + 1}`}
-                        className="max-w-full max-h-full object-contain select-none"
+                      <div
+                        ref={containerRef}
+                        className="relative w-full h-[85vh] flex items-center justify-center overflow-hidden bg-white"
+                        onWheel={handleWheel}
+                        onMouseDown={handleMouseDown}
+                        onTouchStart={handleTouchStart}
+                        onTouchMove={handleTouchMove}
+                        onTouchEnd={handleTouchEnd}
                         style={{
-                          transform: `scale(${zoomState.scale}) translate(${zoomState.x / zoomState.scale}px, ${zoomState.y / zoomState.scale}px)`,
-                          transformOrigin: "center center",
-                          transition: isZoomed ? "none" : "transform 0.3s ease",
+                          cursor: isZoomed ? "grab" : "default",
+                          touchAction: "none",
                         }}
-                        onDoubleClick={handleDoubleClick}
-                        draggable={false}
-                      />
-                      {!isZoomed && (
-                        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-800/70 text-white px-4 py-2 rounded-lg text-sm pointer-events-none backdrop-blur-sm">
-                          Double-click to zoom in
-                        </div>
-                      )}
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+                      >
+                        <img
+                          ref={imageRef}
+                          src={image}
+                          alt={`${activeTabData.label} Floor Plan ${index + 1}`}
+                          className="max-w-full max-h-full object-contain select-none"
+                          style={{
+                            transform: `scale(${zoomState.scale}) translate(${zoomState.x / zoomState.scale}px, ${zoomState.y / zoomState.scale}px)`,
+                            transformOrigin: "center center",
+                            transition: isZoomed
+                              ? "none"
+                              : "transform 0.3s ease",
+                          }}
+                          onDoubleClick={handleDoubleClick}
+                          draggable={false}
+                        />
+                        {!isZoomed && (
+                          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-800/70 text-white px-4 py-2 rounded-lg text-sm pointer-events-none backdrop-blur-sm">
+                            Double-click to zoom in
+                          </div>
+                        )}
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
               </div>
             </div>
           </div>
@@ -603,4 +654,3 @@ export default function FloorPlans() {
     </section>
   );
 }
-

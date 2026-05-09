@@ -1,18 +1,12 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
 import { useLanguage } from "@/contexts/fourSeason/LanguageContext";
+import { useState } from "react";
 
-import React from "react";
-import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
 import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
+import React from "react";
 import PropertySearchForm from "../common/PropertySearchForm";
 
 const Transition = React.forwardRef(function Transition(
@@ -67,7 +61,10 @@ export default function EnlightenmentSection() {
               loop
               muted
             >
-              <source src="/images/flow-25/four-seasonsVido.mp4" type="video/mp4" />
+              <source
+                src="/images/flow-25/four-seasonsVido.mp4"
+                type="video/mp4"
+              />
             </video>
           </div>
         </div>
@@ -124,7 +121,7 @@ export default function EnlightenmentSection() {
             "budget",
             "message",
           ]}
-          requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+          requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
           viewType="image"
           // downloadBrochure={true}
           // brochureUrl="/images/four-seasons/Yas_Riva_Residences_Brochure.pdf"

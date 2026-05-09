@@ -1,21 +1,15 @@
 "use client";
 
-import Header from "./YasRivaResidences/Header";
-import OneResidencesHero from "./YasRivaResidences/OneResidencesHero";
-import WaterfrontLiving from "./YasRivaResidences/WaterfrontLiving";
-import EnlightenmentSection from "./YasRivaResidences/EnlightenmentSection";
-import WindowToWonder from "./YasRivaResidences/WindowToWonder";
-import HotelStyleLiving from "./YasRivaResidences/HotelStyleLiving";
-import InteriorCarousel from "./YasRivaResidences/InteriorCarousel";
-import DiscoverSection from "./YasRivaResidences/DiscoverSection";
 import CareAndGrace from "./YasRivaResidences/CareAndGrace";
-import DreamsAndDesign from "./YasRivaResidences/DreamsAndDesign";
+import DiscoverSection from "./YasRivaResidences/DiscoverSection";
 import Footer from "./YasRivaResidences/Footer";
+import Header from "./YasRivaResidences/Header";
 import HeroKeywords from "./YasRivaResidences/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./YasRivaResidences/PaymentOptions";
+import InteriorCarousel from "./YasRivaResidences/InteriorCarousel";
 import PaymentOptionsTwo from "./YasRivaResidences/PaymentOptionsTwo";
+import WaterfrontLiving from "./YasRivaResidences/WaterfrontLiving";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function YasRivaResidencesPage() {
   return (
@@ -37,7 +31,7 @@ export default function YasRivaResidencesPage() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="/yas-riva-residences/thank-you"

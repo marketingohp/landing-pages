@@ -1,22 +1,16 @@
 "use client";
 
-import Header from "./TheWildsByAldar/Header";
-import OneResidencesHero from "./TheWildsByAldar/OneResidencesHero";
-import WaterfrontLiving from "./TheWildsByAldar/WaterfrontLiving";
-import EnlightenmentSection from "./TheWildsByAldar/EnlightenmentSection";
-import WindowToWonder from "./TheWildsByAldar/WindowToWonder";
-import HotelStyleLiving from "./TheWildsByAldar/HotelStyleLiving";
-import InteriorCarousel from "./TheWildsByAldar/InteriorCarousel";
-import DiscoverSection from "./TheWildsByAldar/DiscoverSection";
 import CareAndGrace from "./TheWildsByAldar/CareAndGrace";
-import DreamsAndDesign from "./TheWildsByAldar/DreamsAndDesign";
+import DiscoverSection from "./TheWildsByAldar/DiscoverSection";
+import EnlightenmentSection from "./TheWildsByAldar/EnlightenmentSection";
 import Footer from "./TheWildsByAldar/Footer";
+import Header from "./TheWildsByAldar/Header";
 import HeroKeywords from "./TheWildsByAldar/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./TheWildsByAldar/PaymentOptions";
+import InteriorCarousel from "./TheWildsByAldar/InteriorCarousel";
 import PaymentOptionsTwo from "./TheWildsByAldar/PaymentOptionsTwo";
-import PropertySearchFormThree from "./common/PropertySearchFormThree";
+import WaterfrontLiving from "./TheWildsByAldar/WaterfrontLiving";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function TheWildsByAldarPage() {
   return (
@@ -25,7 +19,7 @@ export default function TheWildsByAldarPage() {
       <div id="home">
         <HeroKeywords />
         <div className="absolute bottom-0 left-0 w-full custom-form-container">
-          <PropertySearchFormThree
+          <PropertySearchForm
             formName="the-wilds-by-aldar"
             pointName="get-in-touch"
             formType="banner-form"
@@ -38,7 +32,7 @@ export default function TheWildsByAldarPage() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="the-wilds-by-aldar/thank-you"

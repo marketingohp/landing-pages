@@ -1,6 +1,6 @@
-import "../../components/StRegisAlMaryah/style.css";
-import type { Metadata } from "next";
 import StRegisAlMaryahPage from "@/components/StRegisAlMaryah";
+import type { Metadata } from "next";
+import "../../components/StRegisAlMaryah/style.css";
 export const metadata: Metadata = {
   title: " St.Regis Al Maryah Island ",
   description:

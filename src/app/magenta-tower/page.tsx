@@ -1,6 +1,6 @@
-import "../../components/MagentaTower/style.css";
-import type { Metadata } from "next";
 import MagentaTowerPage from "@/components/MagentaTower";
+import type { Metadata } from "next";
+import "../../components/MagentaTower/style.css";
 export const metadata: Metadata = {
   title: "Magenta Tower",
   description:

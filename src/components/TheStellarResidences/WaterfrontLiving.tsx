@@ -1,19 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import { useLanguage } from "@/contexts/theStellarResidences/LanguageContext";
-import React from "react";
-import Button from "@mui/material/Button";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
 import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
+import React from "react";
 import PropertySearchForm from "../common/PropertySearchForm";
 
-import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 
 const Transition = React.forwardRef(function Transition(
@@ -168,7 +160,8 @@ export default function WaterfrontLiving() {
               {/* 1 TO 3 BEDROOM APARTMENTS */}
               <div className="px-4 py-3 text-center border-b border-[#00314a] dark:border-gray-400 border-opacity-30">
                 <div className="text-[#AA8B6A] dark:text-white font-normal text-sm leading-relaxed">
-                  Unit Type <br />  1 – 3BR apartments, 3 – 4BR garden villas, and 5 BR penthouses.
+                  Unit Type <br /> 1 – 3BR apartments, 3 – 4BR garden villas,
+                  and 5 BR penthouses.
                 </div>
               </div>
 
@@ -208,7 +201,8 @@ export default function WaterfrontLiving() {
               {/* 1 TO 3 BEDROOM APARTMENTS */}
               <div className="flex-1 min-w-[200px] px-6 md:px-8 py-4 text-center">
                 <div className="text-[#AA8B6A] dark:text-white font-normal text-sm md:text-base leading-relaxed">
-                  Unit Type <br />  1 – 3BR apartments, 3 – 4BR garden villas, and 5 BR penthouses.
+                  Unit Type <br /> 1 – 3BR apartments, 3 – 4BR garden villas,
+                  and 5 BR penthouses.
                 </div>
               </div>
 

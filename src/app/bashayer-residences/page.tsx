@@ -1,6 +1,6 @@
 import BashayerResidencesPage from "@/components/BashayerResidences";
-import "../../components/BashayerResidences/style.css";
 import type { Metadata } from "next";
+import "../../components/BashayerResidences/style.css";
 export const metadata: Metadata = {
   title: " Bashayer Residences  ",
   description:

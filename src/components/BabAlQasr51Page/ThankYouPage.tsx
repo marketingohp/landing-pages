@@ -1,10 +1,8 @@
 "use client";
 
-import { useEffect } from "react";
+import { useLanguage } from "@/contexts/babAlQasr51/LanguageContext";
 import { useRouter } from "next/navigation";
 import Header from "./Header";
-import { useLanguage } from "@/contexts/babAlQasr51/LanguageContext";
-import { pushToDataLayer } from "@/utils/gtag";
 
 export default function ThankYouPage() {
   const { t } = useLanguage();

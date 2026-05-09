@@ -1,10 +1,7 @@
 "use client";
 
-import Header from "./PrivacyPolicy/Header";
-
-import Footer from "./PrivacyPolicy/Footer";
-import BottomFooter from "./common/BottomFooter";
 import Link from "next/link";
+import BottomFooter from "./common/BottomFooter";
 
 export default function PrivacyPolicyPage() {
   return (

@@ -1,19 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import { useLanguage } from "@/contexts/ohanaMonschasterYas/LanguageContext";
-import React from "react";
-import Button from "@mui/material/Button";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
 import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
-import PropertySearchFormThree from "../common/PropertySearchFormThree";
+import React from "react";
+import PropertySearchForm from "../common/PropertySearchForm";
 
-import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 
 const Transition = React.forwardRef(function Transition(
@@ -320,7 +312,7 @@ export default function WaterfrontLiving() {
               p: 4,
             }}
           >
-            <PropertySearchFormThree
+            <PropertySearchForm
               formName="manchester-city-yas-residences-by-ohana"
               pointName="get-in-touch"
               formType="about-project-form"
@@ -335,7 +327,7 @@ export default function WaterfrontLiving() {
                 "budget",
                 "message",
               ]}
-              requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+              requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
               viewType="image"
               // downloadBrochure={true}
               // brochureUrl="/images/manchester-city-yas-residences-by-ohana/Yas_Riva_Residences_Brochure.pdf"

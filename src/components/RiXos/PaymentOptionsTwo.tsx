@@ -39,14 +39,12 @@ export default function PaymentOptionsTwo() {
                 fontWeight: 300,
                 fontSize: "9rem",
               }}
-            >
-         
-            </div>
+            ></div>
             <div
               className="text-[#ffffff] dark:text-[#b29679] text-7xl md:text-8xl lg:text-9xl font-bold mb-4 font-mobile-payment-plan2"
               style={{ fontFamily: "Abril Fatface, serif" }}
             >
-           40/60
+              40/60
             </div>
             <div
               className="text-white dark:text-[#5f4931] text-xl md:text-2xl lg:text-3xl tracking-wider  font-mobile-payment-plan3"
@@ -91,7 +89,6 @@ export default function PaymentOptionsTwo() {
                     >
                       10%
                       <br />
-                   
                     </td>
                     <td
                       className=" text-center px-4 md:px-6 py-4 text-sm md:text-base"

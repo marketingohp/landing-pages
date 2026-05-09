@@ -1,277 +1,73 @@
 export const DEVELOPERS_MAP = new Map([
-  [
-    "Aldar",
-    "2314"
-  ],
-  [
-    "SAAS",
-    "2315"
-  ],
-  [
-    "Reportage",
-    "2615"
-  ],
-  [
-    "Urban Capital",
-    "2616"
-  ],
-  [
-    "N/A",
-    "2617"
-  ],
-  [
-    "Mered",
-    "2618"
-  ],
-  [
-    "Modon",
-    "2619"
-  ],
-  [
-    "Radiant",
-    "2620"
-  ],
-  [
-    "Bloom",
-    "2621"
-  ],
-  [
-    "Emirates",
-    "2673"
-  ],
-  [
-    "Taraf",
-    "2738"
-  ],
-  [
-    "RAK",
-    "2740"
-  ],
-  [
-    "Imkan",
-    "2742"
-  ],
-  [
-    "ICT",
-    "3222"
-  ],
-  [
-    "Royal Development",
-    "3243"
-  ],
-  [
-    "One Developments",
-    "3294"
-  ],
-  [
-    "Eagle Hills",
-    "3304"
-  ],
-  [
-    "Sohba",
-    "3385"
-  ],
-  [
-    "ORA",
-    "3397"
-  ],
-  [
-    "Ohana",
-    "3549"
-  ],
-  [
-    "Advanced Properties",
-    "3583"
-  ],
-  [
-    "Al Badie Group",
-    "3584"
-  ],
-  [
-    "Al Hamra",
-    "3585"
-  ],
-  [
-    "Azizi",
-    "3586"
-  ],
-  [
-    "Burtville Developments",
-    "3587"
-  ],
-  [
-    "Damac",
-    "3588"
-  ],
-  [
-    "Deyaar Properties",
-    "3589"
-  ],
-  [
-    "General Construction",
-    "3590"
-  ],
-  [
-    "Hydra Properties",
-    "3591"
-  ],
-  [
-    "LEAD Real Estate Developer L.L.C",
-    "3592"
-  ],
-  [
-    "MANAZEL P.J.S.C.",
-    "3593"
-  ],
-  [
-    "Masaood Developments LLC",
-    "3594"
-  ],
-  [
-    "MESAB LTD.",
-    "3595"
-  ],
-  [
-    "Nine Yards Real Estate Development Company LLC",
-    "3596"
-  ],
-  [
-    "Nord Real Estate Development  L.L.C.",
-    "3597"
-  ],
-  [
-    "Q Properties",
-    "3598"
-  ],
-  [
-    "SDIC",
-    "3599"
-  ],
-  [
-    "TDIC",
-    "3600"
-  ],
-  [
-    "Tiger Properties",
-    "3601"
-  ],
-  [
-    "GAF",
-    "3745"
-  ],
-  [
-    "East and West",
-    "3749"
-  ],
-  [
-    "Object 1",
-    "3757"
-  ]
+  ["Aldar", "2314"],
+  ["SAAS", "2315"],
+  ["Reportage", "2615"],
+  ["Urban Capital", "2616"],
+  ["N/A", "2617"],
+  ["Mered", "2618"],
+  ["Modon", "2619"],
+  ["Radiant", "2620"],
+  ["Bloom", "2621"],
+  ["Emirates", "2673"],
+  ["Taraf", "2738"],
+  ["RAK", "2740"],
+  ["Imkan", "2742"],
+  ["ICT", "3222"],
+  ["Royal Development", "3243"],
+  ["One Developments", "3294"],
+  ["Eagle Hills", "3304"],
+  ["Sohba", "3385"],
+  ["ORA", "3397"],
+  ["Ohana", "3549"],
+  ["Advanced Properties", "3583"],
+  ["Al Badie Group", "3584"],
+  ["Al Hamra", "3585"],
+  ["Azizi", "3586"],
+  ["Burtville Developments", "3587"],
+  ["Damac", "3588"],
+  ["Deyaar Properties", "3589"],
+  ["General Construction", "3590"],
+  ["Hydra Properties", "3591"],
+  ["LEAD Real Estate Developer L.L.C", "3592"],
+  ["MANAZEL P.J.S.C.", "3593"],
+  ["Masaood Developments LLC", "3594"],
+  ["MESAB LTD.", "3595"],
+  ["Nine Yards Real Estate Development Company LLC", "3596"],
+  ["Nord Real Estate Development  L.L.C.", "3597"],
+  ["Q Properties", "3598"],
+  ["SDIC", "3599"],
+  ["TDIC", "3600"],
+  ["Tiger Properties", "3601"],
+  ["GAF", "3745"],
+  ["East and West", "3749"],
+  ["Object 1", "3757"],
 ]);
 
 export const LOCATIONS_MAP = new Map([
-  [
-    "Al Reem Island",
-    "406"
-  ],
-  [
-    "Al Maryah Island",
-    "407"
-  ],
-  [
-    "Zayed City",
-    "408"
-  ],
-  [
-    "Hudayriyat Island",
-    "409"
-  ],
-  [
-    "Saadiyat Island",
-    "2603"
-  ],
-  [
-    "Al Fahid Island",
-    "2646"
-  ],
-  [
-    "Abu Dhabi",
-    "2669"
-  ],
-  [
-    "Yas Island",
-    "2675"
-  ],
-  [
-    "Raha & Masdar",
-    "2731"
-  ],
-  [
-    "Al Raha Beach",
-    "2744"
-  ],
-  [
-    "Masdar City",
-    "3209"
-  ],
-  [
-    "Dubai",
-    "3230"
-  ],
-  [
-    "Latvia",
-    "3300"
-  ],
-  [
-    "Ghantoot",
-    "3393"
-  ],
-  [
-    "Al Bateen",
-    "3659"
-  ],
-  [
-    "Al Ghadeer",
-    "3660"
-  ],
-  [
-    "Al Hamra",
-    "3661"
-  ],
-  [
-    "Al Reef",
-    "3662"
-  ],
-  [
-    "Al Shamkha",
-    "3663"
-  ],
-  [
-    "Golf Gardens",
-    "3679"
-  ],
-  [
-    "Jubail Island",
-    "3680"
-  ],
-  [
-    "Khalifa City",
-    "3681"
-  ],
-  [
-    "Ramhan Island",
-    "3682"
-  ],
-  [
-    "Abu Dhabi District",
-    "3733"
-  ],
-  [
-    "London",
-    "3761"
-  ],
-  [
-    "Yas Island & Al Raha Beach",
-    "3839"
-  ]
+  ["Al Reem Island", "406"],
+  ["Al Maryah Island", "407"],
+  ["Zayed City", "408"],
+  ["Hudayriyat Island", "409"],
+  ["Saadiyat Island", "2603"],
+  ["Al Fahid Island", "2646"],
+  ["Abu Dhabi", "2669"],
+  ["Yas Island", "2675"],
+  ["Raha & Masdar", "2731"],
+  ["Al Raha Beach", "2744"],
+  ["Masdar City", "3209"],
+  ["Dubai", "3230"],
+  ["Latvia", "3300"],
+  ["Ghantoot", "3393"],
+  ["Al Bateen", "3659"],
+  ["Al Ghadeer", "3660"],
+  ["Al Hamra", "3661"],
+  ["Al Reef", "3662"],
+  ["Al Shamkha", "3663"],
+  ["Golf Gardens", "3679"],
+  ["Jubail Island", "3680"],
+  ["Khalifa City", "3681"],
+  ["Ramhan Island", "3682"],
+  ["Abu Dhabi District", "3733"],
+  ["London", "3761"],
+  ["Yas Island & Al Raha Beach", "3839"],
 ]);

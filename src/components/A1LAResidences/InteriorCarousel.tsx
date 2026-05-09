@@ -1,28 +1,27 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 export default function InteriorCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = [
-   "/images/a1la-residences/A1LA-RESIDENCE_1.jpg",
-   "/images/a1la-residences/A1LA-RESIDENCE_4.jpg",
-   "/images/a1la-residences/A1LA-RESIDENCE_5.jpg",
-   "/images/a1la-residences/A1LA-RESIDENCE_6.jpg",
-   "/images/a1la-residences/A1LA-RESIDENCE_11.jpg",
-   "/images/a1la-residences/A1LA-RESIDENCE_15.jpg",
+    "/images/a1la-residences/A1LA-RESIDENCE_1.jpg",
+    "/images/a1la-residences/A1LA-RESIDENCE_4.jpg",
+    "/images/a1la-residences/A1LA-RESIDENCE_5.jpg",
+    "/images/a1la-residences/A1LA-RESIDENCE_6.jpg",
+    "/images/a1la-residences/A1LA-RESIDENCE_11.jpg",
+    "/images/a1la-residences/A1LA-RESIDENCE_15.jpg",
   ];
 
   const nextImage = () => {

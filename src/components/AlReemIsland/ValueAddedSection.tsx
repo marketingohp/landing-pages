@@ -34,28 +34,36 @@ export default function ValueAddedSection() {
       image: "/images/al-reem-island/img4.webp",
       description:
         "The UAE Golden Visa offers long-term residency for investors, professionals, and top talent. Enjoy stability, world-class living, and the freedom to live, work, and invest in Abu Dhabi for years to come.",
-    }
+    },
   ];
 
   return (
     <>
       <div className="container mx-auto max-w-12xl">
         {/* Main Heading */}
-        <h2 className="text-3xl playfair-display-regular md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white text-center mb-6 lg:mb-8 leading-tight"
+        <h2
+          className="text-3xl playfair-display-regular md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white text-center mb-6 lg:mb-8 leading-tight"
           style={{ color: "#2296c4" }}
-
         >
-          <span className="text-8xl">4</span> Reasons<br />Why Living on Al Reem Island is Perfect for Life?
+          <span className="text-8xl">4</span> Reasons
+          <br />
+          Why Living on Al Reem Island is Perfect for Life?
         </h2>
       </div>
-      <section className="relative min-h-screen dark:bg-[#0a0a0a] overflow-hidden container-fluid mx-auto px-4s  lg:px-8"
+      <section
+        className="relative min-h-screen dark:bg-[#0a0a0a] overflow-hidden container-fluid mx-auto px-4s  lg:px-8"
         id="value-added-section"
         style={{
           borderRadius: 20,
-          paddingBottom: 0, marginTop: 60, marginBottom: 150, position: "relative", border: "2px solid #2296c4", marginLeft: 20, marginRight: 20
+          paddingBottom: 0,
+          marginTop: 60,
+          marginBottom: 150,
+          position: "relative",
+          border: "2px solid #2296c4",
+          marginLeft: 20,
+          marginRight: 20,
         }}
       >
-
         {/* Diagonal Background Band - Top Left with Sharp Diagonal Cut */}
         {/* <div
           className="absolute top-0 left-0 z-0"
@@ -88,7 +96,6 @@ export default function ValueAddedSection() {
 
         {/* Main Content Container */}
         <div className="relative z-10 container mx-auto px-6 lg:px-12 py-16 lg:py-24">
-
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             {/* Left Section - Timeline */}
             <div className="lg:col-span-3 relative z-20 flex flex-col justify-end">
@@ -99,8 +106,7 @@ export default function ValueAddedSection() {
                 for incress abu dhabi its a landmark for a new beginning tomorrow, gain others the
                 new
               </p> */}
-              <div className="relative" style={{ marginBottom: -200 }}
-              >
+              <div className="relative" style={{ marginBottom: -200 }}>
                 <div className="hidden lg:block absolute left-0 bottom-54">
                   <Dots />
                 </div>
@@ -108,9 +114,7 @@ export default function ValueAddedSection() {
                   <Dots />
                 </div>
               </div>
-
             </div>
-
 
             {/* Center Section - Numbered Timeline Items */}
             <div className="lg:col-span-6 relative py-4">
@@ -142,8 +146,11 @@ export default function ValueAddedSection() {
                       />
 
                       <div
-                        className={`relative flex flex-col md:flex-col items-start gap-4 md:gap-6 ${isEven ? "lg:flex-row-reverse lg:gap-6" : "lg:flex-row lg:gap-6"
-                          }`}
+                        className={`relative flex flex-col md:flex-col items-start gap-4 md:gap-6 ${
+                          isEven
+                            ? "lg:flex-row-reverse lg:gap-6"
+                            : "lg:flex-row lg:gap-6"
+                        }`}
                       >
                         {/* Number Badge - Box Style */}
                         <div className="relative z-10 flex-shrink-0 group w-full lg:w-auto timeline-image-container">
@@ -156,7 +163,8 @@ export default function ValueAddedSection() {
                               minHeight: "180px",
                               borderRadius: "0px 50px 0px 50px",
                               border: "2px solid rgba(255, 255, 255, 0.2)",
-                              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1)",
+                              boxShadow:
+                                "0 4px 8px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1)",
                             }}
                           >
                             {/* Background Image */}
@@ -178,7 +186,9 @@ export default function ValueAddedSection() {
                                 textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)",
                               }}
                             >
-                              <span className="lg:text-6xl md:text-5xl text-4xl">{item.number}</span>
+                              <span className="lg:text-6xl md:text-5xl text-4xl">
+                                {item.number}
+                              </span>
                             </div>
 
                             {/* Hover Overlay - Fades and slides from bottom to top */}
@@ -190,7 +200,9 @@ export default function ValueAddedSection() {
                             >
                               <div className="absolute inset-0 flex items-center justify-center">
                                 <div className="text-white text-left px-4 pt-8 hover-text-s1">
-                                  <div className="text-2xl font-bold mb-0 playfair-display-regular">{item.title}</div>
+                                  <div className="text-2xl font-bold mb-0 playfair-display-regular">
+                                    {item.title}
+                                  </div>
                                   {/* <div className="text-sm opacity-90 montserrat-regular">{item.description}</div> */}
                                 </div>
                               </div>
@@ -200,8 +212,11 @@ export default function ValueAddedSection() {
 
                         {/* Content */}
                         <div
-                          className={`flex-1 w-full ${isEven ? "md:text-left lg:text-right lg:pr-8" : "md:text-left lg:text-left lg:pl-8"
-                            }`}
+                          className={`flex-1 w-full ${
+                            isEven
+                              ? "md:text-left lg:text-right lg:pr-8"
+                              : "md:text-left lg:text-left lg:pl-8"
+                          }`}
                         >
                           <h4 className="text-lg md:text-xl lg:text-2xl font-bold playfair-display-regular text-gray-900 dark:text-white mb-2 md:mb-3">
                             {item.title}
@@ -216,8 +231,6 @@ export default function ValueAddedSection() {
                 })}
               </div>
             </div>
-
-
           </div>
         </div>
 
@@ -247,16 +260,16 @@ export default function ValueAddedSection() {
             {/* Content - Centered */}
             <div className="relative z-10 px-6 py-8 text-center">
               <h3 className="text-2xl playfair-display-regular lg:text-3xl xl:text-3xl font-bold text-white mb-4 leading-tight">
-                In a market that beats as fast as Abu Dhabi,<br /> the opportunity you miss today becomes tomorrow’s gain for others. Be the one to take the first step.
+                In a market that beats as fast as Abu Dhabi,
+                <br /> the opportunity you miss today becomes tomorrow’s gain
+                for others. Be the one to take the first step.
               </h3>
               {/* <p className="text-white/90 text-sm lg:text-base leading-relaxed">
               for incress abu dhabi its a landmark for a new beginning tomorrow, gain others the new
               </p> */}
-
             </div>
           </div>
         </div>
-
       </section>
     </>
   );
@@ -272,7 +285,6 @@ function Dots() {
           className="w-2 h-2 border border-[#4cc3ff] rounded-full opacity-70"
         />
       ))}
-
     </div>
   );
 }

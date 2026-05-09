@@ -2,10 +2,10 @@
 
 import {
   createContext,
-  useContext,
-  useState,
-  useEffect,
   ReactNode,
+  useContext,
+  useEffect,
+  useState,
 } from "react";
 
 type Language = "en" | "ar" | "ru";
@@ -131,12 +131,14 @@ const translations = {
     "royal.waterfront.title": "The Stellar Residences",
     "royal.waterfront.title2":
       "blends heritage charm with outstanding connectivity",
-    "royal.waterfront.desc1": "Stellar by Elie Saab is the first fashion-branded residential landmark on Yas Island, Abu Dhabi. Developed by Emirates Developments, this 17-storey architectural masterpiece brings the timeless elegance of haute couture to the heart of Yas Bay. Offering a limited collection of 144 residences,including luxury apartments, garden villas, and an opulent duplex penthouse.",
+    "royal.waterfront.desc1":
+      "Stellar by Elie Saab is the first fashion-branded residential landmark on Yas Island, Abu Dhabi. Developed by Emirates Developments, this 17-storey architectural masterpiece brings the timeless elegance of haute couture to the heart of Yas Bay. Offering a limited collection of 144 residences,including luxury apartments, garden villas, and an opulent duplex penthouse.",
     "royal.waterfront.desc2": "",
     "royal.waterfront.explore": "EXPLORE RESIDENCES",
     "royal.waterfront.brochure": "REGISTER YOUR INTEREST",
     "royal.enlightenment.title": "A Signature Landmark",
-    "royal.enlightenment.desc": "Bathed in Abu Dhabi’s golden light, STELLAR reveals a sculpted form defined by fluid lines and graceful geometry, where architecture flows seamlessly into its natural surroundings. The design creates a continuous harmony between interior and exterior spaces, blending elegance with the calm of the coastal landscape. Each residence becomes a refined dialogue of light and form, shaping a balanced living experience within Yas Island’s evolving skyline.",
+    "royal.enlightenment.desc":
+      "Bathed in Abu Dhabi’s golden light, STELLAR reveals a sculpted form defined by fluid lines and graceful geometry, where architecture flows seamlessly into its natural surroundings. The design creates a continuous harmony between interior and exterior spaces, blending elegance with the calm of the coastal landscape. Each residence becomes a refined dialogue of light and form, shaping a balanced living experience within Yas Island’s evolving skyline.",
     "royal.enlightenment.desc2": "",
 
     "royal.enlightenment.viewGallery": "VIEW GALLERY",
@@ -146,10 +148,12 @@ const translations = {
       "Wake up to inspiring views. Live close to the city’s top destinations. Experience a lifestyle that’s refined, relaxed, and always connected.",
     "royal.hotel.explore": "Register Your Interest",
     "royal.discover.title": "Immersed in Yas Island’s Waterfront Landscape",
-    "royal.discover.desc": "With captivating views over the Pearl Sea, pool, gardens, and community spaces, and exclusive access to Crest Park, STELLAR by ELIE SAAB translates ELIE SAAB’s vision of timeless elegance into interiors that evoke emotion through balance, texture, and light",
+    "royal.discover.desc":
+      "With captivating views over the Pearl Sea, pool, gardens, and community spaces, and exclusive access to Crest Park, STELLAR by ELIE SAAB translates ELIE SAAB’s vision of timeless elegance into interiors that evoke emotion through balance, texture, and light",
     "royal.discover.masterplan": "VIEW MASTERPLAN",
     "royal.care.title": "Experience a True Sense of Belonging",
-    "royal.care.desc": "The amenities at STELLAR by ELIE SAAB extend the living experience beyond the private residence, creating spaces that engage emotion, light, and form. Each environment is shaped with the same precision and artistry that define ELIE SAAB’s vision of living, where beauty, comfort, and balance coexist in harmony.",
+    "royal.care.desc":
+      "The amenities at STELLAR by ELIE SAAB extend the living experience beyond the private residence, creating spaces that engage emotion, light, and form. Each environment is shaped with the same precision and artistry that define ELIE SAAB’s vision of living, where beauty, comfort, and balance coexist in harmony.",
     "royal.care.viewAll": "Explore More",
     "royal.dreams.title":
       "LET THE BAY SLOW YOU DOWN. LET THE CITY LIFT YOU UP.",

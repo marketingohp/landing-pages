@@ -46,7 +46,7 @@ export default function PaymentOptionsTwo() {
               className="text-[#ffffff] dark:text-[#b29679] text-7xl md:text-8xl lg:text-9xl font-bold mb-4 font-mobile-payment-plan2"
               style={{ fontFamily: "Abril Fatface, serif" }}
             >
-             35/65
+              35/65
             </div>
             <div
               className="text-white dark:text-[#5f4931] text-xl md:text-2xl lg:text-3xl tracking-wider  font-mobile-payment-plan3"

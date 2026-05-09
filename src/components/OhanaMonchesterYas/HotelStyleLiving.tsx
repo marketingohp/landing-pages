@@ -2,16 +2,11 @@
 
 import { useLanguage } from "@/contexts/ohanaMonschasterYas/LanguageContext";
 
-import React from "react";
-import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
 import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
-import PropertySearchFormThree from "../common/PropertySearchFormThree";
+import React from "react";
+import PropertySearchForm from "../common/PropertySearchForm";
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -81,7 +76,7 @@ export default function HotelStyleLiving() {
           },
         }}
       >
-        <PropertySearchFormThree
+        <PropertySearchForm
           formName="manchester-city-yas-residences-by-ohana"
           pointName="get-in-touch"
           formType="short-about-form"
@@ -96,7 +91,7 @@ export default function HotelStyleLiving() {
             "budget",
             "message",
           ]}
-          requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+          requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
           viewType="image"
           // downloadBrochure={true}
           // brochureUrl="/images/manchester-city-yas-residences-by-ohana/Yas_Riva_Residences_Brochure.pdf"

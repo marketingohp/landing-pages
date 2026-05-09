@@ -1,6 +1,6 @@
-import "../../components/ComingsoonOhana/style.css";
-import type { Metadata } from "next";
 import ComingsoonOhanaPage from "@/components/ComingsoonOhana";
+import type { Metadata } from "next";
+import "../../components/ComingsoonOhana/style.css";
 export const metadata: Metadata = {
   title: " Coming Soon Ohana",
   description:

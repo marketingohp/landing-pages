@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { useLanguage } from "@/contexts/oneResidences/LanguageContext";
+import Image from "next/image";
 import PropertySearchForm from "../common/PropertySearchForm";
 
 export default function Footer() {
@@ -38,7 +38,12 @@ export default function Footer() {
                   "budget",
                   "message",
                 ]}
-                requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+                requiredFields={[
+                  "firstName",
+                  "lastName",
+                  "phoneNumber",
+                  "email",
+                ]}
                 redirectToThankYou={true}
                 thankYouPath="/home-view/thank-you"
               />
@@ -79,8 +84,6 @@ export default function Footer() {
                 {/* {t("royal.tagline")} */}
               </div>
             </div>
-
-           
 
             {/* Social Media Icons */}
             {/* <div className="flex gap-4">

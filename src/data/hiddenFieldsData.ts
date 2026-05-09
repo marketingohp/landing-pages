@@ -32,7 +32,7 @@ export const PROJECT_HIDDEN_FIELDS: Record<string, ProjectHiddenFields> = {
     location: "Masdar City",
     developer: "Taraf",
   },
-  "flow25": {
+  flow25: {
     location: "Reem Island",
     developer: "GAF",
   },
@@ -72,7 +72,7 @@ export const PROJECT_HIDDEN_FIELDS: Record<string, ProjectHiddenFields> = {
     location: "Al Reem ISLAND",
     developer: "Royal Development",
   },
-  "rixos": {
+  rixos: {
     location: "Reem Island",
     developer: "East and West",
   },
@@ -90,7 +90,7 @@ export const PROJECT_HIDDEN_FIELDS: Record<string, ProjectHiddenFields> = {
   },
   "st-regis-al-maryah": {
     location: "Al Maryah Island",
-    developer: 'SAAS'
+    developer: "SAAS",
   },
   "the-row-saadiyat": {
     location: "Saadiyat Island",
@@ -108,7 +108,7 @@ export const PROJECT_HIDDEN_FIELDS: Record<string, ProjectHiddenFields> = {
     location: "Dubailand",
     developer: "Aldar",
   },
-  "wadeem": {
+  wadeem: {
     location: "Hudayriyat Island",
     developer: "Modon",
   },

@@ -1,6 +1,6 @@
 import OneResidencePage from "@/components/FayHills";
-import "../../components/FayHills/style.css";
 import type { Metadata } from "next";
+import "../../components/FayHills/style.css";
 export const metadata: Metadata = {
   title: " Fay Hills  ",
   description:

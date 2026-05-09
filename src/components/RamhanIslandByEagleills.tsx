@@ -1,23 +1,18 @@
 "use client";
 
-import Header from "./RamhanIslandByEagleills/Header";
-import OneResidencesHero from "./RamhanIslandByEagleills/OneResidencesHero";
-import WaterfrontLiving from "./RamhanIslandByEagleills/WaterfrontLiving";
-import EnlightenmentSection from "./RamhanIslandByEagleills/EnlightenmentSection";
-import WindowToWonder from "./RamhanIslandByEagleills/WindowToWonder";
-import HotelStyleLiving from "./RamhanIslandByEagleills/HotelStyleLiving";
-import InteriorCarousel from "./RamhanIslandByEagleills/InteriorCarousel";
-import DiscoverSection from "./RamhanIslandByEagleills/DiscoverSection";
-import CareAndGrace from "./RamhanIslandByEagleills/CareAndGrace";
-import DreamsAndDesign from "./RamhanIslandByEagleills/DreamsAndDesign";
-import Footer from "./RamhanIslandByEagleills/Footer";
-import HeroKeywords from "./RamhanIslandByEagleills/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./RamhanIslandByEagleills/PaymentOptions";
-import PaymentOptionsTwo from "./RamhanIslandByEagleills/PaymentOptionsTwo";
-import { useEffect } from "react";
 import { pushToDataLayer } from "@/utils/gtag";
+import { useEffect } from "react";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
+import CareAndGrace from "./RamhanIslandByEagleills/CareAndGrace";
+import DiscoverSection from "./RamhanIslandByEagleills/DiscoverSection";
+import EnlightenmentSection from "./RamhanIslandByEagleills/EnlightenmentSection";
+import Footer from "./RamhanIslandByEagleills/Footer";
+import Header from "./RamhanIslandByEagleills/Header";
+import HeroKeywords from "./RamhanIslandByEagleills/HeroKeywords";
+import InteriorCarousel from "./RamhanIslandByEagleills/InteriorCarousel";
+import PaymentOptionsTwo from "./RamhanIslandByEagleills/PaymentOptionsTwo";
+import WaterfrontLiving from "./RamhanIslandByEagleills/WaterfrontLiving";
 
 export default function WimbledonBridgeHouseByAldar() {
   useEffect(() => {

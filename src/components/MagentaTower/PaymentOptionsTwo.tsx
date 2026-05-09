@@ -33,14 +33,12 @@ export default function PaymentOptionsTwo() {
           <div className="order-2 lg:order-1 flex flex-col items-center lg:items-start text-center lg:text-left">
             <div
               className="text-white text-5xl md:text-6xl lg:text-7xl mb-2 font-mobile-payment-plan1 "
-              style={
-                {
-                 fontFamily: "SavoyeLET",
-                  fontStyle: "italic",
-                  fontWeight: 300,
-                  fontSize: "7rem",
-                }
-              }
+              style={{
+                fontFamily: "SavoyeLET",
+                fontStyle: "italic",
+                fontWeight: 300,
+                fontSize: "7rem",
+              }}
             >
               Flexible
             </div>

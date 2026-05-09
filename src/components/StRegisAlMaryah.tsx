@@ -1,21 +1,16 @@
 "use client";
 
-import Header from "./StRegisAlMaryah/Header";
-import OneResidencesHero from "./StRegisAlMaryah/OneResidencesHero";
-import WaterfrontLiving from "./StRegisAlMaryah/WaterfrontLiving";
-import EnlightenmentSection from "./StRegisAlMaryah/EnlightenmentSection";
-import WindowToWonder from "./StRegisAlMaryah/WindowToWonder";
-import HotelStyleLiving from "./StRegisAlMaryah/HotelStyleLiving";
-import InteriorCarousel from "./StRegisAlMaryah/InteriorCarousel";
-import DiscoverSection from "./StRegisAlMaryah/DiscoverSection";
 import CareAndGrace from "./StRegisAlMaryah/CareAndGrace";
-import DreamsAndDesign from "./StRegisAlMaryah/DreamsAndDesign";
+import DiscoverSection from "./StRegisAlMaryah/DiscoverSection";
+import EnlightenmentSection from "./StRegisAlMaryah/EnlightenmentSection";
 import Footer from "./StRegisAlMaryah/Footer";
+import Header from "./StRegisAlMaryah/Header";
 import HeroKeywords from "./StRegisAlMaryah/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./StRegisAlMaryah/PaymentOptions";
+import InteriorCarousel from "./StRegisAlMaryah/InteriorCarousel";
 import PaymentOptionsTwo from "./StRegisAlMaryah/PaymentOptionsTwo";
+import WaterfrontLiving from "./StRegisAlMaryah/WaterfrontLiving";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function StRegisAlMaryahPage() {
   return (
@@ -37,7 +32,7 @@ export default function StRegisAlMaryahPage() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="/st-regis-al-maryah/thank-you"

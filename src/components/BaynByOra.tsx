@@ -1,23 +1,18 @@
 "use client";
 
-import Header from "./BaynByOra/Header";
-import OneResidencesHero from "./BaynByOra/OneResidencesHero";
-import WaterfrontLiving from "./BaynByOra/WaterfrontLiving";
-import EnlightenmentSection from "./BaynByOra/EnlightenmentSection";
-import WindowToWonder from "./BaynByOra/WindowToWonder";
-import HotelStyleLiving from "./BaynByOra/HotelStyleLiving";
-import InteriorCarousel from "./BaynByOra/InteriorCarousel";
-import DiscoverSection from "./BaynByOra/DiscoverSection";
-import CareAndGrace from "./BaynByOra/CareAndGrace";
-import DreamsAndDesign from "./BaynByOra/DreamsAndDesign";
-import Footer from "./BaynByOra/Footer";
-import HeroKeywords from "./BaynByOra/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./BaynByOra/PaymentOptions";
-import PaymentOptionsTwo from "./BaynByOra/PaymentOptionsTwo";
-import { useEffect } from "react";
 import { pushToDataLayer } from "@/utils/gtag";
+import { useEffect } from "react";
+import CareAndGrace from "./BaynByOra/CareAndGrace";
+import DiscoverSection from "./BaynByOra/DiscoverSection";
+import EnlightenmentSection from "./BaynByOra/EnlightenmentSection";
+import Footer from "./BaynByOra/Footer";
+import Header from "./BaynByOra/Header";
+import HeroKeywords from "./BaynByOra/HeroKeywords";
+import InteriorCarousel from "./BaynByOra/InteriorCarousel";
+import PaymentOptionsTwo from "./BaynByOra/PaymentOptionsTwo";
+import WaterfrontLiving from "./BaynByOra/WaterfrontLiving";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function BaynByOraPage() {
   useEffect(() => {
@@ -46,7 +41,7 @@ export default function BaynByOraPage() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="/bayn-by-ora/thank-you"

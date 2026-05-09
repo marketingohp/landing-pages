@@ -1,6 +1,6 @@
-import "../../components/MagentaTower/style.css";
-import type { Metadata } from "next";
 import AthlonByAldarPage from "@/components/AthlonByAldar";
+import type { Metadata } from "next";
+import "../../components/MagentaTower/style.css";
 export const metadata: Metadata = {
   title: "Athlon by Aldar",
   description:

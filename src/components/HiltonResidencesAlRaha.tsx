@@ -1,22 +1,16 @@
 "use client";
 
-import Header from "./HiltonResidencesAlRaha/Header";
-import OneResidencesHero from "./HiltonResidencesAlRaha/OneResidencesHero";
-import WaterfrontLiving from "./HiltonResidencesAlRaha/WaterfrontLiving";
-import EnlightenmentSection from "./HiltonResidencesAlRaha/EnlightenmentSection";
-import WindowToWonder from "./HiltonResidencesAlRaha/WindowToWonder";
-import HotelStyleLiving from "./HiltonResidencesAlRaha/HotelStyleLiving";
-import InteriorCarousel from "./HiltonResidencesAlRaha/InteriorCarousel";
-import DiscoverSection from "./HiltonResidencesAlRaha/DiscoverSection";
 import CareAndGrace from "./HiltonResidencesAlRaha/CareAndGrace";
-import DreamsAndDesign from "./HiltonResidencesAlRaha/DreamsAndDesign";
+import DiscoverSection from "./HiltonResidencesAlRaha/DiscoverSection";
+import EnlightenmentSection from "./HiltonResidencesAlRaha/EnlightenmentSection";
 import Footer from "./HiltonResidencesAlRaha/Footer";
+import Header from "./HiltonResidencesAlRaha/Header";
 import HeroKeywords from "./HiltonResidencesAlRaha/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./HiltonResidencesAlRaha/PaymentOptions";
+import InteriorCarousel from "./HiltonResidencesAlRaha/InteriorCarousel";
 import PaymentOptionsTwo from "./HiltonResidencesAlRaha/PaymentOptionsTwo";
-import PropertySearchFormThree from "./common/PropertySearchFormThree";
+import WaterfrontLiving from "./HiltonResidencesAlRaha/WaterfrontLiving";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function HiltonResidencesAlRahaPage() {
   return (
@@ -25,7 +19,7 @@ export default function HiltonResidencesAlRahaPage() {
       <div id="home">
         <HeroKeywords />
         <div className="absolute bottom-0 left-0 w-full custom-form-container">
-          <PropertySearchFormThree
+          <PropertySearchForm
             formName="hilton-residences-al-raha"
             pointName="get-in-touch"
             formType="banner-form"
@@ -38,7 +32,7 @@ export default function HiltonResidencesAlRahaPage() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="/hilton-residences-al-raha/thank-you"

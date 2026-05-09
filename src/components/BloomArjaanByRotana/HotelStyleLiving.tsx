@@ -2,22 +2,17 @@
 
 import { useLanguage } from "@/contexts/oneResidences/LanguageContext";
 
-import React from "react";
-import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
 import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
+import React from "react";
 import PropertySearchForm from "../common/PropertySearchForm";
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
     children: React.ReactElement<any, any>;
   },
-  ref: React.Ref<unknown>
+  ref: React.Ref<unknown>,
 ) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -34,7 +29,10 @@ export default function HotelStyleLiving() {
   };
 
   return (
-    <section className="py-20 lg:py-32 bg-[#f5f5f0] dark:bg-[#1a1a1a]" style={{paddingTop:0}}>
+    <section
+      className="py-20 lg:py-32 bg-[#f5f5f0] dark:bg-[#1a1a1a]"
+      style={{ paddingTop: 0 }}
+    >
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2
@@ -93,7 +91,7 @@ export default function HotelStyleLiving() {
             "budget",
             "message",
           ]}
-          requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+          requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
           viewType="image"
           downloadBrochure={true}
           thankYouPath="/bloom-arjaan-by-rotana/thank-you"

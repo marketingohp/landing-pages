@@ -2,10 +2,10 @@
 
 import {
   createContext,
-  useContext,
-  useState,
-  useEffect,
   ReactNode,
+  useContext,
+  useEffect,
+  useState,
 } from "react";
 
 type Language = "en" | "ar" | "ru";
@@ -129,14 +129,16 @@ const translations = {
     "royal.form.search": "SEARCH",
     "royal.form.select": "Select",
     "royal.waterfront.title": "Joud Residence",
-    "royal.waterfront.title2":
-      "this is where the future of living takes shape",
-    "royal.waterfront.desc1": "At JOUD Residence by One Development, your home doesn’t just respond it learns, adapts, and anticipates your lifestyle through advanced AI integration. Paired with future-forward features like air taxi access and drone-enabled services, it’s designed for those who expect more from where they live.",
-    "royal.waterfront.desc2": "Set within Al Reem Island, the tower offers well-designed homes in a location that keeps everything within reach, from cafés and retail to open spaces and waterfront views, creating a lifestyle that feels both connected and calm.",
+    "royal.waterfront.title2": "this is where the future of living takes shape",
+    "royal.waterfront.desc1":
+      "At JOUD Residence by One Development, your home doesn’t just respond it learns, adapts, and anticipates your lifestyle through advanced AI integration. Paired with future-forward features like air taxi access and drone-enabled services, it’s designed for those who expect more from where they live.",
+    "royal.waterfront.desc2":
+      "Set within Al Reem Island, the tower offers well-designed homes in a location that keeps everything within reach, from cafés and retail to open spaces and waterfront views, creating a lifestyle that feels both connected and calm.",
     "royal.waterfront.explore": "EXPLORE RESIDENCES",
     "royal.waterfront.brochure": "REGISTER YOUR INTEREST",
     "royal.enlightenment.title": "Clarity in Every Detail",
-    "royal.enlightenment.desc": "This project is built on a simple idea: living well comes from clarity, not excess. Instead of overwhelming spaces with features, the focus is on proportion, flow, and purpose. Every element—layout, light, access, and shared areas—is arranged to reduce friction in daily life.",
+    "royal.enlightenment.desc":
+      "This project is built on a simple idea: living well comes from clarity, not excess. Instead of overwhelming spaces with features, the focus is on proportion, flow, and purpose. Every element—layout, light, access, and shared areas—is arranged to reduce friction in daily life.",
     "royal.enlightenment.desc2": "",
 
     "royal.enlightenment.viewGallery": "VIEW GALLERY",
@@ -146,10 +148,12 @@ const translations = {
       "Wake up to inspiring views. Live close to the city’s top destinations. Experience a lifestyle that’s refined, relaxed, and always connected.",
     "royal.hotel.explore": "Register Your Interest",
     "royal.discover.title": "At The Heart of The City",
-    "royal.discover.desc": "Set within Al Reem Island, the residence offers an urban lifestyle where the evolving story of Abu Dhabi is written in everyday moments. From green spaces and social hubs to cafés, retail and cultural destinations, the district is alive with opportunity, yet retains a sense of calm. Close to the city center, it is a place where living is both effortless and elevated.",
+    "royal.discover.desc":
+      "Set within Al Reem Island, the residence offers an urban lifestyle where the evolving story of Abu Dhabi is written in everyday moments. From green spaces and social hubs to cafés, retail and cultural destinations, the district is alive with opportunity, yet retains a sense of calm. Close to the city center, it is a place where living is both effortless and elevated.",
     "royal.discover.masterplan": "VIEW MASTERPLAN",
     "royal.care.title": "A leading address for living and investment",
-    "royal.care.desc": "JOUD offers a competitive entry into high-rise living, backed by strong demand and proven growth potential.",
+    "royal.care.desc":
+      "JOUD offers a competitive entry into high-rise living, backed by strong demand and proven growth potential.",
     "royal.care.viewAll": "Explore More",
     "royal.dreams.title":
       "LET THE BAY SLOW YOU DOWN. LET THE CITY LIFT YOU UP.",

@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/reemIsland/LanguageContext";
 import { useTheme } from "@/contexts/ThemeContext";
+import { useEffect, useState } from "react";
 import LanguageSelector from "./LanguageSelector";
 
 export default function Header() {
@@ -39,7 +39,7 @@ export default function Header() {
 
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
-    href: string
+    href: string,
   ) => {
     e.preventDefault();
     const element = document.querySelector(href);

@@ -2,18 +2,17 @@
 
 import { useLanguage } from "@/contexts/LanguageContext";
 
-import React, { useRef, useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import PropertySearchFormThree from "../common/PropertySearchFormThree";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 export default function HeroKeywords() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -84,9 +83,9 @@ export default function HeroKeywords() {
       </Swiper>
 
       <style jsx>{`
-       .swiper-slide img{
-        height: auto !important;
-      }
+        .swiper-slide img {
+          height: auto !important;
+        }
       `}</style>
     </section>
   );

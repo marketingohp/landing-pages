@@ -1,18 +1,12 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
 import { useLanguage } from "@/contexts/waldorfAstoriaResidencesByAldar/LanguageContext";
+import { useState } from "react";
 
-import React from "react";
-import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
 import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
+import React from "react";
 import PropertySearchForm from "../common/PropertySearchForm";
 
 const Transition = React.forwardRef(function Transition(

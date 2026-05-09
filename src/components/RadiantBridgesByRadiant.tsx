@@ -1,23 +1,17 @@
 "use client";
 
-import Header from "./RadiantBridgesByRadiant/Header";
-import OneResidencesHero from "./RadiantBridgesByRadiant/OneResidencesHero";
-import WaterfrontLiving from "./RadiantBridgesByRadiant/WaterfrontLiving";
-import EnlightenmentSection from "./RadiantBridgesByRadiant/EnlightenmentSection";
-import WindowToWonder from "./RadiantBridgesByRadiant/WindowToWonder";
-import HotelStyleLiving from "./RadiantBridgesByRadiant/HotelStyleLiving";
-import InteriorCarousel from "./RadiantBridgesByRadiant/InteriorCarousel";
-import DiscoverSection from "./RadiantBridgesByRadiant/DiscoverSection";
-import CareAndGrace from "./RadiantBridgesByRadiant/CareAndGrace";
-import DreamsAndDesign from "./RadiantBridgesByRadiant/DreamsAndDesign";
-import Footer from "./RadiantBridgesByRadiant/Footer";
-import HeroKeywords from "./RadiantBridgesByRadiant/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./RadiantBridgesByRadiant/PaymentOptions";
-import PaymentOptionsTwo from "./RadiantBridgesByRadiant/PaymentOptionsTwo";
-import { useEffect } from "react";
 import { pushToDataLayer } from "@/utils/gtag";
+import { useEffect } from "react";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
+import CareAndGrace from "./RadiantBridgesByRadiant/CareAndGrace";
+import DiscoverSection from "./RadiantBridgesByRadiant/DiscoverSection";
+import EnlightenmentSection from "./RadiantBridgesByRadiant/EnlightenmentSection";
+import Footer from "./RadiantBridgesByRadiant/Footer";
+import Header from "./RadiantBridgesByRadiant/Header";
+import HeroKeywords from "./RadiantBridgesByRadiant/HeroKeywords";
+import InteriorCarousel from "./RadiantBridgesByRadiant/InteriorCarousel";
+import WaterfrontLiving from "./RadiantBridgesByRadiant/WaterfrontLiving";
 
 export default function WimbledonBridgeHouseByAldar() {
   useEffect(() => {

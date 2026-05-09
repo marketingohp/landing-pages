@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const OhanaTimer = ({ days, hours, minutes, seconds }) => {
-  
   const [time, setTime] = useState({
     days: days,
     hours: hours,

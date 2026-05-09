@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { useLanguage } from "@/contexts/stRegisAlMaryah/LanguageContext";
+import Image from "next/image";
 
 export default function DreamsAndDesign() {
   const { t } = useLanguage();

@@ -1,27 +1,26 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 export default function InteriorCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = [
     "/images/rixos/rixos_images3.png",
- "/images/rixos/rixos_images2.png",
- "/images/rixos/rixos_images7.png",
- "/images/rixos/rixos_images6.png",
- "/images/rixos/rixos_images9.png",
+    "/images/rixos/rixos_images2.png",
+    "/images/rixos/rixos_images7.png",
+    "/images/rixos/rixos_images6.png",
+    "/images/rixos/rixos_images9.png",
   ];
 
   const nextImage = () => {

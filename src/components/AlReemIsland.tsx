@@ -1,25 +1,14 @@
 "use client";
 
-import Header from "./AlReemIsland/Header";
-import ProjectHero from "./AlReemIsland/ProjectHero";
-import WaterfrontLiving from "./AlReemIsland/WaterfrontLiving";
-import EnlightenmentSection from "./AlReemIsland/EnlightenmentSection";
-import WindowToWonder from "./AlReemIsland/WindowToWonder";
-import HotelStyleLiving from "./AlReemIsland/HotelStyleLiving";
-import InteriorCarousel from "./AlReemIsland/InteriorCarousel";
-import DiscoverSection from "./AlReemIsland/DiscoverSection";
-import CareAndGrace from "./AlReemIsland/CareAndGrace";
-import DreamsAndDesign from "./AlReemIsland/DreamsAndDesign";
-import Footer from "./AlReemIsland/Footer";
-import InformationFooter from "./AlReemIsland/InformationFooter";
-import NearBySection from "./AlReemIsland/NearBySection";
-import HeroKeywords from "./AlReemIsland/HeroKeywords";
-import PropertySearchFormTwo from "./common/PropertySearchFormTwo";
-import PaymentOptions from "./AlReemIsland/PaymentOptions";
-import PaymentOptionsTwo from "./AlReemIsland/PaymentOptionsTwo";
-import ValueAddedSection from "./AlReemIsland/ValueAddedSection";
 import CounterSection from "./AlReemIsland/CounterSection";
+import Header from "./AlReemIsland/Header";
+import HeroKeywords from "./AlReemIsland/HeroKeywords";
+import InformationFooter from "./AlReemIsland/InformationFooter";
+import InteriorCarousel from "./AlReemIsland/InteriorCarousel";
+import NearBySection from "./AlReemIsland/NearBySection";
 import NextLegacySection from "./AlReemIsland/NextLegacySection";
+import ValueAddedSection from "./AlReemIsland/ValueAddedSection";
+import PropertySearchFormTwo from "./common/PropertySearchFormTwo";
 
 export default function AlReemIslandPage() {
   return (
@@ -52,7 +41,7 @@ export default function AlReemIslandPage() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="/reem-island/thank-you"

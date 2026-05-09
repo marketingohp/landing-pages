@@ -1,21 +1,15 @@
 "use client";
 
-import Header from "./FayHills/Header";
-import OneResidencesHero from "./FayHills/OneResidencesHero";
-import WaterfrontLiving from "./FayHills/WaterfrontLiving";
-import EnlightenmentSection from "./FayHills/EnlightenmentSection";
-import WindowToWonder from "./FayHills/WindowToWonder";
-import HotelStyleLiving from "./FayHills/HotelStyleLiving";
-import InteriorCarousel from "./FayHills/InteriorCarousel";
-import DiscoverSection from "./FayHills/DiscoverSection";
 import CareAndGrace from "./FayHills/CareAndGrace";
-import DreamsAndDesign from "./FayHills/DreamsAndDesign";
+import DiscoverSection from "./FayHills/DiscoverSection";
+import EnlightenmentSection from "./FayHills/EnlightenmentSection";
 import Footer from "./FayHills/Footer";
+import Header from "./FayHills/Header";
 import HeroKeywords from "./FayHills/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./FayHills/PaymentOptions";
+import InteriorCarousel from "./FayHills/InteriorCarousel";
 import PaymentOptionsTwo from "./FayHills/PaymentOptionsTwo";
-import BottomFooter from "./common/BottomFooter";
+import WaterfrontLiving from "./FayHills/WaterfrontLiving";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function FayHillsPage() {
   return (
@@ -37,7 +31,7 @@ export default function FayHillsPage() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="/fay-hills/thank-you"

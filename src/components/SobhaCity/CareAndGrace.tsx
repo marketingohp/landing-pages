@@ -1,23 +1,17 @@
 "use client";
 
 import { useLanguage } from "@/contexts/sobhaCity/LanguageContext";
-import Image from "next/image";
-import React, { useState } from "react";
-import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
-import IconButton from "@mui/material/IconButton";
 import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
-import PropertySearchForm from "../common/PropertySearchForm";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import Image from "next/image";
+import React, { useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import PropertySearchForm from "../common/PropertySearchForm";
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -51,55 +45,55 @@ export default function CareAndGrace() {
   };
 
   const amenities = [
-  {
-    name: "Wellness Centre",
-    icon: "/images/sobha-city/amenities/fitness.svg"
-  },
-  {
-    name: "Swimming Pools",
-    icon: "/images/sobha-city/amenities/swimming_pool.svg"
-  },
-  {
-    name: "Golf Course",
-    icon: "/images/sobha-city/amenities/golf_course.svg"
-  },
-  {
-    name: "International Schools",
-    icon: "/images/sobha-city/amenities/schools.svg"
-  },
-  {
-    name: "Retail & Dining",
-    icon: "/images/sobha-city/amenities/retail_outlets.svg"
-  },
-  {
-    name: "Running Tracks",
-    icon: "/images/sobha-city/amenities/running_track.svg"
-  },
-  {
-    name: "24/7 Security",
-    icon: "/images/sobha-city/amenities/24x7hr_security.svg"
-  },
-  {
-    name: "Community Transport",
-    icon: "/images/sobha-city/amenities/community_center.svg"
-  },
-  {
-    name: "Landscaped Parks",
-    icon: "/images/sobha-city/amenities/landscape_garden.svg"
-  },
-  {
-    name: "Concierge Services",
-    icon: "/images/sobha-city/amenities/concierage.svg"
-  },
-  {
-    name: "Smart Home Tech",
-    icon: "/images/sobha-city/amenities/kitchen.svg"
-  },
-  {
-    name: "Premium Clubhouse",
-    icon: "/images/sobha-city/amenities/football_court.svg"
-  }
-];
+    {
+      name: "Wellness Centre",
+      icon: "/images/sobha-city/amenities/fitness.svg",
+    },
+    {
+      name: "Swimming Pools",
+      icon: "/images/sobha-city/amenities/swimming_pool.svg",
+    },
+    {
+      name: "Golf Course",
+      icon: "/images/sobha-city/amenities/golf_course.svg",
+    },
+    {
+      name: "International Schools",
+      icon: "/images/sobha-city/amenities/schools.svg",
+    },
+    {
+      name: "Retail & Dining",
+      icon: "/images/sobha-city/amenities/retail_outlets.svg",
+    },
+    {
+      name: "Running Tracks",
+      icon: "/images/sobha-city/amenities/running_track.svg",
+    },
+    {
+      name: "24/7 Security",
+      icon: "/images/sobha-city/amenities/24x7hr_security.svg",
+    },
+    {
+      name: "Community Transport",
+      icon: "/images/sobha-city/amenities/community_center.svg",
+    },
+    {
+      name: "Landscaped Parks",
+      icon: "/images/sobha-city/amenities/landscape_garden.svg",
+    },
+    {
+      name: "Concierge Services",
+      icon: "/images/sobha-city/amenities/concierage.svg",
+    },
+    {
+      name: "Smart Home Tech",
+      icon: "/images/sobha-city/amenities/kitchen.svg",
+    },
+    {
+      name: "Premium Clubhouse",
+      icon: "/images/sobha-city/amenities/football_court.svg",
+    },
+  ];
 
   return (
     <section className="py-20 lg:py-32 bg-[[#C9A96E]] dark:bg-[#[#9C7A45]] relative">

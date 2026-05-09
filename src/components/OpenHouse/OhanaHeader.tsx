@@ -1,17 +1,14 @@
-import React, { useState, useRef, useEffect } from "react";
-import OhanaTimer from "./OhanaTimer";
-import useCountdown from "./useCountdown";
-import PropertySearchForm from "../common/PropertySearchForm";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import Dialog from "@mui/material/Dialog";
+import Slide from "@mui/material/Slide";
+import { TransitionProps } from "@mui/material/transitions";
+import Image from "next/image";
+import React, { useEffect, useRef, useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import Dialog from "@mui/material/Dialog";
-import { TransitionProps } from "@mui/material/transitions";
-import Slide from "@mui/material/Slide";
 import PropertySearchFormFour from "../common/PropertySearchFormFour";
-import Image from "next/image";
+import OhanaTimer from "./OhanaTimer";
+import useCountdown from "./useCountdown";
 //const video = "/video/ohana.mp4";
 const video =
   "https://cdn.prod.website-files.com/6953e1cc8ce6f26a3cb13814/6953e1cc8ce6f26a3cb138d3_smoke-colors-bg_loop_mp4.mp4";
@@ -76,8 +73,20 @@ const OhanaHeader = () => {
     <>
       <div className="VideoContainer">
         {/* Desktop Video  */}
-        <Image src="/images/openhouse/ohana-banner-1.jpg" alt="" width={1000} height={1000} className="desktop" />
-        <Image src="/images/openhouse/banner-mobile.webp" alt="" width={1000} height={1000} className="mobilee" />
+        <Image
+          src="/images/openhouse/ohana-banner-1.jpg"
+          alt=""
+          width={1000}
+          height={1000}
+          className="desktop"
+        />
+        <Image
+          src="/images/openhouse/banner-mobile.webp"
+          alt=""
+          width={1000}
+          height={1000}
+          className="mobilee"
+        />
         {/* <video
           ref={videoRef}
           width={"100%"}
@@ -94,21 +103,26 @@ const OhanaHeader = () => {
         </video> */}
         <div className="HeaderContent">
           <div className="HeaderContent1">
-            <div className="header-logos-row__item" style={{ marginBottom: '20px' }}>
-              <img src="/images/ohana/ohana_logo.svg" alt="ohana" width={200} height={100} />
+            <div
+              className="header-logos-row__item"
+              style={{ marginBottom: "20px" }}
+            >
+              <img
+                src="/images/ohana/ohana_logo.svg"
+                alt="ohana"
+                width={200}
+                height={100}
+              />
             </div>
             <h2>Join the Ohana Development</h2>
 
             <div className="header-logos-row">
-
               <div className="header-logos-row__item">
                 <h3 style={{ color: "white", paddingTop: "0px" }}>
                   <span className="spanDay">Open Day</span> in Abu Dhabi
                 </h3>
               </div>
-
             </div>
-
 
             <p>Mon, 23 & Thu, 24 Feb 2026</p>
             <p>8PM - 12AM</p>
@@ -141,10 +155,10 @@ const OhanaHeader = () => {
             Ohana Sales Center - Landmark Tower, Abu Dhabi
           </p>
           <p style={{ textAlign: "center", color: "#ffffff" }}>
-            On 23rd to 24th Febuary 2026, Open Home Properties invites you to an exclusive
-            Open Day event in collaboration with Ohana. Join us at Ohana Sales
-            Center - Landmark Tower, Abu Dhabi, for a unique opportunity to
-            explore some of Abu Dhabi’s most
+            On 23rd to 24th Febuary 2026, Open Home Properties invites you to an
+            exclusive Open Day event in collaboration with Ohana. Join us at
+            Ohana Sales Center - Landmark Tower, Abu Dhabi, for a unique
+            opportunity to explore some of Abu Dhabi’s most
             <b style={{ fontSize: "26px", fontWeight: "600" }}>
               &nbsp; Exclusive branded &nbsp;
             </b>
@@ -199,7 +213,7 @@ const OhanaHeader = () => {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="/open-day/thank-you"
@@ -255,7 +269,7 @@ const OhanaHeader = () => {
             "budget",
             "message",
           ]}
-          requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+          requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
           viewType="image"
           // downloadBrochure={true}
           // brochureUrl="/images/yas-riva-residences/Yas_Riva_Residences_Brochure.pdf"

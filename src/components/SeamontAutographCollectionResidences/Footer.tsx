@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useLanguage } from "@/contexts/seamonthAutoGraph/LanguageContext";
 import PropertySearchForm from "../common/PropertySearchForm";
 
@@ -38,7 +37,12 @@ export default function Footer() {
                   "budget",
                   "message",
                 ]}
-                requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+                requiredFields={[
+                  "firstName",
+                  "lastName",
+                  "phoneNumber",
+                  "email",
+                ]}
                 redirectToThankYou={true}
                 thankYouPath="/seamont-autograph-collection-residences/thank-you"
                 colorCodeOne="#ebe8dd"

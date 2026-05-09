@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { useLanguage } from "@/contexts/wimbledonBridgeHouse/LanguageContext";
+import Image from "next/image";
 
 export default function WindowToWonder() {
   const { t } = useLanguage();

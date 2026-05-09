@@ -1,6 +1,6 @@
-import "../../components/FourSeasons/style.css";
-import type { Metadata } from "next";
 import FourSeasonsPage from "@/components/FourSeasons";
+import type { Metadata } from "next";
+import "../../components/FourSeasons/style.css";
 export const metadata: Metadata = {
   title: "Four Seasons",
   description:
@@ -22,5 +22,5 @@ export const metadata: Metadata = {
 };
 
 export default function FourSeasons() {
-  return <FourSeasonsPage /> ;
+  return <FourSeasonsPage />;
 }

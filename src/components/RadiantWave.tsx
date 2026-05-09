@@ -1,21 +1,15 @@
 "use client";
 
-import Header from "./RadiantWave/Header";
-import OneResidencesHero from "./RadiantWave/OneResidencesHero";
-import WaterfrontLiving from "./RadiantWave/WaterfrontLiving";
-import EnlightenmentSection from "./RadiantWave/EnlightenmentSection";
-import WindowToWonder from "./RadiantWave/WindowToWonder";
-import HotelStyleLiving from "./RadiantWave/HotelStyleLiving";
-import InteriorCarousel from "./RadiantWave/InteriorCarousel";
-import DiscoverSection from "./RadiantWave/DiscoverSection";
 import CareAndGrace from "./RadiantWave/CareAndGrace";
-import DreamsAndDesign from "./RadiantWave/DreamsAndDesign";
+import DiscoverSection from "./RadiantWave/DiscoverSection";
 import Footer from "./RadiantWave/Footer";
+import Header from "./RadiantWave/Header";
 import HeroKeywords from "./RadiantWave/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./RadiantWave/PaymentOptions";
+import InteriorCarousel from "./RadiantWave/InteriorCarousel";
 import PaymentOptionsTwo from "./RadiantWave/PaymentOptionsTwo";
+import WaterfrontLiving from "./RadiantWave/WaterfrontLiving";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function RadiantWavePage() {
   return (
@@ -37,7 +31,7 @@ export default function RadiantWavePage() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="/radiant-wave/thank-you"

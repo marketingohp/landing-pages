@@ -1,22 +1,17 @@
 "use client";
 
-import Image from "next/image";
 import { useLanguage } from "@/contexts/ramhanIslandByEagleHills/LanguageContext";
-import React, { useState } from "react";
-import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
 import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
-import PropertySearchForm from "../common/PropertySearchForm";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import Image from "next/image";
+import React, { useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import PropertySearchForm from "../common/PropertySearchForm";
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -61,37 +56,37 @@ export default function DiscoverSection() {
 
   // Destinations matching the image layout (2x3 grid)
   const destinations = [
-  {
-    time: "10 MINUTES",
-    icon: "/images/ramhan-island-by-eagle-hills/locations/ferrari_world.png",
-    destination: "Ferrari World"
-  },
-  {
-    time: "18 MINUTES",
-    icon: "/images/ramhan-island-by-eagle-hills/locations/louvre.png",
-    destination: "Louvre"
-  },
-  {
-    time: "15 MINUTES",
-    icon: "/images/ramhan-island-by-eagle-hills/locations/zayed_international_airport.png",
-    destination: "Zayed International Airport "
-  },
-  {
-    time: "15 MINUTES",
-    icon: "/images/ramhan-island-by-eagle-hills/locations/sheikh_zayed_grand_mosque.png",
-    destination: "Sheikh Zayed Grand Mosque"
-  },
-  {
-    time: "20 MINUTES",
-    icon: "/images/ramhan-island-by-eagle-hills/locations/downtown_abu_dhabi.png",
-    destination: "Downtown Abu Dhabi"
-  },
-  {
-    time: "10 MINUTES",
-    icon: "/images/ramhan-island-by-eagle-hills/locations/al_jubail_island.png",
-    destination: "Al Jubail Island"
-  }
-];
+    {
+      time: "10 MINUTES",
+      icon: "/images/ramhan-island-by-eagle-hills/locations/ferrari_world.png",
+      destination: "Ferrari World",
+    },
+    {
+      time: "18 MINUTES",
+      icon: "/images/ramhan-island-by-eagle-hills/locations/louvre.png",
+      destination: "Louvre",
+    },
+    {
+      time: "15 MINUTES",
+      icon: "/images/ramhan-island-by-eagle-hills/locations/zayed_international_airport.png",
+      destination: "Zayed International Airport ",
+    },
+    {
+      time: "15 MINUTES",
+      icon: "/images/ramhan-island-by-eagle-hills/locations/sheikh_zayed_grand_mosque.png",
+      destination: "Sheikh Zayed Grand Mosque",
+    },
+    {
+      time: "20 MINUTES",
+      icon: "/images/ramhan-island-by-eagle-hills/locations/downtown_abu_dhabi.png",
+      destination: "Downtown Abu Dhabi",
+    },
+    {
+      time: "10 MINUTES",
+      icon: "/images/ramhan-island-by-eagle-hills/locations/al_jubail_island.png",
+      destination: "Al Jubail Island",
+    },
+  ];
 
   return (
     <section className="py-12 sm:py-16 md:py-20 lg:py-32 bg-[#FCFCF9] dark:bg-[#1a1a1a]">

@@ -1,21 +1,16 @@
 "use client";
 
-import Header from "./BabAlQasr28/Header";
-import OneResidencesHero from "./BabAlQasr28/OneResidencesHero";
-import WaterfrontLiving from "./BabAlQasr28/WaterfrontLiving";
-import EnlightenmentSection from "./BabAlQasr28/EnlightenmentSection";
-import WindowToWonder from "./BabAlQasr28/WindowToWonder";
-import HotelStyleLiving from "./BabAlQasr28/HotelStyleLiving";
-import InteriorCarousel from "./BabAlQasr28/InteriorCarousel";
-import DiscoverSection from "./BabAlQasr28/DiscoverSection";
 import CareAndGrace from "./BabAlQasr28/CareAndGrace";
-import DreamsAndDesign from "./BabAlQasr28/DreamsAndDesign";
+import DiscoverSection from "./BabAlQasr28/DiscoverSection";
+import EnlightenmentSection from "./BabAlQasr28/EnlightenmentSection";
 import Footer from "./BabAlQasr28/Footer";
+import Header from "./BabAlQasr28/Header";
 import HeroKeywords from "./BabAlQasr28/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./BabAlQasr28/PaymentOptions";
+import InteriorCarousel from "./BabAlQasr28/InteriorCarousel";
 import PaymentOptionsTwo from "./BabAlQasr28/PaymentOptionsTwo";
+import WaterfrontLiving from "./BabAlQasr28/WaterfrontLiving";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function BabAlQasr28Page() {
   return (
@@ -37,7 +32,7 @@ export default function BabAlQasr28Page() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="/bab-al-qasr-royal-28/thank-you"

@@ -1,23 +1,17 @@
 "use client";
 
 import { useLanguage } from "@/contexts/waldorfAstoriaResidencesByAldar/LanguageContext";
-import Image from "next/image";
-import React, { useState } from "react";
-import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
-import IconButton from "@mui/material/IconButton";
 import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
-import PropertySearchForm from "../common/PropertySearchForm";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import Image from "next/image";
+import React, { useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import PropertySearchForm from "../common/PropertySearchForm";
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -51,63 +45,63 @@ export default function CareAndGrace() {
   };
 
   const amenities = [
-  {
-    name: "24/7 Concierge",
-    icon: "/images/waldorf-astoria-residences-by-aldar/amenities/concierage.svg"
-  },
-  {
-    name: "CINEMA",
-    icon: "/images/waldorf-astoria-residences-by-aldar/amenities/cinema.svg"
-  },
-  {
-    name: "MEDIA ROOM",
-    icon: "/images/waldorf-astoria-residences-by-aldar/amenities/studio.svg"
-  },
-  {
-    name: "MULTI-PURPOSEROOM",
-    icon: "/images/waldorf-astoria-residences-by-aldar/amenities/mutli_purpose_room.svg"
-  },
-  {
-    name: "MEETING / PRIVATE DINING ROOM",
-    icon: "/images/waldorf-astoria-residences-by-aldar/amenities/dining_outlets.svg"
-  },
-  {
-    name: "KIDS\u2019 CLUB",
-    icon: "/images/waldorf-astoria-residences-by-aldar/amenities/kids_play.svg"
-  },
-  {
-    name: "SIMULATOR ROOM",
-    icon: "/images/waldorf-astoria-residences-by-aldar/amenities/mutli_purpose_room.svg"
-  },
-  {
-    name: "TREATMENT / SPA ROOM",
-    icon: "/images/waldorf-astoria-residences-by-aldar/amenities/spa.svg"
-  },
-  {
-    name: "OWNERS\u2019 LOUNGE",
-    icon: "/images/waldorf-astoria-residences-by-aldar/amenities/owner_lounge.svg"
-  },
-  {
-    name: "POOL AREA",
-    icon: "/images/waldorf-astoria-residences-by-aldar/amenities/swimming_pool.svg"
-  },
-  {
-    name: "KITCHEN",
-    icon: "/images/waldorf-astoria-residences-by-aldar/amenities/kitchen.svg"
-  },
-  {
-    name: "GAME ROOM",
-    icon: "/images/waldorf-astoria-residences-by-aldar/amenities/game_room.svg"
-  },
-  {
-    name: "GYM",
-    icon: "/images/waldorf-astoria-residences-by-aldar/amenities/fitness.svg"
-  },
-  {
-    name: "ONE YEAR YAS LINKS MEMBERSHIP",
-    icon: "/images/waldorf-astoria-residences-by-aldar/amenities/membership.svg"
-  }
-];
+    {
+      name: "24/7 Concierge",
+      icon: "/images/waldorf-astoria-residences-by-aldar/amenities/concierage.svg",
+    },
+    {
+      name: "CINEMA",
+      icon: "/images/waldorf-astoria-residences-by-aldar/amenities/cinema.svg",
+    },
+    {
+      name: "MEDIA ROOM",
+      icon: "/images/waldorf-astoria-residences-by-aldar/amenities/studio.svg",
+    },
+    {
+      name: "MULTI-PURPOSEROOM",
+      icon: "/images/waldorf-astoria-residences-by-aldar/amenities/mutli_purpose_room.svg",
+    },
+    {
+      name: "MEETING / PRIVATE DINING ROOM",
+      icon: "/images/waldorf-astoria-residences-by-aldar/amenities/dining_outlets.svg",
+    },
+    {
+      name: "KIDS\u2019 CLUB",
+      icon: "/images/waldorf-astoria-residences-by-aldar/amenities/kids_play.svg",
+    },
+    {
+      name: "SIMULATOR ROOM",
+      icon: "/images/waldorf-astoria-residences-by-aldar/amenities/mutli_purpose_room.svg",
+    },
+    {
+      name: "TREATMENT / SPA ROOM",
+      icon: "/images/waldorf-astoria-residences-by-aldar/amenities/spa.svg",
+    },
+    {
+      name: "OWNERS\u2019 LOUNGE",
+      icon: "/images/waldorf-astoria-residences-by-aldar/amenities/owner_lounge.svg",
+    },
+    {
+      name: "POOL AREA",
+      icon: "/images/waldorf-astoria-residences-by-aldar/amenities/swimming_pool.svg",
+    },
+    {
+      name: "KITCHEN",
+      icon: "/images/waldorf-astoria-residences-by-aldar/amenities/kitchen.svg",
+    },
+    {
+      name: "GAME ROOM",
+      icon: "/images/waldorf-astoria-residences-by-aldar/amenities/game_room.svg",
+    },
+    {
+      name: "GYM",
+      icon: "/images/waldorf-astoria-residences-by-aldar/amenities/fitness.svg",
+    },
+    {
+      name: "ONE YEAR YAS LINKS MEMBERSHIP",
+      icon: "/images/waldorf-astoria-residences-by-aldar/amenities/membership.svg",
+    },
+  ];
 
   return (
     <section className="py-20 lg:py-32 bg-[[#875B38]] dark:bg-[#[#5C2E07]] relative">

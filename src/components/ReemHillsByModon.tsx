@@ -1,23 +1,18 @@
 "use client";
 
-import Header from "./ReemHillsByModon/Header";
-import OneResidencesHero from "./ReemHillsByModon/OneResidencesHero";
-import WaterfrontLiving from "./ReemHillsByModon/WaterfrontLiving";
-import EnlightenmentSection from "./ReemHillsByModon/EnlightenmentSection";
-import WindowToWonder from "./ReemHillsByModon/WindowToWonder";
-import HotelStyleLiving from "./ReemHillsByModon/HotelStyleLiving";
-import InteriorCarousel from "./ReemHillsByModon/InteriorCarousel";
-import DiscoverSection from "./ReemHillsByModon/DiscoverSection";
-import CareAndGrace from "./ReemHillsByModon/CareAndGrace";
-import DreamsAndDesign from "./ReemHillsByModon/DreamsAndDesign";
-import Footer from "./ReemHillsByModon/Footer";
-import HeroKeywords from "./ReemHillsByModon/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./ReemHillsByModon/PaymentOptions";
-import PaymentOptionsTwo from "./ReemHillsByModon/PaymentOptionsTwo";
-import { useEffect } from "react";
 import { pushToDataLayer } from "@/utils/gtag";
+import { useEffect } from "react";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
+import CareAndGrace from "./ReemHillsByModon/CareAndGrace";
+import DiscoverSection from "./ReemHillsByModon/DiscoverSection";
+import EnlightenmentSection from "./ReemHillsByModon/EnlightenmentSection";
+import Footer from "./ReemHillsByModon/Footer";
+import Header from "./ReemHillsByModon/Header";
+import HeroKeywords from "./ReemHillsByModon/HeroKeywords";
+import InteriorCarousel from "./ReemHillsByModon/InteriorCarousel";
+import PaymentOptionsTwo from "./ReemHillsByModon/PaymentOptionsTwo";
+import WaterfrontLiving from "./ReemHillsByModon/WaterfrontLiving";
 
 export default function ReemHillsByModon() {
   useEffect(() => {

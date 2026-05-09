@@ -1,16 +1,15 @@
-import type { Metadata } from "next";
-import {
-  Geist,
-  Geist_Mono,
-  Playfair_Display,
-  Inter,
-  El_Messiri,
-  Cairo,
-} from "next/font/google";
-import "./globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { ThemeProvider } from "@/contexts/ThemeContext";
+import {
+  Cairo,
+  El_Messiri,
+  Geist,
+  Geist_Mono,
+  Inter,
+  Playfair_Display,
+} from "next/font/google";
 import Script from "next/script";
+import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

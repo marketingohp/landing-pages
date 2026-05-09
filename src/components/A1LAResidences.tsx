@@ -1,22 +1,16 @@
 "use client";
 
-import Header from "./A1LAResidences/Header";
-import OneResidencesHero from "./A1LAResidences/OneResidencesHero";
-import WaterfrontLiving from "./A1LAResidences/WaterfrontLiving";
-import EnlightenmentSection from "./A1LAResidences/EnlightenmentSection";
-import WindowToWonder from "./A1LAResidences/WindowToWonder";
-import HotelStyleLiving from "./A1LAResidences/HotelStyleLiving";
-import InteriorCarousel from "./A1LAResidences/InteriorCarousel";
-import DiscoverSection from "./A1LAResidences/DiscoverSection";
 import CareAndGrace from "./A1LAResidences/CareAndGrace";
-import DreamsAndDesign from "./A1LAResidences/DreamsAndDesign";
+import DiscoverSection from "./A1LAResidences/DiscoverSection";
+import EnlightenmentSection from "./A1LAResidences/EnlightenmentSection";
 import Footer from "./A1LAResidences/Footer";
+import Header from "./A1LAResidences/Header";
 import HeroKeywords from "./A1LAResidences/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./A1LAResidences/PaymentOptions";
+import InteriorCarousel from "./A1LAResidences/InteriorCarousel";
 import PaymentOptionsTwo from "./A1LAResidences/PaymentOptionsTwo";
-import PropertySearchFormThree from "./common/PropertySearchFormThree";
+import WaterfrontLiving from "./A1LAResidences/WaterfrontLiving";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function A1LAResidencesPage() {
   return (
@@ -25,7 +19,7 @@ export default function A1LAResidencesPage() {
       <div id="home">
         <HeroKeywords />
         <div className="absolute bottom-0 left-0 w-full custom-form-container">
-          <PropertySearchFormThree
+          <PropertySearchForm
             formName="a1la-residences"
             pointName="get-in-touch"
             formType="banner-form"
@@ -38,7 +32,7 @@ export default function A1LAResidencesPage() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="a1la-residences/thank-you"

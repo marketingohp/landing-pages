@@ -1,6 +1,6 @@
-import "../../components/TheWildsByAldar/style.css";
-import type { Metadata } from "next";
 import TheWildsByAldarPage from "@/components/TheWildsByAldar";
+import type { Metadata } from "next";
+import "../../components/TheWildsByAldar/style.css";
 export const metadata: Metadata = {
   title: " The Wilds ",
   description:

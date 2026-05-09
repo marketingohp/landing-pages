@@ -1,21 +1,16 @@
 "use client";
 
-import Header from "./RiXos/Header";
-import OneResidencesHero from "./RiXos/OneResidencesHero";
-import WaterfrontLiving from "./RiXos/WaterfrontLiving";
-import EnlightenmentSection from "./RiXos/EnlightenmentSection";
-import WindowToWonder from "./RiXos/WindowToWonder";
-import HotelStyleLiving from "./RiXos/HotelStyleLiving";
-import InteriorCarousel from "./RiXos/InteriorCarousel";
-import DiscoverSection from "./RiXos/DiscoverSection";
 import CareAndGrace from "./RiXos/CareAndGrace";
-import DreamsAndDesign from "./RiXos/DreamsAndDesign";
+import DiscoverSection from "./RiXos/DiscoverSection";
+import EnlightenmentSection from "./RiXos/EnlightenmentSection";
 import Footer from "./RiXos/Footer";
+import Header from "./RiXos/Header";
 import HeroKeywords from "./RiXos/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./RiXos/PaymentOptions";
+import InteriorCarousel from "./RiXos/InteriorCarousel";
 import PaymentOptionsTwo from "./RiXos/PaymentOptionsTwo";
+import WaterfrontLiving from "./RiXos/WaterfrontLiving";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function RixosPage() {
   return (
@@ -37,7 +32,7 @@ export default function RixosPage() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="/rixos/thank-you"

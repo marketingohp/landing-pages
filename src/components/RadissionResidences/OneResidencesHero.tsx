@@ -1,8 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import PropertySearchForm from "../common/PropertySearchForm";
 import { useLanguage } from "@/contexts/oneResidences/LanguageContext";
+import Image from "next/image";
 
 export default function OneResidencesHero() {
   const { t } = useLanguage();
@@ -56,7 +55,6 @@ export default function OneResidencesHero() {
       </div>
 
       {/* Property Search Form Overlay */}
-     
     </section>
   );
 }

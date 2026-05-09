@@ -1,6 +1,6 @@
-import "../../components/RotanaResidencesAlReem/style.css";
-import type { Metadata } from "next";
 import RotanaResidencesAlReemPage from "@/components/RotanaResidencesAlReem";
+import type { Metadata } from "next";
+import "../../components/RotanaResidencesAlReem/style.css";
 export const metadata: Metadata = {
   title: " Rotana Residences at Al Reem Island  ",
   description:

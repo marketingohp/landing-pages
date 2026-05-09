@@ -1,6 +1,6 @@
 import PrivacyPolicyPage from "@/components/PrivacyPolicy";
-import "../../components/PrivacyPolicy/style.css";
 import type { Metadata } from "next";
+import "../../components/PrivacyPolicy/style.css";
 export const metadata: Metadata = {
   title: "PrivacyPolicy Abu Dhabi Properties ",
   description: "",

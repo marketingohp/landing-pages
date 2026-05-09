@@ -1,23 +1,18 @@
 "use client";
 
-import Header from "./FahidBeachHouseByAldar/Header";
-import OneResidencesHero from "./FahidBeachHouseByAldar/OneResidencesHero";
-import WaterfrontLiving from "./FahidBeachHouseByAldar/WaterfrontLiving";
-import EnlightenmentSection from "./FahidBeachHouseByAldar/EnlightenmentSection";
-import WindowToWonder from "./FahidBeachHouseByAldar/WindowToWonder";
-import HotelStyleLiving from "./FahidBeachHouseByAldar/HotelStyleLiving";
-import InteriorCarousel from "./FahidBeachHouseByAldar/InteriorCarousel";
-import DiscoverSection from "./FahidBeachHouseByAldar/DiscoverSection";
-import CareAndGrace from "./FahidBeachHouseByAldar/CareAndGrace";
-import DreamsAndDesign from "./FahidBeachHouseByAldar/DreamsAndDesign";
-import Footer from "./FahidBeachHouseByAldar/Footer";
-import HeroKeywords from "./FahidBeachHouseByAldar/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./FahidBeachHouseByAldar/PaymentOptions";
-import PaymentOptionsTwo from "./FahidBeachHouseByAldar/PaymentOptionsTwo";
-import { useEffect } from "react";
 import { pushToDataLayer } from "@/utils/gtag";
+import { useEffect } from "react";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
+import CareAndGrace from "./FahidBeachHouseByAldar/CareAndGrace";
+import DiscoverSection from "./FahidBeachHouseByAldar/DiscoverSection";
+import EnlightenmentSection from "./FahidBeachHouseByAldar/EnlightenmentSection";
+import Footer from "./FahidBeachHouseByAldar/Footer";
+import Header from "./FahidBeachHouseByAldar/Header";
+import HeroKeywords from "./FahidBeachHouseByAldar/HeroKeywords";
+import InteriorCarousel from "./FahidBeachHouseByAldar/InteriorCarousel";
+import PaymentOptionsTwo from "./FahidBeachHouseByAldar/PaymentOptionsTwo";
+import WaterfrontLiving from "./FahidBeachHouseByAldar/WaterfrontLiving";
 
 export default function WimbledonBridgeHouseByAldar() {
   useEffect(() => {

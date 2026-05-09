@@ -1,6 +1,6 @@
-import "../../components/WadeeM/style.css";
-import type { Metadata } from "next";
 import WadeemPage from "@/components/Wadeem";
+import type { Metadata } from "next";
+import "../../components/WadeeM/style.css";
 export const metadata: Metadata = {
   title: " Wadeem Plots ",
   description:

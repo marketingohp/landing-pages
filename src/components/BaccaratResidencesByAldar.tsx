@@ -1,23 +1,17 @@
 "use client";
 
-import Header from "./BaccaratResidencesByAldar/Header";
-import OneResidencesHero from "./BaccaratResidencesByAldar/OneResidencesHero";
-import WaterfrontLiving from "./BaccaratResidencesByAldar/WaterfrontLiving";
-import EnlightenmentSection from "./BaccaratResidencesByAldar/EnlightenmentSection";
-import WindowToWonder from "./BaccaratResidencesByAldar/WindowToWonder";
-import HotelStyleLiving from "./BaccaratResidencesByAldar/HotelStyleLiving";
-import InteriorCarousel from "./BaccaratResidencesByAldar/InteriorCarousel";
-import DiscoverSection from "./BaccaratResidencesByAldar/DiscoverSection";
-import CareAndGrace from "./BaccaratResidencesByAldar/CareAndGrace";
-import DreamsAndDesign from "./BaccaratResidencesByAldar/DreamsAndDesign";
-import Footer from "./BaccaratResidencesByAldar/Footer";
-import HeroKeywords from "./BaccaratResidencesByAldar/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./BaccaratResidencesByAldar/PaymentOptions";
-import PaymentOptionsTwo from "./BaccaratResidencesByAldar/PaymentOptionsTwo";
-import { useEffect } from "react";
 import { pushToDataLayer } from "@/utils/gtag";
+import { useEffect } from "react";
+import CareAndGrace from "./BaccaratResidencesByAldar/CareAndGrace";
+import DiscoverSection from "./BaccaratResidencesByAldar/DiscoverSection";
+import EnlightenmentSection from "./BaccaratResidencesByAldar/EnlightenmentSection";
+import Footer from "./BaccaratResidencesByAldar/Footer";
+import Header from "./BaccaratResidencesByAldar/Header";
+import HeroKeywords from "./BaccaratResidencesByAldar/HeroKeywords";
+import InteriorCarousel from "./BaccaratResidencesByAldar/InteriorCarousel";
+import WaterfrontLiving from "./BaccaratResidencesByAldar/WaterfrontLiving";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function BaccaratResidencesByAldar() {
   useEffect(() => {

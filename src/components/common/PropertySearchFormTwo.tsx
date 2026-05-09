@@ -1,18 +1,17 @@
 "use client";
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { useLanguage } from "@/contexts/AlreemIsland/LanguageContext";
 import { useTheme } from "@/contexts/ThemeContext";
-import TextField from "@mui/material/TextField";
-import MenuItem from "@mui/material/MenuItem";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
+import { submitFormLead } from "@/lib/api";
+import { pushToDataLayer, reportConversion } from "@/utils/gtag";
+import { Box } from "@mui/material";
 import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
-import { Box } from "@mui/material";
-import { submitFormLead } from "@/lib/api";
-import { reportConversion, pushToDataLayer } from "@/utils/gtag";
-
+import MenuItem from "@mui/material/MenuItem";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
+import TextField from "@mui/material/TextField";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 const countryCodes = [
   { value: "+971", label: "+971" },
@@ -229,9 +228,8 @@ const countryCodes = [
   { value: "+994", label: "+994" },
   { value: "+995", label: "+995" },
   { value: "+996", label: "+996" },
-  { value: "+998", label: "+998" }
+  { value: "+998", label: "+998" },
 ];
-
 
 const unitTypeOptions = [
   { value: "apartment", label: "Apartment" },
@@ -250,9 +248,7 @@ const budgetOptions = [
   { value: "3000000", label: "3000000" },
   { value: "4000000", label: "4000000" },
 ];
-const messageOptions = [
-  { value: "message", label: "Message" },
-];
+const messageOptions = [{ value: "message", label: "Message" }];
 const hearAboutUsOptions = [
   { value: "google", label: "Google" },
   { value: "meta", label: "Meta" },
@@ -339,15 +335,15 @@ export default function PropertySearchFormTwo({
   downloadBrochure = false,
   brochureUrl = "/brochure.pdf", // Default brochure URL
   viewType = "default",
-  colorCodeOne="#1a3a5c",
-  colorCodeTwo="#4a6fa5",
-  colorCodeThree="#1e4a71",
-  colorCodeBtnBg="#1a3a5c",
-  colorCodeBtnText="#ffffff",
-  colorCodeBtnBorder="#4a6fa5",
-  colorCodeBtnHoverBg="#4a6fa5",
-  colorCodeBtnHoverText="#ffffff",
-  colorCodeBtnHoverBorder="#1a3a5c",
+  colorCodeOne = "#1a3a5c",
+  colorCodeTwo = "#4a6fa5",
+  colorCodeThree = "#1e4a71",
+  colorCodeBtnBg = "#1a3a5c",
+  colorCodeBtnText = "#ffffff",
+  colorCodeBtnBorder = "#4a6fa5",
+  colorCodeBtnHoverBg = "#4a6fa5",
+  colorCodeBtnHoverText = "#ffffff",
+  colorCodeBtnHoverBorder = "#1a3a5c",
 }: PropertySearchFormProps) {
   const { t } = useLanguage();
   const { theme } = useTheme();
@@ -372,7 +368,7 @@ export default function PropertySearchFormTwo({
   }>({ type: null, message: "" });
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const [touchedFields, setTouchedFields] = useState<Record<string, boolean>>(
-    {}
+    {},
   );
 
   const handleSelectChange =
@@ -416,8 +412,7 @@ export default function PropertySearchFormTwo({
 
     const value = formData[field];
     if (!value || value.trim() === "") {
-      const fieldLabel =
-        t(`${field}` as any) || fieldLabels[field] || field;
+      const fieldLabel = t(`${field}` as any) || fieldLabels[field] || field;
       return `${fieldLabel} is required`;
     }
 
@@ -517,17 +512,12 @@ export default function PropertySearchFormTwo({
       // Submit to both Laravel API and Next.js Email API (dual submission)
       const [apiResult, emailResult] = await Promise.allSettled([
         // Submit to Laravel API
-        submitFormLead(
-          submissionData,
-          formName,
-          pointName,
-          formType
-        ),
+        submitFormLead(submissionData, formName, pointName, formType),
         // Submit to Next.js Email API
-        fetch('/api/sendEmail', {
-          method: 'POST',
+        fetch("/api/sendEmail", {
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({
             firstName: submissionData.firstName,
@@ -546,38 +536,42 @@ export default function PropertySearchFormTwo({
         }).then(async (res) => {
           const data = await res.json();
           if (!res.ok) {
-            throw new Error(data.error || 'Failed to send email');
+            throw new Error(data.error || "Failed to send email");
           }
           return data;
         }),
       ]);
 
       // Check Laravel API result
-      const laravelSuccess = apiResult.status === 'fulfilled' && apiResult.value.success;
-      const emailSuccess = emailResult.status === 'fulfilled';
+      const laravelSuccess =
+        apiResult.status === "fulfilled" && apiResult.value.success;
+      const emailSuccess = emailResult.status === "fulfilled";
 
       // Log results for debugging
-      if (apiResult.status === 'rejected') {
-        console.error('Laravel API error:', apiResult.reason);
+      if (apiResult.status === "rejected") {
+        console.error("Laravel API error:", apiResult.reason);
       }
-      if (emailResult.status === 'rejected') {
-        console.error('Email API error:', emailResult.reason);
+      if (emailResult.status === "rejected") {
+        console.error("Email API error:", emailResult.reason);
       }
 
       // // Consider submission successful if at least Laravel API succeeds
       // // Email is secondary (for notifications)
       if (!laravelSuccess) {
-        const errorMessage = apiResult.status === 'fulfilled' 
-          ? apiResult.value.error || "Failed to submit form"
-          : apiResult.reason?.message || "Failed to submit form";
+        const errorMessage =
+          apiResult.status === "fulfilled"
+            ? apiResult.value.error || "Failed to submit form"
+            : apiResult.reason?.message || "Failed to submit form";
         throw new Error(errorMessage);
       }
 
       setSubmitStatus({
         type: "success",
-        message: apiResult.status === 'fulfilled' 
-          ? (apiResult.value.message || "Form submitted successfully! We will contact you soon.")
-          : "Form submitted successfully! We will contact you soon.",
+        message:
+          apiResult.status === "fulfilled"
+            ? apiResult.value.message ||
+              "Form submitted successfully! We will contact you soon."
+            : "Form submitted successfully! We will contact you soon.",
       });
 
       // Reset form after successful submission
@@ -616,7 +610,7 @@ export default function PropertySearchFormTwo({
           pushToDataLayer({
             event: "form_submit",
             label: formName || "Contact Us",
-            value: formType || "Contact Us Form Is Submitted"
+            value: formType || "Contact Us Form Is Submitted",
           });
           reportConversion(thankYouPath);
           //router.push(thankYouPath);
@@ -644,57 +638,57 @@ export default function PropertySearchFormTwo({
   const getSelectStyles = (field: FormFieldKey) => {
     const hasError = fieldErrors[field] && touchedFields[field];
 
-        // Banner view: white background, dark text
-        if (viewType === "banner") {
-          return {
-            "& .MuifilledInput-root": {
-              color: "#333",
-              backgroundColor: "white",
-              borderRadius: "12px",
-              border: "none",
-              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.12)",
-              padding: "12px 16px",
-              minHeight: "48px",
-              "& fieldset": {
-                borderColor: hasError ? "#ef4444" : "transparent",
-                borderWidth: hasError ? "2px" : "0px",
-              },
-              "&:hover fieldset": {
-                borderColor: hasError ? "#ef4444" : "transparent",
-              },
-              "&.Mui-focused fieldset": {
-                borderColor: hasError ? "#ef4444" : colorCodeOne,
-                borderWidth: "2px",
-              },
-              "&.Mui-error fieldset": {
-                borderColor: "#ef4444",
-              },
-              "& .MuiSelect-select": {
-                padding: "8px 0",
-                fontSize: "14px",
-                fontWeight: 400,
-                color: "#333",
-              },
-            },
-            "& .MuiInputLabel-root": {
-              color: hasError ? "#ef4444" : "#666",
-              fontSize: "12px",
-              textTransform: "uppercase",
-              letterSpacing: "0.08em",
-              fontWeight: 600,
-              marginLeft: "4px",
-              "&.Mui-focused": {
-                color: hasError ? "#ef4444" : colorCodeOne,
-              },
-              "&.Mui-error": {
-                color: "#ef4444",
-              },
-            },
-            "& .MuiSelect-icon": {
-              color: hasError ? "#ef4444" : "#666",
-            },
-          };
-        }
+    // Banner view: white background, dark text
+    if (viewType === "banner") {
+      return {
+        "& .MuifilledInput-root": {
+          color: "#333",
+          backgroundColor: "white",
+          borderRadius: "12px",
+          border: "none",
+          boxShadow: "0 4px 12px rgba(0, 0, 0, 0.12)",
+          padding: "12px 16px",
+          minHeight: "48px",
+          "& fieldset": {
+            borderColor: hasError ? "#ef4444" : "transparent",
+            borderWidth: hasError ? "2px" : "0px",
+          },
+          "&:hover fieldset": {
+            borderColor: hasError ? "#ef4444" : "transparent",
+          },
+          "&.Mui-focused fieldset": {
+            borderColor: hasError ? "#ef4444" : colorCodeOne,
+            borderWidth: "2px",
+          },
+          "&.Mui-error fieldset": {
+            borderColor: "#ef4444",
+          },
+          "& .MuiSelect-select": {
+            padding: "8px 0",
+            fontSize: "14px",
+            fontWeight: 400,
+            color: "#333",
+          },
+        },
+        "& .MuiInputLabel-root": {
+          color: hasError ? "#ef4444" : "#666",
+          fontSize: "12px",
+          textTransform: "uppercase",
+          letterSpacing: "0.08em",
+          fontWeight: 600,
+          marginLeft: "4px",
+          "&.Mui-focused": {
+            color: hasError ? "#ef4444" : colorCodeOne,
+          },
+          "&.Mui-error": {
+            color: "#ef4444",
+          },
+        },
+        "& .MuiSelect-icon": {
+          color: hasError ? "#ef4444" : "#666",
+        },
+      };
+    }
 
     // Image view: white background, dark text
     if (viewType === "image") {
@@ -789,23 +783,23 @@ export default function PropertySearchFormTwo({
           borderColor: hasError
             ? "#232323"
             : isDark
-            ? "rgba(255, 255, 255, 0.1)"
-            : "rgba(255, 255, 255, 0.2)",
+              ? "rgba(255, 255, 255, 0.1)"
+              : "rgba(255, 255, 255, 0.2)",
           borderWidth: hasError ? "2px" : "1px",
         },
         "&:hover fieldset": {
           borderColor: hasError
             ? "#232323"
             : isDark
-            ? "rgba(255, 255, 255, 0.2)"
-            : "rgba(255, 255, 255, 0.3)",
+              ? "rgba(255, 255, 255, 0.2)"
+              : "rgba(255, 255, 255, 0.3)",
         },
         "&.Mui-focused fieldset": {
           borderColor: hasError
             ? "#ef4444"
             : isDark
-            ? "rgba(255, 255, 255, 0.3)"
-            : "rgba(255, 255, 255, 0.4)",
+              ? "rgba(255, 255, 255, 0.3)"
+              : "rgba(255, 255, 255, 0.4)",
         },
         "&.Mui-error fieldset": {
           borderColor: "#232323",
@@ -982,23 +976,23 @@ export default function PropertySearchFormTwo({
           borderColor: hasError
             ? "#ef4444"
             : isDark
-            ? "rgba(255, 255, 255, 0.1)"
-            : "rgba(255, 255, 255, 0.2)",
+              ? "rgba(255, 255, 255, 0.1)"
+              : "rgba(255, 255, 255, 0.2)",
           borderWidth: hasError ? "2px" : "1px",
         },
         "&:hover fieldset": {
           borderColor: hasError
             ? "#232323"
             : isDark
-            ? "rgba(255, 255, 255, 0.2)"
-            : "rgba(255, 255, 255, 0.3)",
+              ? "rgba(255, 255, 255, 0.2)"
+              : "rgba(255, 255, 255, 0.3)",
         },
         "&.Mui-focused fieldset": {
           borderColor: hasError
             ? "#ef4444"
             : isDark
-            ? "rgba(255, 255, 255, 0.3)"
-            : "rgba(255, 255, 255, 0.4)",
+              ? "rgba(255, 255, 255, 0.3)"
+              : "rgba(255, 255, 255, 0.4)",
         },
         "&.Mui-error fieldset": {
           borderColor: "#232323",
@@ -1199,7 +1193,8 @@ export default function PropertySearchFormTwo({
       <div>
         <div className="flex gap-2">
           <FormControl
-            variant="filled" className="bg-white rounded-xl" 
+            variant="filled"
+            className="bg-white rounded-xl"
             sx={{ width: "120px", ...getSelectStyles("phoneCountryCode") }}
             error={hasError}
           >
@@ -1232,7 +1227,7 @@ export default function PropertySearchFormTwo({
             required={isRequired}
             error={hasError}
             sx={getTextFieldStyles("phoneNumber")}
-          className="bg-white rounded-xl"
+            className="bg-white rounded-xl"
             size="small"
           />
         </div>
@@ -1285,7 +1280,7 @@ export default function PropertySearchFormTwo({
         sx={getSelectStyles("hearAboutUs")}
         required={isRequired}
         error={hasError}
-        variant="filled" 
+        variant="filled"
         className="bg-white rounded-xl"
       >
         <InputLabel id="hear-about-us-label" required={isRequired}>
@@ -1334,7 +1329,7 @@ export default function PropertySearchFormTwo({
         sx={getSelectStyles("unitType")}
         required={isRequired}
         error={hasError}
-        variant="filled" 
+        variant="filled"
         className="bg-white rounded-xl"
       >
         <InputLabel id="unit-type-label" required={isRequired}>
@@ -1378,11 +1373,11 @@ export default function PropertySearchFormTwo({
         sx={getSelectStyles("bedrooms")}
         required={isRequired}
         error={hasError}
-        variant="filled" 
+        variant="filled"
         className="bg-white rounded-xl"
       >
         <InputLabel id="bedrooms-label" required={isRequired}>
-           {"Number of bedrooms"}
+          {"Number of bedrooms"}
         </InputLabel>
         <Select
           labelId="bedrooms-label"
@@ -1423,7 +1418,7 @@ export default function PropertySearchFormTwo({
         sx={getSelectStyles("budget")}
         required={isRequired}
         error={hasError}
-        variant="filled" 
+        variant="filled"
         className="bg-white rounded-xl"
       >
         <InputLabel id="budget-label" required={isRequired}>
@@ -1548,7 +1543,12 @@ export default function PropertySearchFormTwo({
   // Render phone country code field for image view
   const renderPhoneCountryCodeField = () => {
     return (
-      <FormControl variant="filled" className="bg-white border-2 border-gray-300 rounded-md"  fullWidth sx={getSelectStyles("phoneCountryCode")}>
+      <FormControl
+        variant="filled"
+        className="bg-white border-2 border-gray-300 rounded-md"
+        fullWidth
+        sx={getSelectStyles("phoneCountryCode")}
+      >
         <InputLabel id="phone-country-code-label">
           {t("phoneCountryCode") || fieldLabels.phoneCountryCode}
         </InputLabel>
@@ -1562,10 +1562,10 @@ export default function PropertySearchFormTwo({
           size="small"
         >
           {countryCodes.map((option) => (
-                <MenuItem key={option.value} value={option.value}>
-                  {option.label}
-                </MenuItem>
-              ))}
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
         </Select>
       </FormControl>
     );
@@ -1590,7 +1590,7 @@ export default function PropertySearchFormTwo({
         required={isRequired}
         error={hasError}
         sx={getTextFieldStyles("phoneNumber")}
-          className="bg-white rounded-xl"
+        className="bg-white rounded-xl"
         size="small"
       />
     );
@@ -1600,7 +1600,10 @@ export default function PropertySearchFormTwo({
   const renderBannerViewLayout = () => (
     <Box className="space-y-4" sx={{ padding: "24px 0" }}>
       {/* First Row: First Name, Last Name, Email, Phone Code, Phone Number */}
-      <Box className="grid grid-cols-1 md:grid-cols-5 gap-4" sx={{ marginBottom: "16px" }}>
+      <Box
+        className="grid grid-cols-1 md:grid-cols-5 gap-4"
+        sx={{ marginBottom: "16px" }}
+      >
         {renderFirstNameField()}
         {renderLastNameField()}
         {renderEmailField()}
@@ -1613,10 +1616,13 @@ export default function PropertySearchFormTwo({
             </div>
           )}
         </div>
-      </Box>  
+      </Box>
 
       {/* Second Row: How did you hear about us, Unit Type, Bedrooms, Budget */}
-      <Box className="grid grid-cols-1 md:grid-cols-3 gap-4" sx={{ marginBottom: "16px" }}>
+      <Box
+        className="grid grid-cols-1 md:grid-cols-3 gap-4"
+        sx={{ marginBottom: "16px" }}
+      >
         {renderHearAboutUsField()}
         {renderUnitTypeField()}
         {renderBedroomsField()}
@@ -1624,14 +1630,17 @@ export default function PropertySearchFormTwo({
       </Box>
 
       {/* Third Row: Message and Submit Button */}
-      <Box className="grid grid-cols-1 md:grid-cols-3 gap-4" sx={{ marginBottom: "0" }}>
+      <Box
+        className="grid grid-cols-1 md:grid-cols-3 gap-4"
+        sx={{ marginBottom: "0" }}
+      >
         <Box className="md:col-span-2">{renderMessageField()}</Box>
         <Box className="flex items-end">
           <button
             type="submit"
             disabled={isSubmitting}
             className={`w-full text-white uppercase tracking-wider transition-all disabled:opacity-50 disabled:cursor-not-allowed`}
-            style={{ 
+            style={{
               fontFamily: "var(--font-inter), sans-serif",
               backgroundColor: "#3996c4",
               boxShadow: "0 4px 12px rgba(57, 150, 196, 0.3)",
@@ -1639,18 +1648,20 @@ export default function PropertySearchFormTwo({
               padding: "14px 24px",
               fontSize: "14px",
               fontWeight: 600,
-              letterSpacing: "0.05em"
+              letterSpacing: "0.05em",
             }}
             onMouseEnter={(e) => {
               if (!isSubmitting) {
                 e.currentTarget.style.backgroundColor = "#2d7ba3";
-                e.currentTarget.style.boxShadow = "0 6px 16px rgba(57, 150, 196, 0.4)";
+                e.currentTarget.style.boxShadow =
+                  "0 6px 16px rgba(57, 150, 196, 0.4)";
               }
             }}
             onMouseLeave={(e) => {
               if (!isSubmitting) {
                 e.currentTarget.style.backgroundColor = "#3996c4";
-                e.currentTarget.style.boxShadow = "0 4px 12px rgba(57, 150, 196, 0.3)";
+                e.currentTarget.style.boxShadow =
+                  "0 4px 12px rgba(57, 150, 196, 0.3)";
               }
             }}
           >
@@ -1782,7 +1793,7 @@ export default function PropertySearchFormTwo({
         required={isRequired}
         error={hasError}
         sx={getTextFieldStyles("phoneNumber")}
-          className="bg-white rounded-xl"
+        className="bg-white rounded-xl"
         size="small"
       />
     );
@@ -1811,25 +1822,25 @@ export default function PropertySearchFormTwo({
 
       {/* Background overlay for banner view */}
       {viewType === "banner" && (
-        <div 
-          className="absolute inset-0 backdrop-blur-sm" 
+        <div
+          className="absolute inset-0 backdrop-blur-sm"
           style={{
             borderRadius: "20px",
             backgroundColor: "#b3d9e8",
-            boxShadow: "0 4px 20px rgba(0, 0, 0, 0.15)"
-          }} 
+            boxShadow: "0 4px 20px rgba(0, 0, 0, 0.15)",
+          }}
         />
       )}
 
       {/* Modal view background */}
-      {viewType === "modal" && (
-        <div className="absolute inset-0 bg-black/30" />
-      )}
+      {viewType === "modal" && <div className="absolute inset-0 bg-black/30" />}
 
       <form
         onSubmit={handleSubmit}
         className={`${getFormWrapperClasses()} ${
-          viewType === "image" || viewType === "modal" || viewType === "banner" ? "relative z-10" : ""
+          viewType === "image" || viewType === "modal" || viewType === "banner"
+            ? "relative z-10"
+            : ""
         }`}
       >
         {formName && <input type="hidden" name="formName" value={formName} />}
@@ -1840,11 +1851,11 @@ export default function PropertySearchFormTwo({
 
         {renderFormTitle()}
 
-        {viewType === "banner" 
-          ? renderBannerViewLayout() 
-          : viewType === "image" 
-          ? renderImageViewLayout() 
-          : renderDefaultLayout()}
+        {viewType === "banner"
+          ? renderBannerViewLayout()
+          : viewType === "image"
+            ? renderImageViewLayout()
+            : renderDefaultLayout()}
 
         <div
           className={`${viewType === "image" || viewType === "banner" ? "hidden" : "text-center"} mt-6`}
@@ -1869,12 +1880,17 @@ export default function PropertySearchFormTwo({
                   ? `bg-[${colorCodeBtnBg}] text-[${colorCodeBtnText}] hover:bg-[${colorCodeBtnHoverBg}]/90 border-2 border-[${colorCodeBtnBorder}]`
                   : `bg-[${colorCodeBtnBg}] dark:bg-gray-200 text-[${colorCodeBtnText}] dark:text-[#0f1f2e] hover:bg-white/90 dark:hover:bg-gray-300 border-2 border-[${colorCodeBtnBorder}] border-white`
               }`}
-              style={{ fontFamily: "var(--font-inter), sans-serif" , color: colorCodeBtnText}}
-              onClick={() => pushToDataLayer({
-                event: "button_click",
-                label: formName || "Contact Us",
-                value: formType || "Contact Us Form"
-              })}
+              style={{
+                fontFamily: "var(--font-inter), sans-serif",
+                color: colorCodeBtnText,
+              }}
+              onClick={() =>
+                pushToDataLayer({
+                  event: "button_click",
+                  label: formName || "Contact Us",
+                  value: formType || "Contact Us Form",
+                })
+              }
             >
               {isSubmitting ? "Sending..." : "SUBMIT"}
             </button>
@@ -1893,7 +1909,7 @@ export default function PropertySearchFormTwo({
     padding: 0 !important;
   }
           `}
-        </style>
-      </div>
-    );
-  }
+      </style>
+    </div>
+  );
+}

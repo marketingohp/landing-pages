@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useLanguage } from "@/contexts/stRegisAlMaryah/LanguageContext";
 import PropertySearchForm from "../common/PropertySearchForm";
 
@@ -38,7 +37,12 @@ export default function Footer() {
                   "budget",
                   "message",
                 ]}
-                requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+                requiredFields={[
+                  "firstName",
+                  "lastName",
+                  "phoneNumber",
+                  "email",
+                ]}
                 redirectToThankYou={true}
                 thankYouPath="/st-regis-al-maryah/thank-you"
                 colorCodeOne="#ebe8dd"

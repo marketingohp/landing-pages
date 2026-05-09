@@ -1,22 +1,17 @@
 "use client";
 
-import Image from "next/image";
 import { useLanguage } from "@/contexts/rixos/LanguageContext";
-import React, { useState } from "react";
-import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
 import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
-import PropertySearchForm from "../common/PropertySearchForm";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import Image from "next/image";
+import React, { useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import PropertySearchForm from "../common/PropertySearchForm";
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -62,12 +57,12 @@ export default function DiscoverSection() {
   // Destinations matching the image layout (2x3 grid)
   const destinations = [
     // Row 1
-    { 
+    {
       time: "7 MINUTES",
       icon: "/images/rixos/location/reem.png",
       destination: "Reem Central Park",
     },
-     { 
+    {
       time: "5 MINUTES",
       icon: "/images/rixos/location/redwood.jpg",
       destination: "Redwood Montessor Nursery",
@@ -103,8 +98,6 @@ export default function DiscoverSection() {
       icon: "/images/rixos/location/zayed.png",
       destination: " Zayed International Airport",
     },
-
-
   ];
 
   return (
@@ -704,7 +697,7 @@ export default function DiscoverSection() {
             "budget",
             "message",
           ]}
-          requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+          requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
           viewType="image"
           // downloadBrochure={true}
           // brochureUrl="/images/rixos/Yas_Riva_Residences_Brochure.pdf"

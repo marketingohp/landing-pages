@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 interface CountdownTimerProps {
   targetDate: string; // ISO date string or date in the future

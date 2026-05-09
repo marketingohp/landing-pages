@@ -1,18 +1,17 @@
 "use client";
 
 import { useLanguage } from "@/contexts/AlreemIsland/LanguageContext";
-import Image from "next/image";
-import React, { useState } from "react";
 import Dialog from "@mui/material/Dialog";
 import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
+import React, { useState } from "react";
 import PropertySearchForm from "../common/PropertySearchForm";
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
     children: React.ReactElement<any, any>;
   },
-  ref: React.Ref<unknown>
+  ref: React.Ref<unknown>,
 ) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -33,12 +32,19 @@ export default function HeroKeywords() {
 
   return (
     <section
-      style={{ }}
+      style={{}}
       className="hero-keywords-banner relative bgColorTwo mt-25 pb-5 flex items-center justify-center overflow-hidden dark:from-gray-900 dark:to-gray-800"
     >
       {/* Background Image */}
-      <div className="relative w-full overflow-hidden hero-banner-container rounded-[20px]" style={{ margin: "0px 20px", height: "70vh" }}>
-        <img src={firstImage} alt="Al Reem Island" className="w-full h-full object-cover hero-banner-image rounded-[20px]" />
+      <div
+        className="relative w-full overflow-hidden hero-banner-container rounded-[20px]"
+        style={{ margin: "0px 20px", height: "70vh" }}
+      >
+        <img
+          src={firstImage}
+          alt="Al Reem Island"
+          className="w-full h-full object-cover hero-banner-image rounded-[20px]"
+        />
         {/* <Image
           src={firstImage}
           alt="Al Reem Island"
@@ -55,14 +61,17 @@ export default function HeroKeywords() {
           <div className="max-w-2xl text-center hero-banner-text-wrapper">
             {/* Main Headline */}
             <h1 className="text-5xl sm:text-4xl md:text-7xl lg:text-7xl xl:text-7xl font-bold text-white playfair-display-regular hero-banner-title leading-tight">
-             Al Reem Island
+              Al Reem Island
             </h1>
 
             {/* Description */}
             <p className="text-sm pb-5 sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed max-w-xl montserrat-regular mx-auto hero-banner-description">
-              Imagine waking up to endless sea views, living in beautifully designed apartments,
-              penthouses, and waterfront villas crafted for tranquility and elegance.<br />
-              <strong>Al Reem Island</strong> is where urban luxury flows seamlessly with coastal serenity.
+              Imagine waking up to endless sea views, living in beautifully
+              designed apartments, penthouses, and waterfront villas crafted for
+              tranquility and elegance.
+              <br />
+              <strong>Al Reem Island</strong> is where urban luxury flows
+              seamlessly with coastal serenity.
             </p>
 
             {/* Call-to-Action Button */}
@@ -116,7 +125,7 @@ export default function HeroKeywords() {
             "budget",
             "message",
           ]}
-          requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+          requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
           viewType="image"
           redirectToThankYou={true}
           thankYouPath="/reem-island/thank-you"

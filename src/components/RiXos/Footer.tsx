@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useLanguage } from "@/contexts/rixos/LanguageContext";
 import PropertySearchForm from "../common/PropertySearchForm";
 
@@ -38,7 +37,12 @@ export default function Footer() {
                   "budget",
                   "message",
                 ]}
-                requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+                requiredFields={[
+                  "firstName",
+                  "lastName",
+                  "phoneNumber",
+                  "email",
+                ]}
                 redirectToThankYou={true}
                 thankYouPath="/rixos/thank-you"
                 colorCodeOne="#ebe8dd"

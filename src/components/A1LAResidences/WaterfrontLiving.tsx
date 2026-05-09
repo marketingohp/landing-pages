@@ -1,19 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import { useLanguage } from "@/contexts/a1laResidences/LanguageContext";
-import React from "react";
-import Button from "@mui/material/Button";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
 import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
-import PropertySearchFormThree from "../common/PropertySearchFormThree";
+import React from "react";
+import PropertySearchForm from "../common/PropertySearchForm";
 
-import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 
 const Transition = React.forwardRef(function Transition(
@@ -175,8 +167,8 @@ export default function WaterfrontLiving() {
               {/* 4 BEDROOM DUPLEXES AND TOWNHOUSES */}
               <div className="px-4 py-3 text-center border-b border-[#a77b55] dark:border-gray-400 border-opacity-30">
                 <div className="text-[#a77b55] dark:text-white font-normal text-sm leading-relaxed">
-                  Unit Type: <br /> 1 to 3 Bedroom <br /> 2 Bedroom Duplex <br />
-3 Bedroom Duplex
+                  Unit Type: <br /> 1 to 3 Bedroom <br /> 2 Bedroom Duplex{" "}
+                  <br />3 Bedroom Duplex
                 </div>
               </div>
 
@@ -192,7 +184,8 @@ export default function WaterfrontLiving() {
               {/* HANDOVER */}
               <div className="px-4 py-3 text-center border-b border-[#a77b55] dark:border-gray-400 border-opacity-30">
                 <div className="text-[#a77b55] dark:text-white font-normal text-sm leading-relaxed">
-             Residential complex with 171 residences <br /> located on Al Reem Island
+                  Residential complex with 171 residences <br /> located on Al
+                  Reem Island
                 </div>
               </div>
             </div>
@@ -208,7 +201,7 @@ export default function WaterfrontLiving() {
                   Al Reem ISLAND
                 </div> */}
                 <div className="text-[#a77b55] dark:text-white font-normal text-sm md:text-base leading-relaxed">
-                Location: <br /> Al Reem Island
+                  Location: <br /> Al Reem Island
                 </div>
               </div>
 
@@ -232,8 +225,8 @@ export default function WaterfrontLiving() {
                 </div>
                 <div className="text-[#a77b55] dark:text-white font-normal text-sm md:text-base"></div> */}
                 <div className="text-[#a77b55] dark:text-white font-normal text-sm md:text-base leading-relaxed">
-                  Unit Type: 1 to 3BR <br /> 2 Bedroom Duplex <br />
-3 Bedroom Duplex
+                  Unit Type: 1 to 3BR <br /> 2 Bedroom Duplex <br />3 Bedroom
+                  Duplex
                 </div>
               </div>
 
@@ -242,7 +235,7 @@ export default function WaterfrontLiving() {
               {/* HANDOVER */}
               <div className="flex-1 min-w-[200px] px-6 md:px-8 py-4 text-center">
                 <div className="text-[#a77b55] dark:text-white font-normal text-sm md:text-base leading-relaxed">
-                 Handover
+                  Handover
                   <br />
                   Q4 - 2028
                 </div>
@@ -253,7 +246,8 @@ export default function WaterfrontLiving() {
               {/* PART OF MARRIOTT'S AUTOGRAPH COLLECTION */}
               <div className="flex-1 min-w-[200px] px-6 md:px-8 py-4 text-center">
                 <div className="text-[#a77b55] dark:text-white font-normal text-sm md:text-base leading-relaxed">
-                  Residential complex with 171 residences <br /> located on Al Reem Island
+                  Residential complex with 171 residences <br /> located on Al
+                  Reem Island
                 </div>
               </div>
             </div>
@@ -315,7 +309,7 @@ export default function WaterfrontLiving() {
               p: 4,
             }}
           >
-            <PropertySearchFormThree
+            <PropertySearchForm
               formName="a1la-residences"
               pointName="get-in-touch"
               formType="about-project-form"
@@ -330,7 +324,7 @@ export default function WaterfrontLiving() {
                 "budget",
                 "message",
               ]}
-              requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+              requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
               viewType="image"
               // downloadBrochure={true}
               // brochureUrl="/images/a1la-residences/Yas_Riva_Residences_Brochure.pdf"

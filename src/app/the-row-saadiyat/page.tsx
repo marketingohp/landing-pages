@@ -1,7 +1,6 @@
-import "../../components/TheRowSaadiyat/style.css";
-import type { Metadata } from "next";
-import WadeemPage from "@/components/Wadeem";
 import TheRowSaadiyatPage from "@/components/TheRowSaadiyat";
+import type { Metadata } from "next";
+import "../../components/TheRowSaadiyat/style.css";
 export const metadata: Metadata = {
   title: " The Row Saadiyat ",
   description:

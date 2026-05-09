@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 
 type DiscountBoxProps = {
   percent: number;
@@ -23,21 +23,36 @@ const DiscountBox = ({ percent, isActive, onClick }: DiscountBoxProps) => {
 
 const PaymentSection = () => {
   const offers = [
-    { id: 1, percent: 10, content: "Down payment 10% (1% monthly till handover)" },
-    { id: 2, percent: 15, content: "Down payment 15% (1% monthly till handover)" },
-    { id: 3, percent: 20, content: "Down payment 20% (1% monthly till handover)" },
+    {
+      id: 1,
+      percent: 10,
+      content: "Down payment 10% (1% monthly till handover)",
+    },
+    {
+      id: 2,
+      percent: 15,
+      content: "Down payment 15% (1% monthly till handover)",
+    },
+    {
+      id: 3,
+      percent: 20,
+      content: "Down payment 20% (1% monthly till handover)",
+    },
   ];
 
-  const defaultOfferId = 3
+  const defaultOfferId = 3;
 
   const [selectedOffer, setSelectedOffer] = useState<number | null>(null);
 
-  const selected = offers.find((offer) => offer.id === selectedOffer || (selectedOffer == null && offer.id == defaultOfferId));
+  const selected = offers.find(
+    (offer) =>
+      offer.id === selectedOffer ||
+      (selectedOffer == null && offer.id == defaultOfferId),
+  );
 
   return (
     <section id="payment-options" className="py-30 bg-[#F5F5F0]">
       <div className="w-full p-4 sm:w-[50%] sm:p-0 mx-auto flex flex-col gap-3">
-        
         {/* heading */}
         <div className="flex flex-col md:flex-row justify-between items-center py-4 px-7 bg-[#6C492B]">
           <h2 className="text-white text-2xl">Payment Plan</h2>
@@ -50,18 +65,17 @@ const PaymentSection = () => {
             <DiscountBox
               key={offer.id}
               percent={offer.percent}
-              isActive={selectedOffer === offer.id || (selectedOffer == null && offer.id == defaultOfferId)}
+              isActive={
+                selectedOffer === offer.id ||
+                (selectedOffer == null && offer.id == defaultOfferId)
+              }
               onClick={() => setSelectedOffer(offer.id)}
             />
           ))}
         </div>
 
         {/* dynamic content */}
-        {selected && (
-          <div className="p-4 border">
-            {selected.content}
-          </div>
-        )}
+        {selected && <div className="p-4 border">{selected.content}</div>}
       </div>
     </section>
   );

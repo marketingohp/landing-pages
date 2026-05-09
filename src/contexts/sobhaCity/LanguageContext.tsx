@@ -2,10 +2,10 @@
 
 import {
   createContext,
-  useContext,
-  useState,
-  useEffect,
   ReactNode,
+  useContext,
+  useEffect,
+  useState,
 } from "react";
 
 type Language = "en" | "ar" | "ru";
@@ -131,12 +131,14 @@ const translations = {
     "royal.waterfront.title": "Sobha City",
     "royal.waterfront.title2":
       "blends heritage charm with outstanding connectivity",
-    "royal.waterfront.desc1": "Sobha City in Abu Dhabi is a newly launched, massive premium freehold master community by Sobha Realty in Al Bahiya. Featuring roughly 400 units, including 1-2 BR apartments (from AED 1.35M) and 3-6 BR townhouses/villas (from AED 4M), it offers 60% open spaces, 20km of trails, and proximity to Yas",
+    "royal.waterfront.desc1":
+      "Sobha City in Abu Dhabi is a newly launched, massive premium freehold master community by Sobha Realty in Al Bahiya. Featuring roughly 400 units, including 1-2 BR apartments (from AED 1.35M) and 3-6 BR townhouses/villas (from AED 4M), it offers 60% open spaces, 20km of trails, and proximity to Yas",
     "royal.waterfront.desc2": "",
     "royal.waterfront.explore": "EXPLORE RESIDENCES",
     "royal.waterfront.brochure": "REGISTER YOUR INTEREST",
     "royal.enlightenment.title": "Massive Master Community",
-    "royal.enlightenment.desc": "At 37.5 million sq.ft, Sobha City is among the largest upcoming developments in Abu Dhabi — built for long-term ecosystem value and community appreciation.",
+    "royal.enlightenment.desc":
+      "At 37.5 million sq.ft, Sobha City is among the largest upcoming developments in Abu Dhabi — built for long-term ecosystem value and community appreciation.",
     "royal.enlightenment.desc2": "",
 
     "royal.enlightenment.viewGallery": "VIEW GALLERY",
@@ -146,10 +148,12 @@ const translations = {
       "Wake up to inspiring views. Live close to the city’s top destinations. Experience a lifestyle that’s refined, relaxed, and always connected.",
     "royal.hotel.explore": "Register Your Interest",
     "royal.discover.title": "Surrounded by Nature",
-    "royal.discover.desc": "Positioned near Yas Island — Abu Dhabi's highest-demand destination for tourism, entertainment, and premium real estate capital appreciation.",
+    "royal.discover.desc":
+      "Positioned near Yas Island — Abu Dhabi's highest-demand destination for tourism, entertainment, and premium real estate capital appreciation.",
     "royal.discover.masterplan": "VIEW MASTERPLAN",
     "royal.care.title": "A Place Shaped for Clarity",
-    "royal.care.desc": "Globally recognized for in-house construction, backward integration, and superior finishes — Sobha's quality standard ensures long-term asset value.",
+    "royal.care.desc":
+      "Globally recognized for in-house construction, backward integration, and superior finishes — Sobha's quality standard ensures long-term asset value.",
     "royal.care.viewAll": "Explore More",
     "royal.dreams.title":
       "LET THE BAY SLOW YOU DOWN. LET THE CITY LIFT YOU UP.",

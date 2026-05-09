@@ -1,6 +1,6 @@
-import "../../components/HiltonResidencesAlRaha/style.css";
-import type { Metadata } from "next";
 import HiltonResidencesAlRahaPage from "@/components/HiltonResidencesAlRaha";
+import type { Metadata } from "next";
+import "../../components/HiltonResidencesAlRaha/style.css";
 export const metadata: Metadata = {
   title:
     "Hilton Residences Al Raha Beach Abu Dhabi | Branded Waterfront Living",

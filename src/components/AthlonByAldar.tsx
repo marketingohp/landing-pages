@@ -1,22 +1,16 @@
 "use client";
 
-import Header from "./AthlonByAldar/Header";
-import OneResidencesHero from "./AthlonByAldar/OneResidencesHero";
-import WaterfrontLiving from "./AthlonByAldar/WaterfrontLiving";
-import EnlightenmentSection from "./AthlonByAldar/EnlightenmentSection";
-import WindowToWonder from "./AthlonByAldar/WindowToWonder";
-import HotelStyleLiving from "./AthlonByAldar/HotelStyleLiving";
-import InteriorCarousel from "./AthlonByAldar/InteriorCarousel";
-import DiscoverSection from "./AthlonByAldar/DiscoverSection";
 import CareAndGrace from "./AthlonByAldar/CareAndGrace";
-import DreamsAndDesign from "./AthlonByAldar/DreamsAndDesign";
+import DiscoverSection from "./AthlonByAldar/DiscoverSection";
+import EnlightenmentSection from "./AthlonByAldar/EnlightenmentSection";
 import Footer from "./AthlonByAldar/Footer";
+import Header from "./AthlonByAldar/Header";
 import HeroKeywords from "./AthlonByAldar/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./AthlonByAldar/PaymentOptions";
+import InteriorCarousel from "./AthlonByAldar/InteriorCarousel";
 import PaymentOptionsTwo from "./AthlonByAldar/PaymentOptionsTwo";
-import PropertySearchFormThree from "./common/PropertySearchFormThree";
+import WaterfrontLiving from "./AthlonByAldar/WaterfrontLiving";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function AthlonByAldarPage() {
   return (
@@ -25,7 +19,7 @@ export default function AthlonByAldarPage() {
       <div id="home">
         <HeroKeywords />
         <div className="absolute bottom-0 left-0 w-full custom-form-container">
-          <PropertySearchFormThree
+          <PropertySearchForm
             formName="athlon-by-aldar"
             pointName="get-in-touch"
             formType="banner-form"
@@ -38,7 +32,7 @@ export default function AthlonByAldarPage() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="/athlon-by-aldar/thank-you"

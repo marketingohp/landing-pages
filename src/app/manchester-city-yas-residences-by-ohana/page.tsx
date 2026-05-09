@@ -1,6 +1,6 @@
-import "../../components/OhanaMonchesterYas/style.css";
-import type { Metadata } from "next";
 import OhanaMonchesterYasPage from "@/components/OhanaMonchesterYas";
+import type { Metadata } from "next";
+import "../../components/OhanaMonchesterYas/style.css";
 export const metadata: Metadata = {
   title: "Manchester City Yas Residences By Ohana",
   description:

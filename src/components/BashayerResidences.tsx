@@ -1,21 +1,16 @@
 "use client";
 
-import Header from "./BashayerResidences/Header";
-import OneResidencesHero from "./BashayerResidences/OneResidencesHero";
-import WaterfrontLiving from "./BashayerResidences/WaterfrontLiving";
-import EnlightenmentSection from "./BashayerResidences/EnlightenmentSection";
-import WindowToWonder from "./BashayerResidences/WindowToWonder";
-import HotelStyleLiving from "./BashayerResidences/HotelStyleLiving";
-import InteriorCarousel from "./BashayerResidences/InteriorCarousel";
-import DiscoverSection from "./BashayerResidences/DiscoverSection";
 import CareAndGrace from "./BashayerResidences/CareAndGrace";
-import DreamsAndDesign from "./BashayerResidences/DreamsAndDesign";
+import DiscoverSection from "./BashayerResidences/DiscoverSection";
+import EnlightenmentSection from "./BashayerResidences/EnlightenmentSection";
 import Footer from "./BashayerResidences/Footer";
+import Header from "./BashayerResidences/Header";
 import HeroKeywords from "./BashayerResidences/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./BashayerResidences/PaymentOptions";
+import InteriorCarousel from "./BashayerResidences/InteriorCarousel";
 import PaymentOptionsTwo from "./BashayerResidences/PaymentOptionsTwo";
+import WaterfrontLiving from "./BashayerResidences/WaterfrontLiving";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function BashayerResidencesPage() {
   return (
@@ -37,7 +32,7 @@ export default function BashayerResidencesPage() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="/bashayer-residences/thank-you"

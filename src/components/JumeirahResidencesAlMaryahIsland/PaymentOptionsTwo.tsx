@@ -91,7 +91,7 @@ export default function PaymentOptionsTwo() {
                     >
                       5%
                       <br />
-                      On Booking Date 
+                      On Booking Date
                     </td>
                     <td
                       className=" text-center px-4 md:px-6 py-4 text-sm md:text-base"

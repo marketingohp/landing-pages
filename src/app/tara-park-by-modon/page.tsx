@@ -1,6 +1,6 @@
-import "../../components/TaraParkByModon/style.css";
-import type { Metadata } from "next";
 import TaraParkByModon from "@/components/TaraParkByModon";
+import type { Metadata } from "next";
+import "../../components/TaraParkByModon/style.css";
 export const metadata: Metadata = {
   title: "Tara Park by Modon – Luxury Apartments for Sale | Al Reem Island",
   description:

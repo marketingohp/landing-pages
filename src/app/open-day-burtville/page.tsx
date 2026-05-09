@@ -1,8 +1,6 @@
-import "../../components/OpenDayBurtville/style.css";
-import type { Metadata } from "next";
-import ComingsoonOhanaPage from "@/components/ComingsoonOhana";
-import OhanaComingSoonPage from "@/components/OhanaComingSoon";
 import OpenHousePage from "@/components/OpenDayBabAlQasr";
+import type { Metadata } from "next";
+import "../../components/OpenDayBurtville/style.css";
 export const metadata: Metadata = {
   title: " Open Day Ohana",
   description:

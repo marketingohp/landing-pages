@@ -1,23 +1,17 @@
 "use client";
 
 import { useLanguage } from "@/contexts/theStellarResidences/LanguageContext";
-import Image from "next/image";
-import React, { useState } from "react";
-import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
-import IconButton from "@mui/material/IconButton";
 import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
-import PropertySearchForm from "../common/PropertySearchForm";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import Image from "next/image";
+import React, { useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import PropertySearchForm from "../common/PropertySearchForm";
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -51,39 +45,39 @@ export default function CareAndGrace() {
   };
 
   const amenities = [
-  {
-    name: "Resident Lounge",
-    icon: "/images/the-stellar-residences/amenities/residence_lounge.png"
-  },
-  {
-    name: "Kids Pool",
-    icon: "/images/the-stellar-residences/amenities/pool.png"
-  },
-  {
-    name: "Conference Room",
-    icon: "/images/the-stellar-residences/amenities/conference_room.png"
-  },
-  {
-    name: "Gym",
-    icon: "/images/the-stellar-residences/amenities/gym.png"
-  },
-  {
-    name: "Infinity Pool",
-    icon: "/images/the-stellar-residences/amenities/pool.png"
-  },
-  {
-    name: "Sports Courts",
-    icon: "/images/the-stellar-residences/amenities/sports_court.png"
-  },
-  {
-    name: "Yoga Area",
-    icon: "/images/the-stellar-residences/amenities/yoga.png"
-  },
-  {
-    name: "Electric Car Stations",
-    icon: "/images/the-stellar-residences/amenities/ev_station.png"
-  }
-];
+    {
+      name: "Resident Lounge",
+      icon: "/images/the-stellar-residences/amenities/residence_lounge.png",
+    },
+    {
+      name: "Kids Pool",
+      icon: "/images/the-stellar-residences/amenities/pool.png",
+    },
+    {
+      name: "Conference Room",
+      icon: "/images/the-stellar-residences/amenities/conference_room.png",
+    },
+    {
+      name: "Gym",
+      icon: "/images/the-stellar-residences/amenities/gym.png",
+    },
+    {
+      name: "Infinity Pool",
+      icon: "/images/the-stellar-residences/amenities/pool.png",
+    },
+    {
+      name: "Sports Courts",
+      icon: "/images/the-stellar-residences/amenities/sports_court.png",
+    },
+    {
+      name: "Yoga Area",
+      icon: "/images/the-stellar-residences/amenities/yoga.png",
+    },
+    {
+      name: "Electric Car Stations",
+      icon: "/images/the-stellar-residences/amenities/ev_station.png",
+    },
+  ];
 
   return (
     <section className="py-20 lg:py-32 bg-[[#AA8B6A]] dark:bg-[#[#AA8B6A]] relative">

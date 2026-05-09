@@ -2,10 +2,10 @@
 
 import {
   createContext,
-  useContext,
-  useState,
-  useEffect,
   ReactNode,
+  useContext,
+  useEffect,
+  useState,
 } from "react";
 
 type Language = "en" | "ar" | "ru";
@@ -148,7 +148,8 @@ const translations = {
     "royal.hotel.desc":
       "Wake up to inspiring views. Live close to the city’s top destinations. Experience a lifestyle that’s refined, relaxed, and always connected.",
     "royal.hotel.explore": "Register Your Interest",
-    "royal.discover.title": "Jumeirah Residences Strategic Location <br /> in Al Maryah Island",
+    "royal.discover.title":
+      "Jumeirah Residences Strategic Location <br /> in Al Maryah Island",
     "royal.discover.desc":
       "Jumeirah Residences Al Maryah Island is ideally located on Al Maryah Island, Abu Dhabi’ s premier business and lifestyle hub. It offers seamless access to Abu Dhabi Global Market, The Galleria Mall, Corniche Road, Reem Island, and Y as Island. With proximity to key commercial, leisure, and healthcare destinations, residents enjoy unparalleled convenience while living in a prestigious waterfront community at the heart of Abu Dhabi.",
     "royal.discover.masterplan": "VIEW MASTERPLAN",

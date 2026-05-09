@@ -1,29 +1,23 @@
 "use client";
 
 import { useLanguage } from "@/contexts/oneResidences/LanguageContext";
-import Image from "next/image";
-import React, { useState } from "react";
-import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
-import IconButton from "@mui/material/IconButton";
 import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
-import PropertySearchForm from "../common/PropertySearchForm";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import Image from "next/image";
+import React, { useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import PropertySearchForm from "../common/PropertySearchForm";
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
     children: React.ReactElement<any, any>;
   },
-  ref: React.Ref<unknown>
+  ref: React.Ref<unknown>,
 ) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -42,20 +36,13 @@ export default function CareAndGrace() {
   };
 
   const handleAmenityClick = (index: number) => {
-   // setSelectedAmenityIndex(index);
-   // setAmenitiesModalOpen(true);
+    // setSelectedAmenityIndex(index);
+    // setAmenitiesModalOpen(true);
   };
 
   const handleCloseAmenitiesModal = () => {
     setAmenitiesModalOpen(false);
   };
-
-  
-
-
-
-
-
 
   const amenities = [
     {
@@ -120,7 +107,11 @@ export default function CareAndGrace() {
         {/* Amenities Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-12">
           {amenities.map((amenity, index) => (
-            <div key={index} className="text-center cursor-pointer" onClick={() => handleAmenityClick(index)}>
+            <div
+              key={index}
+              className="text-center cursor-pointer"
+              onClick={() => handleAmenityClick(index)}
+            >
               <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center shadow-lg text-4xl hover:scale-110 transition-transform duration-300">
                 <img
                   src={amenity.icon}
@@ -221,16 +212,16 @@ export default function CareAndGrace() {
                           alt={amenity.name}
                           className="absolute inset-0 w-full h-full object-cover scale-110 transition-transform duration-700 hover:scale-100"
                         />
-                        
+
                         {/* Animated Gradient Overlay */}
                         <div className="absolute inset-0 bg-gradient-to-br from-[#1a3a5c]/80 via-[#1a3a5c]/60 to-[#4a6fa5]/80 dark:from-[#0a0a0a]/90 dark:via-[#1a1a1a]/80 dark:to-[#2a4a6c]/90"></div>
-                        
+
                         {/* Animated Light Effect */}
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer"></div>
-                        
+
                         {/* Radial Gradient Overlay for Focus */}
                         <div className="absolute inset-0 bg-radial-gradient from-transparent via-black/20 to-black/60"></div>
-                        
+
                         {/* Modern Glassmorphism Effect */}
                         <div className="absolute inset-0 backdrop-blur-[2px]"></div>
                       </div>
@@ -243,7 +234,7 @@ export default function CareAndGrace() {
                             {amenity.name}
                           </span>
                         </h3>
-                        
+
                         {/* Decorative Elements */}
                         <div className="flex items-center gap-4 mt-4">
                           <div className="w-16 md:w-24 h-0.5 bg-gradient-to-r from-transparent via-white/60 to-white/60"></div>
@@ -308,11 +299,11 @@ export default function CareAndGrace() {
         .amenities-lightbox-swiper {
           padding-bottom: 0rem;
         }
-        
+
         .amenities-lightbox-swiper .swiper-slide {
           height: auto;
         }
-        
+
         .swiper-pagination-bullet-custom {
           width: 12px;
           height: 12px;
@@ -321,18 +312,18 @@ export default function CareAndGrace() {
           transition: all 0.3s ease;
           backdrop-filter: blur(4px);
         }
-        
+
         .swiper-pagination-bullet-active-custom {
           background: rgba(255, 255, 255, 0.9);
           width: 32px;
           border-radius: 6px;
           box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
         }
-        
+
         .dark .swiper-pagination-bullet-custom {
           background: rgba(255, 255, 255, 0.3);
         }
-        
+
         .dark .swiper-pagination-bullet-active-custom {
           background: rgba(255, 255, 255, 0.8);
         }
@@ -367,7 +358,8 @@ export default function CareAndGrace() {
         }
 
         @keyframes float {
-          0%, 100% {
+          0%,
+          100% {
             transform: translateY(0px) translateX(0px);
             opacity: 0.4;
           }
@@ -378,7 +370,8 @@ export default function CareAndGrace() {
         }
 
         @keyframes float-delay {
-          0%, 100% {
+          0%,
+          100% {
             transform: translateY(0px) translateX(0px);
             opacity: 0.3;
           }
@@ -389,7 +382,8 @@ export default function CareAndGrace() {
         }
 
         @keyframes float-delay-2 {
-          0%, 100% {
+          0%,
+          100% {
             transform: translateY(0px) translateX(0px);
             opacity: 0.2;
           }
@@ -424,7 +418,12 @@ export default function CareAndGrace() {
         }
 
         .bg-radial-gradient {
-          background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.6) 100%);
+          background: radial-gradient(
+            circle at center,
+            transparent 0%,
+            rgba(0, 0, 0, 0.2) 50%,
+            rgba(0, 0, 0, 0.6) 100%
+          );
         }
       `}</style>
 
@@ -468,7 +467,7 @@ export default function CareAndGrace() {
             "budget",
             "message",
           ]}
-          requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+          requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
           viewType="image"
           // downloadBrochure={true}
           // brochureUrl="/images/one-residences/one-residences-brochure.pdf"

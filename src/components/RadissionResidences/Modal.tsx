@@ -1,24 +1,24 @@
-'use client';
+"use client";
 
-import { useEffect, ReactNode } from 'react';
-import { createPortal } from 'react-dom';
+import { ReactNode, useEffect } from "react";
+import { createPortal } from "react-dom";
 
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   children: ReactNode;
   title?: string;
-  size?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
+  size?: "sm" | "md" | "lg" | "xl" | "full";
   closeOnOverlayClick?: boolean;
   showCloseButton?: boolean;
 }
 
 const sizeClasses = {
-  sm: 'max-w-md',
-  md: 'max-w-2xl',
-  lg: 'max-w-4xl',
-  xl: 'max-w-6xl',
-  full: 'max-w-full mx-4',
+  sm: "max-w-md",
+  md: "max-w-2xl",
+  lg: "max-w-4xl",
+  xl: "max-w-6xl",
+  full: "max-w-full mx-4",
 };
 
 export default function Modal({
@@ -26,37 +26,37 @@ export default function Modal({
   onClose,
   children,
   title,
-  size = 'md',
+  size = "md",
   closeOnOverlayClick = true,
   showCloseButton = true,
 }: ModalProps) {
   // Prevent body scroll when modal is open
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
 
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [isOpen]);
 
   // Handle ESC key
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && isOpen) {
+      if (e.key === "Escape" && isOpen) {
         onClose();
       }
     };
 
     if (isOpen) {
-      document.addEventListener('keydown', handleEscape);
+      document.addEventListener("keydown", handleEscape);
     }
 
     return () => {
-      document.removeEventListener('keydown', handleEscape);
+      document.removeEventListener("keydown", handleEscape);
     };
   }, [isOpen, onClose]);
 
@@ -85,7 +85,10 @@ export default function Modal({
         {(title || showCloseButton) && (
           <div className="flex items-center justify-between p-4 lg:p-6 border-b border-gray-200 dark:border-gray-700">
             {title && (
-              <h2 className="text-xl lg:text-2xl font-semibold text-[#1a3a5c] dark:text-white" style={{ fontFamily: 'var(--font-playfair), serif' }}>
+              <h2
+                className="text-xl lg:text-2xl font-semibold text-[#1a3a5c] dark:text-white"
+                style={{ fontFamily: "var(--font-playfair), serif" }}
+              >
                 {title}
               </h2>
             )}
@@ -120,10 +123,9 @@ export default function Modal({
   );
 
   // Use portal to render modal at root level
-  if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     return createPortal(modalContent, document.body);
   }
 
   return null;
 }
-

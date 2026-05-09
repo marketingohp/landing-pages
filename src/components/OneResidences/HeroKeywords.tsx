@@ -2,18 +2,17 @@
 
 import { useLanguage } from "@/contexts/LanguageContext";
 
-import React, { useRef, useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import PropertySearchForm from "../common/PropertySearchForm";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 export default function HeroKeywords() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -82,16 +81,15 @@ export default function HeroKeywords() {
         ))}
       </Swiper>
 
-     <div className="absolute inset-0 flex items-center justify-center z-20">
-       <img
-         src="/images/one-residences/one-residences-logo.png"
-         width={100}
-         height={60}
-         className="main-logo-banner"
-         alt="one residences"
-       />
-     </div>
-      
+      <div className="absolute inset-0 flex items-center justify-center z-20">
+        <img
+          src="/images/one-residences/one-residences-logo.png"
+          width={100}
+          height={60}
+          className="main-logo-banner"
+          alt="one residences"
+        />
+      </div>
     </section>
   );
 }

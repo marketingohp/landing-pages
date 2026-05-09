@@ -376,7 +376,9 @@ body {
   height: 56px;
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
 }
 
 .floating.whatsapp-icon a:hover {
@@ -390,31 +392,27 @@ body {
   object-fit: contain;
 }
 
-
 .desktop {
   width: 100%;
   height: 100%;
-  
 }
-.mobilee{
-width: 100%;
-height: 100%;
- 
-display: none;
+.mobilee {
+  width: 100%;
+  height: 100%;
+
+  display: none;
   overflow: hidden;
 }
 
-@media (max-width:450px) {
-   
+@media (max-width: 450px) {
   .desktop {
-  width: 100%;
-  height: 100%;
-  display: none;
-}
-.mobilee{
-width: 100%;
-height: 100%;
-display: block;
-}
-
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .mobilee {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
 }

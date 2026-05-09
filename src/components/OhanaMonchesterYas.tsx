@@ -1,22 +1,15 @@
 "use client";
 
-import Header from "./OhanaMonchesterYas/Header";
-import OneResidencesHero from "./OhanaMonchesterYas/OneResidencesHero";
-import WaterfrontLiving from "./OhanaMonchesterYas/WaterfrontLiving";
-import EnlightenmentSection from "./OhanaMonchesterYas/EnlightenmentSection";
-import WindowToWonder from "./OhanaMonchesterYas/WindowToWonder";
-import HotelStyleLiving from "./OhanaMonchesterYas/HotelStyleLiving";
-import InteriorCarousel from "./OhanaMonchesterYas/InteriorCarousel";
-import DiscoverSection from "./OhanaMonchesterYas/DiscoverSection";
 import CareAndGrace from "./OhanaMonchesterYas/CareAndGrace";
-import DreamsAndDesign from "./OhanaMonchesterYas/DreamsAndDesign";
+import DiscoverSection from "./OhanaMonchesterYas/DiscoverSection";
 import Footer from "./OhanaMonchesterYas/Footer";
+import Header from "./OhanaMonchesterYas/Header";
 import HeroKeywords from "./OhanaMonchesterYas/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./OhanaMonchesterYas/PaymentOptions";
+import InteriorCarousel from "./OhanaMonchesterYas/InteriorCarousel";
 import PaymentOptionsTwo from "./OhanaMonchesterYas/PaymentOptionsTwo";
-import PropertySearchFormThree from "./common/PropertySearchFormThree";
+import WaterfrontLiving from "./OhanaMonchesterYas/WaterfrontLiving";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function OhanaMonchesterYasPage() {
   return (
@@ -25,7 +18,7 @@ export default function OhanaMonchesterYasPage() {
       <div id="home">
         <HeroKeywords />
         <div className="absolute bottom-0 left-0 w-full custom-form-container">
-          <PropertySearchFormThree
+          <PropertySearchForm
             formName="manchester-city-yas-residences-by-ohana"
             pointName="get-in-touch"
             formType="banner-form"
@@ -38,7 +31,7 @@ export default function OhanaMonchesterYasPage() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="/manchester-city-yas-residences-by-ohana/thank-you"

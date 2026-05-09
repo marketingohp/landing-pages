@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import { useLanguage } from "@/contexts/yasRivaResidences/LanguageContext";
+import { useState } from "react";
 
 export default function LanguageSelector({
   isScrolled,

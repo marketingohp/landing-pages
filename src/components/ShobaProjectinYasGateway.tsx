@@ -1,21 +1,15 @@
 "use client";
 
-import Header from "./ShobaProjectYas/Header";
-import ProjectHero from "./ShobaProjectYas/ProjectHero";
-import WaterfrontLiving from "./ShobaProjectYas/WaterfrontLiving";
-import EnlightenmentSection from "./ShobaProjectYas/EnlightenmentSection";
-import WindowToWonder from "./ShobaProjectYas/WindowToWonder";
-import HotelStyleLiving from "./ShobaProjectYas/HotelStyleLiving";
-import InteriorCarousel from "./ShobaProjectYas/InteriorCarousel";
-import DiscoverSection from "./ShobaProjectYas/DiscoverSection";
 import CareAndGrace from "./ShobaProjectYas/CareAndGrace";
-import DreamsAndDesign from "./ShobaProjectYas/DreamsAndDesign";
+import DiscoverSection from "./ShobaProjectYas/DiscoverSection";
 import Footer from "./ShobaProjectYas/Footer";
+import Header from "./ShobaProjectYas/Header";
 import HeroKeywords from "./ShobaProjectYas/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./ShobaProjectYas/PaymentOptions";
+import InteriorCarousel from "./ShobaProjectYas/InteriorCarousel";
 import PaymentOptionsTwo from "./ShobaProjectYas/PaymentOptionsTwo";
+import WaterfrontLiving from "./ShobaProjectYas/WaterfrontLiving";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function ShobaProjectinYasGatewayPage() {
   return (
@@ -37,7 +31,7 @@ export default function ShobaProjectinYasGatewayPage() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="/shoba-project-in-yas-gateway/thank-you"

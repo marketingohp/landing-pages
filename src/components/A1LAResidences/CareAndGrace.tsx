@@ -1,23 +1,17 @@
 "use client";
 
 import { useLanguage } from "@/contexts/a1laResidences/LanguageContext";
-import Image from "next/image";
-import React, { useState } from "react";
-import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
-import IconButton from "@mui/material/IconButton";
 import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
-import PropertySearchFormThree from "../common/PropertySearchFormThree";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import Image from "next/image";
+import React, { useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import PropertySearchForm from "../common/PropertySearchForm";
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -53,7 +47,7 @@ export default function CareAndGrace() {
   const amenities = [
     {
       name: "Lobby",
-      icon: "/images/a1la-residences/amenities/Lobby.png",  
+      icon: "/images/a1la-residences/amenities/Lobby.png",
     },
     {
       name: "Gym",
@@ -457,7 +451,7 @@ export default function CareAndGrace() {
           },
         }}
       >
-        <PropertySearchFormThree
+        <PropertySearchForm
           formName="a1la-residences"
           pointName="get-in-touch"
           formType="amenities-form"
@@ -472,7 +466,7 @@ export default function CareAndGrace() {
             "budget",
             "message",
           ]}
-          requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+          requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
           viewType="image"
           // downloadBrochure={true}
           // brochureUrl="/images/the-wilds-by-aldar/Yas_Riva_Residences_Brochure.pdf"

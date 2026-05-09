@@ -1,26 +1,18 @@
 "use client";
 
-import Image from "next/image";
 import { useLanguage } from "@/contexts/oneResidences/LanguageContext";
-import React from "react";
-import Button from "@mui/material/Button";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
 import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
+import React from "react";
 import PropertySearchForm from "../common/PropertySearchForm";
 
-import Box from '@mui/material/Box';
-import Modal from '@mui/material/Modal';
+import Modal from "@mui/material/Modal";
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
     children: React.ReactElement<any, any>;
   },
-  ref: React.Ref<unknown>
+  ref: React.Ref<unknown>,
 ) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -98,7 +90,10 @@ export default function WaterfrontLiving() {
   ];
 
   return (
-    <section className="relative py-20 lg:py-10 bg-[#f5f5f0] dark:bg-[#1a1a1a]" style={{paddingBottom:0, paddingTop:80}}>
+    <section
+      className="relative py-20 lg:py-10 bg-[#f5f5f0] dark:bg-[#1a1a1a]"
+      style={{ paddingBottom: 0, paddingTop: 80 }}
+    >
       {/* Background Image */}
       <div className="absolute inset-0 opacity-20 dark:opacity-10">
         {/* <Image
@@ -119,7 +114,7 @@ export default function WaterfrontLiving() {
           ></h2>
           <div className="max-w-4xl mx-auto space-y-4 text-[#1a3a5c] dark:text-gray-300 text-4xl py-2">
             <p
-            className="custom-mobile-display-style1"
+              className="custom-mobile-display-style1"
               dangerouslySetInnerHTML={{ __html: t("royal.waterfront.desc2") }}
             ></p>
           </div>
@@ -310,13 +305,13 @@ export default function WaterfrontLiving() {
             open={open}
             onClose={handleClose}
             sx={{
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-           
-              bgcolor: 'background.paper',
-              border: '2px solid #000',
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+
+              bgcolor: "background.paper",
+              border: "2px solid #000",
               boxShadow: 24,
               p: 4,
             }}
@@ -336,7 +331,7 @@ export default function WaterfrontLiving() {
                 "budget",
                 "message",
               ]}
-              requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+              requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
               viewType="image"
               // downloadBrochure={true}
               // brochureUrl="/images/one-residences/one-residences-brochure.pdf"

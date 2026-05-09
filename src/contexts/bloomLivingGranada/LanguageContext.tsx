@@ -2,10 +2,10 @@
 
 import {
   createContext,
-  useContext,
-  useState,
-  useEffect,
   ReactNode,
+  useContext,
+  useEffect,
+  useState,
 } from "react";
 
 type Language = "en" | "ar" | "ru";
@@ -131,12 +131,15 @@ const translations = {
     "royal.waterfront.title": "Bloom Living - Granada",
     "royal.waterfront.title2":
       "blends heritage charm with outstanding connectivity",
-    "royal.waterfront.desc1": "Set within the Bloom Living masterplan in Zayed City, Granada presents a collection of refined apartments inspired by timeless Andalusian design. From studios to spacious three-bedroom residences, each home is crafted with open layouts, elevated ceilings, and generous glazing that invites natural light and serene garden views.",
+    "royal.waterfront.desc1":
+      "Set within the Bloom Living masterplan in Zayed City, Granada presents a collection of refined apartments inspired by timeless Andalusian design. From studios to spacious three-bedroom residences, each home is crafted with open layouts, elevated ceilings, and generous glazing that invites natural light and serene garden views.",
     "royal.waterfront.desc2": "",
     "royal.waterfront.explore": "EXPLORE RESIDENCES",
     "royal.waterfront.brochure": "REGISTER YOUR INTEREST",
-    "royal.enlightenment.title": "A Lifestyle Framed by Light, Water, and Community",
-    "royal.enlightenment.desc": "Bathed in Abu Dhabi’s golden light, STELLAR reveals a sculpted form defined by fluid lines and graceful geometry, where architecture flows seamlessly into its natural surroundings. The design creates a continuous harmony between interior and exterior spaces, blending elegance with the calm of the coastal landscape. Each residence becomes a refined dialogue of light and form, shaping a balanced living experience within Yas Island’s evolving skyline.",
+    "royal.enlightenment.title":
+      "A Lifestyle Framed by Light, Water, and Community",
+    "royal.enlightenment.desc":
+      "Bathed in Abu Dhabi’s golden light, STELLAR reveals a sculpted form defined by fluid lines and graceful geometry, where architecture flows seamlessly into its natural surroundings. The design creates a continuous harmony between interior and exterior spaces, blending elegance with the calm of the coastal landscape. Each residence becomes a refined dialogue of light and form, shaping a balanced living experience within Yas Island’s evolving skyline.",
     "royal.enlightenment.desc2": "",
 
     "royal.enlightenment.viewGallery": "VIEW GALLERY",
@@ -146,10 +149,12 @@ const translations = {
       "Wake up to inspiring views. Live close to the city’s top destinations. Experience a lifestyle that’s refined, relaxed, and always connected.",
     "royal.hotel.explore": "Register Your Interest",
     "royal.discover.title": "Connected Living at the Heart of Zayed City",
-    "royal.discover.desc": "Located in Zayed City within Bloom Living, Granada offers strong connectivity and proximity to Zayed International Airport, while maintaining a calm, community-focused setting.",
+    "royal.discover.desc":
+      "Located in Zayed City within Bloom Living, Granada offers strong connectivity and proximity to Zayed International Airport, while maintaining a calm, community-focused setting.",
     "royal.discover.masterplan": "VIEW MASTERPLAN",
     "royal.care.title": "Designed for Active, Balanced Living",
-    "royal.care.desc": "Residents enjoy pools, fitness spaces, rooftop areas, and scenic lake-side trails, all seamlessly connected through thoughtfully designed pathways linking every part of the community, alongside retail, dining, and daily essentials.",
+    "royal.care.desc":
+      "Residents enjoy pools, fitness spaces, rooftop areas, and scenic lake-side trails, all seamlessly connected through thoughtfully designed pathways linking every part of the community, alongside retail, dining, and daily essentials.",
     "royal.care.viewAll": "Explore More",
     "royal.dreams.title":
       "LET THE BAY SLOW YOU DOWN. LET THE CITY LIFT YOU UP.",

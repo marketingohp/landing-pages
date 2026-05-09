@@ -1,21 +1,15 @@
 "use client";
 
-import Header from "./FourSeasons/Header";
-import OneResidencesHero from "./FourSeasons/OneResidencesHero";
-import WaterfrontLiving from "./FourSeasons/WaterfrontLiving";
-import EnlightenmentSection from "./FourSeasons/EnlightenmentSection";
-import WindowToWonder from "./FourSeasons/WindowToWonder";
-import HotelStyleLiving from "./FourSeasons/HotelStyleLiving";
-import InteriorCarousel from "./FourSeasons/InteriorCarousel";
-import DiscoverSection from "./FourSeasons/DiscoverSection";
 import CareAndGrace from "./FourSeasons/CareAndGrace";
-import DreamsAndDesign from "./FourSeasons/DreamsAndDesign";
+import DiscoverSection from "./FourSeasons/DiscoverSection";
 import Footer from "./FourSeasons/Footer";
+import Header from "./FourSeasons/Header";
 import HeroKeywords from "./FourSeasons/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./FourSeasons/PaymentOptions";
+import InteriorCarousel from "./FourSeasons/InteriorCarousel";
 import PaymentOptionsTwo from "./FourSeasons/PaymentOptionsTwo";
+import WaterfrontLiving from "./FourSeasons/WaterfrontLiving";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function FourSeasonsPage() {
   return (
@@ -37,7 +31,7 @@ export default function FourSeasonsPage() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="/four-seasons/thank-you"

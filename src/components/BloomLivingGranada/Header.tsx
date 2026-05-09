@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/bloomLivingGranada/LanguageContext";
 import { useTheme } from "@/contexts/ThemeContext";
+import { useEffect, useState } from "react";
 import LanguageSelector from "./LanguageSelector";
 
 export default function Header() {
@@ -30,31 +30,31 @@ export default function Header() {
   }, []);
 
   const menuItems = [
-  {
-    key: "royal.nav.home",
-    href: "#home"
-  },
-  {
-    key: "royal.nav.location",
-    href: "#location"
-  },
-  {
-    key: "royal.nav.amenities",
-    href: "#amenities"
-  },
-  {
-    key: "royal.nav.gallery",
-    href: "#gallery"
-  },
-  {
-    key: "royal.nav.contact",
-    href: "#contact-us"
-  },
-  {
-    key: "royal.nav.enquire",
-    href: "#enquire-now"
-  }
-];
+    {
+      key: "royal.nav.home",
+      href: "#home",
+    },
+    {
+      key: "royal.nav.location",
+      href: "#location",
+    },
+    {
+      key: "royal.nav.amenities",
+      href: "#amenities",
+    },
+    {
+      key: "royal.nav.gallery",
+      href: "#gallery",
+    },
+    {
+      key: "royal.nav.contact",
+      href: "#contact-us",
+    },
+    {
+      key: "royal.nav.enquire",
+      href: "#enquire-now",
+    },
+  ];
 
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,

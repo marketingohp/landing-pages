@@ -1,27 +1,26 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 export default function InteriorCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = [
-  "/images/radiant-bridges-by-radiant/interior/radiant_bridges_interior_01.webp",
-  "/images/radiant-bridges-by-radiant/interior/radiant_bridges_interior_02.webp",
-  "/images/radiant-bridges-by-radiant/interior/radiant_bridges_interior_03.webp",
-  "/images/radiant-bridges-by-radiant/interior/radiant_bridges_interior_04.webp"
-];
+    "/images/radiant-bridges-by-radiant/interior/radiant_bridges_interior_01.webp",
+    "/images/radiant-bridges-by-radiant/interior/radiant_bridges_interior_02.webp",
+    "/images/radiant-bridges-by-radiant/interior/radiant_bridges_interior_03.webp",
+    "/images/radiant-bridges-by-radiant/interior/radiant_bridges_interior_04.webp",
+  ];
 
   const nextImage = () => {
     setCurrentIndex((prev) => (prev + 1) % images.length);

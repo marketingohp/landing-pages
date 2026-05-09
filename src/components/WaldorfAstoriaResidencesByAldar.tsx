@@ -1,23 +1,18 @@
 "use client";
 
-import Header from "./WaldorfAstoriaResidencesByAldar/Header";
-import OneResidencesHero from "./WaldorfAstoriaResidencesByAldar/OneResidencesHero";
-import WaterfrontLiving from "./WaldorfAstoriaResidencesByAldar/WaterfrontLiving";
-import EnlightenmentSection from "./WaldorfAstoriaResidencesByAldar/EnlightenmentSection";
-import WindowToWonder from "./WaldorfAstoriaResidencesByAldar/WindowToWonder";
-import HotelStyleLiving from "./WaldorfAstoriaResidencesByAldar/HotelStyleLiving";
-import InteriorCarousel from "./WaldorfAstoriaResidencesByAldar/InteriorCarousel";
-import DiscoverSection from "./WaldorfAstoriaResidencesByAldar/DiscoverSection";
-import CareAndGrace from "./WaldorfAstoriaResidencesByAldar/CareAndGrace";
-import DreamsAndDesign from "./WaldorfAstoriaResidencesByAldar/DreamsAndDesign";
-import Footer from "./WaldorfAstoriaResidencesByAldar/Footer";
-import HeroKeywords from "./WaldorfAstoriaResidencesByAldar/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./WaldorfAstoriaResidencesByAldar/PaymentOptions";
-import PaymentOptionsTwo from "./WaldorfAstoriaResidencesByAldar/PaymentOptionsTwo";
-import { useEffect } from "react";
 import { pushToDataLayer } from "@/utils/gtag";
+import { useEffect } from "react";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
+import CareAndGrace from "./WaldorfAstoriaResidencesByAldar/CareAndGrace";
+import DiscoverSection from "./WaldorfAstoriaResidencesByAldar/DiscoverSection";
+import EnlightenmentSection from "./WaldorfAstoriaResidencesByAldar/EnlightenmentSection";
+import Footer from "./WaldorfAstoriaResidencesByAldar/Footer";
+import Header from "./WaldorfAstoriaResidencesByAldar/Header";
+import HeroKeywords from "./WaldorfAstoriaResidencesByAldar/HeroKeywords";
+import InteriorCarousel from "./WaldorfAstoriaResidencesByAldar/InteriorCarousel";
+import PaymentOptionsTwo from "./WaldorfAstoriaResidencesByAldar/PaymentOptionsTwo";
+import WaterfrontLiving from "./WaldorfAstoriaResidencesByAldar/WaterfrontLiving";
 
 export default function WimbledonBridgeHouseByAldar() {
   useEffect(() => {

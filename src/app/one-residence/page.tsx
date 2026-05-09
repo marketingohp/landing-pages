@@ -1,6 +1,6 @@
 import OneResidencePage from "@/components/OneResidences";
-import "../../components/OneResidences/style.css";
 import type { Metadata } from "next";
+import "../../components/OneResidences/style.css";
 export const metadata: Metadata = {
   title: "One Residences Al Reem Island",
   description:

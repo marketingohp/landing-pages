@@ -1,6 +1,5 @@
-import ThankYouPage from '@/components/RadissionResidences/ThankYouPage';
+import ThankYouPage from "@/components/RadissionResidences/ThankYouPage";
 
 export default function ThankYou() {
   return <ThankYouPage />;
 }
-

@@ -1,19 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import { useLanguage } from "@/contexts/joudResidenceByOneDevelopment/LanguageContext";
-import React from "react";
-import Button from "@mui/material/Button";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
 import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
+import React from "react";
 import PropertySearchForm from "../common/PropertySearchForm";
 
-import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 
 const Transition = React.forwardRef(function Transition(
@@ -129,12 +121,12 @@ export default function WaterfrontLiving() {
           <div className="max-w-5xl mx-auto space-y-4 text-[#2C3E5F] dark:text-white text-lg py-4">
             <p
               dangerouslySetInnerHTML={{ __html: t("royal.waterfront.desc1") }}
-              ></p>
+            ></p>
           </div>
           <div className="max-w-5xl mx-auto space-y-4 text-[#2C3E5F] dark:text-white text-lg py-4">
             <p
               dangerouslySetInnerHTML={{ __html: t("royal.waterfront.desc2") }}
-              ></p>
+            ></p>
           </div>
         </div>
 
@@ -172,7 +164,7 @@ export default function WaterfrontLiving() {
               {/* 1 TO 3 BEDROOM APARTMENTS */}
               <div className="px-4 py-3 text-center border-b border-[#00314a] dark:border-gray-400 border-opacity-30">
                 <div className="text-[#2C3E5F] dark:text-white font-normal text-sm leading-relaxed">
-                  Unit Type <br />  1 – 4 BR apartments
+                  Unit Type <br /> 1 – 4 BR apartments
                 </div>
               </div>
 
@@ -212,7 +204,7 @@ export default function WaterfrontLiving() {
               {/* 1 TO 3 BEDROOM APARTMENTS */}
               <div className="flex-1 min-w-[200px] px-6 md:px-8 py-4 text-center">
                 <div className="text-[#2C3E5F] dark:text-white font-normal text-sm md:text-base leading-relaxed">
-                  Unit Type <br />  1 – 4 BR apartments
+                  Unit Type <br /> 1 – 4 BR apartments
                 </div>
               </div>
 

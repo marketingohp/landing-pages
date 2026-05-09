@@ -2,10 +2,10 @@
 
 import {
   createContext,
-  useContext,
-  useState,
-  useEffect,
   ReactNode,
+  useContext,
+  useEffect,
+  useState,
 } from "react";
 
 type Language = "en" | "ar" | "ru";
@@ -131,12 +131,14 @@ const translations = {
     "royal.waterfront.title": "Fahid Beach House",
     "royal.waterfront.title2":
       "blends heritage charm with outstanding connectivity",
-    "royal.waterfront.desc1": "The Beach House Fahid by Aldar presents an exclusive waterfront enclave on Fahid Island, perfectly situated between Yas and Saadiyat Islands, a mere 10 minutes from Downtown Abu Dhabi. Comprising 862 meticulously designed residences, ranging from elegant studios to expansive three-bedroom apartments—with select units featuring maid’s quarters—each home boasts Italian-appointed kitchens, contemporary open layouts, and privileged beach access.",
+    "royal.waterfront.desc1":
+      "The Beach House Fahid by Aldar presents an exclusive waterfront enclave on Fahid Island, perfectly situated between Yas and Saadiyat Islands, a mere 10 minutes from Downtown Abu Dhabi. Comprising 862 meticulously designed residences, ranging from elegant studios to expansive three-bedroom apartments—with select units featuring maid’s quarters—each home boasts Italian-appointed kitchens, contemporary open layouts, and privileged beach access.",
     "royal.waterfront.desc2": "",
     "royal.waterfront.explore": "EXPLORE RESIDENCES",
     "royal.waterfront.brochure": "REGISTER YOUR INTEREST",
     "royal.enlightenment.title": "An Entire Island Designed for Well-Being",
-    "royal.enlightenment.desc": "The development connects residents and professionals to Abu Dhabi’s main business and lifestyle destinations combining urban energy with the calm of island living",
+    "royal.enlightenment.desc":
+      "The development connects residents and professionals to Abu Dhabi’s main business and lifestyle destinations combining urban energy with the calm of island living",
     "royal.enlightenment.desc2": "",
 
     "royal.enlightenment.viewGallery": "VIEW GALLERY",
@@ -146,10 +148,12 @@ const translations = {
       "Wake up to inspiring views. Live close to the city’s top destinations. Experience a lifestyle that’s refined, relaxed, and always connected.",
     "royal.hotel.explore": "Register Your Interest",
     "royal.discover.title": "A Connected Wellness Escape",
-    "royal.discover.desc": "Strategically located in Abu Dhabi, Fahid Island offers both privacy and accessibility, along with easy transfers to and from Zayed International Airport.",
+    "royal.discover.desc":
+      "Strategically located in Abu Dhabi, Fahid Island offers both privacy and accessibility, along with easy transfers to and from Zayed International Airport.",
     "royal.discover.masterplan": "VIEW MASTERPLAN",
     "royal.care.title": "Where Life Finds Its Balance",
-    "royal.care.desc": "Find your balance in a place where natural beauty surrounds you and community inspires you. Set in the vibrant heart of Fahid Island, The Beach House Fahid offers partial views of the expansive sea and the Abu Dhabi skyline, along with seamless access to the shoreline, landscaped gardens, Coral Drive’s retail and lifestyle experiences, and the fitness and wellness corridors within the berm. This is a central address that puts every kind of well-being within easy reach",
+    "royal.care.desc":
+      "Find your balance in a place where natural beauty surrounds you and community inspires you. Set in the vibrant heart of Fahid Island, The Beach House Fahid offers partial views of the expansive sea and the Abu Dhabi skyline, along with seamless access to the shoreline, landscaped gardens, Coral Drive’s retail and lifestyle experiences, and the fitness and wellness corridors within the berm. This is a central address that puts every kind of well-being within easy reach",
     "royal.care.viewAll": "Explore More",
     "royal.dreams.title":
       "LET THE BAY SLOW YOU DOWN. LET THE CITY LIFT YOU UP.",

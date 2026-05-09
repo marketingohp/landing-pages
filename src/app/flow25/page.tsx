@@ -1,6 +1,6 @@
-import "../../components/Flow25/style.css";
-import type { Metadata } from "next";
 import Flow25Page from "@/components/Flow25";
+import type { Metadata } from "next";
+import "../../components/Flow25/style.css";
 export const metadata: Metadata = {
   title: " Flow 25  ",
   description:

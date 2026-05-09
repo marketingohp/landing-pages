@@ -1,6 +1,6 @@
-import "../../components/ReemHillsByModon/style.css";
-import type { Metadata } from "next";
 import ReemHillsByModon from "@/components/ReemHillsByModon";
+import type { Metadata } from "next";
+import "../../components/ReemHillsByModon/style.css";
 export const metadata: Metadata = {
   title: "Reem Hills | Luxury Gated Community in Abu Dhabi",
   description:

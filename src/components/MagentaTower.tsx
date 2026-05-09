@@ -1,22 +1,16 @@
 "use client";
 
-import Header from "./MagentaTower/Header";
-import OneResidencesHero from "./MagentaTower/OneResidencesHero";
-import WaterfrontLiving from "./MagentaTower/WaterfrontLiving";
-import EnlightenmentSection from "./MagentaTower/EnlightenmentSection";
-import WindowToWonder from "./MagentaTower/WindowToWonder";
-import HotelStyleLiving from "./MagentaTower/HotelStyleLiving";
-import InteriorCarousel from "./MagentaTower/InteriorCarousel";
-import DiscoverSection from "./MagentaTower/DiscoverSection";
 import CareAndGrace from "./MagentaTower/CareAndGrace";
-import DreamsAndDesign from "./MagentaTower/DreamsAndDesign";
+import DiscoverSection from "./MagentaTower/DiscoverSection";
+import EnlightenmentSection from "./MagentaTower/EnlightenmentSection";
 import Footer from "./MagentaTower/Footer";
+import Header from "./MagentaTower/Header";
 import HeroKeywords from "./MagentaTower/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./MagentaTower/PaymentOptions";
+import InteriorCarousel from "./MagentaTower/InteriorCarousel";
 import PaymentOptionsTwo from "./MagentaTower/PaymentOptionsTwo";
-import PropertySearchFormThree from "./common/PropertySearchFormThree";
+import WaterfrontLiving from "./MagentaTower/WaterfrontLiving";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function MagentaTowerPage() {
   return (
@@ -25,7 +19,7 @@ export default function MagentaTowerPage() {
       <div id="home">
         <HeroKeywords />
         <div className="absolute bottom-0 left-0 w-full custom-form-container">
-          <PropertySearchFormThree
+          <PropertySearchForm
             formName="magenta-tower"
             pointName="get-in-touch"
             formType="banner-form"
@@ -38,7 +32,7 @@ export default function MagentaTowerPage() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="magenta-tower/thank-you"

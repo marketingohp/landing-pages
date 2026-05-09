@@ -1,6 +1,6 @@
-import "../../components/TheStellarResidences/style.css";
-import type { Metadata } from "next";
 import TheStellarResidences from "@/components/TheStellarResidences";
+import type { Metadata } from "next";
+import "../../components/TheStellarResidences/style.css";
 export const metadata: Metadata = {
   title:
     "STELLAR by Elie Saab Yas Island | Branded Luxury Residences Abu Dhabi",

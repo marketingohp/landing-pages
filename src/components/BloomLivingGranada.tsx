@@ -1,23 +1,18 @@
 "use client";
 
-import Header from "./BloomLivingGranada/Header";
-import OneResidencesHero from "./BloomLivingGranada/OneResidencesHero";
-import WaterfrontLiving from "./BloomLivingGranada/WaterfrontLiving";
-import EnlightenmentSection from "./BloomLivingGranada/EnlightenmentSection";
-import WindowToWonder from "./BloomLivingGranada/WindowToWonder";
-import HotelStyleLiving from "./BloomLivingGranada/HotelStyleLiving";
-import InteriorCarousel from "./BloomLivingGranada/InteriorCarousel";
-import DiscoverSection from "./BloomLivingGranada/DiscoverSection";
-import CareAndGrace from "./BloomLivingGranada/CareAndGrace";
-import DreamsAndDesign from "./BloomLivingGranada/DreamsAndDesign";
-import Footer from "./BloomLivingGranada/Footer";
-import HeroKeywords from "./BloomLivingGranada/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./BloomLivingGranada/PaymentOptions";
-import PaymentOptionsTwo from "./BloomLivingGranada/PaymentOptionsTwo";
-import { useEffect } from "react";
 import { pushToDataLayer } from "@/utils/gtag";
+import { useEffect } from "react";
+import CareAndGrace from "./BloomLivingGranada/CareAndGrace";
+import DiscoverSection from "./BloomLivingGranada/DiscoverSection";
+import EnlightenmentSection from "./BloomLivingGranada/EnlightenmentSection";
+import Footer from "./BloomLivingGranada/Footer";
+import Header from "./BloomLivingGranada/Header";
+import HeroKeywords from "./BloomLivingGranada/HeroKeywords";
+import InteriorCarousel from "./BloomLivingGranada/InteriorCarousel";
+import PaymentOptionsTwo from "./BloomLivingGranada/PaymentOptionsTwo";
+import WaterfrontLiving from "./BloomLivingGranada/WaterfrontLiving";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function BloomLivingGranada() {
   useEffect(() => {

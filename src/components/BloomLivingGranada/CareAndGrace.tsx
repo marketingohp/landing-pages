@@ -1,23 +1,17 @@
 "use client";
 
 import { useLanguage } from "@/contexts/bloomLivingGranada/LanguageContext";
-import Image from "next/image";
-import React, { useState } from "react";
-import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
-import IconButton from "@mui/material/IconButton";
 import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
-import PropertySearchForm from "../common/PropertySearchForm";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import Image from "next/image";
+import React, { useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import PropertySearchForm from "../common/PropertySearchForm";
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -51,43 +45,43 @@ export default function CareAndGrace() {
   };
 
   const amenities = [
-  {
-    name: "Healthcare Facilities",
-    icon: "/images/bloom-living-granada/amenities/health.png"
-  },
-  {
-    name: "World-Class Restaurants & Caf\u00e9s",
-    icon: "/images/bloom-living-granada/amenities/dining.png"
-  },
-  {
-    name: "Dedicated Dog Park",
-    icon: "/images/bloom-living-granada/amenities/landscape.png"
-  },
-  {
-    name: "24/7 Security",
-    icon: "/images/bloom-living-granada/amenities/security.png"
-  },
-  {
-    name: "Landscaped Parks",
-    icon: "/images/bloom-living-granada/amenities/landscape.png"
-  },
-  {
-    name: "Large Lake for Connectivity",
-    icon: "/images/bloom-living-granada/amenities/lake.png"
-  },
-  {
-    name: "Mediterranean Inspired Residential Areas",
-    icon: "/images/bloom-living-granada/amenities/residence.png"
-  },
-  {
-    name: "Cycling Tracks",
-    icon: "/images/bloom-living-granada/amenities/cycling_tracks.png"
-  },
-  {
-    name: "Swimming Pools",
-    icon: "/images/bloom-living-granada/amenities/swimming_pool.png"
-  }
-];
+    {
+      name: "Healthcare Facilities",
+      icon: "/images/bloom-living-granada/amenities/health.png",
+    },
+    {
+      name: "World-Class Restaurants & Caf\u00e9s",
+      icon: "/images/bloom-living-granada/amenities/dining.png",
+    },
+    {
+      name: "Dedicated Dog Park",
+      icon: "/images/bloom-living-granada/amenities/landscape.png",
+    },
+    {
+      name: "24/7 Security",
+      icon: "/images/bloom-living-granada/amenities/security.png",
+    },
+    {
+      name: "Landscaped Parks",
+      icon: "/images/bloom-living-granada/amenities/landscape.png",
+    },
+    {
+      name: "Large Lake for Connectivity",
+      icon: "/images/bloom-living-granada/amenities/lake.png",
+    },
+    {
+      name: "Mediterranean Inspired Residential Areas",
+      icon: "/images/bloom-living-granada/amenities/residence.png",
+    },
+    {
+      name: "Cycling Tracks",
+      icon: "/images/bloom-living-granada/amenities/cycling_tracks.png",
+    },
+    {
+      name: "Swimming Pools",
+      icon: "/images/bloom-living-granada/amenities/swimming_pool.png",
+    },
+  ];
 
   return (
     <section className="py-20 lg:py-32 bg-[[#AA8B6A]] dark:bg-[#[#AA8B6A]] relative">

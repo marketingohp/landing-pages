@@ -1,8 +1,8 @@
 "use client";
 
 import BottomFooter from "./common/BottomFooter";
-import OhanaHeader from "./OpenHouse/OhanaHeader";
 import FloatingWhatsAppIcon from "./OpenHouse/FloatingWhatsAppIcon";
+import OhanaHeader from "./OpenHouse/OhanaHeader";
 
 export default function OpenHousePage() {
   return (

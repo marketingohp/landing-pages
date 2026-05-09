@@ -1,17 +1,13 @@
-import React, { useState, useRef, useEffect } from "react";
-import OhanaTimer from "./OhanaTimer";
-import useCountdown from "./useCountdown";
-import PropertySearchForm from "../common/PropertySearchForm";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import Dialog from "@mui/material/Dialog";
+import Slide from "@mui/material/Slide";
+import { TransitionProps } from "@mui/material/transitions";
+import Image from "next/image";
+import React, { useEffect, useRef, useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import Dialog from "@mui/material/Dialog";
-import { TransitionProps } from "@mui/material/transitions";
-import Slide from "@mui/material/Slide";
 import PropertySearchFormFour from "../common/PropertySearchFormFour";
-import Image from "next/image";
+import useCountdown from "./useCountdown";
 //const video = "/video/ohana.mp4";
 
 const video =

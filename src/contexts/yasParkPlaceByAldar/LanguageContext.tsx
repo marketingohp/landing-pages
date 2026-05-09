@@ -2,10 +2,10 @@
 
 import {
   createContext,
-  useContext,
-  useState,
-  useEffect,
   ReactNode,
+  useContext,
+  useEffect,
+  useState,
 } from "react";
 
 type Language = "en" | "ar" | "ru";
@@ -131,12 +131,14 @@ const translations = {
     "royal.waterfront.title": "Yas Park Place",
     "royal.waterfront.title2":
       "blends heritage charm with outstanding connectivity",
-    "royal.waterfront.desc1": "A vibrant island community where modern architecture meets expansive green spaces and a well-balanced lifestyle. Designed for contemporary living, Yas Park Place offers elegant homes surrounded by landscaped parks, leisure facilities, and family-friendly amenities.",
+    "royal.waterfront.desc1":
+      "A vibrant island community where modern architecture meets expansive green spaces and a well-balanced lifestyle. Designed for contemporary living, Yas Park Place offers elegant homes surrounded by landscaped parks, leisure facilities, and family-friendly amenities.",
     "royal.waterfront.desc2": "",
     "royal.waterfront.explore": "EXPLORE RESIDENCES",
     "royal.waterfront.brochure": "REGISTER YOUR INTEREST",
     "royal.enlightenment.title": "At the heart of Yas Park",
-    "royal.enlightenment.desc": "At its center is a large landscaped garden, designed as a shared space for relaxation, connection, and outdoor living. Open green areas, walking paths, and well-planned communal zones support an active and social environment.",
+    "royal.enlightenment.desc":
+      "At its center is a large landscaped garden, designed as a shared space for relaxation, connection, and outdoor living. Open green areas, walking paths, and well-planned communal zones support an active and social environment.",
     "royal.enlightenment.desc2": "",
 
     "royal.enlightenment.viewGallery": "VIEW GALLERY",
@@ -145,11 +147,14 @@ const translations = {
     "royal.hotel.desc":
       "Wake up to inspiring views. Live close to the city’s top destinations. Experience a lifestyle that’s refined, relaxed, and always connected.",
     "royal.hotel.explore": "Register Your Interest",
-    "royal.discover.title": "Moments from the World’s Top Entertainment Attractions",
-    "royal.discover.desc": "Yas Park Place is located on Yas Island, one of the capital’s most dynamic lifestyle and entertainment destinations. The community benefits from excellent connectivity to key locations across Abu Dhabi while remaining close to some of the UAE’s most famous attractions.",
+    "royal.discover.title":
+      "Moments from the World’s Top Entertainment Attractions",
+    "royal.discover.desc":
+      "Yas Park Place is located on Yas Island, one of the capital’s most dynamic lifestyle and entertainment destinations. The community benefits from excellent connectivity to key locations across Abu Dhabi while remaining close to some of the UAE’s most famous attractions.",
     "royal.discover.masterplan": "VIEW MASTERPLAN",
     "royal.care.title": "Designed For Living. Built For Belonging.",
-    "royal.care.desc": "A range of amenities supports daily life within a well-planned community, combining outdoor and indoor spaces. Landscaped parks, walking and cycling tracks, swimming pools, and a gymnasium are complemented by children’s play areas and multi-purpose spaces. Retail outlets and dining options are integrated to provide everyday convenience.",
+    "royal.care.desc":
+      "A range of amenities supports daily life within a well-planned community, combining outdoor and indoor spaces. Landscaped parks, walking and cycling tracks, swimming pools, and a gymnasium are complemented by children’s play areas and multi-purpose spaces. Retail outlets and dining options are integrated to provide everyday convenience.",
     "royal.care.viewAll": "Explore More",
     "royal.dreams.title":
       "LET THE BAY SLOW YOU DOWN. LET THE CITY LIFT YOU UP.",

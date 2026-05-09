@@ -1,23 +1,17 @@
 "use client";
 
 import { useLanguage } from "@/contexts/ramhanIslandByEagleHills/LanguageContext";
-import Image from "next/image";
-import React, { useState } from "react";
-import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
-import IconButton from "@mui/material/IconButton";
 import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
-import PropertySearchForm from "../common/PropertySearchForm";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import Image from "next/image";
+import React, { useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import PropertySearchForm from "../common/PropertySearchForm";
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -51,63 +45,63 @@ export default function CareAndGrace() {
   };
 
   const amenities = [
-  {
-    name: "Waterfront Living",
-    icon: "/images/ramhan-island-by-eagle-hills/amenities/waterfront_living.png"
-  },
-  {
-    name: "Sandbar",
-    icon: "/images/ramhan-island-by-eagle-hills/amenities/sandbar.png"
-  },
-  {
-    name: "Private beach for every unit",
-    icon: "/images/ramhan-island-by-eagle-hills/amenities/private_beach.png"
-  },
-  {
-    name: "Floating Villas",
-    icon: "/images/ramhan-island-by-eagle-hills/amenities/floating_villa.png"
-  },
-  {
-    name: "Outdoor sports facilities",
-    icon: "/images/ramhan-island-by-eagle-hills/amenities/outdoor_sports.png"
-  },
-  {
-    name: "Eco parks",
-    icon: "/images/ramhan-island-by-eagle-hills/amenities/eco_parks.png"
-  },
-  {
-    name: "Jogging and walking tracks",
-    icon: "/images/ramhan-island-by-eagle-hills/amenities/walking_tracks.png"
-  },
-  {
-    name: "Marina & Yacht club",
-    icon: "/images/ramhan-island-by-eagle-hills/amenities/marina_club.png"
-  },
-  {
-    name: "Infinity Pool",
-    icon: "/images/ramhan-island-by-eagle-hills/amenities/infinity_pool.png"
-  },
-  {
-    name: "Bike tracks",
-    icon: "/images/ramhan-island-by-eagle-hills/amenities/bike_tracks.png"
-  },
-  {
-    name: "Nurseries",
-    icon: "/images/ramhan-island-by-eagle-hills/amenities/nurseries.png"
-  },
-  {
-    name: "Spa & Wellness",
-    icon: "/images/ramhan-island-by-eagle-hills/amenities/spa_wellness.png"
-  },
-  {
-    name: "Open green spaces",
-    icon: "/images/ramhan-island-by-eagle-hills/amenities/open_green_spaces.png"
-  },
-  {
-    name: "Kids play areas",
-    icon: "/images/ramhan-island-by-eagle-hills/amenities/kids_playarea.png"
-  }
-];
+    {
+      name: "Waterfront Living",
+      icon: "/images/ramhan-island-by-eagle-hills/amenities/waterfront_living.png",
+    },
+    {
+      name: "Sandbar",
+      icon: "/images/ramhan-island-by-eagle-hills/amenities/sandbar.png",
+    },
+    {
+      name: "Private beach for every unit",
+      icon: "/images/ramhan-island-by-eagle-hills/amenities/private_beach.png",
+    },
+    {
+      name: "Floating Villas",
+      icon: "/images/ramhan-island-by-eagle-hills/amenities/floating_villa.png",
+    },
+    {
+      name: "Outdoor sports facilities",
+      icon: "/images/ramhan-island-by-eagle-hills/amenities/outdoor_sports.png",
+    },
+    {
+      name: "Eco parks",
+      icon: "/images/ramhan-island-by-eagle-hills/amenities/eco_parks.png",
+    },
+    {
+      name: "Jogging and walking tracks",
+      icon: "/images/ramhan-island-by-eagle-hills/amenities/walking_tracks.png",
+    },
+    {
+      name: "Marina & Yacht club",
+      icon: "/images/ramhan-island-by-eagle-hills/amenities/marina_club.png",
+    },
+    {
+      name: "Infinity Pool",
+      icon: "/images/ramhan-island-by-eagle-hills/amenities/infinity_pool.png",
+    },
+    {
+      name: "Bike tracks",
+      icon: "/images/ramhan-island-by-eagle-hills/amenities/bike_tracks.png",
+    },
+    {
+      name: "Nurseries",
+      icon: "/images/ramhan-island-by-eagle-hills/amenities/nurseries.png",
+    },
+    {
+      name: "Spa & Wellness",
+      icon: "/images/ramhan-island-by-eagle-hills/amenities/spa_wellness.png",
+    },
+    {
+      name: "Open green spaces",
+      icon: "/images/ramhan-island-by-eagle-hills/amenities/open_green_spaces.png",
+    },
+    {
+      name: "Kids play areas",
+      icon: "/images/ramhan-island-by-eagle-hills/amenities/kids_playarea.png",
+    },
+  ];
 
   return (
     <section className="py-20 lg:py-32 bg-[[#199BAA]] dark:bg-[#[#158592]] relative">

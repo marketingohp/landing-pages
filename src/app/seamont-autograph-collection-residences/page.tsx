@@ -1,6 +1,6 @@
-import "../../components/SeamontAutographCollectionResidences/style.css";
-import type { Metadata } from "next";
 import SeaMontAutoGraPhCollectionPage from "@/components/SeaMontAutoGraPhCollection";
+import type { Metadata } from "next";
+import "../../components/SeamontAutographCollectionResidences/style.css";
 export const metadata: Metadata = {
   title: " Seamont Autograph Collection Residences ",
   description:

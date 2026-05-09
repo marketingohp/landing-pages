@@ -1,26 +1,18 @@
 "use client";
 
-import Image from "next/image";
 import { useLanguage } from "@/contexts/rixos/LanguageContext";
-import React from "react";
-import Button from "@mui/material/Button";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
 import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
+import React from "react";
 import PropertySearchForm from "../common/PropertySearchForm";
 
-import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
     children: React.ReactElement<any, any>;
   },
-  ref: React.Ref<unknown>, 
+  ref: React.Ref<unknown>,
 ) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -182,7 +174,7 @@ export default function WaterfrontLiving() {
               {/* 4 BEDROOM DUPLEXES AND TOWNHOUSES */}
               <div className="px-4 py-3 text-center border-b border-[#5b4b3b] dark:border-gray-400 border-opacity-30">
                 <div className="text-[#5b4b3b] dark:text-white font-normal text-sm leading-relaxed">
-                  Unit Type: <br />  1 to 4BR Flat & Loft
+                  Unit Type: <br /> 1 to 4BR Flat & Loft
                 </div>
               </div>
 
@@ -195,9 +187,9 @@ export default function WaterfrontLiving() {
 
               <div className="px-4 py-3 text-center border-b border-[#5b4b3b] dark:border-gray-400 border-opacity-30">
                 <div className="text-[#5b4b3b] dark:text-white font-normal text-sm leading-relaxed">
-                 - Exclusive Residence Options At Rixos Al Reem Residences <br />
-  Collaborators Behind Rixos Al Reem Residences
-
+                  - Exclusive Residence Options At Rixos Al Reem Residences{" "}
+                  <br />
+                  Collaborators Behind Rixos Al Reem Residences
                 </div>
               </div>
             </div>
@@ -206,7 +198,6 @@ export default function WaterfrontLiving() {
             <div className="hidden md:flex md:flex-wrap md:items-center md:justify-center gap-0 min-w-max">
               {/* LOCATION */}
               <div className="flex-1 min-w-[200px] px-6 md:px-8 py-4 text-center">
-                
                 <div className="text-[#5b4b3b] dark:text-white font-normal text-sm md:text-base leading-relaxed">
                   Location: <br /> Reem Island
                 </div>
@@ -217,7 +208,7 @@ export default function WaterfrontLiving() {
               {/* 1 TO 3 BEDROOM APARTMENTS */}
               <div className="flex-1 min-w-[200px] px-6 md:px-8 py-4 text-center">
                 <div className="text-[#5b4b3b] dark:text-white font-normal text-sm md:text-base leading-relaxed">
-               By: <br /> East & West Property Development
+                  By: <br /> East & West Property Development
                 </div>
               </div>
 
@@ -231,20 +222,21 @@ export default function WaterfrontLiving() {
                 </div>
                 <div className="text-[#5b4b3b] dark:text-white font-normal text-sm md:text-base"></div> */}
                 <div className="text-[#5b4b3b] dark:text-white font-normal text-sm md:text-base leading-relaxed">
-                 Unit Type: <br />  1 to 4BR Flat & Loft
+                  Unit Type: <br /> 1 to 4BR Flat & Loft
                 </div>
               </div>
 
-{/* Vertical Separator */}
+              {/* Vertical Separator */}
               <div className="w-px h-20 bg-[#5b4b3b] dark:bg-gray-400 opacity-30"></div>
-               {/* 4 BEDROOM DUPLEXES AND TOWNHOUSES */}
+              {/* 4 BEDROOM DUPLEXES AND TOWNHOUSES */}
               <div className="flex-1 min-w-[200px] px-6 md:px-8 py-4 text-center">
                 {/* <div className="text-[#5b4b3b] dark:text-white font-bold text-sm md:text-base mb-1 uppercase tracking-wide">
                   By <br /> One Residences
                 </div>
                 <div className="text-[#5b4b3b] dark:text-white font-normal text-sm md:text-base"></div> */}
                 <div className="text-[#5b4b3b] dark:text-white font-normal text-sm md:text-base leading-relaxed">
-                Handover:<br /> Q1: 2029
+                  Handover:
+                  <br /> Q1: 2029
                 </div>
               </div>
 
@@ -254,8 +246,9 @@ export default function WaterfrontLiving() {
               {/* PART OF MARRIOTT'S AUTOGRAPH COLLECTION */}
               <div className="flex-1 min-w-[200px] px-6 md:px-8 py-4 text-center">
                 <div className="text-[#5b4b3b] dark:text-white font-normal text-sm md:text-base leading-relaxed">
-                      Exclusive Residence Options <br /> At Rixos Al Reem Residences <br />
-  Collaborators Behind Rixos <br /> Al Reem Residences
+                  Exclusive Residence Options <br /> At Rixos Al Reem Residences{" "}
+                  <br />
+                  Collaborators Behind Rixos <br /> Al Reem Residences
                 </div>
               </div>
             </div>
@@ -332,7 +325,7 @@ export default function WaterfrontLiving() {
                 "budget",
                 "message",
               ]}
-              requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+              requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
               viewType="image"
               // downloadBrochure={true}
               // brochureUrl="/images/rixos/Yas_Riva_Residences_Brochure.pdf"

@@ -1,8 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { useLanguage } from "@/contexts/athlonByAldar/LanguageContext";
-import PropertySearchFormThree from "../common/PropertySearchFormThree";
+import PropertySearchForm from "../common/PropertySearchForm";
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -23,7 +22,7 @@ export default function Footer() {
           {/* Left Column - Buttons */}
           <div className="space-y-4 ">
             <div className="footer-form-container">
-              <PropertySearchFormThree
+              <PropertySearchForm
                 formName="athlon-by-aldar"
                 pointName="get-in-touch"
                 formType="footer-form"
@@ -38,7 +37,12 @@ export default function Footer() {
                   "budget",
                   "message",
                 ]}
-                requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+                requiredFields={[
+                  "firstName",
+                  "lastName",
+                  "phoneNumber",
+                  "email",
+                ]}
                 redirectToThankYou={true}
                 thankYouPath="/athlon-by-aldar/thank-you"
                 colorCodeOne="#0000003b"
@@ -50,7 +54,6 @@ export default function Footer() {
                 colorCodeBtnHoverBg="#ebe8dd"
                 colorCodeBtnHoverText="#ffffff"
                 colorCodeBtnHoverBorder="#642d5b"
-                classAdd="classAddFooter"
               />
             </div>
 

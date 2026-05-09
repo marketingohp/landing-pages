@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
 import IntlTelInput from "@intl-tel-input/react";
 import "intl-tel-input/styles";
+import { useEffect, useRef, useState } from "react";
 
 const geoIpLookup = async (): Promise<string> => {
   const res = await fetch("https://ipapi.co/json");

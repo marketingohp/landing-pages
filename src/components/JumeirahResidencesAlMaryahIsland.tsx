@@ -1,21 +1,16 @@
 "use client";
 
-import Header from "./JumeirahResidencesAlMaryahIsland/Header";
-import OneResidencesHero from "./JumeirahResidencesAlMaryahIsland/OneResidencesHero";
-import WaterfrontLiving from "./JumeirahResidencesAlMaryahIsland/WaterfrontLiving";
-import EnlightenmentSection from "./JumeirahResidencesAlMaryahIsland/EnlightenmentSection";
-import WindowToWonder from "./JumeirahResidencesAlMaryahIsland/WindowToWonder";
-import HotelStyleLiving from "./JumeirahResidencesAlMaryahIsland/HotelStyleLiving";
-import InteriorCarousel from "./JumeirahResidencesAlMaryahIsland/InteriorCarousel";
-import DiscoverSection from "./JumeirahResidencesAlMaryahIsland/DiscoverSection";
 import CareAndGrace from "./JumeirahResidencesAlMaryahIsland/CareAndGrace";
-import DreamsAndDesign from "./JumeirahResidencesAlMaryahIsland/DreamsAndDesign";
+import DiscoverSection from "./JumeirahResidencesAlMaryahIsland/DiscoverSection";
+import EnlightenmentSection from "./JumeirahResidencesAlMaryahIsland/EnlightenmentSection";
 import Footer from "./JumeirahResidencesAlMaryahIsland/Footer";
+import Header from "./JumeirahResidencesAlMaryahIsland/Header";
 import HeroKeywords from "./JumeirahResidencesAlMaryahIsland/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./JumeirahResidencesAlMaryahIsland/PaymentOptions";
+import InteriorCarousel from "./JumeirahResidencesAlMaryahIsland/InteriorCarousel";
 import PaymentOptionsTwo from "./JumeirahResidencesAlMaryahIsland/PaymentOptionsTwo";
+import WaterfrontLiving from "./JumeirahResidencesAlMaryahIsland/WaterfrontLiving";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function JumeirahResidencesPage() {
   return (
@@ -37,7 +32,7 @@ export default function JumeirahResidencesPage() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="/jumeirah-residences-al-maryah-island/thank-you"
@@ -55,7 +50,7 @@ export default function JumeirahResidencesPage() {
         {/* <OneResidencesHero /> */}
       </div>
       <WaterfrontLiving />
-      <EnlightenmentSection /> 
+      <EnlightenmentSection />
       {/* <WindowToWonder /> */}
       {/* <HotelStyleLiving />  */}
       <div id="gallery">

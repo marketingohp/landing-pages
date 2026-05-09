@@ -1,21 +1,16 @@
 "use client";
 
-import Header from "./WadeeM/Header";
-import OneResidencesHero from "./WadeeM/OneResidencesHero";
-import WaterfrontLiving from "./WadeeM/WaterfrontLiving";
-import EnlightenmentSection from "./WadeeM/EnlightenmentSection";
-import WindowToWonder from "./WadeeM/WindowToWonder";
-import HotelStyleLiving from "./WadeeM/HotelStyleLiving";
-import InteriorCarousel from "./WadeeM/InteriorCarousel";
-import DiscoverSection from "./WadeeM/DiscoverSection";
 import CareAndGrace from "./WadeeM/CareAndGrace";
-import DreamsAndDesign from "./WadeeM/DreamsAndDesign";
+import DiscoverSection from "./WadeeM/DiscoverSection";
+import EnlightenmentSection from "./WadeeM/EnlightenmentSection";
 import Footer from "./WadeeM/Footer";
+import Header from "./WadeeM/Header";
 import HeroKeywords from "./WadeeM/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./WadeeM/PaymentOptions";
+import InteriorCarousel from "./WadeeM/InteriorCarousel";
 import PaymentOptionsTwo from "./WadeeM/PaymentOptionsTwo";
+import WaterfrontLiving from "./WadeeM/WaterfrontLiving";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function WadeemPage() {
   return (
@@ -37,7 +32,7 @@ export default function WadeemPage() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="/wadeem/thank-you"

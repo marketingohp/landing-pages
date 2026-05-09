@@ -1,18 +1,30 @@
-import { NextRequest, NextResponse } from 'next/server';
-const nodemailer = require('nodemailer');
+import { NextRequest, NextResponse } from "next/server";
+const nodemailer = require("nodemailer");
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     const { formData, formName, pointName, formType } = body;
 
-    console.log('Received form submission:', { formName, pointName, formType, fieldsCount: Object.keys(formData || {}).length });
+    console.log("Received form submission:", {
+      formName,
+      pointName,
+      formType,
+      fieldsCount: Object.keys(formData || {}).length,
+    });
 
     // Validate required environment variables
-    if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
+    if (
+      !process.env.SMTP_HOST ||
+      !process.env.SMTP_USER ||
+      !process.env.SMTP_PASS
+    ) {
       return NextResponse.json(
-        { error: 'Email configuration is missing. Please check environment variables (SMTP_HOST, SMTP_USER, SMTP_PASS).' },
-        { status: 500 }
+        {
+          error:
+            "Email configuration is missing. Please check environment variables (SMTP_HOST, SMTP_USER, SMTP_PASS).",
+        },
+        { status: 500 },
       );
     }
 
@@ -20,7 +32,7 @@ export async function POST(request: NextRequest) {
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT) || 587,
-      secure: process.env.SMTP_PORT === '465', // true for 465, false for other ports
+      secure: process.env.SMTP_PORT === "465", // true for 465, false for other ports
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
@@ -33,18 +45,21 @@ export async function POST(request: NextRequest) {
     // Format form data for email
     const formatFieldLabel = (key: string): string => {
       return key
-        .replace(/([A-Z])/g, ' $1')
+        .replace(/([A-Z])/g, " $1")
         .replace(/^./, (str) => str.toUpperCase())
         .trim();
     };
 
     const formatFieldValue = (value: string): string => {
-      return value || 'Not specified';
+      return value || "Not specified";
     };
 
     // Build email content
     const fieldsHtml = Object.entries(formData)
-      .filter(([_, value]) => value && typeof value === 'string' && value.trim() !== '')
+      .filter(
+        ([_, value]) =>
+          value && typeof value === "string" && value.trim() !== "",
+      )
       .map(([key, value]) => {
         const label = formatFieldLabel(key);
         return `<tr>
@@ -52,15 +67,18 @@ export async function POST(request: NextRequest) {
           <td style="padding: 8px; border-bottom: 1px solid #eee;">${formatFieldValue(value as string)}</td>
         </tr>`;
       })
-      .join('');
+      .join("");
 
     const metadataHtml = [
-      formName && `<tr><td style="padding: 8px; border-bottom: 1px solid #eee; font-weight: bold;">Form Name:</td><td style="padding: 8px; border-bottom: 1px solid #eee;">${formName}</td></tr>`,
-      pointName && `<tr><td style="padding: 8px; border-bottom: 1px solid #eee; font-weight: bold;">Point Name:</td><td style="padding: 8px; border-bottom: 1px solid #eee;">${pointName}</td></tr>`,
-      formType && `<tr><td style="padding: 8px; border-bottom: 1px solid #eee; font-weight: bold;">Form Type:</td><td style="padding: 8px; border-bottom: 1px solid #eee;">${formType}</td></tr>`,
+      formName &&
+        `<tr><td style="padding: 8px; border-bottom: 1px solid #eee; font-weight: bold;">Form Name:</td><td style="padding: 8px; border-bottom: 1px solid #eee;">${formName}</td></tr>`,
+      pointName &&
+        `<tr><td style="padding: 8px; border-bottom: 1px solid #eee; font-weight: bold;">Point Name:</td><td style="padding: 8px; border-bottom: 1px solid #eee;">${pointName}</td></tr>`,
+      formType &&
+        `<tr><td style="padding: 8px; border-bottom: 1px solid #eee; font-weight: bold;">Form Type:</td><td style="padding: 8px; border-bottom: 1px solid #eee;">${formType}</td></tr>`,
     ]
       .filter(Boolean)
-      .join('');
+      .join("");
 
     const htmlContent = `
       <!DOCTYPE html>
@@ -94,71 +112,83 @@ export async function POST(request: NextRequest) {
     const textContent = `
 New Property Search Form Submission
 
-${formName ? `Form Name: ${formName}\n` : ''}${pointName ? `Point Name: ${pointName}\n` : ''}${formType ? `Form Type: ${formType}\n` : ''}
+${formName ? `Form Name: ${formName}\n` : ""}${pointName ? `Point Name: ${pointName}\n` : ""}${formType ? `Form Type: ${formType}\n` : ""}
 ${Object.entries(formData)
-  .filter(([_, value]) => value && typeof value === 'string' && value.trim() !== '')
-  .map(([key, value]) => `${formatFieldLabel(key)}: ${formatFieldValue(value as string)}`)
-  .join('\n')}
+  .filter(
+    ([_, value]) => value && typeof value === "string" && value.trim() !== "",
+  )
+  .map(
+    ([key, value]) =>
+      `${formatFieldLabel(key)}: ${formatFieldValue(value as string)}`,
+  )
+  .join("\n")}
 
 Submitted at: ${new Date().toLocaleString()}
     `.trim();
 
     // Determine recipient email
     const recipientEmail = process.env.SMTP_TO || process.env.SMTP_USER;
-    
+
     if (!recipientEmail) {
       return NextResponse.json(
-        { error: 'No recipient email configured. Please set SMTP_TO or SMTP_USER.' },
-        { status: 500 }
+        {
+          error:
+            "No recipient email configured. Please set SMTP_TO or SMTP_USER.",
+        },
+        { status: 500 },
       );
     }
 
     // Verify connection before sending
     try {
       await transporter.verify();
-      console.log('SMTP connection verified successfully');
+      console.log("SMTP connection verified successfully");
     } catch (verifyError) {
-      console.error('SMTP verification failed:', verifyError);
+      console.error("SMTP verification failed:", verifyError);
       return NextResponse.json(
-        { 
-          error: 'SMTP connection failed',
-          details: verifyError instanceof Error ? verifyError.message : 'Unknown verification error'
+        {
+          error: "SMTP connection failed",
+          details:
+            verifyError instanceof Error
+              ? verifyError.message
+              : "Unknown verification error",
         },
-        { status: 500 }
+        { status: 500 },
       );
     }
 
     // Send email
     const mailOptions = {
-      from: process.env.SMTP_FROM || `"Property Search Form" <${process.env.SMTP_USER}>`,
+      from:
+        process.env.SMTP_FROM ||
+        `"Property Search Form" <${process.env.SMTP_USER}>`,
       to: recipientEmail,
-      subject: `New Property Search: ${formName || 'Form Submission'}`,
+      subject: `New Property Search: ${formName || "Form Submission"}`,
       text: textContent,
       html: htmlContent,
       replyTo: process.env.SMTP_REPLY_TO || process.env.SMTP_USER,
     };
 
-    console.log('Sending email to:', recipientEmail);
+    console.log("Sending email to:", recipientEmail);
     const info = await transporter.sendMail(mailOptions);
-    console.log('Email sent successfully:', info.messageId);
+    console.log("Email sent successfully:", info.messageId);
 
     return NextResponse.json(
-      { 
-        success: true, 
+      {
+        success: true,
         messageId: info.messageId,
-        message: 'Email sent successfully' 
+        message: "Email sent successfully",
       },
-      { status: 200 }
+      { status: 200 },
     );
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error("Error sending email:", error);
     return NextResponse.json(
-      { 
-        error: 'Failed to send email',
-        details: error instanceof Error ? error.message : 'Unknown error'
+      {
+        error: "Failed to send email",
+        details: error instanceof Error ? error.message : "Unknown error",
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
-

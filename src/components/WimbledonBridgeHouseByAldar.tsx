@@ -1,23 +1,18 @@
 "use client";
 
-import Header from "./WimbledonBridgeHouseByAldar/Header";
-import OneResidencesHero from "./WimbledonBridgeHouseByAldar/OneResidencesHero";
-import WaterfrontLiving from "./WimbledonBridgeHouseByAldar/WaterfrontLiving";
-import EnlightenmentSection from "./WimbledonBridgeHouseByAldar/EnlightenmentSection";
-import WindowToWonder from "./WimbledonBridgeHouseByAldar/WindowToWonder";
-import HotelStyleLiving from "./WimbledonBridgeHouseByAldar/HotelStyleLiving";
-import InteriorCarousel from "./WimbledonBridgeHouseByAldar/InteriorCarousel";
-import DiscoverSection from "./WimbledonBridgeHouseByAldar/DiscoverSection";
-import CareAndGrace from "./WimbledonBridgeHouseByAldar/CareAndGrace";
-import DreamsAndDesign from "./WimbledonBridgeHouseByAldar/DreamsAndDesign";
-import Footer from "./WimbledonBridgeHouseByAldar/Footer";
-import HeroKeywords from "./WimbledonBridgeHouseByAldar/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./WimbledonBridgeHouseByAldar/PaymentOptions";
-import PaymentOptionsTwo from "./WimbledonBridgeHouseByAldar/PaymentOptionsTwo";
-import { useEffect } from "react";
 import { pushToDataLayer } from "@/utils/gtag";
+import { useEffect } from "react";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
+import CareAndGrace from "./WimbledonBridgeHouseByAldar/CareAndGrace";
+import DiscoverSection from "./WimbledonBridgeHouseByAldar/DiscoverSection";
+import EnlightenmentSection from "./WimbledonBridgeHouseByAldar/EnlightenmentSection";
+import Footer from "./WimbledonBridgeHouseByAldar/Footer";
+import Header from "./WimbledonBridgeHouseByAldar/Header";
+import HeroKeywords from "./WimbledonBridgeHouseByAldar/HeroKeywords";
+import InteriorCarousel from "./WimbledonBridgeHouseByAldar/InteriorCarousel";
+import PaymentOptionsTwo from "./WimbledonBridgeHouseByAldar/PaymentOptionsTwo";
+import WaterfrontLiving from "./WimbledonBridgeHouseByAldar/WaterfrontLiving";
 
 export default function WimbledonBridgeHouseByAldar() {
   useEffect(() => {

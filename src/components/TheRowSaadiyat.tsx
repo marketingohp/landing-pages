@@ -1,21 +1,16 @@
 "use client";
 
-import Header from "./TheRowSaadiyat/Header";
-import OneResidencesHero from "./TheRowSaadiyat/OneResidencesHero";
-import WaterfrontLiving from "./TheRowSaadiyat/WaterfrontLiving";
-import EnlightenmentSection from "./TheRowSaadiyat/EnlightenmentSection";
-import WindowToWonder from "./TheRowSaadiyat/WindowToWonder";
-import HotelStyleLiving from "./TheRowSaadiyat/HotelStyleLiving";
-import InteriorCarousel from "./TheRowSaadiyat/InteriorCarousel";
-import DiscoverSection from "./TheRowSaadiyat/DiscoverSection";
 import CareAndGrace from "./TheRowSaadiyat/CareAndGrace";
-import DreamsAndDesign from "./TheRowSaadiyat/DreamsAndDesign";
+import DiscoverSection from "./TheRowSaadiyat/DiscoverSection";
+import EnlightenmentSection from "./TheRowSaadiyat/EnlightenmentSection";
 import Footer from "./TheRowSaadiyat/Footer";
+import Header from "./TheRowSaadiyat/Header";
 import HeroKeywords from "./TheRowSaadiyat/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./TheRowSaadiyat/PaymentOptions";
+import InteriorCarousel from "./TheRowSaadiyat/InteriorCarousel";
 import PaymentOptionsTwo from "./TheRowSaadiyat/PaymentOptionsTwo";
+import WaterfrontLiving from "./TheRowSaadiyat/WaterfrontLiving";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function TheRowSaadiyatPage() {
   return (
@@ -37,7 +32,7 @@ export default function TheRowSaadiyatPage() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="/the-row-saadiyat/thank-you"

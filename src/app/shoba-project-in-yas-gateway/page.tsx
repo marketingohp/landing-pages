@@ -1,6 +1,6 @@
-import "../../components/ShobaProjectYas/style.css";
-import type { Metadata } from "next";
 import ShobaProjectinYasGatewayPage from "@/components/ShobaProjectinYasGateway";
+import type { Metadata } from "next";
+import "../../components/ShobaProjectYas/style.css";
 export const metadata: Metadata = {
   title: " Shoba Project in Yas  ",
   description:

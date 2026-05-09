@@ -1,23 +1,17 @@
 "use client";
 
-import Header from "./JoudResidenceByOneDevelopment/Header";
-import OneResidencesHero from "./JoudResidenceByOneDevelopment/OneResidencesHero";
-import WaterfrontLiving from "./JoudResidenceByOneDevelopment/WaterfrontLiving";
-import EnlightenmentSection from "./JoudResidenceByOneDevelopment/EnlightenmentSection";
-import WindowToWonder from "./JoudResidenceByOneDevelopment/WindowToWonder";
-import HotelStyleLiving from "./JoudResidenceByOneDevelopment/HotelStyleLiving";
-import InteriorCarousel from "./JoudResidenceByOneDevelopment/InteriorCarousel";
-import DiscoverSection from "./JoudResidenceByOneDevelopment/DiscoverSection";
-import CareAndGrace from "./JoudResidenceByOneDevelopment/CareAndGrace";
-import DreamsAndDesign from "./JoudResidenceByOneDevelopment/DreamsAndDesign";
-import Footer from "./JoudResidenceByOneDevelopment/Footer";
-import HeroKeywords from "./JoudResidenceByOneDevelopment/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./JoudResidenceByOneDevelopment/PaymentOptions";
-import PaymentOptionsTwo from "./JoudResidenceByOneDevelopment/PaymentOptionsTwo";
-import { useEffect } from "react";
 import { pushToDataLayer } from "@/utils/gtag";
+import { useEffect } from "react";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
+import CareAndGrace from "./JoudResidenceByOneDevelopment/CareAndGrace";
+import DiscoverSection from "./JoudResidenceByOneDevelopment/DiscoverSection";
+import EnlightenmentSection from "./JoudResidenceByOneDevelopment/EnlightenmentSection";
+import Footer from "./JoudResidenceByOneDevelopment/Footer";
+import Header from "./JoudResidenceByOneDevelopment/Header";
+import HeroKeywords from "./JoudResidenceByOneDevelopment/HeroKeywords";
+import PaymentOptionsTwo from "./JoudResidenceByOneDevelopment/PaymentOptionsTwo";
+import WaterfrontLiving from "./JoudResidenceByOneDevelopment/WaterfrontLiving";
 
 export default function JoudResidenceByOneDevelopment() {
   useEffect(() => {
@@ -33,7 +27,9 @@ export default function JoudResidenceByOneDevelopment() {
       <div id="home">
         <HeroKeywords />
         <div className="absolute top-[15%] px-[14%] md:top-[45%] md:px-[11%] text-white z-90">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black">JOUD - AI Powered Tower</h1>
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black">
+            JOUD - AI Powered Tower
+          </h1>
           <h3 className="text-lg md:text-xl font-normal">On Reem Island</h3>
         </div>
         <div className="absolute bottom-0 left-0 w-full custom-form-container">

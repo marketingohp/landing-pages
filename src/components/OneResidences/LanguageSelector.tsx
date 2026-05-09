@@ -1,9 +1,13 @@
 "use client";
 
-import { useState } from "react";
 import { useLanguage } from "@/contexts/oneResidences/LanguageContext";
+import { useState } from "react";
 
-export default function LanguageSelector({ isScrolled }: { isScrolled: boolean }) {
+export default function LanguageSelector({
+  isScrolled,
+}: {
+  isScrolled: boolean;
+}) {
   const { language, setLanguage } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 

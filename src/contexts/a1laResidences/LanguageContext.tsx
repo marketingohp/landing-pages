@@ -2,10 +2,10 @@
 
 import {
   createContext,
-  useContext,
-  useState,
-  useEffect,
   ReactNode,
+  useContext,
+  useEffect,
+  useState,
 } from "react";
 
 type Language = "en" | "ar" | "ru";
@@ -152,8 +152,7 @@ const translations = {
     "royal.discover.desc":
       "A1LA Residence is perfectly positioned in the heart of Al Reem Island, offering a rare balance of city connectivity and island tranquility.",
     "royal.discover.masterplan": "VIEW MASTERPLAN",
-    "royal.care.title":
-      "NATURE-LED AMENITIES",
+    "royal.care.title": "NATURE-LED AMENITIES",
     "royal.care.desc":
       "Life at A1LA is elevated by spaces designed to soothe the soul and nourish the body. These amenities flow with a soft celestial glow ",
     "royal.care.viewAll": "DISCOVER MORE",

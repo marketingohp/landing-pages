@@ -2,10 +2,10 @@
 
 import {
   createContext,
-  useContext,
-  useState,
-  useEffect,
   ReactNode,
+  useContext,
+  useEffect,
+  useState,
 } from "react";
 
 type Language = "en" | "ar" | "ru";
@@ -152,8 +152,7 @@ const translations = {
     "royal.discover.desc":
       "The Wilds Residences is located in the south of Dubai, neighbouring the Majan Development and Al Barari community, just 25 minutes from Dubai Airport and Dubai Mall.",
     "royal.discover.masterplan": "VIEW MASTERPLAN",
-    "royal.care.title":
-      "NATURE-LED AMENITIES",
+    "royal.care.title": "NATURE-LED AMENITIES",
     "royal.care.desc":
       "At The Wilds, life is elevated by amenities that flow effortlessly with the natural landscape. Each space is crafted to inspire meaningful connections between residents and the natural world. The amenities on the right are exclusively for The Wilds Residences residents.",
     "royal.care.viewAll": "DISCOVER MORE",

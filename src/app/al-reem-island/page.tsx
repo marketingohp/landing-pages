@@ -1,6 +1,6 @@
-import "../../components/AlReemIsland/style.css";
-import type { Metadata } from "next";
 import AlReemIslandPage from "@/components/AlReemIsland";
+import type { Metadata } from "next";
+import "../../components/AlReemIsland/style.css";
 export const metadata: Metadata = {
   title: " Al Reem Island  ",
   description:

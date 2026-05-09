@@ -1,22 +1,16 @@
 "use client";
 
-import Header from "./RadissionResidences/Header";
-import OneResidencesHero from "./RadissionResidences/OneResidencesHero";
-import WaterfrontLiving from "./RadissionResidences/WaterfrontLiving";
-import EnlightenmentSection from "./RadissionResidences/EnlightenmentSection";
-import WindowToWonder from "./RadissionResidences/WindowToWonder";
-import HotelStyleLiving from "./RadissionResidences/HotelStyleLiving";
-import InteriorCarousel from "./RadissionResidences/InteriorCarousel";
-import DiscoverSection from "./RadissionResidences/DiscoverSection";
 import CareAndGrace from "./RadissionResidences/CareAndGrace";
-import DreamsAndDesign from "./RadissionResidences/DreamsAndDesign";
-import Footer from "./RadissionResidences/Footer";
-import HeroKeywords from "./RadissionResidences/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./RadissionResidences/PaymentOptions";
-import PaymentOptionsTwo from "./RadissionResidences/PaymentOptionsTwo";
+import DiscoverSection from "./RadissionResidences/DiscoverSection";
 import FloorPlans from "./RadissionResidences/FloorPlans";
+import Footer from "./RadissionResidences/Footer";
+import Header from "./RadissionResidences/Header";
+import HeroKeywords from "./RadissionResidences/HeroKeywords";
+import InteriorCarousel from "./RadissionResidences/InteriorCarousel";
+import PaymentOptionsTwo from "./RadissionResidences/PaymentOptionsTwo";
+import WaterfrontLiving from "./RadissionResidences/WaterfrontLiving";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function RadissionResidencesPage() {
   return (
@@ -38,7 +32,7 @@ export default function RadissionResidencesPage() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="/radisson-residences/thank-you"

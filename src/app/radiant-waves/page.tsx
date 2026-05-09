@@ -1,6 +1,6 @@
-import "../../components/RadiantWave/style.css";
-import type { Metadata } from "next";
 import RadiantWavePage from "@/components/RadiantWave";
+import type { Metadata } from "next";
+import "../../components/RadiantWave/style.css";
 export const metadata: Metadata = {
   title: " Radiant Waves ",
   description:

@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import CountUp from "react-countup";
 
 interface CounterStat {
@@ -19,7 +18,6 @@ interface CounterSectionProps {
   optionalText?: string;
 }
 
-
 const steps = [
   { id: "01", title: "Step One", icon: "🏠" },
   { id: "02", title: "Step Two", icon: "📄" },
@@ -27,7 +25,6 @@ const steps = [
   { id: "04", title: "Step Four", icon: "⚙️" },
   { id: "05", title: "Step Five", icon: "✅" },
 ];
-
 
 export default function CounterSection({
   backgroundImage = "/images/reem-island/Al-Reem-Island-01.webp",
@@ -38,7 +35,11 @@ export default function CounterSection({
     { value: 2500, label: "Properties Sold", suffix: "+" },
     { value: 100, label: "Projects", suffix: "+" },
     { value: 10, label: "Years Experience", suffix: "+" },
-    { value: 85, label: "Global investor base from nationalities", suffix: "+" },
+    {
+      value: 85,
+      label: "Global investor base from nationalities",
+      suffix: "+",
+    },
   ],
   optionalText = "Global investor base from 85+ nationalities",
 }: CounterSectionProps) {
@@ -56,7 +57,7 @@ export default function CounterSection({
       },
       {
         threshold: 0.3,
-      }
+      },
     );
 
     if (sectionRef.current) {
@@ -91,13 +92,17 @@ export default function CounterSection({
 
       {/* Content Overlay */}
       <div className="relative z-10 w-full h-full flex flex-col items-center justify-center px-4 lg:px-8 py-12 lg:py-16">
-        <div className="container-fluid mx-auto max-w-6xl"
-
-          style={{
-            // width: "100%",
-          }}>
+        <div
+          className="container-fluid mx-auto max-w-6xl"
+          style={
+            {
+              // width: "100%",
+            }
+          }
+        >
           {/* Main Heading */}
-          <h2 className="text-3xl playfair-display-regular md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center mb-6 lg:mb-8 leading-tight"
+          <h2
+            className="text-3xl playfair-display-regular md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center mb-6 lg:mb-8 leading-tight"
             style={{ color: "#2296c4" }}
           >
             {title}
@@ -110,13 +115,17 @@ export default function CounterSection({
 
           {/* Statistics Grid - Card Design */}
           <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-10  mx-auto middle-text-main counter-section-wrapper">
-
             {stats.map((stat, index) => (
-              <div key={index} className={`step-card step-card-${index} flex flex-col items-center justify-center bg-white rounded-lg border border-gray-200 shadow-sm p-6 lg:p-8 relative`}>
+              <div
+                key={index}
+                className={`step-card step-card-${index} flex flex-col items-center justify-center bg-white rounded-lg border border-gray-200 shadow-sm p-6 lg:p-8 relative`}
+              >
                 {/* <div className="relative w-32 h-32 lg:w-36 lg:h-36 flex items-center justify-center mb-4"> */}
                 <div className="w-full flex flex-col items-center justify-center">
                   <div className="step-circle">
-                    <div className={`text-center-circle text-center-circle-${index}`}>
+                    <div
+                      className={`text-center-circle text-center-circle-${index}`}
+                    >
                       {hasAnimated ? (
                         <>
                           <CountUp
@@ -127,7 +136,9 @@ export default function CounterSection({
                             decimals={0}
                           />
                           {stat.suffix && (
-                            <div className="text-4xl lg:text-4xl">{stat.suffix}</div>
+                            <div className="text-4xl lg:text-4xl">
+                              {stat.suffix}
+                            </div>
                           )}
                         </>
                       ) : (
@@ -137,7 +148,10 @@ export default function CounterSection({
                   </div>
                   <div className="step-content text-center middle-text w-full flex items-center justify-center">
                     {/* <h4 className="text-2xl playfair-display-regular">{stat.label}</h4> */}
-                    <p className="text-sm montserrat-regula text-center w-full" style={{fontWeight: 900}}>
+                    <p
+                      className="text-sm montserrat-regula text-center w-full"
+                      style={{ fontWeight: 900 }}
+                    >
                       {stat.label}
                     </p>
                   </div>
@@ -199,7 +213,6 @@ export default function CounterSection({
             ))*/}
           </div>
 
-
           {/* <p className="text-sm md:text-base font-bold lg:text-lg text-center max-w-4xl mx-auto mb-12 lg:mb-16 leading-relaxed mt-12 text-gray-700 dark:text-gray-300">
             {optionalText}
           </p> */}
@@ -220,9 +233,7 @@ export default function CounterSection({
       </div>
     </section>
   );
-};
-
-
+}
 
 /* Dotted Pattern */
 function Dots() {

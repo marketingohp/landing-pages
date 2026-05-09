@@ -1,13 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'standalone',
+  output: "standalone",
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'seamont.rdhuae.com',
-        pathname: '/**',
+        protocol: "https",
+        hostname: "seamont.rdhuae.com",
+        pathname: "/**",
       },
     ],
   },

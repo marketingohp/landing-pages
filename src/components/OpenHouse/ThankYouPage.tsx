@@ -1,10 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
-import OhanaHeader from "./OhanaHeader";
 import { useLanguage } from "@/contexts/ComingsoonOhana/LanguageContext";
-import { pushToDataLayer } from "@/utils/gtag";
+import { useRouter } from "next/navigation";
 
 export default function ThankYouPage() {
   const { t } = useLanguage();

@@ -1,23 +1,18 @@
 "use client";
 
+import { pushToDataLayer } from "@/utils/gtag";
+import { useEffect } from "react";
+import PropertySearchForm from "../components/common/PropertySearchForm";
+import BottomFooter from "./common/BottomFooter";
+import CareAndGrace from "./OneResidences/CareAndGrace";
+import DiscoverSection from "./OneResidences/DiscoverSection";
+import Footer from "./OneResidences/Footer";
 import Header from "./OneResidences/Header";
-import OneResidencesHero from "./OneResidences/OneResidencesHero";
-import WaterfrontLiving from "./OneResidences/WaterfrontLiving";
-import EnlightenmentSection from "./OneResidences/EnlightenmentSection";
-import WindowToWonder from "./OneResidences/WindowToWonder";
+import HeroKeywords from "./OneResidences/HeroKeywords";
 import HotelStyleLiving from "./OneResidences/HotelStyleLiving";
 import InteriorCarousel from "./OneResidences/InteriorCarousel";
-import DiscoverSection from "./OneResidences/DiscoverSection";
-import CareAndGrace from "./OneResidences/CareAndGrace";
-import DreamsAndDesign from "./OneResidences/DreamsAndDesign";
-import Footer from "./OneResidences/Footer";
-import HeroKeywords from "./OneResidences/HeroKeywords";
-import PropertySearchForm from "../components/common/PropertySearchForm";
-import PaymentOptions from "./OneResidences/PaymentOptions";
 import PaymentOptionsTwo from "./OneResidences/PaymentOptionsTwo";
-import { useEffect } from "react";
-import { pushToDataLayer } from "@/utils/gtag";
-import BottomFooter from "./common/BottomFooter";
+import WaterfrontLiving from "./OneResidences/WaterfrontLiving";
 export default function OneResidencesPage() {
   useEffect(() => {
     pushToDataLayer({
@@ -46,7 +41,7 @@ export default function OneResidencesPage() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
           />

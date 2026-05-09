@@ -1,21 +1,15 @@
 "use client";
 
-import Header from "./HudayriyatIsland/Header";
-import OneResidencesHero from "./HudayriyatIsland/OneResidencesHero";
-import WaterfrontLiving from "./HudayriyatIsland/WaterfrontLiving";
-import EnlightenmentSection from "./HudayriyatIsland/EnlightenmentSection";
-import WindowToWonder from "./HudayriyatIsland/WindowToWonder";
-import HotelStyleLiving from "./HudayriyatIsland/HotelStyleLiving";
-import InteriorCarousel from "./HudayriyatIsland/InteriorCarousel";
-import DiscoverSection from "./HudayriyatIsland/DiscoverSection";
 import CareAndGrace from "./HudayriyatIsland/CareAndGrace";
-import DreamsAndDesign from "./HudayriyatIsland/DreamsAndDesign";
+import DiscoverSection from "./HudayriyatIsland/DiscoverSection";
 import Footer from "./HudayriyatIsland/Footer";
+import Header from "./HudayriyatIsland/Header";
 import HeroKeywords from "./HudayriyatIsland/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./HudayriyatIsland/PaymentOptions";
+import InteriorCarousel from "./HudayriyatIsland/InteriorCarousel";
 import PaymentOptionsTwo from "./HudayriyatIsland/PaymentOptionsTwo";
+import WaterfrontLiving from "./HudayriyatIsland/WaterfrontLiving";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function HudayriyatIslandPage() {
   return (
@@ -37,7 +31,7 @@ export default function HudayriyatIslandPage() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="/hudayriyat-island/thank-you"

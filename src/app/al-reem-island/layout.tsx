@@ -9,4 +9,3 @@ export default function AlReemIslandLayout({
 }) {
   return <LanguageProvider>{children}</LanguageProvider>;
 }
-

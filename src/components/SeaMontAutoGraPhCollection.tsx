@@ -1,22 +1,16 @@
 "use client";
 
-import Header from "./SeamontAutographCollectionResidences/Header";
-import OneResidencesHero from "./SeamontAutographCollectionResidences/OneResidencesHero";
-import WaterfrontLiving from "./SeamontAutographCollectionResidences/WaterfrontLiving";
-import EnlightenmentSection from "./SeamontAutographCollectionResidences/EnlightenmentSection";
-import WindowToWonder from "./SeamontAutographCollectionResidences/WindowToWonder";
-import HotelStyleLiving from "./SeamontAutographCollectionResidences/HotelStyleLiving";
-import InteriorCarousel from "./SeamontAutographCollectionResidences/InteriorCarousel";
-import DiscoverSection from "./SeamontAutographCollectionResidences/DiscoverSection";
 import CareAndGrace from "./SeamontAutographCollectionResidences/CareAndGrace";
-import DreamsAndDesign from "./SeamontAutographCollectionResidences/DreamsAndDesign";
+import DiscoverSection from "./SeamontAutographCollectionResidences/DiscoverSection";
+import EnlightenmentSection from "./SeamontAutographCollectionResidences/EnlightenmentSection";
 import Footer from "./SeamontAutographCollectionResidences/Footer";
+import Header from "./SeamontAutographCollectionResidences/Header";
 import HeroKeywords from "./SeamontAutographCollectionResidences/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./SeamontAutographCollectionResidences/PaymentOptions";
+import InteriorCarousel from "./SeamontAutographCollectionResidences/InteriorCarousel";
 import PaymentOptionsTwo from "./SeamontAutographCollectionResidences/PaymentOptionsTwo";
+import WaterfrontLiving from "./SeamontAutographCollectionResidences/WaterfrontLiving";
 import BottomFooter from "./common/BottomFooter";
-import PropertySearchFormThree from "./common/PropertySearchFormThree";
+import PropertySearchForm from "./common/PropertySearchForm";
 export default function SeaMontAutoGraPhCollectionPage() {
   return (
     <div className="min-h-screen bg-white dark:bg-[#0a0a0a] transition-colors duration-300">
@@ -51,7 +45,7 @@ export default function SeaMontAutoGraPhCollectionPage() {
             colorCodeBtnHoverText="#ffffff"
             colorCodeBtnHoverBorder="#0f1f2e"
           /> */}
-          <PropertySearchFormThree
+          <PropertySearchForm
             formName="seamont-autograph-collection-residences"
             pointName="get-in-touch"
             formType="banner-form"
@@ -64,7 +58,7 @@ export default function SeaMontAutoGraPhCollectionPage() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="/seamont-autograph-collection-residences/thank-you"

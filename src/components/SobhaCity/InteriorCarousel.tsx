@@ -1,28 +1,27 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 export default function InteriorCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = [
-  "/images/sobha-city/interior/sobha_interior_01.webp",
-  "/images/sobha-city/interior/sobha_interior_02.webp",
-  "/images/sobha-city/interior/sobha_interior_03.webp",
-  "/images/sobha-city/interior/sobha_interior_04.webp",
-  "/images/sobha-city/interior/sobha_interior_05.webp"
-];
+    "/images/sobha-city/interior/sobha_interior_01.webp",
+    "/images/sobha-city/interior/sobha_interior_02.webp",
+    "/images/sobha-city/interior/sobha_interior_03.webp",
+    "/images/sobha-city/interior/sobha_interior_04.webp",
+    "/images/sobha-city/interior/sobha_interior_05.webp",
+  ];
 
   const nextImage = () => {
     setCurrentIndex((prev) => (prev + 1) % images.length);

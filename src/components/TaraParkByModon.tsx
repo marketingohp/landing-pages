@@ -1,23 +1,18 @@
 "use client";
 
-import Header from "./TaraParkByModon/Header";
-import OneResidencesHero from "./TaraParkByModon/OneResidencesHero";
-import WaterfrontLiving from "./TaraParkByModon/WaterfrontLiving";
-import EnlightenmentSection from "./TaraParkByModon/EnlightenmentSection";
-import WindowToWonder from "./TaraParkByModon/WindowToWonder";
-import HotelStyleLiving from "./TaraParkByModon/HotelStyleLiving";
-import InteriorCarousel from "./TaraParkByModon/InteriorCarousel";
-import DiscoverSection from "./TaraParkByModon/DiscoverSection";
-import CareAndGrace from "./TaraParkByModon/CareAndGrace";
-import DreamsAndDesign from "./TaraParkByModon/DreamsAndDesign";
-import Footer from "./TaraParkByModon/Footer";
-import HeroKeywords from "./TaraParkByModon/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./TaraParkByModon/PaymentOptions";
-import PaymentOptionsTwo from "./TaraParkByModon/PaymentOptionsTwo";
-import { useEffect } from "react";
 import { pushToDataLayer } from "@/utils/gtag";
+import { useEffect } from "react";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
+import CareAndGrace from "./TaraParkByModon/CareAndGrace";
+import DiscoverSection from "./TaraParkByModon/DiscoverSection";
+import EnlightenmentSection from "./TaraParkByModon/EnlightenmentSection";
+import Footer from "./TaraParkByModon/Footer";
+import Header from "./TaraParkByModon/Header";
+import HeroKeywords from "./TaraParkByModon/HeroKeywords";
+import InteriorCarousel from "./TaraParkByModon/InteriorCarousel";
+import PaymentOptionsTwo from "./TaraParkByModon/PaymentOptionsTwo";
+import WaterfrontLiving from "./TaraParkByModon/WaterfrontLiving";
 
 export default function TaraBarkByModon() {
   useEffect(() => {

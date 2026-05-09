@@ -2,10 +2,10 @@
 
 import {
   createContext,
-  useContext,
-  useState,
-  useEffect,
   ReactNode,
+  useContext,
+  useEffect,
+  useState,
 } from "react";
 
 type Language = "en" | "ar" | "ru";
@@ -129,7 +129,8 @@ const translations = {
     "royal.form.search": "SEARCH",
     "royal.form.select": "Select",
     "royal.waterfront.title": "Four Seasons – Saadiyat Island",
-    "royal.waterfront.title2": "Four Seasons Private Residences – Saadiyat Island",
+    "royal.waterfront.title2":
+      "Four Seasons Private Residences – Saadiyat Island",
     "royal.waterfront.desc1":
       "Branded beachfront residences located on one of Abu Dhabi’s most prestigious coastal destinations – Saadiyat Island. It is a residential community shaped by natural surroundings, offering a balanced lifestyle where beachfront living, elegant design, and premium services come together in a private, low-density setting.",
     "royal.waterfront.desc2":

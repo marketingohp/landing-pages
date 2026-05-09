@@ -1,17 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 export default function InteriorCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -19,11 +18,10 @@ export default function InteriorCarousel() {
   const images = [
     "/images/four-seasons/four_seasons_img_10.jpg",
     "/images/four-seasons/four_seasons_img_12.jpg",
-     "/images/four-seasons/four_seasons_img_10.jpg",
+    "/images/four-seasons/four_seasons_img_10.jpg",
     "/images/four-seasons/four_seasons_img_8.jpg",
     "/images/four-seasons/four_seasons_img_9.jpg",
-     "/images/four-seasons/four_seasons_img_11.jpg",
-     
+    "/images/four-seasons/four_seasons_img_11.jpg",
   ];
 
   const nextImage = () => {

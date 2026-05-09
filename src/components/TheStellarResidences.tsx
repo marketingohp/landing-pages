@@ -1,23 +1,18 @@
 "use client";
 
-import Header from "./TheStellarResidences/Header";
-import OneResidencesHero from "./TheStellarResidences/OneResidencesHero";
-import WaterfrontLiving from "./TheStellarResidences/WaterfrontLiving";
-import EnlightenmentSection from "./TheStellarResidences/EnlightenmentSection";
-import WindowToWonder from "./TheStellarResidences/WindowToWonder";
-import HotelStyleLiving from "./TheStellarResidences/HotelStyleLiving";
-import InteriorCarousel from "./TheStellarResidences/InteriorCarousel";
-import DiscoverSection from "./TheStellarResidences/DiscoverSection";
-import CareAndGrace from "./TheStellarResidences/CareAndGrace";
-import DreamsAndDesign from "./TheStellarResidences/DreamsAndDesign";
-import Footer from "./TheStellarResidences/Footer";
-import HeroKeywords from "./TheStellarResidences/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./TheStellarResidences/PaymentOptions";
-import PaymentOptionsTwo from "./TheStellarResidences/PaymentOptionsTwo";
-import { useEffect } from "react";
 import { pushToDataLayer } from "@/utils/gtag";
+import { useEffect } from "react";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
+import CareAndGrace from "./TheStellarResidences/CareAndGrace";
+import DiscoverSection from "./TheStellarResidences/DiscoverSection";
+import EnlightenmentSection from "./TheStellarResidences/EnlightenmentSection";
+import Footer from "./TheStellarResidences/Footer";
+import Header from "./TheStellarResidences/Header";
+import HeroKeywords from "./TheStellarResidences/HeroKeywords";
+import InteriorCarousel from "./TheStellarResidences/InteriorCarousel";
+import PaymentOptionsTwo from "./TheStellarResidences/PaymentOptionsTwo";
+import WaterfrontLiving from "./TheStellarResidences/WaterfrontLiving";
 
 export default function TheStellarResidences() {
   useEffect(() => {

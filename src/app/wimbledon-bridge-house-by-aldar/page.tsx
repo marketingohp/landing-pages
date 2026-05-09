@@ -1,6 +1,6 @@
-import "../../components/WimbledonBridgeHouseByAldar/style.css";
-import type { Metadata } from "next";
 import WimbledonBridgeHouseByAldar from "@/components/WimbledonBridgeHouseByAldar";
+import type { Metadata } from "next";
+import "../../components/WimbledonBridgeHouseByAldar/style.css";
 export const metadata: Metadata = {
   title:
     "Wimbledon Bridge House London Square – Luxury London Apartments for Sale ",

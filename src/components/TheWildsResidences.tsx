@@ -1,22 +1,16 @@
 "use client";
 
-import Header from "./TheWildsResidences/Header";
-import OneResidencesHero from "./TheWildsResidences/OneResidencesHero";
-import WaterfrontLiving from "./TheWildsResidences/WaterfrontLiving";
-import EnlightenmentSection from "./TheWildsResidences/EnlightenmentSection";
-import WindowToWonder from "./TheWildsResidences/WindowToWonder";
-import HotelStyleLiving from "./TheWildsResidences/HotelStyleLiving";
-import InteriorCarousel from "./TheWildsResidences/InteriorCarousel";
-import DiscoverSection from "./TheWildsResidences/DiscoverSection";
 import CareAndGrace from "./TheWildsResidences/CareAndGrace";
-import DreamsAndDesign from "./TheWildsResidences/DreamsAndDesign";
+import DiscoverSection from "./TheWildsResidences/DiscoverSection";
+import EnlightenmentSection from "./TheWildsResidences/EnlightenmentSection";
 import Footer from "./TheWildsResidences/Footer";
+import Header from "./TheWildsResidences/Header";
 import HeroKeywords from "./TheWildsResidences/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./TheWildsResidences/PaymentOptions";
+import InteriorCarousel from "./TheWildsResidences/InteriorCarousel";
 import PaymentOptionsTwo from "./TheWildsResidences/PaymentOptionsTwo";
-import PropertySearchFormThree from "./common/PropertySearchFormThree";
+import WaterfrontLiving from "./TheWildsResidences/WaterfrontLiving";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function TheWildsResidencesPage() {
   return (
@@ -25,7 +19,7 @@ export default function TheWildsResidencesPage() {
       <div id="home">
         <HeroKeywords />
         <div className="absolute bottom-0 left-0 w-full custom-form-container">
-          <PropertySearchFormThree
+          <PropertySearchForm
             formName="the-wilds-residences"
             pointName="get-in-touch"
             formType="banner-form"
@@ -38,7 +32,7 @@ export default function TheWildsResidencesPage() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="/the-wilds-residences/thank-you"

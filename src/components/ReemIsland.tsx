@@ -1,21 +1,13 @@
 "use client";
 
-import Header from "./ReemIsland/Header";
-import ProjectHero from "./ReemIsland/ProjectHero";
-import WaterfrontLiving from "./ReemIsland/WaterfrontLiving";
-import EnlightenmentSection from "./ReemIsland/EnlightenmentSection";
-import WindowToWonder from "./ReemIsland/WindowToWonder";
-import HotelStyleLiving from "./ReemIsland/HotelStyleLiving";
-import InteriorCarousel from "./ReemIsland/InteriorCarousel";
 import DiscoverSection from "./ReemIsland/DiscoverSection";
-import CareAndGrace from "./ReemIsland/CareAndGrace";
-import DreamsAndDesign from "./ReemIsland/DreamsAndDesign";
 import Footer from "./ReemIsland/Footer";
+import Header from "./ReemIsland/Header";
 import HeroKeywords from "./ReemIsland/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./ReemIsland/PaymentOptions";
-import PaymentOptionsTwo from "./ReemIsland/PaymentOptionsTwo";
+import InteriorCarousel from "./ReemIsland/InteriorCarousel";
+import WaterfrontLiving from "./ReemIsland/WaterfrontLiving";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function ReemIslandPage() {
   return (
@@ -37,7 +29,7 @@ export default function ReemIslandPage() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="/reem-island/thank-you"

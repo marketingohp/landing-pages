@@ -1,6 +1,6 @@
-import "../../components/BabAlQasr51Page/style.css";
-import type { Metadata } from "next";
 import BabAlQasr51Page from "@/components/BabAlQasr51Page";
+import type { Metadata } from "next";
+import "../../components/BabAlQasr51Page/style.css";
 export const metadata: Metadata = {
   title:
     "Bab Al Qasr Seaview Residence 51 | Luxury Waterfront Apartments in Al Raha Beach",

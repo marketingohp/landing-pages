@@ -1,21 +1,16 @@
 "use client";
 
-import Header from "./BloomArjaanByRotana/Header";
-import OneResidencesHero from "./BloomArjaanByRotana/OneResidencesHero";
-import WaterfrontLiving from "./BloomArjaanByRotana/WaterfrontLiving";
-import EnlightenmentSection from "./BloomArjaanByRotana/EnlightenmentSection";
-import WindowToWonder from "./BloomArjaanByRotana/WindowToWonder";
-import HotelStyleLiving from "./BloomArjaanByRotana/HotelStyleLiving";
-import InteriorCarousel from "./BloomArjaanByRotana/InteriorCarousel";
-import DiscoverSection from "./BloomArjaanByRotana/DiscoverSection";
 import CareAndGrace from "./BloomArjaanByRotana/CareAndGrace";
-import DreamsAndDesign from "./BloomArjaanByRotana/DreamsAndDesign";
+import DiscoverSection from "./BloomArjaanByRotana/DiscoverSection";
+import EnlightenmentSection from "./BloomArjaanByRotana/EnlightenmentSection";
 import Footer from "./BloomArjaanByRotana/Footer";
+import Header from "./BloomArjaanByRotana/Header";
 import HeroKeywords from "./BloomArjaanByRotana/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./BloomArjaanByRotana/PaymentOptions";
+import InteriorCarousel from "./BloomArjaanByRotana/InteriorCarousel";
 import PaymentOptionsTwo from "./BloomArjaanByRotana/PaymentOptionsTwo";
+import WaterfrontLiving from "./BloomArjaanByRotana/WaterfrontLiving";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function BloomArjaanByRotanaPage() {
   return (
@@ -37,7 +32,7 @@ export default function BloomArjaanByRotanaPage() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="/bloom-arjaan-by-rotana/thank-you"

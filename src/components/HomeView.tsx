@@ -1,23 +1,11 @@
 "use client";
 
-import Header from "./HomeView/Header";
-import OneResidencesHero from "./HomeView/OneResidencesHero";
-import WaterfrontLiving from "./HomeView/WaterfrontLiving";
-import EnlightenmentSection from "./HomeView/EnlightenmentSection";
-import WindowToWonder from "./HomeView/WindowToWonder";
-import HotelStyleLiving from "./HomeView/HotelStyleLiving";
-import InteriorCarousel from "./HomeView/InteriorCarousel";
-import DiscoverSection from "./HomeView/DiscoverSection";
-import CareAndGrace from "./HomeView/CareAndGrace";
-import DreamsAndDesign from "./HomeView/DreamsAndDesign";
-import Footer from "./HomeView/Footer";
-import HeroKeywords from "./HomeView/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./HomeView/PaymentOptions";
-import PaymentOptionsTwo from "./HomeView/PaymentOptionsTwo";
-import { useEffect } from "react";
 import { pushToDataLayer } from "@/utils/gtag";
+import { useEffect } from "react";
 import BottomFooter from "./common/BottomFooter";
+import Footer from "./HomeView/Footer";
+import Header from "./HomeView/Header";
+import HeroKeywords from "./HomeView/HeroKeywords";
 export default function HomeViewPage() {
   useEffect(() => {
     pushToDataLayer({

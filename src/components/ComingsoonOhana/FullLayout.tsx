@@ -1,8 +1,8 @@
 "use client";
 
+import { useLanguage } from "@/contexts/ComingsoonOhana/LanguageContext";
 import PropertySearchForm from "../common/PropertySearchForm";
 import Header from "./Header";
-import { useLanguage } from "@/contexts/ComingsoonOhana/LanguageContext";
 
 export default function FullLayout() {
   const { t } = useLanguage();
@@ -10,7 +10,7 @@ export default function FullLayout() {
   return (
     <>
       <Header />
-      
+
       <section id="discover-more" className="contact-component">
         <div className="contact-container">
           <div className="block-left">
@@ -28,8 +28,15 @@ export default function FullLayout() {
                 <div className="medium-text-wrap is-white max-w">
                   <div className="heading-2">
                     Register to be among the first to receive exclusive updates
-                    about the <span className="light-italic is-xl">Branded Residences</span> by{" "}
-                    <span className="light-italic is-xl">Ohana Development</span>.
+                    about the{" "}
+                    <span className="light-italic is-xl">
+                      Branded Residences
+                    </span>{" "}
+                    by{" "}
+                    <span className="light-italic is-xl">
+                      Ohana Development
+                    </span>
+                    .
                   </div>
                 </div>
               </div>
@@ -46,7 +53,12 @@ export default function FullLayout() {
                     "phoneNumber",
                     "hearAboutUs",
                   ]}
-                  requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+                  requiredFields={[
+                    "firstName",
+                    "lastName",
+                    "phoneNumber",
+                    "email",
+                  ]}
                   redirectToThankYou={true}
                   thankYouPath="/comingsoon-ohana/thank-you"
                   className="Form ohana-form"

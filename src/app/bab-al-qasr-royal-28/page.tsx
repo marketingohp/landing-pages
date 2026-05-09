@@ -1,6 +1,6 @@
-import "../../components/BabAlQasr28/style.css";
-import type { Metadata } from "next";
 import BabAlQasr28Page from "@/components/BabAlQasr28";
+import type { Metadata } from "next";
+import "../../components/BabAlQasr28/style.css";
 export const metadata: Metadata = {
   title: " Bab Al Qasr Royal Residence 28 ",
   description:

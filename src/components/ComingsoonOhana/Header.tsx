@@ -1,9 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/ComingsoonOhana/LanguageContext";
-import LanguageSelector from "./LanguageSelector";
 import CountdownTimer from "./CountdownTimer";
+import LanguageSelector from "./LanguageSelector";
 
 export default function Header() {
   const { t } = useLanguage();

@@ -1,6 +1,6 @@
 import RadissionResidencesPage from "@/components/RadissionResidences";
-import "../../components/RadissionResidences/style.css";
 import type { Metadata } from "next";
+import "../../components/RadissionResidences/style.css";
 export const metadata: Metadata = {
   title: " Radisson Residences Al Reem Island",
   description:

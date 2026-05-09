@@ -1,23 +1,18 @@
 "use client";
 
-import Header from "./SobhaCity/Header";
-import OneResidencesHero from "./SobhaCity/OneResidencesHero";
-import WaterfrontLiving from "./SobhaCity/WaterfrontLiving";
-import EnlightenmentSection from "./SobhaCity/EnlightenmentSection";
-import WindowToWonder from "./SobhaCity/WindowToWonder";
-import HotelStyleLiving from "./SobhaCity/HotelStyleLiving";
-import InteriorCarousel from "./SobhaCity/InteriorCarousel";
-import DiscoverSection from "./SobhaCity/DiscoverSection";
-import CareAndGrace from "./SobhaCity/CareAndGrace";
-import DreamsAndDesign from "./SobhaCity/DreamsAndDesign";
-import Footer from "./SobhaCity/Footer";
-import HeroKeywords from "./SobhaCity/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./SobhaCity/PaymentOptions";
-import PaymentOptionsTwo from "./SobhaCity/PaymentOptionsTwo";
-import { useEffect } from "react";
 import { pushToDataLayer } from "@/utils/gtag";
+import { useEffect } from "react";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
+import CareAndGrace from "./SobhaCity/CareAndGrace";
+import DiscoverSection from "./SobhaCity/DiscoverSection";
+import EnlightenmentSection from "./SobhaCity/EnlightenmentSection";
+import Footer from "./SobhaCity/Footer";
+import Header from "./SobhaCity/Header";
+import HeroKeywords from "./SobhaCity/HeroKeywords";
+import InteriorCarousel from "./SobhaCity/InteriorCarousel";
+import PaymentOptionsTwo from "./SobhaCity/PaymentOptionsTwo";
+import WaterfrontLiving from "./SobhaCity/WaterfrontLiving";
 
 export default function WimbledonBridgeHouseByAldar() {
   useEffect(() => {

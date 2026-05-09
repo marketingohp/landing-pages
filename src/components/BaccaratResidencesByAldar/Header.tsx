@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/baccaratResidencesByAldar/LanguageContext";
 import { useTheme } from "@/contexts/ThemeContext";
-import LanguageSelector from "./LanguageSelector";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import LanguageSelector from "./LanguageSelector";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,7 +41,7 @@ export default function Header() {
 
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
-    href: string
+    href: string,
   ) => {
     e.preventDefault();
     const element = document.querySelector(href);

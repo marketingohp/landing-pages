@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from "react";
-import OhanaTimer from "./OhanaTimer";
+import React, { useEffect, useRef, useState } from "react";
 import PropertySearchFormFour from "../common/PropertySearchFormFour";
+import OhanaTimer from "./OhanaTimer";
 //const video = "/video/ohana.mp4";
 const video =
   "https://cdn.prod.website-files.com/6953e1cc8ce6f26a3cb13814/6953e1cc8ce6f26a3cb138d3_smoke-colors-bg_loop_mp4.mp4";
@@ -118,7 +118,7 @@ const OhanaHeader = () => {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="/ohana/thank-you"

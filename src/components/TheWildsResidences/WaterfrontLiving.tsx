@@ -1,19 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import { useLanguage } from "@/contexts/theWildsResidences/LanguageContext";
-import React from "react";
-import Button from "@mui/material/Button";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
 import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
-import PropertySearchFormThree from "../common/PropertySearchFormThree";
+import React from "react";
+import PropertySearchForm from "../common/PropertySearchForm";
 
-import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 
 const Transition = React.forwardRef(function Transition(
@@ -192,7 +184,7 @@ export default function WaterfrontLiving() {
               {/* HANDOVER */}
               <div className="px-4 py-3 text-center border-b border-[#585f2a] dark:border-gray-400 border-opacity-30">
                 <div className="text-[#585f2a] dark:text-white font-normal text-sm leading-relaxed">
-                Etotal No. Of Units
+                  Etotal No. Of Units
                   <br />
                   740
                 </div>
@@ -234,7 +226,7 @@ export default function WaterfrontLiving() {
                 </div>
                 <div className="text-[#585f2a] dark:text-white font-normal text-sm md:text-base"></div> */}
                 <div className="text-[#585f2a] dark:text-white font-normal text-sm md:text-base leading-relaxed">
-                 Unit Type: Duplex & Maid Duplex <br />
+                  Unit Type: Duplex & Maid Duplex <br />
                   1, 2 & 3 Bedroom
                 </div>
               </div>
@@ -319,7 +311,7 @@ export default function WaterfrontLiving() {
               p: 4,
             }}
           >
-            <PropertySearchFormThree
+            <PropertySearchForm
               formName="the-wilds-residences"
               pointName="get-in-touch"
               formType="about-project-form"
@@ -334,7 +326,7 @@ export default function WaterfrontLiving() {
                 "budget",
                 "message",
               ]}
-              requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+              requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
               viewType="image"
               // downloadBrochure={true}
               // brochureUrl="/images/the-wilds-residences/Yas_Riva_Residences_Brochure.pdf"

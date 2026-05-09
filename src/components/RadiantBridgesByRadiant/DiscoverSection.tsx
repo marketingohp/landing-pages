@@ -1,22 +1,17 @@
 "use client";
 
-import Image from "next/image";
 import { useLanguage } from "@/contexts/radiantBridgesByRadiant/LanguageContext";
-import React, { useState } from "react";
-import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
 import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
-import PropertySearchForm from "../common/PropertySearchForm";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import Image from "next/image";
+import React, { useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import PropertySearchForm from "../common/PropertySearchForm";
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -61,37 +56,37 @@ export default function DiscoverSection() {
 
   // Destinations matching the image layout (2x3 grid)
   const destinations = [
-  {
-    time: "5 MINUTES",
-    icon: "/images/radiant-bridges-by-radiant/locations/reem_mall.png",
-    destination: "Reem Mall"
-  },
-  {
-    time: "FEW MINUTES",
-    icon: "/images/radiant-bridges-by-radiant/locations/al_maryah_island.png",
-    destination: "Al Maryah Island"
-  },
-  {
-    time: "5 MINUTES",
-    icon: "/images/radiant-bridges-by-radiant/locations/galleria_mall.png",
-    destination: "Galleria Mall"
-  },
-  {
-    time: "5 MINUTES",
-    icon: "/images/radiant-bridges-by-radiant/locations/reem_center_park.png",
-    destination: "Reem Central Park"
-  },
-  {
-    time: "FEW MINUTES",
-    icon: "/images/radiant-bridges-by-radiant/locations/downtown_abu_dhabi.png",
-    destination: "Downtown Abu Dhabi"
-  },
-  {
-    time: "5 MINUTES",
-    icon: "/images/radiant-bridges-by-radiant/locations/cleveland_clinic.png",
-    destination: "Cleveland Clinic"
-  }
-];
+    {
+      time: "5 MINUTES",
+      icon: "/images/radiant-bridges-by-radiant/locations/reem_mall.png",
+      destination: "Reem Mall",
+    },
+    {
+      time: "FEW MINUTES",
+      icon: "/images/radiant-bridges-by-radiant/locations/al_maryah_island.png",
+      destination: "Al Maryah Island",
+    },
+    {
+      time: "5 MINUTES",
+      icon: "/images/radiant-bridges-by-radiant/locations/galleria_mall.png",
+      destination: "Galleria Mall",
+    },
+    {
+      time: "5 MINUTES",
+      icon: "/images/radiant-bridges-by-radiant/locations/reem_center_park.png",
+      destination: "Reem Central Park",
+    },
+    {
+      time: "FEW MINUTES",
+      icon: "/images/radiant-bridges-by-radiant/locations/downtown_abu_dhabi.png",
+      destination: "Downtown Abu Dhabi",
+    },
+    {
+      time: "5 MINUTES",
+      icon: "/images/radiant-bridges-by-radiant/locations/cleveland_clinic.png",
+      destination: "Cleveland Clinic",
+    },
+  ];
 
   return (
     <section className="py-12 sm:py-16 md:py-20 lg:py-32 bg-[#FEFFFF] dark:bg-[#1a1a1a]">

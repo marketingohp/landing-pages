@@ -1,6 +1,5 @@
-import ThankYouPage from '@/components/OneResidences/ThankYouPage';
+import ThankYouPage from "@/components/OneResidences/ThankYouPage";
 
 export default function ThankYou() {
   return <ThankYouPage />;
 }
-

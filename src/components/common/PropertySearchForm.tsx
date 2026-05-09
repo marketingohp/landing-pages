@@ -1,23 +1,26 @@
 "use client";
 
-import { useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useTheme } from "@/contexts/ThemeContext";
-import TextField from "@mui/material/TextField";
-import MenuItem from "@mui/material/MenuItem";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
+import { submitFormLead } from "@/lib/api";
+import { pushToDataLayer, reportConversion } from "@/utils/gtag";
+import { Box } from "@mui/material";
 import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
-import { Box } from "@mui/material";
-import { submitFormLead } from "@/lib/api";
-import { reportConversion, pushToDataLayer } from "@/utils/gtag";
-import { DEVELOPERS_MAP, LOCATIONS_MAP } from '../../data/crmIds.js'
+import MenuItem from "@mui/material/MenuItem";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
+import TextField from "@mui/material/TextField";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { DEVELOPERS_MAP, LOCATIONS_MAP } from "../../data/crmIds.js";
 
 // react-phone-number-input import
 import PhoneNumberInput from "./PhoneNumberInput";
 
-import { getProjectHiddenFields, getSlugFromPath } from "../../utils/projectHiddenFields";
+import {
+  getProjectHiddenFields,
+  getSlugFromPath,
+} from "../../utils/projectHiddenFields";
 
 const countryCodes = [
   { value: "+971", label: "+971" },
@@ -378,7 +381,7 @@ export default function PropertySearchForm({
   const [touchedFields, setTouchedFields] = useState<Record<string, boolean>>(
     {},
   );
-  
+
   const handleSelectChange =
     (field: string) => (event: SelectChangeEvent<string>) => {
       if (field != "phoneNumber") {
@@ -504,13 +507,13 @@ export default function PropertySearchForm({
     setSubmitStatus({ type: null, message: "" });
 
     // getting developer, and location by slug
-    const slug = getSlugFromPath()
-    const hiddenFields = getProjectHiddenFields(slug)
+    const slug = getSlugFromPath();
+    const hiddenFields = getProjectHiddenFields(slug);
 
     // developer and location ids map and send (if found)
     const developerId = hiddenFields?.developer
-    ? DEVELOPERS_MAP.get(hiddenFields.developer)
-    : undefined;
+      ? DEVELOPERS_MAP.get(hiddenFields.developer)
+      : undefined;
 
     const locationId = hiddenFields?.location
       ? LOCATIONS_MAP.get(hiddenFields.location)
@@ -518,9 +521,9 @@ export default function PropertySearchForm({
 
     // check testing params (if not, will send the default value)
     const params = new URLSearchParams(window.location.search);
-    const companyStatus = params.get('company_status') || 'Yes';
+    const companyStatus = params.get("company_status") || "Yes";
 
-    const { phoneCountryCode, ...cleanFormData } = formData
+    const { phoneCountryCode, ...cleanFormData } = formData;
 
     const submissionData: Record<string, string> = {
       ...cleanFormData,

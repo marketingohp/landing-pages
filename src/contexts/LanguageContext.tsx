@@ -2,10 +2,10 @@
 
 import {
   createContext,
-  useContext,
-  useState,
-  useEffect,
   ReactNode,
+  useContext,
+  useEffect,
+  useState,
 } from "react";
 
 type Language = "en" | "ar" | "ru";
@@ -17,7 +17,7 @@ interface LanguageContextType {
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(
-  undefined
+  undefined,
 );
 
 const translations = {
@@ -135,8 +135,7 @@ const translations = {
       "With Saadiyat's cultural district as the backdrop, sea and sky as the frame, and world class luxury as texture, this is waterfront living, elevated.",
     "royal.waterfront.explore": "EXPLORE RESIDENCES",
     "royal.waterfront.brochure": "DOWNLOAD BROCHURE",
-    "royal.enlightenment.title":
-      "Where Couture Design Meets Waterfront Living",
+    "royal.enlightenment.title": "Where Couture Design Meets Waterfront Living",
     "royal.enlightenment.viewGallery": "VIEW GALLERY",
     "royal.window.title": "WHERE EVERY WINDOW OPENS TO WONDER.",
     "royal.hotel.title": "HOTEL STYLE LIVING, AT HOME.",

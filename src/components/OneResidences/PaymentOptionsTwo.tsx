@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function PaymentOptionsTwo() {
   return (
     <section className="py-20 lg:py-32 bg-[#1a1a1a] dark:bg-[#0a0a0a] relative">
-          <div className="absolute inset-0 opacity-20 dark:opacity-20">
+      <div className="absolute inset-0 opacity-20 dark:opacity-20">
         <Image
           src="/images/one-residences/one_residences_2.webp"
           alt="Footer Background"
@@ -16,12 +16,14 @@ export default function PaymentOptionsTwo() {
       <div className="relative z-10 container mx-auto px-4 lg:px-8">
         {/* Title */}
         <div className="text-center mb-12 lg:mb-16">
-         
           <h2
             className="text-6xl md:text-4xl lg:text-4xl text-[#ffffff] dark:text-white mb-8"
-            style={{ fontFamily: "var(--font-playfair), serif", fontSize: "4rem" }}
+            style={{
+              fontFamily: "var(--font-playfair), serif",
+              fontSize: "4rem",
+            }}
           >
-             Payment Plan
+            Payment Plan
           </h2>
         </div>
 
@@ -48,7 +50,7 @@ export default function PaymentOptionsTwo() {
             </div>
             <div
               className="text-[#b29679] dark:text-[#b29679] text-xl md:text-2xl lg:text-3xl tracking-wider  font-mobile-payment-plan3"
-              style={{ fontFamily: "Abril Fatface, serif", fontSize: "3.5rem"}}
+              style={{ fontFamily: "Abril Fatface, serif", fontSize: "3.5rem" }}
             >
               Payment Plan
             </div>
@@ -83,25 +85,43 @@ export default function PaymentOptionsTwo() {
                 <tbody>
                   {/* Row 1 */}
                   <tr className="border-b border-[#d4af37]/30">
-                    <td className=" text-center px-4 md:px-6 py-4 text-sm md:text-base" style={{ fontFamily: "Arial, sans-serif" }}>
+                    <td
+                      className=" text-center px-4 md:px-6 py-4 text-sm md:text-base"
+                      style={{ fontFamily: "Arial, sans-serif" }}
+                    >
                       10%
                     </td>
-                    <td className=" text-center px-4 md:px-6 py-4 text-sm md:text-base" style={{ fontFamily: "Arial, sans-serif" }}>
+                    <td
+                      className=" text-center px-4 md:px-6 py-4 text-sm md:text-base"
+                      style={{ fontFamily: "Arial, sans-serif" }}
+                    >
                       40% over 24 monthly installments
                     </td>
-                    <td className=" text-center px-4 md:px-6 py-4 text-sm md:text-base" style={{ fontFamily: "Arial, sans-serif" }}>
+                    <td
+                      className=" text-center px-4 md:px-6 py-4 text-sm md:text-base"
+                      style={{ fontFamily: "Arial, sans-serif" }}
+                    >
                       50%
                     </td>
                   </tr>
                   {/* Row 2 */}
                   <tr>
-                    <td className=" text-center px-4 md:px-6 py-4 text-sm md:text-base" style={{ fontFamily: "Arial, sans-serif" }}>
+                    <td
+                      className=" text-center px-4 md:px-6 py-4 text-sm md:text-base"
+                      style={{ fontFamily: "Arial, sans-serif" }}
+                    >
                       10%
                     </td>
-                    <td className=" text-center px-4 md:px-6 py-4 text-sm md:text-base" style={{ fontFamily: "Arial, sans-serif" }}>
+                    <td
+                      className=" text-center px-4 md:px-6 py-4 text-sm md:text-base"
+                      style={{ fontFamily: "Arial, sans-serif" }}
+                    >
                       40% across 8 installments
                     </td>
-                    <td className=" text-center px-4 md:px-6 py-4 text-sm md:text-base" style={{ fontFamily: "Arial, sans-serif" }}>
+                    <td
+                      className=" text-center px-4 md:px-6 py-4 text-sm md:text-base"
+                      style={{ fontFamily: "Arial, sans-serif" }}
+                    >
                       50%
                     </td>
                   </tr>
@@ -114,4 +134,3 @@ export default function PaymentOptionsTwo() {
     </section>
   );
 }
-

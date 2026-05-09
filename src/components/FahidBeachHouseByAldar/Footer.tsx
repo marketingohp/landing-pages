@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useLanguage } from "@/contexts/fahidBeachHouseByAldar/LanguageContext";
 import PropertySearchForm from "../common/PropertySearchForm";
 

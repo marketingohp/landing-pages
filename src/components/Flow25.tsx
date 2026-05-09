@@ -1,21 +1,16 @@
 "use client";
 
-import Header from "./Flow25/Header";
-import OneResidencesHero from "./Flow25/OneResidencesHero";
-import WaterfrontLiving from "./Flow25/WaterfrontLiving";
-import EnlightenmentSection from "./Flow25/EnlightenmentSection";
-import WindowToWonder from "./Flow25/WindowToWonder";
-import HotelStyleLiving from "./Flow25/HotelStyleLiving";
-import InteriorCarousel from "./Flow25/InteriorCarousel";
-import DiscoverSection from "./Flow25/DiscoverSection";
 import CareAndGrace from "./Flow25/CareAndGrace";
-import DreamsAndDesign from "./Flow25/DreamsAndDesign";
+import DiscoverSection from "./Flow25/DiscoverSection";
+import EnlightenmentSection from "./Flow25/EnlightenmentSection";
 import Footer from "./Flow25/Footer";
+import Header from "./Flow25/Header";
 import HeroKeywords from "./Flow25/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./Flow25/PaymentOptions";
+import InteriorCarousel from "./Flow25/InteriorCarousel";
 import PaymentOptionsTwo from "./Flow25/PaymentOptionsTwo";
+import WaterfrontLiving from "./Flow25/WaterfrontLiving";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function Flow25Page() {
   return (
@@ -37,7 +32,7 @@ export default function Flow25Page() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="/flow25/thank-you"

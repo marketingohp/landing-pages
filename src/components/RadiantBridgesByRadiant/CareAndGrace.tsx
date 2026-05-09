@@ -1,23 +1,17 @@
 "use client";
 
 import { useLanguage } from "@/contexts/radiantBridgesByRadiant/LanguageContext";
-import Image from "next/image";
-import React, { useState } from "react";
-import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
-import IconButton from "@mui/material/IconButton";
 import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
-import PropertySearchForm from "../common/PropertySearchForm";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import Image from "next/image";
+import React, { useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import PropertySearchForm from "../common/PropertySearchForm";
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -51,27 +45,27 @@ export default function CareAndGrace() {
   };
 
   const amenities = [
-  {
-    name: "Landscaped Podium Terraces",
-    icon: "/images/radiant-bridges-by-radiant/amenities/landscaped_podium.png"
-  },
-  {
-    name: "Swimming Pool & Fitness Centers",
-    icon: "/images/radiant-bridges-by-radiant/amenities/swimming_pool.png"
-  },
-  {
-    name: "Dedicated Lobbies for Offices & Residences",
-    icon: "/images/radiant-bridges-by-radiant/amenities/lobies.png"
-  },
-  {
-    name: "859 Parking Spaces",
-    icon: "/images/radiant-bridges-by-radiant/amenities/parking_spaces.png"
-  },
-  {
-    name: "EV Charging",
-    icon: "/images/radiant-bridges-by-radiant/amenities/ev_charging.png"
-  }
-];
+    {
+      name: "Landscaped Podium Terraces",
+      icon: "/images/radiant-bridges-by-radiant/amenities/landscaped_podium.png",
+    },
+    {
+      name: "Swimming Pool & Fitness Centers",
+      icon: "/images/radiant-bridges-by-radiant/amenities/swimming_pool.png",
+    },
+    {
+      name: "Dedicated Lobbies for Offices & Residences",
+      icon: "/images/radiant-bridges-by-radiant/amenities/lobies.png",
+    },
+    {
+      name: "859 Parking Spaces",
+      icon: "/images/radiant-bridges-by-radiant/amenities/parking_spaces.png",
+    },
+    {
+      name: "EV Charging",
+      icon: "/images/radiant-bridges-by-radiant/amenities/ev_charging.png",
+    },
+  ];
 
   return (
     <section className="py-20 lg:py-32 bg-[[#5C7F84]] dark:bg-[#[#0D3137]] relative">

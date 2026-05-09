@@ -1,6 +1,6 @@
 import YasRivaResidencesPage from "@/components/YasRivaResidences";
-import "../../components/YasRivaResidences/style.css";
 import type { Metadata } from "next";
+import "../../components/YasRivaResidences/style.css";
 export const metadata: Metadata = {
   title: " Yas Riva Residences  ",
   description:

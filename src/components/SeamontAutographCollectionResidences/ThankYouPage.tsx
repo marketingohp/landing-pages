@@ -1,10 +1,8 @@
 "use client";
 
-import { useEffect } from "react";
+import { useLanguage } from "@/contexts/seamonthAutoGraph/LanguageContext";
 import { useRouter } from "next/navigation";
 import Header from "./Header";
-import { useLanguage } from "@/contexts/seamonthAutoGraph/LanguageContext";
-import { pushToDataLayer } from "@/utils/gtag";
 
 export default function ThankYouPage() {
   const { t } = useLanguage();
@@ -33,7 +31,9 @@ export default function ThankYouPage() {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button
-              onClick={() => router.push("/seamont-autograph-collection-residences")}
+              onClick={() =>
+                router.push("/seamont-autograph-collection-residences")
+              }
               className="bg-white text-[#5f602c] px-8 py-3 rounded uppercase tracking-wider font-sans font-semibold hover:bg-white/90 transition-colors"
             >
               {t("royal.thankYou.backHome")}

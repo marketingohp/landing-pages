@@ -1,23 +1,18 @@
 "use client";
 
-import Header from "./YasParkPlaceByAldar/Header";
-import OneResidencesHero from "./YasParkPlaceByAldar/OneResidencesHero";
-import WaterfrontLiving from "./YasParkPlaceByAldar/WaterfrontLiving";
-import EnlightenmentSection from "./YasParkPlaceByAldar/EnlightenmentSection";
-import WindowToWonder from "./YasParkPlaceByAldar/WindowToWonder";
-import HotelStyleLiving from "./YasParkPlaceByAldar/HotelStyleLiving";
-import InteriorCarousel from "./YasParkPlaceByAldar/InteriorCarousel";
-import DiscoverSection from "./YasParkPlaceByAldar/DiscoverSection";
-import CareAndGrace from "./YasParkPlaceByAldar/CareAndGrace";
-import DreamsAndDesign from "./YasParkPlaceByAldar/DreamsAndDesign";
-import Footer from "./YasParkPlaceByAldar/Footer";
-import HeroKeywords from "./YasParkPlaceByAldar/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./YasParkPlaceByAldar/PaymentOptions";
-import PaymentOptionsTwo from "./YasParkPlaceByAldar/PaymentOptionsTwo";
-import { useEffect } from "react";
 import { pushToDataLayer } from "@/utils/gtag";
+import { useEffect } from "react";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
+import CareAndGrace from "./YasParkPlaceByAldar/CareAndGrace";
+import DiscoverSection from "./YasParkPlaceByAldar/DiscoverSection";
+import EnlightenmentSection from "./YasParkPlaceByAldar/EnlightenmentSection";
+import Footer from "./YasParkPlaceByAldar/Footer";
+import Header from "./YasParkPlaceByAldar/Header";
+import HeroKeywords from "./YasParkPlaceByAldar/HeroKeywords";
+import InteriorCarousel from "./YasParkPlaceByAldar/InteriorCarousel";
+import PaymentOptionsTwo from "./YasParkPlaceByAldar/PaymentOptionsTwo";
+import WaterfrontLiving from "./YasParkPlaceByAldar/WaterfrontLiving";
 
 export default function WimbledonBridgeHouseByAldar() {
   useEffect(() => {

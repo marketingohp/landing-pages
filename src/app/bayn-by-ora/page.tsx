@@ -1,6 +1,6 @@
-import "../../components/BaynByOra/style.css";
-import type { Metadata } from "next";
 import BaynByOraPage from "@/components/BaynByOra";
+import type { Metadata } from "next";
+import "../../components/BaynByOra/style.css";
 export const metadata: Metadata = {
   title: " Bayn By Ora  ",
   description:

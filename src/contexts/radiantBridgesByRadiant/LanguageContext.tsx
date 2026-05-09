@@ -2,10 +2,10 @@
 
 import {
   createContext,
-  useContext,
-  useState,
-  useEffect,
   ReactNode,
+  useContext,
+  useEffect,
+  useState,
 } from "react";
 
 type Language = "en" | "ar" | "ru";
@@ -131,12 +131,14 @@ const translations = {
     "royal.waterfront.title": "Radiant Bridges",
     "royal.waterfront.title2":
       "blends heritage charm with outstanding connectivity",
-    "royal.waterfront.desc1": "Radiant Bridges Towers stands proudly on Al Reem Island — a canal-view development that unites three worlds: the rhythm of business, the comfort of home, and the spirit of community. Featuring two Grade-A office towers (Tower A & Tower B) and one residential tower (Tower C) linked by a shared podium, it embodies Radiant Real Estate’s vision for connected urban living and timeless architecture.",
+    "royal.waterfront.desc1":
+      "Radiant Bridges Towers stands proudly on Al Reem Island — a canal-view development that unites three worlds: the rhythm of business, the comfort of home, and the spirit of community. Featuring two Grade-A office towers (Tower A & Tower B) and one residential tower (Tower C) linked by a shared podium, it embodies Radiant Real Estate’s vision for connected urban living and timeless architecture.",
     "royal.waterfront.desc2": "",
     "royal.waterfront.explore": "EXPLORE RESIDENCES",
     "royal.waterfront.brochure": "REGISTER YOUR INTEREST",
     "royal.enlightenment.title": "Modern Comfort, Elevated Design",
-    "royal.enlightenment.desc": "The development connects residents and professionals to Abu Dhabi’s main business and lifestyle destinations combining urban energy with the calm of island living",
+    "royal.enlightenment.desc":
+      "The development connects residents and professionals to Abu Dhabi’s main business and lifestyle destinations combining urban energy with the calm of island living",
     "royal.enlightenment.desc2": "",
 
     "royal.enlightenment.viewGallery": "VIEW GALLERY",
@@ -146,10 +148,12 @@ const translations = {
       "Wake up to inspiring views. Live close to the city’s top destinations. Experience a lifestyle that’s refined, relaxed, and always connected.",
     "royal.hotel.explore": "Register Your Interest",
     "royal.discover.title": "Between the City and the Water",
-    "royal.discover.desc": "Located on Al Reem Street, City of Lights, Al Reem Island, Radiant Bridges enjoys a prime location with canal and city views.",
+    "royal.discover.desc":
+      "Located on Al Reem Street, City of Lights, Al Reem Island, Radiant Bridges enjoys a prime location with canal and city views.",
     "royal.discover.masterplan": "VIEW MASTERPLAN",
     "royal.care.title": "Connected Living on Al Reem Island",
-    "royal.care.desc": "Radiant Bridges Towers redefines the mixed-use experience — bridging people, purpose, and place. It celebrates balance and community, where the boundaries between home, work, and life dissolve into one connected experience along Al Reem Island’s canal-view skyline.",
+    "royal.care.desc":
+      "Radiant Bridges Towers redefines the mixed-use experience — bridging people, purpose, and place. It celebrates balance and community, where the boundaries between home, work, and life dissolve into one connected experience along Al Reem Island’s canal-view skyline.",
     "royal.care.viewAll": "Explore More",
     "royal.dreams.title":
       "LET THE BAY SLOW YOU DOWN. LET THE CITY LIFT YOU UP.",

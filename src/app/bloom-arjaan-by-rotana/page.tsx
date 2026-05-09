@@ -1,6 +1,6 @@
-import "../../components/BloomArjaanByRotana/style.css";
-import type { Metadata } from "next";
 import BloomArjaanByRotanaPage from "@/components/BloomArjaanByRotana";
+import type { Metadata } from "next";
+import "../../components/BloomArjaanByRotana/style.css";
 export const metadata: Metadata = {
   title: " Bloom Arjaan by Rotana Masdar City",
   description:

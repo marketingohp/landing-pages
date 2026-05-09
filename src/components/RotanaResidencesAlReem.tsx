@@ -1,21 +1,15 @@
 "use client";
 
-import Header from "./RotanaResidencesAlReem/Header";
-import OneResidencesHero from "./RotanaResidencesAlReem/OneResidencesHero";
-import WaterfrontLiving from "./RotanaResidencesAlReem/WaterfrontLiving";
-import EnlightenmentSection from "./RotanaResidencesAlReem/EnlightenmentSection";
-import WindowToWonder from "./RotanaResidencesAlReem/WindowToWonder";
-import HotelStyleLiving from "./RotanaResidencesAlReem/HotelStyleLiving";
-import InteriorCarousel from "./RotanaResidencesAlReem/InteriorCarousel";
-import DiscoverSection from "./RotanaResidencesAlReem/DiscoverSection";
 import CareAndGrace from "./RotanaResidencesAlReem/CareAndGrace";
-import DreamsAndDesign from "./RotanaResidencesAlReem/DreamsAndDesign";
+import DiscoverSection from "./RotanaResidencesAlReem/DiscoverSection";
 import Footer from "./RotanaResidencesAlReem/Footer";
+import Header from "./RotanaResidencesAlReem/Header";
 import HeroKeywords from "./RotanaResidencesAlReem/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./RotanaResidencesAlReem/PaymentOptions";
+import InteriorCarousel from "./RotanaResidencesAlReem/InteriorCarousel";
 import PaymentOptionsTwo from "./RotanaResidencesAlReem/PaymentOptionsTwo";
+import WaterfrontLiving from "./RotanaResidencesAlReem/WaterfrontLiving";
 import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 export default function RotanaResidencesAlReemPage() {
   return (
@@ -37,7 +31,7 @@ export default function RotanaResidencesAlReemPage() {
               "bedrooms",
               "budget",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
             thankYouPath="/rotana-residences-at-al-reem-island/thank-you"

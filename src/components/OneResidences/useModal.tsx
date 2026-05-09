@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useState, useCallback } from 'react';
+import { useCallback, useState } from "react";
 
 export function useModal() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,4 +24,3 @@ export function useModal() {
     toggleModal,
   };
 }
-

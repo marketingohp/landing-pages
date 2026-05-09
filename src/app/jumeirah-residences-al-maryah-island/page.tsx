@@ -1,6 +1,6 @@
-import "../../components/JumeirahResidencesAlMaryahIsland/style.css";
-import type { Metadata } from "next";
 import JumeirahResidencesPage from "@/components/JumeirahResidencesAlMaryahIsland";
+import type { Metadata } from "next";
+import "../../components/JumeirahResidencesAlMaryahIsland/style.css";
 export const metadata: Metadata = {
   title: "Jumeirah Residences Al Maryah Island",
   description:
@@ -22,5 +22,5 @@ export const metadata: Metadata = {
 };
 
 export default function JumeirahResidencesAlMaryahIsland() {
-  return <JumeirahResidencesPage /> ;
+  return <JumeirahResidencesPage />;
 }

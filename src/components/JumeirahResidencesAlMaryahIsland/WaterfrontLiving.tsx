@@ -1,19 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import { useLanguage } from "@/contexts/jumeirahResidencesAlMaryah/LanguageContext";
-import React from "react";
-import Button from "@mui/material/Button";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
 import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
+import React from "react";
 import PropertySearchForm from "../common/PropertySearchForm";
 
-import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 
 const Transition = React.forwardRef(function Transition(
@@ -182,7 +174,7 @@ export default function WaterfrontLiving() {
               {/* 4 BEDROOM DUPLEXES AND TOWNHOUSES */}
               <div className="px-4 py-3 text-center border-b border-[#000000] dark:border-gray-400 border-opacity-30">
                 <div className="text-[#000000] dark:text-white font-normal text-sm leading-relaxed">
-                  Unit Type: <br /> Villas & Manaions 5-6BR  
+                  Unit Type: <br /> Villas & Manaions 5-6BR
                 </div>
               </div>
 
@@ -195,7 +187,7 @@ export default function WaterfrontLiving() {
 
               <div className="px-4 py-3 text-center border-b border-[#000000] dark:border-gray-400 border-opacity-30">
                 <div className="text-[#000000] dark:text-white font-normal text-sm leading-relaxed">
-                 Starting Price: <br /> AED 69,900,000 
+                  Starting Price: <br /> AED 69,900,000
                 </div>
               </div>
             </div>
@@ -204,14 +196,12 @@ export default function WaterfrontLiving() {
             <div className="hidden md:flex md:flex-wrap md:items-center md:justify-center gap-0 min-w-max">
               {/* HANDOVER */}
               <div className="flex-1 min-w-[200px] px-6 md:px-8 py-4 text-center">
-               
                 <div className="text-[#000000] dark:text-white font-normal text-sm md:text-base leading-relaxed">
-                 Location: <br /> Saadiyat Island
+                  Location: <br /> Saadiyat Island
                 </div>
               </div>
 
-
- {/* Vertical Separator */}
+              {/* Vertical Separator */}
               <div className="w-px h-20 bg-[#000000] dark:bg-gray-400 opacity-30"></div>
               {/* HANDOVER */}
               <div className="flex-1 min-w-[200px] px-6 md:px-8 py-4 text-center">
@@ -226,7 +216,7 @@ export default function WaterfrontLiving() {
               {/* 1 TO 3 BEDROOM APARTMENTS */}
               <div className="flex-1 min-w-[200px] px-6 md:px-8 py-4 text-center">
                 <div className="text-[#000000] dark:text-white font-normal text-sm md:text-base leading-relaxed">
-                    Unit Type: <br /> Villas & Manaions 5-6BR  
+                  Unit Type: <br /> Villas & Manaions 5-6BR
                 </div>
               </div>
 
@@ -240,7 +230,7 @@ export default function WaterfrontLiving() {
                 </div>
                 <div className="text-[#000000] dark:text-white font-normal text-sm md:text-base"></div> */}
                 <div className="text-[#000000] dark:text-white font-normal text-sm md:text-base leading-relaxed">
-                   Handover: <br /> Q3 - Q4: 2029
+                  Handover: <br /> Q3 - Q4: 2029
                 </div>
               </div>
 
@@ -250,7 +240,7 @@ export default function WaterfrontLiving() {
               {/* PART OF MARRIOTT'S AUTOGRAPH COLLECTION */}
               <div className="flex-1 min-w-[200px] px-6 md:px-8 py-4 text-center">
                 <div className="text-[#000000] dark:text-white font-normal text-sm md:text-base leading-relaxed">
-                   Starting Price: <br /> AED 69,900,000 
+                  Starting Price: <br /> AED 69,900,000
                 </div>
               </div>
             </div>
@@ -327,7 +317,7 @@ export default function WaterfrontLiving() {
                 "budget",
                 "message",
               ]}
-              requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+              requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
               viewType="image"
               // downloadBrochure={true}
               // brochureUrl="/images/jumeirah-residences-al-maryah-island/Yas_Riva_Residences_Brochure.pdf"

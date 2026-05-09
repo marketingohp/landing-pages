@@ -1,22 +1,16 @@
 "use client";
 
-import Header from "./BabAlQasr51Page/Header";
-import OneResidencesHero from "./BabAlQasr51Page/OneResidencesHero";
-import WaterfrontLiving from "./BabAlQasr51Page/WaterfrontLiving";
-import EnlightenmentSection from "./BabAlQasr51Page/EnlightenmentSection";
-import WindowToWonder from "./BabAlQasr51Page/WindowToWonder";
-import HotelStyleLiving from "./BabAlQasr51Page/HotelStyleLiving";
-import InteriorCarousel from "./BabAlQasr51Page/InteriorCarousel";
-import DiscoverSection from "./BabAlQasr51Page/DiscoverSection";
 import CareAndGrace from "./BabAlQasr51Page/CareAndGrace";
-import DreamsAndDesign from "./BabAlQasr51Page/DreamsAndDesign";
+import DiscoverSection from "./BabAlQasr51Page/DiscoverSection";
+import EnlightenmentSection from "./BabAlQasr51Page/EnlightenmentSection";
 import Footer from "./BabAlQasr51Page/Footer";
+import Header from "./BabAlQasr51Page/Header";
 import HeroKeywords from "./BabAlQasr51Page/HeroKeywords";
-import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./BabAlQasr51Page/PaymentOptions";
-import PaymentOptionsTwo from "./BabAlQasr51Page/PaymentOptionsTwo";
-import BottomFooter from "./common/BottomFooter";
+import InteriorCarousel from "./BabAlQasr51Page/InteriorCarousel";
 import PaymentSection from "./BabAlQasr51Page/PaymentSection";
+import WaterfrontLiving from "./BabAlQasr51Page/WaterfrontLiving";
+import BottomFooter from "./common/BottomFooter";
+import PropertySearchForm from "./common/PropertySearchForm";
 
 // test comment
 

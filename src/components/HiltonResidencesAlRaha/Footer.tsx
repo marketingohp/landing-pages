@@ -1,8 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { useLanguage } from "@/contexts/hilton-residences-al-raha/LanguageContext";
-import PropertySearchFormThree from "../common/PropertySearchFormThree";
+import PropertySearchForm from "../common/PropertySearchForm";
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -23,7 +22,7 @@ export default function Footer() {
           {/* Left Column - Buttons */}
           <div className="space-y-4 ">
             <div>
-              <PropertySearchFormThree
+              <PropertySearchForm
                 formName="hilton-residences-al-raha"
                 pointName="get-in-touch"
                 formType="footer-form"
@@ -38,7 +37,12 @@ export default function Footer() {
                   "budget",
                   "message",
                 ]}
-                requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+                requiredFields={[
+                  "firstName",
+                  "lastName",
+                  "phoneNumber",
+                  "email",
+                ]}
                 redirectToThankYou={true}
                 thankYouPath="/hilton-residences-al-raha/thank-you"
                 colorCodeOne="#ebe8dd"

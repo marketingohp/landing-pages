@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import PropertySearchForm from "../common/PropertySearchForm";
 import PropertySearchFormTwo from "../common/PropertySearchFormTwo";
 
 export default function InformationFooter() {
@@ -11,7 +10,7 @@ export default function InformationFooter() {
         {/* Left Section - Form with Light Blue Background (1/3 width) */}
         <div className="lg:col-span-1 relative bg-[#e8f4f8] dark:bg-[#1a2a3a] py-12 lg:py-16 px-6 lg:px-8">
           {/* Dotted Pattern on Left Edge */}
-          <div 
+          <div
             className="absolute left-0 top-0 bottom-0 w-4"
             style={{
               backgroundImage: `radial-gradient(circle, #2296c4 2px, transparent 2px)`,
@@ -22,7 +21,10 @@ export default function InformationFooter() {
           />
 
           {/* Form Heading */}
-          <h2 className="text-2xl playfair-display-regular lg:text-3xl font-bold mb-6 lg:mb-8" style={{ color: "#0f1f2e" }}>
+          <h2
+            className="text-2xl playfair-display-regular lg:text-3xl font-bold mb-6 lg:mb-8"
+            style={{ color: "#0f1f2e" }}
+          >
             Register your interest!
           </h2>
 
@@ -42,7 +44,7 @@ export default function InformationFooter() {
               "budget",
               "message",
             ]}
-            requiredFields={["firstName", "lastName", "phoneNumber","email"]}
+            requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             redirectToThankYou={true}
             thankYouPath="/al-reem-island/thank-you"
             colorCodeOne="#ebe8dd"
@@ -73,7 +75,7 @@ export default function InformationFooter() {
           {/* Overlay Content - Positioned in upper right */}
           <div className="absolute inset-0 flex flex-col items-start pl-8 lg:pl-16 pt-12 lg:pt-16">
             {/* Large "S" Shape - Upper Right */}
-            <div 
+            <div
               className="text-white font-bold mb-6"
               style={{
                 fontSize: "clamp(100px, 18vw, 250px)",
@@ -83,13 +85,13 @@ export default function InformationFooter() {
                 opacity: 0.95,
               }}
             >
-          <img
-                  src="/images/reem-island/reem_IslandLogo_white.png"
-                  width={100}
-                  height={60}
-                  style={{ width: "600px", stroke: "white" , marginTop:100}}
-                  alt="one residences"
-                />
+              <img
+                src="/images/reem-island/reem_IslandLogo_white.png"
+                width={100}
+                height={60}
+                style={{ width: "600px", stroke: "white", marginTop: 100 }}
+                alt="one residences"
+              />
             </div>
 
             {/* Arabic Text - Below S */}
@@ -123,4 +125,3 @@ export default function InformationFooter() {
     </footer>
   );
 }
-

@@ -1,15 +1,12 @@
 "use client";
 
-import { useEffect } from "react";
+import { useLanguage } from "@/contexts/a1laResidences/LanguageContext";
 import { useRouter } from "next/navigation";
 import Header from "./Header";
-import { useLanguage } from "@/contexts/a1laResidences/LanguageContext";
-import { pushToDataLayer } from "@/utils/gtag";
 
 export default function ThankYouPage() {
   const { t } = useLanguage();
   const router = useRouter();
-
 
   return (
     <div className="min-h-screen bg-[#5f602c] dark:bg-[#0f1f2e] flex flex-col">

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
 .abril-fatface-regular {
   font-family: "Abril Fatface", serif;
@@ -16,52 +15,53 @@
   font-weight: 900;
   font-style: italic;
   letter-spacing: -0.5px;
-  
 }
 
-.bgColorOne{
+.bgColorOne {
   background-color: #ffffff;
 }
-.bgColorTwo{
+.bgColorTwo {
   background-color: #ece8dd;
 }
-.bgColorThree{
+.bgColorThree {
   background-color: #0f1f2e;
 }
-.bgColorFour{
+.bgColorFour {
   background-color: #2296c4;
 }
-.bgColorFive{
-  background-color: #D2B48C;
+.bgColorFive {
+  background-color: #d2b48c;
 }
-
 
 .montserrat-regular {
   /* Montserrat font styling applied via className */
 }
 
-.hover-text-s1 .playfair-display-regular{
+.hover-text-s1 .playfair-display-regular {
   color: #fff !important;
   font-size: 20px !important;
 }
-.hover-text-s1 .montserrat-regular{
+.hover-text-s1 .montserrat-regular {
   color: #fff !important;
   font-size: 12px !important;
 }
 
-.two-bg-left-right{
-  background-image: url('/images/al-reem-island/right_bg.webp'), url('/images/al-reem-island/left_bg.webp');
-  background-position: left 200px, right 450px;
+.two-bg-left-right {
+  background-image:
+    url("/images/al-reem-island/right_bg.webp"),
+    url("/images/al-reem-island/left_bg.webp");
+  background-position:
+    left 200px,
+    right 450px;
   background-repeat: no-repeat, no-repeat;
   background-size: 300px, 300px;
   width: 100%;
   min-height: 00px;
 }
 
-.absolute.inset-0.backdrop-blur-sm{
+.absolute.inset-0.backdrop-blur-sm {
   background-color: rgba(57, 150, 196, 0.502) !important;
 }
-
 
 .two-bg-left-right-two {
   position: relative;
@@ -74,13 +74,13 @@
 }
 
 .two-bg-left-right-two::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
   width: 50%;
-  background-image: url('/images/al-reem-island/right_bg.webp');
+  background-image: url("/images/al-reem-island/right_bg.webp");
   background-position: left center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -89,13 +89,13 @@
 }
 
 .two-bg-left-right-two::after {
-  content: '';
+  content: "";
   position: absolute;
   right: 0;
   top: 0;
   bottom: 0;
   width: 50%;
-  background-image: url('/images/al-reem-island/left_bg.webp');
+  background-image: url("/images/al-reem-island/left_bg.webp");
   background-position: right center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -108,8 +108,8 @@
   z-index: 10;
 }
 
-
-body, #home{
+body,
+#home {
   background-color: #ebe8dd;
 }
 .swiper-button-prev,
@@ -133,13 +133,9 @@ body, #home{
   font-size: 20px;
 }
 
-
-h2{
+h2 {
   font-size: 45px;
 }
-
-
-
 
 .process-wrapper {
   max-width: 1100px;
@@ -183,13 +179,12 @@ h2{
   min-height: 300px;
 }
 
-
-.step-content{
- margin-top: 60px;
- margin-bottom: 0px;
+.step-content {
+  margin-top: 60px;
+  margin-bottom: 0px;
 }
 
-.step-content p{
+.step-content p {
   text-align: center;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -201,19 +196,19 @@ h2{
   font-style: normal;
   display: inline-block;
 }
-.middle-text-main p:nth-child(1){
+.middle-text-main p:nth-child(1) {
   margin-top: 0px;
 }
-.middle-text-main p:nth-child(2){
+.middle-text-main p:nth-child(2) {
   margin-top: 20px;
 }
-.middle-text-main p:nth-child(3){
+.middle-text-main p:nth-child(3) {
   margin-top: 10px !important;
 }
-.middle-text-main p:nth-child(4){
+.middle-text-main p:nth-child(4) {
   margin-top: 10px !important;
 }
-.middle-text-main p:nth-child(5){
+.middle-text-main p:nth-child(5) {
   margin-top: 20px !important;
 }
 
@@ -235,7 +230,7 @@ h2{
   /* border: 2px solid #22a1ff; */
 }
 
-.text-center-circle{
+.text-center-circle {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -267,7 +262,7 @@ h2{
 .text-center-circle div {
   display: inline-block !important;
 }
- 
+
 .step-icon {
   margin-top: 20px;
   font-size: 26px;
@@ -282,37 +277,44 @@ h2{
   margin-inline: auto;
 }
 
-
-.step-card-1,.step-card-3,.step-card-5{
+.step-card-1,
+.step-card-3,
+.step-card-5 {
   background: #2296c4;
 }
 
-.step-card-0,.step-card-2,.step-card-4{
-  background: #D2B48C;
+.step-card-0,
+.step-card-2,
+.step-card-4 {
+  background: #d2b48c;
 }
 
-.text-center-circle-1,.text-center-circle-3,.text-center-circle-5{
+.text-center-circle-1,
+.text-center-circle-3,
+.text-center-circle-5 {
   background: #2296c4;
-  border: 2px solid #2296c4; 
+  border: 2px solid #2296c4;
 }
 
-.text-center-circle-0,.text-center-circle-2,.text-center-circle-4{
-  background: #D2B48C;
-  border: 2px solid #D2B48C; 
+.text-center-circle-0,
+.text-center-circle-2,
+.text-center-circle-4 {
+  background: #d2b48c;
+  border: 2px solid #d2b48c;
 }
 
-#value-added-section{
-  background-image: url('/images/al-reem-island/site_top.webp');
+#value-added-section {
+  background-image: url("/images/al-reem-island/site_top.webp");
   background-size: 600px 600px;
   background-position: top left;
   background-repeat: no-repeat;
 }
 
-.hero-banner-text-wrapper{
+.hero-banner-text-wrapper {
   margin-top: -100px;
 }
 
-.css-1pemltt-MuiInputBase-input-MuiFilledInput-input{
+.css-1pemltt-MuiInputBase-input-MuiFilledInput-input {
   border-radius: 12px !important;
 }
 
@@ -327,20 +329,20 @@ h2{
     overflow: hidden !important;
   }
 
-  #home{
+  #home {
     padding-bottom: 20px;
   }
 
-  .hero-keywords-banner{
+  .hero-keywords-banner {
     height: 75vh !important;
     padding-bottom: 0;
     margin-top: 62px;
   }
 
-  .counter-section-wrapper{
+  .counter-section-wrapper {
     margin-top: 100px;
   }
-  
+
   .hero-banner-container img,
   .hero-banner-image {
     border-radius: inherit !important;
@@ -351,44 +353,44 @@ h2{
     object-fit: cover !important;
     display: block !important;
   }
-  
+
   .hero-banner-overlay {
     border-radius: inherit !important;
     -webkit-border-radius: inherit !important;
     -moz-border-radius: inherit !important;
   }
-  
+
   /* Fix banner content positioning on mobile */
   .hero-banner-content {
     padding: 0 16px !important;
     align-items: center !important;
     justify-content: center !important;
   }
-  
+
   .hero-banner-text-wrapper {
     padding-bottom: 0 !important;
     width: 100% !important;
     margin-top: 0;
   }
-  
+
   /* Fix title positioning */
   .hero-banner-title {
     margin-bottom: 16px !important;
     padding-bottom: 0 !important;
     line-height: 1.2 !important;
   }
-  
+
   /* Fix description positioning */
   .hero-banner-description {
     margin-bottom: 20px !important;
     line-height: 1.5 !important;
   }
-  
+
   /* Fix button positioning */
   .hero-banner-button {
     margin-top: 0 !important;
   }
-  
+
   /* Move search form down and center on mobile */
   .hero-search-form-container {
     position: relative !important;
@@ -404,7 +406,7 @@ h2{
     justify-content: center !important;
     align-items: center !important;
   }
-  
+
   /* Ensure form wrapper is centered */
   .hero-search-form-container .banner-form,
   .hero-search-form-container .custom-width-full-banner {
@@ -412,14 +414,14 @@ h2{
     width: 100% !important;
     max-width: 100% !important;
   }
-  
+
   /* Center the form content */
   .hero-search-form-container > * {
     width: 100% !important;
     max-width: 100% !important;
   }
 
-  .custom-form-container{
+  .custom-form-container {
     background-color: #ece8dd;
   }
 
@@ -562,25 +564,25 @@ h2{
   .timeline-image-container {
     width: auto !important;
   }
-  
+
   .timeline-image-box {
     width: 324px !important;
     height: 215px !important;
     min-width: 324px !important;
     min-height: 215px !important;
   }
-  
+
   /* Restore desktop text sizes */
   #value-added-section h4 {
     font-size: 24px !important;
     margin-bottom: 12px !important;
   }
-  
+
   #value-added-section p {
     font-size: 16px !important;
     line-height: 1.6 !important;
   }
-  
+
   /* Restore desktop number size */
   .timeline-image-box span {
     font-size: 60px !important;
@@ -592,11 +594,11 @@ h2{
   .hero-banner-container {
     border-radius: 20px !important;
   }
-  
+
   .hero-banner-image {
     border-radius: 20px !important;
   }
-  
+
   .hero-banner-overlay {
     border-radius: 20px !important;
   }
@@ -610,18 +612,16 @@ h2{
     min-width: 260px !important;
     min-height: 180px !important;
   }
-  #value-added-section{
+  #value-added-section {
     background-size: 400px 400px !important;
   }
-  .two-bg-left-right .container-fluid.mx-auto{
-    max-width:   56rem !important;
+  .two-bg-left-right .container-fluid.mx-auto {
+    max-width: 56rem !important;
   }
 
-  .hero-banner-container{
-
+  .hero-banner-container {
   }
-  .hero-search-form-container{
+  .hero-search-form-container {
     bottom: -59px !important;
   }
-
 }
