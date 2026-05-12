@@ -42,6 +42,7 @@ export const DEVELOPERS_MAP = new Map([
   ["East and West", "3749"],
   ["Object 1", "3757"],
   ["London Square Developments", "3893"],
+  ["Al Ain Development", "3897"],
 ]);
 
 export const LOCATIONS_MAP = new Map([

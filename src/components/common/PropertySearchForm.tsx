@@ -539,119 +539,119 @@ export default function PropertySearchForm({
     try {
       // Submit to both Laravel API and Next.js Email API (dual submission)
       const [apiResult, emailResult] = await Promise.allSettled([
-        // Submit to Laravel API
-        submitFormLead(submissionData, formName, pointName, formType),
-        // Submit to Next.js Email API
-        fetch("/api/sendEmail", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            firstName: submissionData.firstName,
-            lastName: submissionData.lastName,
-            email: submissionData.email,
-            phoneNumber: submissionData.phoneNumber,
-            message: submissionData.message,
-            hearAboutUs: submissionData.hearAboutUs,
-            unitType: submissionData.unitType,
-            bedrooms: submissionData.bedrooms,
-            budget: submissionData.budget,
-            formName,
-            pointName,
-            formType,
-            ...(locationId && { locationId }),
-            ...(developerId && { developerId }),
-            ...(companyStatus && { CompanyStatus: companyStatus }),
-          }),
-        }).then(async (res) => {
-          const data = await res.json();
-          if (!res.ok) {
-            throw new Error(data.error || "Failed to send email");
-          }
-          return data;
+      // Submit to Laravel API
+      submitFormLead(submissionData, formName, pointName, formType),
+      // Submit to Next.js Email API
+      fetch("/api/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          firstName: submissionData.firstName,
+          lastName: submissionData.lastName,
+          email: submissionData.email,
+          phoneNumber: submissionData.phoneNumber,
+          message: submissionData.message,
+          hearAboutUs: submissionData.hearAboutUs,
+          unitType: submissionData.unitType,
+          bedrooms: submissionData.bedrooms,
+          budget: submissionData.budget,
+          formName,
+          pointName,
+          formType,
+          ...(locationId && { locationId }),
+          ...(developerId && { developerId }),
+          ...(companyStatus && { CompanyStatus: companyStatus }),
         }),
-      ]);
+      }).then(async (res) => {
+        const data = await res.json();
+        if (!res.ok) {
+          throw new Error(data.error || "Failed to send email");
+        }
+        return data;
+      }),
+    ]);
 
-      // Check Laravel API result
-      const laravelSuccess =
-        apiResult.status === "fulfilled" && apiResult.value.success;
-      const emailSuccess = emailResult.status === "fulfilled";
+    // Check Laravel API result
+    const laravelSuccess =
+      apiResult.status === "fulfilled" && apiResult.value.success;
+    const emailSuccess = emailResult.status === "fulfilled";
 
-      // Log results for debugging
-      if (apiResult.status === "rejected") {
-        console.error("Laravel API error:", apiResult.reason);
-      }
-      if (emailResult.status === "rejected") {
-        console.error("Email API error:", emailResult.reason);
-      }
+    // Log results for debugging
+    if (apiResult.status === "rejected") {
+      console.error("Laravel API error:", apiResult.reason);
+    }
+    if (emailResult.status === "rejected") {
+      console.error("Email API error:", emailResult.reason);
+    }
 
-      // // Consider submission successful if at least Laravel API succeeds
-      // // Email is secondary (for notifications)
-      if (!laravelSuccess) {
-        const errorMessage =
-          apiResult.status === "fulfilled"
-            ? apiResult.value.error || "Failed to submit form"
-            : apiResult.reason?.message || "Failed to submit form";
-        throw new Error(errorMessage);
-      }
+    // // Consider submission successful if at least Laravel API succeeds
+    // // Email is secondary (for notifications)
+    if (!laravelSuccess) {
+      const errorMessage =
+        apiResult.status === "fulfilled"
+          ? apiResult.value.error || "Failed to submit form"
+          : apiResult.reason?.message || "Failed to submit form";
+      throw new Error(errorMessage);
+    }
 
-      setSubmitStatus({
-        type: "success",
-        message:
-          apiResult.status === "fulfilled"
-            ? apiResult.value.message ||
-              "Form submitted successfully! We will contact you soon."
-            : "Form submitted successfully! We will contact you soon.",
-      });
+    setSubmitStatus({
+      type: "success",
+      message:
+        apiResult.status === "fulfilled"
+          ? apiResult.value.message ||
+            "Form submitted successfully! We will contact you soon."
+          : "Form submitted successfully! We will contact you soon.",
+    });
 
-      // Reset form after successful submission
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phoneCountryCode: "+971",
-        phoneNumber: "",
-        hearAboutUs: "",
-        unitType: "",
-        bedrooms: "",
-        budget: "",
-        message: "",
-      });
+    // Reset form after successful submission
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      phoneCountryCode: "+971",
+      phoneNumber: "",
+      hearAboutUs: "",
+      unitType: "",
+      bedrooms: "",
+      budget: "",
+      message: "",
+    });
 
-      // Clear all errors
-      setFieldErrors({});
-      setTouchedFields({});
+    // Clear all errors
+    setFieldErrors({});
+    setTouchedFields({});
 
-      // Call custom onSubmit if provided
-      if (onSubmit) {
-        onSubmit(submissionData);
-      }
+    // Call custom onSubmit if provided
+    if (onSubmit) {
+      onSubmit(submissionData);
+    }
 
-      // Download brochure if enabled
-      if (downloadBrochure) {
-        setTimeout(() => {
-          downloadBrochureFile();
-        }, 500); // Small delay to ensure form submission is complete
-      }
+    // Download brochure if enabled
+    if (downloadBrochure) {
+      setTimeout(() => {
+        downloadBrochureFile();
+      }, 500); // Small delay to ensure form submission is complete
+    }
 
-      // Redirect to thank you page if enabled
-      if (redirectToThankYou) {
-        setTimeout(() => {
-          pushToDataLayer({
-            event: "form_submit",
-            label: formName || "Form Submission",
-            value: formType || "Contact Us Form Is Submitted",
-          });
-          reportConversion(thankYouPath);
-          //router.push(thankYouPath);
-        }, 1500); // Small delay to show success message
-      } else {
-        // Clear success message after 5 seconds
-        setTimeout(() => {
-          setSubmitStatus({ type: null, message: "" });
-        }, 5000);
-      }
+    // Redirect to thank you page if enabled
+    if (redirectToThankYou) {
+      setTimeout(() => {
+        pushToDataLayer({
+          event: "form_submit",
+          label: formName || "Form Submission",
+          value: formType || "Contact Us Form Is Submitted",
+        });
+        reportConversion(thankYouPath);
+        //router.push(thankYouPath);
+      }, 1500); // Small delay to show success message
+    } else {
+      // Clear success message after 5 seconds
+      setTimeout(() => {
+        setSubmitStatus({ type: null, message: "" });
+      }, 5000);
+    }
     } catch (error) {
       console.error("Error submitting form:", error);
       setSubmitStatus({
@@ -664,7 +664,7 @@ export default function PropertySearchForm({
     } finally {
       setIsSubmitting(false);
     }
-  };
+  }
 
   const getSelectStyles = (field: FormFieldKey) => {
     const hasError = fieldErrors[field] && touchedFields[field];

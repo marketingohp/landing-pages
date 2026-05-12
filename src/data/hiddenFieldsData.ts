@@ -172,4 +172,8 @@ export const PROJECT_HIDDEN_FIELDS: Record<string, ProjectHiddenFields> = {
     location: "Al Reem Island",
     developer: "One Developments",
   },
+  "tilal-binghatti": {
+    location: "Al Rowaiyah",
+    developer: "Binghatti Developers",
+  },
 };
