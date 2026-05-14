@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useLanguage } from "@/contexts/alghadeerGardensByAldar/LanguageContext";
 import PropertySearchForm from "../common/PropertySearchForm";
 
@@ -83,9 +82,9 @@ export default function Footer() {
               >
                 <img
                   src="/images/alghadeer-gardens-by-aldar/alghadeer_logo_white.png"
-                  width={100}
-                  height={100}
-                  style={{ width: "200px" }}
+                  width={300}
+                  height={300}
+                  style={{ width: "300px" }}
                   alt="Aghadeer Gardens By Aldar"
                 />
               </div>

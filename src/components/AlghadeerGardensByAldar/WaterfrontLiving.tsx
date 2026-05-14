@@ -161,7 +161,7 @@ export default function WaterfrontLiving() {
               {/* LOCATION */}
               <div className="px-4 py-3 text-center border-b border-[#00314a] dark:border-gray-400 border-opacity-30">
                 <div className="text-[#A7A08A] dark:text-white font-normal text-sm leading-relaxed">
-                  LOCATION: <br /> Al Ghadeer
+                  LOCATION: <br /> Al Ghadeer - Seih Sedeirah
                 </div>
               </div>
 
@@ -198,7 +198,7 @@ export default function WaterfrontLiving() {
                   Al Reem ISLAND
                 </div> */}
                 <div className="text-[#A7A08A] dark:text-white font-normal text-sm md:text-base leading-relaxed">
-                  LOCATION: <br /> Al Ghadeer
+                  LOCATION: <br /> Al Ghadeer - Seih Sedeirah
                 </div>
               </div>
 

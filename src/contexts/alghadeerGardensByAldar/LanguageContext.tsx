@@ -131,12 +131,12 @@ const translations = {
     "royal.waterfront.title": "Al Ghadeer Gardens",
     "royal.waterfront.title2":
       "blends heritage charm with outstanding connectivity",
-    "royal.waterfront.desc1": "Set within the latest residential phase of Alghadeer, a collection of maisonettes, townhouses, and villas offers a home to suit every lifestyle. Surrounded by fresh air, open landscapes, lakes, gardens, and greenhouses, the community blends nature with smart living and modern conveniences — creating a fully integrated, self-sustained way of life.",
+    "royal.waterfront.desc1": "Set within the latest residential phase of Alghadeer, a collection of townhouses, and villas offers a home to suit every lifestyle. Surrounded by fresh air, open landscapes, lakes, gardens, and greenhouses, the community blends nature with smart living and modern conveniences — creating a fully integrated, self-sustained way of life.",
     "royal.waterfront.desc2": "",
     "royal.waterfront.explore": "EXPLORE RESIDENCES",
     "royal.waterfront.brochure": "REGISTER YOUR INTEREST",
     "royal.enlightenment.title": "Connected to Abu Dhabi & Dubai",
-    "royal.enlightenment.desc": "Set between Abu Dhabi and Dubai, Al Ghadeer is a community shaped around greenery, open space, and everyday comfort. From modern homes to outdoor experiences and essential amenities, everything is designed to support a complete lifestyle in one place.",
+    "royal.enlightenment.desc": "The project is expected to benefit from the rapid growth surrounding Al Maktoum International Airport and Dubai South, enhancing its future residential and investment value.",
     "royal.enlightenment.desc2": "",
 
     "royal.enlightenment.viewGallery": "VIEW GALLERY",
@@ -146,7 +146,7 @@ const translations = {
       "Wake up to inspiring views. Live close to the city’s top destinations. Experience a lifestyle that’s refined, relaxed, and always connected.",
     "royal.hotel.explore": "Register Your Interest",
     "royal.discover.title": "Rooted in the Heart of New Dubai",
-    "royal.discover.desc": "Nestled in Al Rowaiyah along Sheikh Mohammed Bin Zayed Road, just 15 minutes from Downtown Dubai. Surrounded by Mirdif, Al Khawaneej & Dubai Silicon Oasis — a quiet address with an extraordinary future.",
+    "royal.discover.desc": "strategically located between Abu Dhabi and Dubai, near Al Maktoum International Airport.",
     "royal.discover.masterplan": "VIEW MASTERPLAN",
     "royal.care.title": "Spaces That Bring People Together",
     "royal.care.desc": "Linked by shaded walkways and landscaped gardens, Alghadeer is planned around everyday community living. Residents can spend weekends cycling along dedicated tracks, growing produce at the farm, unwinding beside the lake, or gathering with neighbours at the riding stables.",
