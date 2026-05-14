@@ -1,12 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import { useLanguage } from "@/contexts/alghadeerGardensByAldar/LanguageContext";
 import PropertySearchForm from "../common/PropertySearchForm";
 
 export default function Footer() {
   const { t } = useLanguage();
   return (
-    <footer className="relative py-20 lg:py-32 bg-[#A7A08A] dark:bg-[#A7A08A] text-white">
+    <footer className="relative py-20 lg:py-32 bg-[#241D4B] dark:bg-[#150F38] text-white">
       {/* <div className="absolute inset-0 opacity-30 dark:opacity-20">
         <Image
           src="https://seamont.rdhuae.com/assets/images/home/bgs/slider-3.png?ver=54"

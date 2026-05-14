@@ -6,7 +6,7 @@ export default function PaymentOptionsTwo() {
     <section className="py-20 lg:py-32 bg-[#050708]/90 dark:bg-[#0a0a0a] relative">
       <div className="absolute inset-0 opacity-20 dark:opacity-20">
         <Image
-          src="/images/alghadeer-gardens-by-aldar/interior/alghadeer_interior_04.webp"
+          src="/images/alghadeer-gardens-by-aldar/keywords/alghadeer_exterior_01.png"
           alt="Footer Background"
           fill
           className="object-cover"
@@ -46,7 +46,7 @@ export default function PaymentOptionsTwo() {
               className="text-[#ffffff] dark:text-white text-7xl md:text-8xl lg:text-9xl font-bold mb-4 font-mobile-payment-plan2"
               style={{ fontFamily: "Abril Fatface, serif" }}
             >
-              40/60
+              50/50
             </div>
             <div
               className="text-white dark:text-white text-xl md:text-2xl lg:text-3xl tracking-wider  font-mobile-payment-plan3"
@@ -97,7 +97,7 @@ export default function PaymentOptionsTwo() {
                       className=" text-center px-4 md:px-6 py-4 text-sm md:text-base"
                       style={{ fontFamily: "Arial, sans-serif" }}
                     >
-                      35%
+                      45%
                       <br />
                       During Constraction
                     </td>
@@ -105,7 +105,7 @@ export default function PaymentOptionsTwo() {
                       className=" text-center px-4 md:px-6 py-4 text-sm md:text-base"
                       style={{ fontFamily: "Arial, sans-serif" }}
                     >
-                      60%
+                      50%
                       <br />
                       On Handover
                     </td>

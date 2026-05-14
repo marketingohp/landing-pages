@@ -94,15 +94,15 @@ export default function DiscoverSection() {
 ];
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 lg:py-32 bg-[#FFFFFD] dark:bg-[#1a1a1a]">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-32 bg-[#FEFEFF] dark:bg-[#1a1a1a]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-10 md:mb-12">
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#A7A08A] dark:text-white mb-4 sm:mb-6 md:mb-8"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#150F38] dark:text-white mb-4 sm:mb-6 md:mb-8"
             style={{ fontFamily: "var(--font-playfair), serif" }}
             dangerouslySetInnerHTML={{ __html: t("royal.discover.title") }}
           ></h2>
-          <p className="text-base sm:text-lg text-[#A7A08A] dark:text-white max-w-5xl mx-auto mb-8 sm:mb-10 md:mb-12 px-2">
+          <p className="text-base sm:text-lg text-[#150F38] dark:text-white max-w-5xl mx-auto mb-8 sm:mb-10 md:mb-12 px-2">
             {t("royal.discover.desc")}
           </p>
         </div>
@@ -121,7 +121,7 @@ export default function DiscoverSection() {
                     // onClick={() => handleDestinationClick(index)}
                   >
                     {/* Icon Circle */}
-                    <div className="w-20 h-20 md:w-24 md:h-24 mb-3 rounded-full bg-[#A7A08A] dark:bg-[#A7A08A] flex items-center justify-center shadow-md overflow-hidden hover:scale-110 transition-transform duration-300">
+                    <div className="w-20 h-20 md:w-24 md:h-24 mb-3 rounded-full bg-[#241D4B] dark:bg-[#150F38] flex items-center justify-center shadow-md overflow-hidden hover:scale-110 transition-transform duration-300">
                       <img
                         src={item.icon}
                         width={60}
@@ -137,10 +137,10 @@ export default function DiscoverSection() {
 
                     {/* Destination */}
 
-                    <div className="text-[#A7A08A] dark:text-white font-bold text-xs mb-0.5">
+                    <div className="text-[#150F38] dark:text-white font-bold text-xs mb-0.5">
                       {item.destination}
                     </div>
-                    <div className="text-[#A7A08A] dark:text-white text-[10px] leading-tight">
+                    <div className="text-[#150F38] dark:text-white text-[10px] leading-tight">
                       {item.time}
                     </div>
                   </div>
@@ -156,7 +156,7 @@ export default function DiscoverSection() {
                     // onClick={() => handleDestinationClick(index)}
                   >
                     {/* Icon Circle */}
-                    <div className="w-20 h-20 md:w-24 md:h-24 mb-3 rounded-full bg-[#A7A08A] dark:bg-[#A7A08A] flex items-center justify-center shadow-md overflow-hidden hover:scale-110 transition-transform duration-300">
+                    <div className="w-20 h-20 md:w-24 md:h-24 mb-3 rounded-full bg-[#241D4B] dark:bg-[#150F38] flex items-center justify-center shadow-md overflow-hidden hover:scale-110 transition-transform duration-300">
                       <img
                         src={item.icon}
                         width={60}
@@ -171,10 +171,10 @@ export default function DiscoverSection() {
                     {/* Time */}
 
                     {/* Destination */}
-                    <div className="text-[#A7A08A] dark:text-white font-bold text-sm md:text-base mb-1">
+                    <div className="text-[#150F38] dark:text-white font-bold text-sm md:text-base mb-1">
                       {item.destination}
                     </div>
-                    <div className="text-[#A7A08A] dark:text-white text-xs md:text-sm leading-tight px-1">
+                    <div className="text-[#150F38] dark:text-white text-xs md:text-sm leading-tight px-1">
                       {item.time}
                     </div>
                   </div>
@@ -186,7 +186,7 @@ export default function DiscoverSection() {
             <div className="order-1 lg:order-2">
               <div className="bg-white dark:bg-[#050708] rounded-lg p-4 sm:p-5 md:p-6 shadow-lg">
                 {/* Title */}
-                {/* <h3 className="text-[#A7A08A] dark:text-white font-bold text-sm sm:text-base md:text-lg lg:text-xl mb-4 sm:mb-5 md:mb-6 uppercase tracking-wide text-center lg:text-left leading-tight sm:leading-normal">
+                {/* <h3 className="text-[#150F38] dark:text-white font-bold text-sm sm:text-base md:text-lg lg:text-xl mb-4 sm:mb-5 md:mb-6 uppercase tracking-wide text-center lg:text-left leading-tight sm:leading-normal">
                   PRIME WATERFRONT PLOT IN REEM ISLAND - ABU DHABI
                 </h3> */}
 

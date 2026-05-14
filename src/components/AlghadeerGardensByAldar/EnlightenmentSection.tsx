@@ -38,19 +38,19 @@ export default function EnlightenmentSection() {
 
   return (
     <section
-      className="py-20 lg:py-32 bg-[#FFFFFD] dark:bg-[#1a1a1a]"
+      className="py-20 lg:py-32 bg-[#FEFEFF] dark:bg-[#1a1a1a]"
       style={{ paddingBottom: "40px", paddingTop: "0" }}
     >
       <div className="container mx-auto py-10 px-4 lg:px-8">
         <div className="text-center mb-12">
           <h2
-            className="text-2xl md:text-4xl lg:text-5xl text-[#A7A08A] dark:text-white mb-8"
+            className="text-2xl md:text-4xl lg:text-5xl text-[#150F38] dark:text-white mb-8"
             style={{ fontFamily: "var(--font-playfair), serif" }}
           >
             {t("royal.enlightenment.title")}
           </h2>
 
-          <p className="text-base sm:text-lg text-[#A7A08A] dark:text-white max-w-5xl mx-auto mb-8 sm:mb-10 md:mb-12 px-2">
+          <p className="text-base sm:text-lg text-[#150F38] dark:text-white max-w-5xl mx-auto mb-8 sm:mb-10 md:mb-12 px-2">
             {t("royal.enlightenment.desc")}
           </p>
         </div>
@@ -77,12 +77,12 @@ export default function EnlightenmentSection() {
         </div> */}
 
         <div className="text-center">
-          {/* <p className="text-base sm:text-lg text-[#A7A08A] dark:text-white max-w-4xl mx-auto mb-8 sm:mb-10 md:mb-12 px-2">
+          {/* <p className="text-base sm:text-lg text-[#150F38] dark:text-white max-w-4xl mx-auto mb-8 sm:mb-10 md:mb-12 px-2">
             {t("royal.enlightenment.desc2")}
           </p> */}
           <button
             onClick={handleClickOpen}
-            className="bg-[#A7A08A] dark:bg-[#A7A08A] text-white px-8 py-4 rounded uppercase tracking-wider font-sans font-semibold hover:bg-[#C1C2B0]/80 dark:hover:bg-[#C1C2B0]/80 transition-colors"
+            className="bg-[#241D4B] dark:bg-[#150F38] text-white px-8 py-4 rounded uppercase tracking-wider font-sans font-semibold hover:bg-[#241D4B]/80 dark:hover:bg-[#241D4B]/80 transition-colors"
           >
             {t("form.register")}
           </button>

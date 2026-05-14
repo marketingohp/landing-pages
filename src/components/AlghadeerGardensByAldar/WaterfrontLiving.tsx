@@ -99,7 +99,7 @@ export default function WaterfrontLiving() {
 
   return (
     <section
-      className="relative py-20 lg:py-10 bg-[#FFFFFD] dark:bg-[#1a1a1a]"
+      className="relative py-20 lg:py-10 bg-[#FEFEFF] dark:bg-[#1a1a1a]"
       style={{ paddingBottom: 0, paddingTop: 80 }}
     >
       {/* Background Image */}
@@ -116,18 +116,18 @@ export default function WaterfrontLiving() {
       <div className="relative z-10 container mx-auto px-4 lg:px-8">
         <div className="text-center mb-5">
           <h2
-            className="text-2xl md:text-4xl lg:text-5xl text-[#A7A08A] dark:text-white mb-6"
+            className="text-2xl md:text-4xl lg:text-5xl text-[#150F38] dark:text-white mb-6"
             style={{ fontFamily: "var(--font-playfair), serif" }}
             dangerouslySetInnerHTML={{ __html: t("royal.waterfront.title") }}
           ></h2>
 
-          {/* <div className="max-w-8xl mx-auto space-y-4 text-[#A7A08A] dark:text-gray-300 text-4xl py-2">
+          {/* <div className="max-w-8xl mx-auto space-y-4 text-[#150F38] dark:text-gray-300 text-4xl py-2">
             <p
               className="custom-mobile-display-style1"
               dangerouslySetInnerHTML={{ __html: t("royal.waterfront.desc2") }}
             ></p>
           </div> */}
-          <div className="max-w-5xl mx-auto space-y-4 text-[#A7A08A] dark:text-white text-lg py-4">
+          <div className="max-w-5xl mx-auto space-y-4 text-[#150F38] dark:text-white text-lg py-4">
             <p
               dangerouslySetInnerHTML={{ __html: t("royal.waterfront.desc1") }}
             ></p>
@@ -160,28 +160,28 @@ export default function WaterfrontLiving() {
             <div className="flex flex-col md:hidden space-y-4">
               {/* LOCATION */}
               <div className="px-4 py-3 text-center border-b border-[#00314a] dark:border-gray-400 border-opacity-30">
-                <div className="text-[#A7A08A] dark:text-white font-normal text-sm leading-relaxed">
+                <div className="text-[#150F38] dark:text-white font-normal text-sm leading-relaxed">
                   LOCATION: <br /> Al Ghadeer - Seih Sedeirah
                 </div>
               </div>
 
               {/* 1 TO 3 BEDROOM APARTMENTS */}
               <div className="px-4 py-3 text-center border-b border-[#00314a] dark:border-gray-400 border-opacity-30">
-                <div className="text-[#A7A08A] dark:text-white font-normal text-sm leading-relaxed">
-                  Unit Type <br />  2 – 4 BR Townhouses and Villas
+                <div className="text-[#150F38] dark:text-white font-normal text-sm leading-relaxed">
+                  Unit Type <br />  2 – 5 BR Townhouses and Villas
                 </div>
               </div>
 
               {/* 4 BEDROOM DUPLEXES AND TOWNHOUSES */}
               <div className="px-4 py-3 text-center border-b border-[#00314a] dark:border-gray-400 border-opacity-30">
-                <div className="text-[#A7A08A] dark:text-white font-normal text-sm leading-relaxed">
+                <div className="text-[#150F38] dark:text-white font-normal text-sm leading-relaxed">
                   By <br /> Aldar
                 </div>
               </div>
 
               {/* HANDOVER */}
               <div className="px-4 py-3 text-center border-b border-[#00314a] dark:border-gray-400 border-opacity-30">
-                <div className="text-[#A7A08A] dark:text-white font-normal text-sm leading-relaxed">
+                <div className="text-[#150F38] dark:text-white font-normal text-sm leading-relaxed">
                   HANDOVER: <br /> Comming Soon
                 </div>
               </div>
@@ -191,13 +191,13 @@ export default function WaterfrontLiving() {
             <div className="hidden md:flex md:flex-wrap md:items-center md:justify-center gap-0 min-w-max">
               {/* LOCATION */}
               <div className="flex-1 min-w-[200px] px-6 md:px-8 py-4 text-center">
-                {/* <div className="text-[#A7A08A] dark:text-white font-bold text-sm md:text-base mb-1 uppercase tracking-wide">
+                {/* <div className="text-[#150F38] dark:text-white font-bold text-sm md:text-base mb-1 uppercase tracking-wide">
                   LOCATION:
                 </div>
-                <div className="text-[#A7A08A] dark:text-white font-normal text-sm md:text-base leading-relaxed">
+                <div className="text-[#150F38] dark:text-white font-normal text-sm md:text-base leading-relaxed">
                   Al Reem ISLAND
                 </div> */}
-                <div className="text-[#A7A08A] dark:text-white font-normal text-sm md:text-base leading-relaxed">
+                <div className="text-[#150F38] dark:text-white font-normal text-sm md:text-base leading-relaxed">
                   LOCATION: <br /> Al Ghadeer - Seih Sedeirah
                 </div>
               </div>
@@ -207,8 +207,8 @@ export default function WaterfrontLiving() {
 
               {/* 1 TO 3 BEDROOM APARTMENTS */}
               <div className="flex-1 min-w-[200px] px-6 md:px-8 py-4 text-center">
-                <div className="text-[#A7A08A] dark:text-white font-normal text-sm md:text-base leading-relaxed">
-                  Unit Type <br />  2 – 4 BR Townhouses and Villas
+                <div className="text-[#150F38] dark:text-white font-normal text-sm md:text-base leading-relaxed">
+                  Unit Type <br />  2 – 5 BR Townhouses and Villas
                 </div>
               </div>
 
@@ -217,11 +217,11 @@ export default function WaterfrontLiving() {
 
               {/* 4 BEDROOM DUPLEXES AND TOWNHOUSES */}
               <div className="flex-1 min-w-[200px] px-6 md:px-8 py-4 text-center">
-                {/* <div className="text-[#A7A08A] dark:text-white font-bold text-sm md:text-base mb-1 uppercase tracking-wide">
+                {/* <div className="text-[#150F38] dark:text-white font-bold text-sm md:text-base mb-1 uppercase tracking-wide">
                   By <br /> One Residences
                 </div>
-                <div className="text-[#A7A08A] dark:text-white font-normal text-sm md:text-base"></div> */}
-                <div className="text-[#A7A08A] dark:text-white font-normal text-sm md:text-base leading-relaxed">
+                <div className="text-[#150F38] dark:text-white font-normal text-sm md:text-base"></div> */}
+                <div className="text-[#150F38] dark:text-white font-normal text-sm md:text-base leading-relaxed">
                   By <br /> Aldar
                 </div>
               </div>
@@ -233,7 +233,7 @@ export default function WaterfrontLiving() {
               <div className="w-px h-20 bg-[#00314a] dark:bg-gray-400 opacity-30"></div>
               {/* HANDOVER */}
               <div className="flex-1 min-w-[200px] px-6 md:px-8 py-4 text-center">
-                <div className="text-[#A7A08A] dark:text-white font-normal text-sm md:text-base leading-relaxed">
+                <div className="text-[#150F38] dark:text-white font-normal text-sm md:text-base leading-relaxed">
                   HANDOVER: <br /> Comming Soon
                 </div>
               </div>
@@ -256,10 +256,10 @@ export default function WaterfrontLiving() {
                   />
                 </span>
               </div>
-              <div className="text-[#A7A08A] dark:text-white font-bold text-lg mb-2">
+              <div className="text-[#150F38] dark:text-white font-bold text-lg mb-2">
                 {item.time}
               </div>
-              <div className="text-[#A7A08A] dark:text-gray-400 text-sm">
+              <div className="text-[#150F38] dark:text-gray-400 text-sm">
                 {item.destination}
               </div>
             </div>

@@ -135,7 +135,7 @@ const translations = {
     "royal.waterfront.desc2": "",
     "royal.waterfront.explore": "EXPLORE RESIDENCES",
     "royal.waterfront.brochure": "REGISTER YOUR INTEREST",
-    "royal.enlightenment.title": "Connected to Abu Dhabi & Dubai",
+    "royal.enlightenment.title": "A Life Between Two Horizons",
     "royal.enlightenment.desc": "The project is expected to benefit from the rapid growth surrounding Al Maktoum International Airport and Dubai South, enhancing its future residential and investment value.",
     "royal.enlightenment.desc2": "",
 
@@ -145,7 +145,7 @@ const translations = {
     "royal.hotel.desc":
       "Wake up to inspiring views. Live close to the city’s top destinations. Experience a lifestyle that’s refined, relaxed, and always connected.",
     "royal.hotel.explore": "Register Your Interest",
-    "royal.discover.title": "Rooted in the Heart of New Dubai",
+    "royal.discover.title": "Connected to Abu Dhabi & Dubai",
     "royal.discover.desc": "strategically located between Abu Dhabi and Dubai, near Al Maktoum International Airport.",
     "royal.discover.masterplan": "VIEW MASTERPLAN",
     "royal.care.title": "Spaces That Bring People Together",

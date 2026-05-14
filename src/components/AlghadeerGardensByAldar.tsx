@@ -67,9 +67,9 @@ export default function AlghadeerGardensByAldar() {
       <EnlightenmentSection />
       {/* <WindowToWonder /> */}
       {/* <HotelStyleLiving />  */}
-      <div id="gallery">
+      {/* <div id="gallery">
         <InteriorCarousel />
-      </div>
+      </div> */}
       <div id="location">
         <DiscoverSection />
       </div>

@@ -1,8 +1,8 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/alghadeerGardensByAldar/LanguageContext";
 import { useTheme } from "@/contexts/ThemeContext";
-import { useEffect, useState } from "react";
 import LanguageSelector from "./LanguageSelector";
 
 export default function Header() {
@@ -30,31 +30,31 @@ export default function Header() {
   }, []);
 
   const menuItems = [
-    {
-      key: "royal.nav.home",
-      href: "#home",
-    },
-    {
-      key: "royal.nav.location",
-      href: "#location",
-    },
-    {
-      key: "royal.nav.amenities",
-      href: "#amenities",
-    },
-    {
-      key: "royal.nav.gallery",
-      href: "#gallery",
-    },
-    {
-      key: "royal.nav.contact",
-      href: "#contact-us",
-    },
-    {
-      key: "royal.nav.enquire",
-      href: "#enquire-now",
-    },
-  ];
+  {
+    key: "royal.nav.home",
+    href: "#home"
+  },
+  {
+    key: "royal.nav.location",
+    href: "#location"
+  },
+  {
+    key: "royal.nav.amenities",
+    href: "#amenities"
+  },
+  {
+    key: "royal.nav.gallery",
+    href: "#gallery"
+  },
+  {
+    key: "royal.nav.contact",
+    href: "#contact-us"
+  },
+  {
+    key: "royal.nav.enquire",
+    href: "#enquire-now"
+  }
+];
 
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -80,8 +80,8 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 ${
         isScrolled
-          ? "bg-white/95 dark:bg-[#A7A08A]/95 backdrop-blur-md shadow-lg"
-          : "bg-[#ebe8dd] dark:bg-[#A7A08A]/80 dark:backdrop-blur-md"
+          ? "bg-white/95 dark:bg-[#150F38]/95 backdrop-blur-md shadow-lg"
+          : "bg-[#ebe8dd] dark:bg-[#150F38]/80 dark:backdrop-blur-md"
       }`}
     >
       <nav className="container mx-auto px-4 lg:px-8">
@@ -95,8 +95,8 @@ export default function Header() {
             <div
               className={`text-3xl lg:text-4xl transition-colors duration-300 ${
                 isScrolled
-                  ? "text-[#A7A08A] dark:text-gray-100"
-                  : "text-[#A7A08A] dark:text-gray-100"
+                  ? "text-[#150F38] dark:text-gray-100"
+                  : "text-[#150F38] dark:text-gray-100"
               }`}
               style={{ fontFamily: "var(--font-playfair), serif" }}
             >
@@ -104,15 +104,15 @@ export default function Header() {
                 src="/images/alghadeer-gardens-by-aldar/alghadeer_logo_black.png"
                 width={200}
                 height={200}
-                style={{ width: "200px" }}
+                style={{ width: "160px" }}
                 alt="Aghadeer Gardens By Aldar"
               />
             </div>
             <div
               className={`text-xs lg:text-sm font-sans uppercase tracking-wider transition-colors duration-300 ${
                 isScrolled
-                  ? "text-[#A7A08A]/80 dark:text-gray-300"
-                  : "text-[#A7A08A]/80 dark:text-gray-300"
+                  ? "text-[#150F38]/80 dark:text-gray-300"
+                  : "text-[#150F38]/80 dark:text-gray-300"
               }`}
             >
               {/* {t("royal.tagline")} */}
@@ -128,8 +128,8 @@ export default function Header() {
                 onClick={(e) => handleNavClick(e, item.href)}
                 className={`text-sm font-sans uppercase tracking-wider hover:underline transition-all cursor-pointer ${
                   isScrolled
-                    ? "text-[#A7A08A] dark:text-gray-100"
-                    : "text-[#A7A08A] dark:text-gray-100"
+                    ? "text-[#150F38] dark:text-gray-100"
+                    : "text-[#150F38] dark:text-gray-100"
                 }`}
               >
                 {t(item.key)}
@@ -141,8 +141,8 @@ export default function Header() {
               onClick={toggleTheme}
               className={`p-2 rounded-lg transition-colors ${
                 isScrolled
-                  ? "text-[#A7A08A] dark:text-gray-100 hover:bg-[#00314a]/10 dark:hover:bg-gray-800/50"
-                  : "text-[#A7A08A] dark:text-gray-100 hover:bg-white/10 dark:hover:bg-gray-800/50"
+                  ? "text-[#150F38] dark:text-gray-100 hover:bg-[#00314a]/10 dark:hover:bg-gray-800/50"
+                  : "text-[#150F38] dark:text-gray-100 hover:bg-white/10 dark:hover:bg-gray-800/50"
               }`}
               aria-label="Toggle theme"
             >
@@ -186,8 +186,8 @@ export default function Header() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className={`lg:hidden transition-colors duration-300 ${
               isScrolled
-                ? "text-[#A7A08A] dark:text-gray-100"
-                : "text-[#A7A08A] dark:text-gray-100"
+                ? "text-[#150F38] dark:text-gray-100"
+                : "text-[#150F38] dark:text-gray-100"
             }`}
           >
             <svg
@@ -231,8 +231,8 @@ export default function Header() {
                 onClick={(e) => handleNavClick(e, item.href)}
                 className={`block text-sm font-sans uppercase tracking-wider hover:underline transition-all px-4 cursor-pointer ${
                   isScrolled
-                    ? "text-[#A7A08A] dark:text-gray-100"
-                    : "text-[#A7A08A] dark:text-gray-100"
+                    ? "text-[#150F38] dark:text-gray-100"
+                    : "text-[#150F38] dark:text-gray-100"
                 }`}
               >
                 {t(item.key)}
@@ -244,8 +244,8 @@ export default function Header() {
                 onClick={toggleTheme}
                 className={`p-2 rounded-lg transition-colors ${
                   isScrolled
-                    ? "text-[#A7A08A] dark:text-gray-100 hover:bg-[#00314a]/10 dark:hover:bg-gray-800/50"
-                    : "text-[#A7A08A] dark:text-gray-100 hover:bg-white/10 dark:hover:bg-gray-800/50"
+                    ? "text-[#150F38] dark:text-gray-100 hover:bg-[#00314a]/10 dark:hover:bg-gray-800/50"
+                    : "text-[#150F38] dark:text-gray-100 hover:bg-white/10 dark:hover:bg-gray-800/50"
                 }`}
                 aria-label="Toggle theme"
               >

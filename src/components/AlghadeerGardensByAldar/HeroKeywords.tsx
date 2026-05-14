@@ -23,27 +23,12 @@ export default function HeroKeywords() {
   {
     wordKey: "hero.energy",
     taglineKey: "hero.tagline",
-    url: "/images/alghadeer-gardens-by-aldar/keywords/alghadeer_exterior_01.webp"
+    url: "/images/alghadeer-gardens-by-aldar/keywords/alghadeer_exterior_01.png"
   },
   {
     wordKey: "hero.energy",
     taglineKey: "hero.tagline",
     url: "/images/alghadeer-gardens-by-aldar/keywords/alghadeer_exterior_02.webp"
-  },
-  {
-    wordKey: "hero.energy",
-    taglineKey: "hero.tagline",
-    url: "/images/alghadeer-gardens-by-aldar/keywords/alghadeer_exterior_03.webp"
-  },
-  {
-    wordKey: "hero.energy",
-    taglineKey: "hero.tagline",
-    url: "/images/alghadeer-gardens-by-aldar/keywords/alghadeer_exterior_04.webp"
-  },
-  {
-    wordKey: "hero.energy",
-    taglineKey: "hero.tagline",
-    url: "/images/alghadeer-gardens-by-aldar/keywords/alghadeer_exterior_05.webp"
   }
 ];
 

@@ -86,7 +86,7 @@ export default function CareAndGrace() {
 ];
 
   return (
-    <section className="py-20 lg:py-32 bg-[[#A7A08A]] dark:bg-[#[#A7A08A]] relative">
+    <section className="py-20 lg:py-32 bg-[[#241D4B]] dark:bg-[#[#150F38]] relative">
       <div className="absolute inset-0 opacity-20 dark:opacity-20 z-0">
         <Image
           src="/images/one-residences/one-residence_amenities-back.webp"
@@ -99,12 +99,12 @@ export default function CareAndGrace() {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="text-center mb-12 ">
           <h2
-            className="text-2xl md:text-4xl lg:text-4xl text-[#A7A08A] dark:text-white mb-8"
+            className="text-2xl md:text-4xl lg:text-4xl text-[#150F38] dark:text-white mb-8"
             style={{ fontFamily: "var(--font-playfair), serif" }}
           >
             {t("royal.care.title")}
           </h2>
-          <p className="text-base sm:text-lg text-[#A7A08A] dark:text-white max-w-5xl mx-auto mb-8 sm:mb-10 md:mb-12 px-2">
+          <p className="text-base sm:text-lg text-[#150F38] dark:text-white max-w-5xl mx-auto mb-8 sm:mb-10 md:mb-12 px-2">
             {t("royal.care.desc")}
           </p>
         </div>
@@ -117,7 +117,7 @@ export default function CareAndGrace() {
               className="text-center cursor-pointer"
               onClick={() => handleAmenityClick(index)}
             >
-              <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-[#A7A08A] dark:bg-[#A7A08A] flex items-center justify-center shadow-lg text-4xl hover:scale-110 transition-transform duration-300">
+              <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-[#241D4B] dark:bg-[#150F38] flex items-center justify-center shadow-lg text-4xl hover:scale-110 transition-transform duration-300">
                 <img
                   src={amenity.icon}
                   width={60}
@@ -125,7 +125,7 @@ export default function CareAndGrace() {
                   alt={amenity.name}
                 />
               </div>
-              <p className="text-[#A7A08A] dark:text-white text-sm font-sans uppercase tracking-wider leading-tight font-bold">
+              <p className="text-[#150F38] dark:text-white text-sm font-sans uppercase tracking-wider leading-tight font-bold">
                 {amenity.name}
               </p>
             </div>
@@ -135,7 +135,7 @@ export default function CareAndGrace() {
         <div className="text-center relative z-20">
           <button
             onClick={handleClickOpen}
-            className="bg-[#A7A08A] dark:bg-[#A7A08A] text-white px-8 py-4 rounded uppercase tracking-wider font-sans font-semibold hover:bg-[#C1C2B0]/80 dark:hover:bg-[#C1C2B0]/80 transition-colors relative z-20"
+            className="bg-[#241D4B] dark:bg-[#150F38] text-white px-8 py-4 rounded uppercase tracking-wider font-sans font-semibold hover:bg-[#241D4B]/80 dark:hover:bg-[#241D4B]/80 transition-colors relative z-20"
           >
             {t("royal.care.viewAll")}
           </button>
