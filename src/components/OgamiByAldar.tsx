@@ -1,30 +1,30 @@
 "use client";
 
-import Header from "./AlghadeerGardensByAldar/Header";
-import OneResidencesHero from "./AlghadeerGardensByAldar/OneResidencesHero";
-import WaterfrontLiving from "./AlghadeerGardensByAldar/WaterfrontLiving";
-import EnlightenmentSection from "./AlghadeerGardensByAldar/EnlightenmentSection";
-import WindowToWonder from "./AlghadeerGardensByAldar/WindowToWonder";
-import HotelStyleLiving from "./AlghadeerGardensByAldar/HotelStyleLiving";
-import InteriorCarousel from "./AlghadeerGardensByAldar/InteriorCarousel";
-import DiscoverSection from "./AlghadeerGardensByAldar/DiscoverSection";
-import CareAndGrace from "./AlghadeerGardensByAldar/CareAndGrace";
-import DreamsAndDesign from "./AlghadeerGardensByAldar/DreamsAndDesign";
-import Footer from "./AlghadeerGardensByAldar/Footer";
-import HeroKeywords from "./AlghadeerGardensByAldar/HeroKeywords";
+import Header from "./OgamiByAldar/Header";
+import OneResidencesHero from "./OgamiByAldar/OneResidencesHero";
+import WaterfrontLiving from "./OgamiByAldar/WaterfrontLiving";
+import EnlightenmentSection from "./OgamiByAldar/EnlightenmentSection";
+import WindowToWonder from "./OgamiByAldar/WindowToWonder";
+import HotelStyleLiving from "./OgamiByAldar/HotelStyleLiving";
+import InteriorCarousel from "./OgamiByAldar/InteriorCarousel";
+import DiscoverSection from "./OgamiByAldar/DiscoverSection";
+import CareAndGrace from "./OgamiByAldar/CareAndGrace";
+import DreamsAndDesign from "./OgamiByAldar/DreamsAndDesign";
+import Footer from "./OgamiByAldar/Footer";
+import HeroKeywords from "./OgamiByAldar/HeroKeywords";
 import PropertySearchForm from "./common/PropertySearchForm";
-import PaymentOptions from "./AlghadeerGardensByAldar/PaymentOptions";
-import PaymentOptionsTwo from "./AlghadeerGardensByAldar/PaymentOptionsTwo";
+import PaymentOptions from "./OgamiByAldar/PaymentOptions";
+import PaymentOptionsTwo from "./OgamiByAldar/PaymentOptionsTwo";
 import { useEffect } from "react";
 import { pushToDataLayer } from "@/utils/gtag";
 import BottomFooter from "./common/BottomFooter";
 
-export default function AlghadeerGardensByAldar() {
+export default function OgamiByAldar() {
   useEffect(() => {
     pushToDataLayer({
       event: "page_view",
-      label: "Aghadeer Gardens By Aldar Page",
-      value: "Aghadeer Gardens By Aldar Page View",
+      label: "Ogami By Aldar Page",
+      value: "Ogami By Aldar Page View",
     });
   }, []);
   return (
@@ -34,7 +34,7 @@ export default function AlghadeerGardensByAldar() {
         <HeroKeywords />
         <div className="absolute bottom-0 left-0 w-full custom-form-container">
           <PropertySearchForm
-            formName="alghadeer-gardens-by-aldar"
+            formName="ogami-by-aldar"
             pointName="get-in-touch"
             formType="banner-form"
             visibleFields={[
@@ -49,7 +49,7 @@ export default function AlghadeerGardensByAldar() {
             requiredFields={["firstName", "lastName", "phoneNumber", "email"]}
             viewType="banner"
             redirectToThankYou={true}
-            thankYouPath="/alghadeer-gardens-by-aldar/thank-you"
+            thankYouPath="/ogami-by-aldar/thank-you"
             colorCodeOne="#00314a"
             colorCodeTwo="#0f1f2e"
             colorCodeThree="#00314a"

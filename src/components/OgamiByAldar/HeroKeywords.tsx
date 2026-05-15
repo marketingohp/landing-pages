@@ -23,27 +23,27 @@ export default function HeroKeywords() {
   {
     wordKey: "hero.energy",
     taglineKey: "hero.tagline",
-    url: "/images/alghadeer-gardens-by-aldar/keywords/alghadeer_exterior_01.webp"
+    url: "/images/ogami-by-aldar/keywords/ogami_exterior_01.webp"
   },
   {
     wordKey: "hero.energy",
     taglineKey: "hero.tagline",
-    url: "/images/alghadeer-gardens-by-aldar/keywords/alghadeer_exterior_02.webp"
+    url: "/images/ogami-by-aldar/keywords/ogami_exterior_02.webp"
   },
   {
     wordKey: "hero.energy",
     taglineKey: "hero.tagline",
-    url: "/images/alghadeer-gardens-by-aldar/keywords/alghadeer_exterior_03.webp"
+    url: "/images/ogami-by-aldar/keywords/ogami_exterior_03.webp"
   },
   {
     wordKey: "hero.energy",
     taglineKey: "hero.tagline",
-    url: "/images/alghadeer-gardens-by-aldar/keywords/alghadeer_exterior_04.webp"
+    url: "/images/ogami-by-aldar/keywords/ogami_exterior_04.webp"
   },
   {
     wordKey: "hero.energy",
     taglineKey: "hero.tagline",
-    url: "/images/alghadeer-gardens-by-aldar/keywords/alghadeer_exterior_05.webp"
+    url: "/images/ogami-by-aldar/keywords/ogami_exterior_05.webp"
   }
 ];
 

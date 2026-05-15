@@ -17,12 +17,10 @@ export default function InteriorCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = [
-  "/images/alghadeer-gardens-by-aldar/interior/alghadeer_interior_01.webp",
-  "/images/alghadeer-gardens-by-aldar/interior/alghadeer_interior_02.webp",
-  "/images/alghadeer-gardens-by-aldar/interior/alghadeer_interior_03.webp",
-  "/images/alghadeer-gardens-by-aldar/interior/alghadeer_interior_04.webp",
-  "/images/alghadeer-gardens-by-aldar/interior/alghadeer_interior_05.webp",
-  "/images/alghadeer-gardens-by-aldar/interior/alghadeer_interior_06.webp"
+  "/images/ogami-by-aldar/interior/ogami_interior_01.webp",
+  "/images/ogami-by-aldar/interior/ogami_interior_02.webp",
+  "/images/ogami-by-aldar/interior/ogami_interior_03.webp",
+  "/images/ogami-by-aldar/interior/ogami_interior_04.webp"
 ];
 
   const nextImage = () => {

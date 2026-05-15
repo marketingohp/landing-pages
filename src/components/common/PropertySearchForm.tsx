@@ -503,7 +503,7 @@ export default function PropertySearchForm({
       return;
     }
 
-    setIsSubmitting(true);
+    setIsSubmitting(false);
     setSubmitStatus({ type: null, message: "" });
 
     // getting developer, and location by slug
@@ -522,6 +522,7 @@ export default function PropertySearchForm({
     // check testing params (if not, will send the default value)
     const params = new URLSearchParams(window.location.search);
     const companyStatus = params.get("company_status") || "Yes";
+    const assignedById = params.get("assigned_by_id") || "No";
 
     const { phoneCountryCode, ...cleanFormData } = formData;
 
@@ -530,6 +531,7 @@ export default function PropertySearchForm({
       ...(developerId && { developerId }),
       ...(locationId && { locationId }),
       ...(companyStatus && { CompanyStatus: companyStatus }),
+      ...(assignedById !== null && { ASSIGNED_BY_ID: assignedById }),
     };
 
     if (formName) submissionData.formName = formName;
@@ -563,6 +565,7 @@ export default function PropertySearchForm({
           ...(locationId && { locationId }),
           ...(developerId && { developerId }),
           ...(companyStatus && { CompanyStatus: companyStatus }),
+          ...(assignedById !== null && { ASSIGNED_BY_ID: assignedById }),
         }),
       }).then(async (res) => {
         const data = await res.json();
