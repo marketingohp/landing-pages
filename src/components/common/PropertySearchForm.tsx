@@ -11,7 +11,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import TextField from "@mui/material/TextField";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { DEVELOPERS_MAP, LOCATIONS_MAP } from "../../data/crmIds.js";
 
 // react-phone-number-input import
@@ -381,6 +381,44 @@ export default function PropertySearchForm({
   const [touchedFields, setTouchedFields] = useState<Record<string, boolean>>(
     {},
   );
+  // helpers
+  const calcUserFingerprint = (timestamp: string) => {
+    const lastSubmissionTime = parseInt(timestamp, 10);
+    const currentTime = Date.now();
+    const limitInMs = 2 * 60 * 60 * 1000;
+    const timeDeff = currentTime - lastSubmissionTime;
+
+    return { currentTime, lastSubmissionTime, limitInMs, timeDeff };
+  };
+
+  // clean up expired user fingerprints
+  const cleanupExpiredSubmissions = () => {
+    let cleanedCount = 0;
+
+    // Loop through all localStorage items
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key && key.startsWith("fsb:")) {
+        const timestamp = localStorage.getItem(key);
+        if (timestamp) {
+          const { limitInMs, timeDeff } = calcUserFingerprint(timestamp);
+          // Check if submission is older than 2 hours
+          if (timeDeff >= limitInMs) {
+            localStorage.removeItem(key);
+            cleanedCount++;
+          }
+        }
+      }
+    }
+
+    if (cleanedCount > 0) {
+      console.log(`Cleaned up ${cleanedCount} expired submissions`);
+    }
+  };
+
+  useEffect(() => {
+    cleanupExpiredSubmissions();
+  }, []);
 
   const handleSelectChange =
     (field: string) => (event: SelectChangeEvent<string>) => {
@@ -503,8 +541,27 @@ export default function PropertySearchForm({
       return;
     }
 
-    setIsSubmitting(false);
+    setIsSubmitting(true);
     setSubmitStatus({ type: null, message: "" });
+
+    // check if user submitted before during last 2 hours
+    const storageKey = `fsb:${formData.email}:${formData.phoneNumber}`;
+    const lastSubmission = localStorage.getItem(storageKey);
+
+    if (lastSubmission) {
+      const { limitInMs, timeDeff } = calcUserFingerprint(lastSubmission);
+
+      if (timeDeff < limitInMs) {
+        const remainingTime = Math.ceil((limitInMs - timeDeff) / (60 * 1000));
+        setSubmitStatus({
+          type: "error",
+          message: `You have already submitted a form recently. Please wait ${remainingTime} minutes before submitting again.`,
+        });
+
+        setIsSubmitting(false);
+        return;
+      }
+    }
 
     // getting developer, and location by slug
     const slug = getSlugFromPath();
@@ -541,120 +598,123 @@ export default function PropertySearchForm({
     try {
       // Submit to both Laravel API and Next.js Email API (dual submission)
       const [apiResult, emailResult] = await Promise.allSettled([
-      // Submit to Laravel API
-      submitFormLead(submissionData, formName, pointName, formType),
-      // Submit to Next.js Email API
-      fetch("/api/sendEmail", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          firstName: submissionData.firstName,
-          lastName: submissionData.lastName,
-          email: submissionData.email,
-          phoneNumber: submissionData.phoneNumber,
-          message: submissionData.message,
-          hearAboutUs: submissionData.hearAboutUs,
-          unitType: submissionData.unitType,
-          bedrooms: submissionData.bedrooms,
-          budget: submissionData.budget,
-          formName,
-          pointName,
-          formType,
-          ...(locationId && { locationId }),
-          ...(developerId && { developerId }),
-          ...(companyStatus && { CompanyStatus: companyStatus }),
-          ...(assignedById !== null && { ASSIGNED_BY_ID: assignedById }),
+        // Submit to Laravel API
+        submitFormLead(submissionData, formName, pointName, formType),
+        // Submit to Next.js Email API
+        fetch("/api/sendEmail", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            firstName: submissionData.firstName,
+            lastName: submissionData.lastName,
+            email: submissionData.email,
+            phoneNumber: submissionData.phoneNumber,
+            message: submissionData.message,
+            hearAboutUs: submissionData.hearAboutUs,
+            unitType: submissionData.unitType,
+            bedrooms: submissionData.bedrooms,
+            budget: submissionData.budget,
+            formName,
+            pointName,
+            formType,
+            ...(locationId && { locationId }),
+            ...(developerId && { developerId }),
+            ...(companyStatus && { CompanyStatus: companyStatus }),
+            ...(assignedById !== null && { ASSIGNED_BY_ID: assignedById }),
+          }),
+        }).then(async (res) => {
+          const data = await res.json();
+          if (!res.ok) {
+            throw new Error(data.error || "Failed to send email");
+          }
+          return data;
         }),
-      }).then(async (res) => {
-        const data = await res.json();
-        if (!res.ok) {
-          throw new Error(data.error || "Failed to send email");
-        }
-        return data;
-      }),
-    ]);
+      ]);
 
-    // Check Laravel API result
-    const laravelSuccess =
-      apiResult.status === "fulfilled" && apiResult.value.success;
-    const emailSuccess = emailResult.status === "fulfilled";
+      // Check Laravel API result
+      const laravelSuccess =
+        apiResult.status === "fulfilled" && apiResult.value.success;
+      const emailSuccess = emailResult.status === "fulfilled";
 
-    // Log results for debugging
-    if (apiResult.status === "rejected") {
-      console.error("Laravel API error:", apiResult.reason);
-    }
-    if (emailResult.status === "rejected") {
-      console.error("Email API error:", emailResult.reason);
-    }
+      // Log results for debugging
+      if (apiResult.status === "rejected") {
+        console.error("Laravel API error:", apiResult.reason);
+      }
+      if (emailResult.status === "rejected") {
+        console.error("Email API error:", emailResult.reason);
+      }
 
-    // // Consider submission successful if at least Laravel API succeeds
-    // // Email is secondary (for notifications)
-    if (!laravelSuccess) {
-      const errorMessage =
-        apiResult.status === "fulfilled"
-          ? apiResult.value.error || "Failed to submit form"
-          : apiResult.reason?.message || "Failed to submit form";
-      throw new Error(errorMessage);
-    }
+      // // Consider submission successful if at least Laravel API succeeds
+      // // Email is secondary (for notifications)
+      if (!laravelSuccess) {
+        const errorMessage =
+          apiResult.status === "fulfilled"
+            ? apiResult.value.error || "Failed to submit form"
+            : apiResult.reason?.message || "Failed to submit form";
+        throw new Error(errorMessage);
+      }
 
-    setSubmitStatus({
-      type: "success",
-      message:
-        apiResult.status === "fulfilled"
-          ? apiResult.value.message ||
-            "Form submitted successfully! We will contact you soon."
-          : "Form submitted successfully! We will contact you soon.",
-    });
+      // saving user submission fingerprint
+      localStorage.setItem(storageKey, Date.now().toString());
 
-    // Reset form after successful submission
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phoneCountryCode: "+971",
-      phoneNumber: "",
-      hearAboutUs: "",
-      unitType: "",
-      bedrooms: "",
-      budget: "",
-      message: "",
-    });
+      setSubmitStatus({
+        type: "success",
+        message:
+          apiResult.status === "fulfilled"
+            ? apiResult.value.message ||
+              "Form submitted successfully! We will contact you soon."
+            : "Form submitted successfully! We will contact you soon.",
+      });
 
-    // Clear all errors
-    setFieldErrors({});
-    setTouchedFields({});
+      // Reset form after successful submission
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phoneCountryCode: "+971",
+        phoneNumber: "",
+        hearAboutUs: "",
+        unitType: "",
+        bedrooms: "",
+        budget: "",
+        message: "",
+      });
 
-    // Call custom onSubmit if provided
-    if (onSubmit) {
-      onSubmit(submissionData);
-    }
+      // Clear all errors
+      setFieldErrors({});
+      setTouchedFields({});
 
-    // Download brochure if enabled
-    if (downloadBrochure) {
-      setTimeout(() => {
-        downloadBrochureFile();
-      }, 500); // Small delay to ensure form submission is complete
-    }
+      // Call custom onSubmit if provided
+      if (onSubmit) {
+        onSubmit(submissionData);
+      }
 
-    // Redirect to thank you page if enabled
-    if (redirectToThankYou) {
-      setTimeout(() => {
-        pushToDataLayer({
-          event: "form_submit",
-          label: formName || "Form Submission",
-          value: formType || "Contact Us Form Is Submitted",
-        });
-        reportConversion(thankYouPath);
-        //router.push(thankYouPath);
-      }, 1500); // Small delay to show success message
-    } else {
-      // Clear success message after 5 seconds
-      setTimeout(() => {
-        setSubmitStatus({ type: null, message: "" });
-      }, 5000);
-    }
+      // Download brochure if enabled
+      if (downloadBrochure) {
+        setTimeout(() => {
+          downloadBrochureFile();
+        }, 500); // Small delay to ensure form submission is complete
+      }
+
+      // Redirect to thank you page if enabled
+      if (redirectToThankYou) {
+        setTimeout(() => {
+          pushToDataLayer({
+            event: "form_submit",
+            label: formName || "Form Submission",
+            value: formType || "Contact Us Form Is Submitted",
+          });
+          reportConversion(thankYouPath);
+          //router.push(thankYouPath);
+        }, 1500); // Small delay to show success message
+      } else {
+        // Clear success message after 5 seconds
+        setTimeout(() => {
+          setSubmitStatus({ type: null, message: "" });
+        }, 5000);
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
       setSubmitStatus({
@@ -667,7 +727,7 @@ export default function PropertySearchForm({
     } finally {
       setIsSubmitting(false);
     }
-  }
+  };
 
   const getSelectStyles = (field: FormFieldKey) => {
     const hasError = fieldErrors[field] && touchedFields[field];
