@@ -131,7 +131,7 @@ const translations = {
     "royal.waterfront.title": "Tilal Binghatti",
     "royal.waterfront.title2":
       "blends heritage charm with outstanding connectivity",
-    "royal.waterfront.desc1": "Set within Al Reem Island, this residential tower offers a balanced way of living shaped by the pace of Abu Dhabi. The project brings together well-proportioned homes, considered layouts, and a location that keeps daily life within reach. From nearby cafés and retail spaces to open areas and waterfront views, everything is positioned to support a routine that feels both connected and calm..",
+    "royal.waterfront.desc1": "A masterplanned villa community in Al Rowaiyah designed around greenery, open space, and a more connected way of living. Tilal Binghatti brings together nature-inspired landscapes, walkable streets, and contemporary homes within one integrated destination.",
     "royal.waterfront.desc2": "",
     "royal.waterfront.explore": "EXPLORE RESIDENCES",
     "royal.waterfront.brochure": "REGISTER YOUR INTEREST",
